@@ -98,7 +98,7 @@ if __name__ == '__main__':
     mail_list = []
     get_mail_list(mail_list)
     if not check_server_status():
-        os.system('nohup python %s/manage.py &' %basedir)
+        os.system('nohup python %s/manage.py runserver 0.0.0.0:5000 &' %basedir)
         send_mail(mail_list, 'Server Down!', "%s 不可用！" %server)
         logging.error('%s 不可用！' %server)
         sleep(3)
