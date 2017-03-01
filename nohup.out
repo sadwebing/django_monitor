@@ -1,0 +1,781 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 15:18:53
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 15:20:41
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 15:42:12
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 15:52:57
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+/usr/local/lib/python2.7/site-packages/django/db/models/base.py:310: RuntimeWarning: Model 'check_tomcat.tomcat_project' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 16:21:52
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+/usr/local/lib/python2.7/site-packages/django/db/models/base.py:310: RuntimeWarning: Model 'check_tomcat.tomcat_project' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
+  new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 16:24:00
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 16:24:51
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 16:39:33
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 16:39:37
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x2ba72a07acf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^check_tomcat', include('check_tomcat.urls')),
+NameError: name 'include' is not defined
+Unhandled exception in thread started by <function wrapper at 0x2aff65cf1cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^check_tomcat', include('check_tomcat.urls')),
+NameError: name 'include' is not defined
+Unhandled exception in thread started by <function wrapper at 0x2b4d2fa50cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^check_tomcat', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 1, in <module>
+    from django.conf.urls import url, patterns, include
+ImportError: cannot import name patterns
+Unhandled exception in thread started by <function wrapper at 0x2af5e2ee1cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^check_tomcat', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 1, in <module>
+    from django.conf.urls import url, patterns, include
+ImportError: cannot import name patterns
+Unhandled exception in thread started by <function wrapper at 0x2b0da2162cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 1, in <module>
+    from django.conf.urls import url, patterns, include
+ImportError: cannot import name patterns
+Unhandled exception in thread started by <function wrapper at 0x2b9e89087cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 1, in <module>
+    from django.conf.urls import url, patterns, include
+ImportError: cannot import name patterns
+Unhandled exception in thread started by <function wrapper at 0x2b794b469cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 1, in <module>
+    from django.conf.urls import url, patterns, include
+ImportError: cannot import name patterns
+
+Type 'manage.py help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[auth]
+    changepassword
+    createsuperuser
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+
+[sessions]
+    clearsessions
+
+[staticfiles]
+    collectstatic
+    findstatic
+    runserver
+Unknown command: 'runerver'
+Type 'manage.py help' for usage.
+Unhandled exception in thread started by <function wrapper at 0x2ab080093c80>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 1, in <module>
+    from django.conf.urls import url, patterns, include
+ImportError: cannot import name patterns
+Unhandled exception in thread started by <function wrapper at 0x2b86df98ec80>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 4, in <module>
+    url('^$', views.MonitorServer),
+NameError: name 'views' is not defined
+Unhandled exception in thread started by <function wrapper at 0x2ae3ef058cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 4, in <module>
+    url('^$', views.MonitorServer),
+NameError: name 'views' is not defined
+Error: That port is already in use.
+Not Found: /
+[01/Mar/2017 16:59:04] "GET / HTTP/1.1" 404 2025
+Not Found: /
+[01/Mar/2017 16:59:05] "GET / HTTP/1.1" 404 2025
+Internal Server Error: /monitor_server
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/deprecation.py", line 138, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python2.7/site-packages/django/middleware/clickjacking.py", line 32, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+[01/Mar/2017 16:59:22] "GET /monitor_server HTTP/1.1" 500 57621
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 16:58:34
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /monitor_server
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view check_tomcat.views.MonitorServer didn't return an HttpResponse object. It returned None instead.
+[01/Mar/2017 17:01:54] "GET /monitor_server HTTP/1.1" 500 56525
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:01:51
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /monitor_server
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view check_tomcat.views.MonitorServer didn't return an HttpResponse object. It returned None instead.
+[01/Mar/2017 17:03:16] "GET /monitor_server HTTP/1.1" 500 56525
+Internal Server Error: /monitor_server
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view check_tomcat.views.MonitorServer didn't return an HttpResponse object. It returned None instead.
+[01/Mar/2017 17:04:06] "GET /monitor_server HTTP/1.1" 500 53640
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:03:12
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /monitor_server
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view check_tomcat.views.MonitorServer didn't return an HttpResponse object. It returned None instead.
+[01/Mar/2017 17:06:23] "GET /monitor_server HTTP/1.1" 500 56525
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:06:21
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Internal Server Error: /monitor_server
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view check_tomcat.views.MonitorServer didn't return an HttpResponse object. It returned None instead.
+[01/Mar/2017 17:13:11] "GET /monitor_server HTTP/1.1" 500 56525
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:13:08
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[01/Mar/2017 17:14:47] "GET /monitor_server HTTP/1.1" 200 8
+[01/Mar/2017 17:14:56] "GET /monitor_server HTTP/1.1" 200 8
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:14:43
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Forbidden (CSRF cookie not set.): /monitor_server
+[01/Mar/2017 17:15:45] "POST /monitor_server HTTP/1.1" 403 2857
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:15:39
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Forbidden (CSRF cookie not set.): /monitor_server
+[01/Mar/2017 17:27:46] "POST /monitor_server HTTP/1.1" 403 2857
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:27:41
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x2ab78bf2bc80>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 2, in <module>
+    from . import views
+  File "/django/check_tomcat/views.py", line 4, in <module>
+    @csrf_exempt 
+NameError: name 'csrf_exempt' is not defined
+[01/Mar/2017 17:29:51] "POST /monitor_server HTTP/1.1" 200 8
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:29:50
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+[01/Mar/2017 17:30:21] "GET /monitor_server HTTP/1.1" 200 16
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 17:30:17
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 316, in execute
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 53, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 41, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 97, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/settings.py", line 158
+SyntaxError: Non-ASCII character '\xe6' in file /django/monitor/settings.py on line 158, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/__init__.py", line 316, in execute
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 53, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 41, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/usr/local/lib/python2.7/site-packages/django/conf/__init__.py", line 97, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/settings.py", line 159, in <module>
+    'filename': os.path.join(STATIC_ROOT+'/logs/','monitor.log'), #或者直接写路径：'c:\logs\all.log',
+NameError: name 'STATIC_ROOT' is not defined
+Unhandled exception in thread started by <function wrapper at 0x2b65874fba28>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/__init__.py", line 22, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/log.py", line 75, in configure_logging
+    logging_config_func(logging_settings)
+  File "/usr/local/lib/python2.7/logging/config.py", line 794, in dictConfig
+    dictConfigClass(config).configure()
+  File "/usr/local/lib/python2.7/logging/config.py", line 627, in configure
+    '%r: %s' % (name, e))
+ValueError: Unable to configure logger 'django': Unable to add handler 'console': 'console'
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 18:02:05
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x2b514daeba28>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/__init__.py", line 22, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/log.py", line 75, in configure_logging
+    logging_config_func(logging_settings)
+  File "/usr/local/lib/python2.7/logging/config.py", line 794, in dictConfig
+    dictConfigClass(config).configure()
+  File "/usr/local/lib/python2.7/logging/config.py", line 576, in configure
+    '%r: %s' % (name, e))
+ValueError: Unable to configure handler 'default': 'NoneType' object has no attribute 'split'
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 18:03:54
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x2b734c495a28>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/__init__.py", line 22, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/log.py", line 75, in configure_logging
+    logging_config_func(logging_settings)
+  File "/usr/local/lib/python2.7/logging/config.py", line 794, in dictConfig
+    dictConfigClass(config).configure()
+  File "/usr/local/lib/python2.7/logging/config.py", line 627, in configure
+    '%r: %s' % (name, e))
+ValueError: Unable to configure logger 'django': Unable to add handler 'console': 'console'
+2017-03-01 18:05:48,433 [Dummy-1:47212256229696] [django.db.backends:90] [DEBUG]- (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2017-03-01 18:05:48,436 [Dummy-1:47212256229696] [django.db.backends:90] [DEBUG]- (0.001) SELECT VERSION(); args=None
+2017-03-01 18:05:48,523 [Dummy-1:47212256229696] [django.db.backends:90] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-01 18:05:48,529 [Dummy-1:47212256229696] [django.db.backends:90] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-01 18:05:48,870 [Thread-2:47212266723648] [django.server:131] [INFO]- "GET /monitor_server HTTP/1.1" 200 16
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 18:05:48
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 18:06:39
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 18:09:07
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Error: That port is already in use.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 01, 2017 - 18:15:48
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
