@@ -1,31 +1,26 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.response import TemplateResponse
 from django.views.decorators.csrf import csrf_exempt
-from models import tomcat_status
 import json, logging
 from django.contrib.auth.models import User
-
+from django.contrib.auth import authenticate, login
+from forms import UserForm
+from django.contrib.auth.decorators import login_required
 
 logger = logging.getLogger('django')
 
 @csrf_exempt 
-def login(request):
-    if request.method == 'POST':
+def Login(request, template_name='login.html',):
+    form = UserForm(request.POST)
+    if form.is_valid():
+        
         clientip = request.META['REMOTE_ADDR']
-        data = json.loads(request.body)
-        #status = "\t".join([data['access_time'], data['project'], data['domain'], data['url'], data['code'], data['info']])
-        logger.info('%s is requesting. %s' %(clientip, data))
-        status = tomcat_status(
-            access_time = data['access_time'],
-            project     = data['project'],
-            domain      = data['domain'],
-            url         = data['url'],
-            code        = data['code'],
-            info        = data['info'],
-        )
+        username = ''
+        
         status.save()
-        return HttpResponse("success!")
-    elif request.method == 'GET':
-        return HttpResponse('You get nothing!')
-    else:
-        return HttpResponse('nothing!')
+    return TemplateResponse(request, template_name)
+
+@login_required
+def index(request):
+    return HttpResponse('welcome!')

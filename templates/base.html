@@ -1,0 +1,15 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}} - microblog</title>
+    {% else %}
+    <title>microblog</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>主页：
+        <a href="{% url 'monitor_server' %}">Home</a>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>
