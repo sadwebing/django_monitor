@@ -64,18 +64,6 @@ def update_mail():
         else:
             info = mail(name=mail_info[0], mail_address=mail_info[1], status=mail_info[2], role=mail_info[3])
             info.save()
-#
-#def update_check_tomcat():
-#    data = request.form 
-#    result = db.check_tomcat(
-#        time = data.get('time'),
-#        project = data.get('project'),
-#        domain = data.get('domain'),
-#        url = data.get('url'),
-#        code = data.get('code')
-#    )
-#    db.db.session.add(result)
-#    db.db.session.commit()
 
 if __name__ == '__main__':
     if len(sys.argv) == 1:

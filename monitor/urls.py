@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^monitor_server', include('check_tomcat.urls')),
+    url(r'^accounts/', include('accounts.urls')),
 ]

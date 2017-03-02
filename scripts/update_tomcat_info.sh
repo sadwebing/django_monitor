@@ -23,5 +23,5 @@ fi
 }
 
 auto_update tomcat_url tomcat_info.txt
-auto_update mail tomcat_info.txt
-auto_update tomcat_project tomcat_info.txt
+auto_update mail mail.txt
+auto_update tomcat_project tomcat_project.txt

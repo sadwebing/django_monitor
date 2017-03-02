@@ -44,7 +44,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'check_tomcat',
     'saltstack',
+    #'users',
 ]
+
+#AUTH_USER_MODEL = 'users.User'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -61,7 +65,7 @@ ROOT_URLCONF = 'monitor.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -169,15 +173,7 @@ LOGGING = {
         'request_handler': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(BASE_DIR+'/logs/','script.log'),
-            'maxBytes': 1024*1024*5, # 5 MB
-            'backupCount': 5,
-            'formatter':'standard',
-        },
-        'scprits_handler': {
-            'level':'DEBUG',
-            'class':'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(BASE_DIR+'/logs/','script.log'), 
+            'filename': os.path.join(BASE_DIR+'/logs/','debug.log'),
             'maxBytes': 1024*1024*5, # 5 MB
             'backupCount': 5,
             'formatter':'standard',
@@ -193,20 +189,14 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['default', 'error'],
+            'handlers': ['default', 'error', 'request_handler'],
             'level': 'DEBUG',
             'propagate': False
         },
-        'django.request': {
-            'handlers': ['request_handler'],
-            'level': 'DEBUG',
-            'propagate': False
-        },
-        'scripts': { 
-            'handlers': ['scprits_handler'],
-            'level': 'INFO',
-            'propagate': False
-        },
+        #'django.request': {
+        #    'handlers': ['request_handler'],
+        #    'level': 'DEBUG',
+        #    'propagate': False
+        #},
     }
 }          
-
