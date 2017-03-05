@@ -32,6 +32,7 @@ ADMINS = [('Arno', 'Arno@ag866.com')]
 
 ALLOWED_HOSTS = ['192.168.100.107']
 
+LOGIN_REDIRECT_URL = '/tomcat/index/'
 
 # Application definition
 
@@ -91,7 +92,7 @@ DATABASES = {
         # The following settings are not used with sqlite3:
         'USER': 'monitor',
         'PASSWORD': 'ag866.com',
-        'HOST': '192.168.100.107',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': '192.168.100.164',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
         'OPTIONS': {
             'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
@@ -133,7 +134,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -200,3 +201,33 @@ LOGGING = {
         #},
     }
 }          
+
+USERS_REGISTRATION_OPEN = True
+ 
+USERS_VERIFY_EMAIL = True
+ 
+USERS_AUTO_LOGIN_ON_ACTIVATION = True
+ 
+USERS_EMAIL_CONFIRMATION_TIMEOUT_DAYS = 3
+ 
+# Specifies minimum length for passwords:
+USERS_PASSWORD_MIN_LENGTH = 5
+ 
+# Specifies maximum length for passwords:
+USERS_PASSWORD_MAX_LENGTH = None
+ 
+# the complexity validator, checks the password strength
+USERS_CHECK_PASSWORD_COMPLEXITY = True
+ 
+USERS_SPAM_PROTECTION = False  # important!
+ 
+ 
+#  ---------------------------------------------------------
+#  Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+#EMAIL_HOST_USER = 'sa@ag866.com'
+#EMAIL_HOST_PASSWORD = 'ag866sSBra'
+DEFAULT_FROM_EMAIL = 'sa@ag866.com'

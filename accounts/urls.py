@@ -16,7 +16,7 @@ urlpatterns = [
     #url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
     #    activate, name='users_activate'),
 
-    url(r'^login/$', login, {'template_name': 'login.html'}, name='index'),
+    url(r'^login/$', login, name='index'),
     #url(r'^logout/$', logout, {'template_name': 'users/logout.html'}, name='users_logout'),
     #url(r'^password_change/$', password_change,
     #    {

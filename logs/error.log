@@ -4720,3 +4720,537 @@ Traceback (most recent call last):
     (lookup_view_s, args, kwargs, len(patterns), patterns)
 NoReverseMatch: Reverse for 'monitor_server' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
 2017-03-02 19:11:02,971 basehttp.py [django.server:131] [ERROR]- "GET /accounts/login/ HTTP/1.1" 500 128175
+2017-03-03 15:40:28,954 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/03 15:40:02</td><td>http://192.168.100.55:7010</td><td>www.ag8.com</td><td>http://192.168.100.55:7010</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-03 15:45:30,707 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/03 15:45:01</td><td>http://192.168.100.55:7010</td><td>www.ag8.com</td><td>http://192.168.100.55:7010</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-03 16:55:28,381 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/03 16:55:02</td><td>http://192.168.100.70:7010</td><td>www.ag8.com</td><td>http://192.168.100.70:7010</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-03 17:00:30,704 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/03 17:00:04</td><td>http://192.168.100.70:7010</td><td>www.ag8.com</td><td>http://192.168.100.70:7010</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-03 18:15:28,444 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/03 18:15:02</td><td>http://192.168.100.70:7010</td><td>www.ag8.com</td><td>http://192.168.100.70:7010</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-03 23:00:26,732 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/03 23:00:02</td><td>http://192.168.100.86:7030</td><td>ag8.ag</td><td>http://192.168.100.86:7030</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 01:10:16,491 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 01:10:13</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 01:45:18,835 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 01:45:15</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 02:05:17,242 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 02:05:12</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 02:15:17,593 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 02:15:13</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 03:10:15,756 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 03:10:13</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 03:40:16,060 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 03:40:13</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 03:50:15,898 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 03:50:12</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 04:20:16,367 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 04:20:12</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 05:06:15,427 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 05:06:06</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 05:25:18,445 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 05:25:14</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 07:00:26,616 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 07:00:12</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/03/05 07:00:14</td><td>http://192.168.100.114:7010</td><td>ag9.info</td><td>http://192.168.100.114:7010</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 07:55:17,844 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 07:55:14</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 08:00:30,688 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 08:00:15</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/03/05 08:00:18</td><td>http://192.168.100.114:7010</td><td>ag9.info</td><td>http://192.168.100.114:7010</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 08:05:15,566 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/03/05 08:05:12</td><td>http://192.168.100.123:1270</td><td>payfront.agg060.com</td><td>http://192.168.100.123:1270</td><td>null</td><td>null</td></tr></table></body></html>
+2017-03-05 13:45:02,263 tomcat.py [django:35] [ERROR]- [failed]mail from monitor@ag866.com, mail to [], http://192.168.100.107:5000/monitor_server 不可用！
+2017-03-05 13:45:02,265 tomcat.py [django:109] [ERROR]- http://192.168.100.107:5000/monitor_server 不可用！
+2017-03-05 16:01:10,915 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python2.7/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'monitor_server' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-03-05 16:01:11,695 basehttp.py [django.server:131] [ERROR]- "GET /accounts/login/ HTTP/1.1" 500 131273
+2017-03-05 16:28:30,844 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/django/users/views.py", line 69, in register
+    send_activation_email(**opts)
+  File "/django/users/utils.py", line 138, in send_activation_email
+    email_message.send()
+  File "/usr/local/lib/python2.7/site-packages/django/core/mail/message.py", line 342, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/usr/local/lib/python2.7/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/usr/local/lib/python2.7/site-packages/django/core/mail/backends/smtp.py", line 67, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/local/lib/python2.7/smtplib.py", line 611, in login
+    raise SMTPException("No suitable authentication method found.")
+SMTPException: No suitable authentication method found.
+2017-03-05 16:28:31,380 basehttp.py [django.server:131] [ERROR]- "POST /accounts/register/ HTTP/1.1" 500 105178
+2017-03-05 16:40:02,253 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/django/users/views.py", line 56, in register
+    user = form.save()
+  File "/django/users/forms.py", line 57, in save
+    user.save()
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '' for key 'username'")
+2017-03-05 16:40:03,383 basehttp.py [django.server:131] [ERROR]- "POST /accounts/register/ HTTP/1.1" 500 159637
+2017-03-05 16:40:49,367 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/django/users/views.py", line 56, in register
+    user = form.save()
+  File "/django/users/forms.py", line 57, in save
+    user.save()
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '' for key 'username'")
+2017-03-05 16:40:50,201 basehttp.py [django.server:131] [ERROR]- "POST /accounts/register/ HTTP/1.1" 500 159636
+2017-03-05 16:43:13,102 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/django/users/views.py", line 56, in register
+    user = form.save()
+  File "/django/users/forms.py", line 57, in save
+    user.save()
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '' for key 'username'")
+2017-03-05 16:43:13,867 basehttp.py [django.server:131] [ERROR]- "POST /accounts/register/ HTTP/1.1" 500 159637
+2017-03-05 16:43:25,166 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/django/users/views.py", line 56, in register
+    user = form.save()
+  File "/django/users/forms.py", line 57, in save
+    user.save()
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 110, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '' for key 'username'")
+2017-03-05 16:43:26,002 basehttp.py [django.server:131] [ERROR]- "POST /accounts/register/ HTTP/1.1" 500 159635
+2017-03-05 17:13:25,186 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 83, in login
+    return HttpResponseRedirect(_get_login_redirect_url(request, redirect_to))
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 54, in _get_login_redirect_url
+    return resolve_url(settings.LOGIN_REDIRECT_URL)
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'admin' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-03-05 17:13:25,719 basehttp.py [django.server:131] [ERROR]- "POST /accounts/login/ HTTP/1.1" 500 106594
+2017-03-05 17:19:45,021 exception.py [django.request:124] [ERROR]- Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 83, in login
+    return HttpResponseRedirect(_get_login_redirect_url(request, redirect_to))
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/views.py", line 54, in _get_login_redirect_url
+    return resolve_url(settings.LOGIN_REDIRECT_URL)
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'tomcat_index' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-03-05 17:19:45,620 basehttp.py [django.server:131] [ERROR]- "POST /accounts/login/ HTTP/1.1" 500 106692

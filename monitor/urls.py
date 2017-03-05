@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^monitor_server', include('check_tomcat.urls')),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^tomcat/', include('check_tomcat.urls')),
 ]

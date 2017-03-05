@@ -17,7 +17,7 @@ fi
 
 if [ "${md5_now}" != "${md5_1min}" ];then
     /usr/local/bin/python ${basedir}/update_table.py $TableName
-    sed -i '/$TableName/ d' ${basedir}/md5_1min.txt
+    sed -i '/'$TableName'/ d' ${basedir}/md5_1min.txt
     echo "${md5_now}" >> ${basedir}/md5_1min.txt
 fi
 }

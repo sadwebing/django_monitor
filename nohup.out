@@ -9107,3 +9107,384 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 85, in url
     raise TypeError('view must be a callable or a list/tuple in the case of include().')
 TypeError: view must be a callable or a list/tuple in the case of include().
+Unhandled exception in thread started by <function wrapper at 0x2b67afb64c80>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/model_checks.py", line 30, in check_all_models
+    errors.extend(model.check(**kwargs))
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 1266, in check
+    errors.extend(cls._check_fields(**kwargs))
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 1337, in _check_fields
+    errors.extend(field.check(**kwargs))
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 893, in check
+    errors = super(AutoField, self).check(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 208, in check
+    errors.extend(self._check_backend_specific_checks(**kwargs))
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 311, in _check_backend_specific_checks
+    return connections[db].validation.check_field(self, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/validation.py", line 41, in check_field
+    field_type = field.db_type(connection)
+  File "/usr/local/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 629, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "/usr/local/lib/python2.7/site-packages/django/db/__init__.py", line 33, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 183, in data_types
+    if self.features.supports_microsecond_precision:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/features.py", line 54, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 367, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "/usr/local/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/base/base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/base/base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/base/base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/base/base.py", line 199, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/base/base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 263, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 221, in __init__
+    self.set_character_set(charset)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 312, in set_character_set
+    super(Connection, self).set_character_set(charset)
+django.db.utils.OperationalError: (1115, "Unknown character set: 'utf8mb4'")
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 13:59:44
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 14:20:58
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x2abffb1f2398>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/usr/local/lib/python2.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/models.py", line 6, in <module>
+    class tomcat_project(models.Model):
+  File "/django/check_tomcat/models.py", line 15, in tomcat_project
+    class Meta:
+  File "/django/check_tomcat/models.py", line 16, in Meta
+    unique_together = (product, project)
+NameError: name 'product' is not defined
+Unhandled exception in thread started by <function wrapper at 0x2b8e002d5398>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models(all_models)
+  File "/usr/local/lib/python2.7/site-packages/django/apps/config.py", line 199, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/models.py", line 6, in <module>
+    class tomcat_project(models.Model):
+  File "/django/check_tomcat/models.py", line 15, in tomcat_project
+    class Meta:
+  File "/django/check_tomcat/models.py", line 16, in Meta
+    unique_together = (product, project)
+NameError: name 'product' is not defined
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 14:57:06
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:17:17
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:17:55
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:26:53
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:32:34
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:39:36
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:43:09
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:47:31
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:57:24
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): users.
+Run 'python manage.py migrate' to apply them.
+March 05, 2017 - 16:57:46
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:00:14
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:12:43
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:13:21
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:13:53
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:14:00
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:15:17
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:15:30
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x2b56532fecf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 6, in <module>
+    url('index/$', views.index),
+AttributeError: 'module' object has no attribute 'index'
+Unhandled exception in thread started by <function wrapper at 0x2b45e71d7cf8>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/monitor/urls.py", line 21, in <module>
+    url(r'^monitor_server', include('check_tomcat.urls')),
+  File "/usr/local/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/django/check_tomcat/urls.py", line 6, in <module>
+    url('index/$', views.index),
+AttributeError: 'module' object has no attribute 'index'
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:18:00
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:19:31
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:20:12
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 05, 2017 - 17:22:10
+Django version 1.10.5, using settings 'monitor.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.

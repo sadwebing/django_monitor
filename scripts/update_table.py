@@ -33,10 +33,10 @@ def update_tomcat_project():
         info.delete()
     cursor.execute('alter table check_tomcat_tomcat_project AUTO_INCREMENT=1; ')
     for tomcat_info in tomcat_project_list:
-        if len(tomcat_info) != 7:
+        if len(tomcat_info) != 8:
             continue
         else:
-            info = tomcat_project(product=tomcat_info[0], project=tomcat_info[1], code_dir=tomcat_info[2], tomcat=tomcat_info[3], main_port=tomcat_info[4], script=tomcat_info[5], jdk=tomcat_info[6])
+            info = tomcat_project(product=tomcat_info[0], project=tomcat_info[1], code_dir=tomcat_info[2], tomcat=tomcat_info[3], main_port=tomcat_info[4], script=tomcat_info[5], jdk=tomcat_info[6], status=tomcat_info[7])
             info.save()
 
 def update_tomcat_url():

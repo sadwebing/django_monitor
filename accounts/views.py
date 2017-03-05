@@ -14,11 +14,13 @@ logger = logging.getLogger('django')
 def Login(request, template_name='login.html',):
     form = UserForm(request.POST)
     if form.is_valid():
-        
         clientip = request.META['REMOTE_ADDR']
-        username = ''
+        username = form.username
+        password = form.password
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        return HttpResponse('You have logined successfull!')
         
-        status.save()
     return TemplateResponse(request, template_name)
 
 @login_required

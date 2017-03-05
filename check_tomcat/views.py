@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from models import tomcat_status
 import json, logging
 
@@ -28,3 +28,8 @@ def MonitorServer(request):
         return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
+
+@csrf_protect
+def index(request):
+    return HttpResponse("success!")
+

@@ -7,9 +7,11 @@
     {% endif %}
   </head>
   <body>
+  {% comment %}
     <div>主页：
         <a href="{% url 'monitor_server' %}">Home</a>
     </div>
+  {% endcomment %}
     {% block content %}{% endblock %}
   </body>
 </html>

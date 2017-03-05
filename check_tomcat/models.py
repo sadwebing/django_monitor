@@ -5,12 +5,15 @@ from django.db import models
 # Create your models here.
 class tomcat_project(models.Model):
     product = models.CharField(max_length=10)
-    project = models.CharField(max_length=64, unique=True)
+    project = models.CharField(max_length=64)
     code_dir = models.CharField(max_length=32, null=True)
     tomcat = models.CharField(max_length=64, null=True)
     main_port = models.CharField(max_length=10, null=True)
     jdk = models.CharField(max_length=10, null=True)
     script = models.CharField(max_length=64, null=True)
+    status = models.CharField(max_length=10, null=True)
+    class Meta:
+        unique_together = ('product', 'project')
 
 class tomcat_url(models.Model):
     project = models.CharField(max_length=64)

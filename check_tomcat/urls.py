@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     url('^$', views.MonitorServer),
+    url('index/$', views.index),
 ]
