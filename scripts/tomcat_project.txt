@@ -39,8 +39,9 @@ B79|B79_WEB_WS|WEB_WS|tomcat-7.0_b79_web_ws_7080|7080|tomcat7_b79webws|jdk1.7|ac
 B79|B79_OFFICE|B79_OFFICE|tomcat-7.0_b79_office_7100|7100|tomcat7_b79office|jdk1.7|active
 B79|B79_OFFICE_WS|OFFICE_WS|tomcat-7.0_b79_office_ws_7110|7110|tomcat7_b79officews|jdk1.7|active
 B79|B79_BRIDGE|ONLINE_PAY|tomcat-7.0|8080|tomcat7_b79_bridge|jdk1.6|active
-PUBLIC|ALL_GDC|ALL_GDC|tomcat-7.0_all_gdc_8010|8010|tomcat7_allgdc|jdk1.8|active
-PUBLIC|ALL_GDC_OLD|GDC_OLD|tomcat-7.0_old_gdc_8020|8020|tomcat7_oldgdc|jdk1.8|active
+PUBLIC|ALL_GDC|ALL_GDC|tomcat-8.0_all_gdc_8010|8010|tomcat8_allgdc|jdk1.8|active
+PUBLIC|ALL_GDC_API|ALL_GDC_API|tomcat-8.0_all_gdc_api_8020|8020|tomcat8_allgdcapi|jdk1.8|active
+PUBLIC|ALL_GDC_OLD|GDC_OLD|tomcat-8.0_old_gdc_8020|8020|tomcat8_oldgdc|jdk1.8|active
 PUBLIC|ALL_MESSAGE|ALL_MESSAGE|tomcat-7.0_all_message_8030|8030|tomcat7_allmessage|jdk1.7|active
 PUBLIC|ALL_ZXZF_WS|ALL_ZXZF_WS|tomcat-7.0_all_zxzf_ws_8040|8040|tomcat7_allzxzfws|jdk1.7|active
 PUBLIC|ALL_ZJ_CASH|ZJ_CASH|tomcat-7.0_zj_cash_8050|8050|tomcat7_zjcash|jdk1.7|active

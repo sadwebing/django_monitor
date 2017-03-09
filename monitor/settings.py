@@ -30,9 +30,11 @@ CSRF_COOKIE_SECURE = False
 
 ADMINS = [('Arno', 'Arno@ag866.com')]
 
-ALLOWED_HOSTS = ['192.168.100.107']
+ALLOWED_HOSTS = ['192.168.100.107', '43.241.204.107']
 
 LOGIN_REDIRECT_URL = '/tomcat/index/'
+
+LOGIN_URL = '/admin/login/'
 
 # Application definition
 
@@ -45,18 +47,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'check_tomcat',
     'saltstack',
+    'djcelery',
     #'users',
 ]
 
 #AUTH_USER_MODEL = 'users.User'
 
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -95,11 +99,12 @@ DATABASES = {
         'HOST': '192.168.100.164',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
         'OPTIONS': {
-            'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
+            #'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
             'charset': 'utf8mb4',
         },
     }
 }
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
 
 # Password validation
@@ -141,6 +146,13 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static'),
+#]
 
 LOGGING = {
     'version': 1,
@@ -231,3 +243,9 @@ EMAIL_PORT = 25
 #EMAIL_HOST_USER = 'sa@ag866.com'
 #EMAIL_HOST_PASSWORD = 'ag866sSBra'
 DEFAULT_FROM_EMAIL = 'sa@ag866.com'
+
+SALT_API = {
+    'url':"https://192.168.100.109:8000/",
+    'user':"saltapi",
+    'password':"ag866.com",
+}

@@ -1,17 +1,29 @@
+<!DOCTYPE html>
 <html>
   <head>
+    {% load staticfiles %}
     {% if title %}
-    <title>{{title}} - microblog</title>
+    <title>{{title}}</title>
     {% else %}
-    <title>microblog</title>
+    <title>管理中心</title>
     {% endif %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' href="static/images/meng.ico" type="image/x-icon" />
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/bootstrap/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-table-angular.js"></script>
+    <script src="/static/bootstrap-table/src/bootstrap-table.js"></script>
+    <script src="/static/bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
   </head>
   <body>
-  {% comment %}
-    <div>主页：
-        <a href="{% url 'monitor_server' %}">Home</a>
+    <div>
+        <a href="/">Tomcat工程</a>
     </div>
-  {% endcomment %}
+    <div>
+        <a href="/saltstack/index">saltstack</a>
+    </div>
     {% block content %}{% endblock %}
   </body>
 </html>

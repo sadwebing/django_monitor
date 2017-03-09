@@ -22,6 +22,6 @@ if [ "${md5_now}" != "${md5_1min}" ];then
 fi
 }
 
-auto_update tomcat_url tomcat_info.txt
+auto_update tomcat_url tomcat_url.txt
 auto_update mail mail.txt
 auto_update tomcat_project tomcat_project.txt

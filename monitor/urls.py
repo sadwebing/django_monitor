@@ -15,10 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
+from django.http import HttpResponseRedirect
 
 urlpatterns = [
+    url(r'^$', include('check_tomcat.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^monitor_server', include('check_tomcat.urls')),
-    url(r'^accounts/', include('accounts.urls')),
+    url(r'^monitor_server/', include('check_tomcat.urls')),
+    #url(r'^accounts/', include('accounts.urls')),
     url(r'^tomcat/', include('check_tomcat.urls')),
-]
+    url(r'^saltstack/', include('saltstack.urls')),
+    url(r'^favicon$', lambda x: HttpResponseRedirect(settings.STATIC_URL+'images/favicon.ico')),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

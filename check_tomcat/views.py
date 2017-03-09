@@ -1,7 +1,9 @@
+# coding: utf8
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from models import tomcat_status
+from models import tomcat_status,tomcat_url
 import json, logging
 
 logger = logging.getLogger('django')
@@ -29,7 +31,59 @@ def MonitorServer(request):
     else:
         return HttpResponse('nothing!')
 
+@csrf_exempt 
+def TomcatUrl(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        data = tomcat_url.objects.all()
+        url_list = []
+        logger.info('%s is requesting. tomcat_url' %clientip)
+        for url in data:
+            tmp_dict = {}
+            tmp_dict['id'] = url.id
+            tmp_dict['project'] = url.project
+            tmp_dict['domain'] = url.domain
+            tmp_dict['url'] = url.url
+            url_list.append(tmp_dict)
+        return HttpResponse(url_list)
+    elif request.method == 'GET':
+        clientip = request.META['REMOTE_ADDR']
+        data = tomcat_url.objects.all()
+        url_list = []
+        logger.info('%s is requesting. tomcat_url' %clientip)
+        for url in data:
+            tmp_dict = {}
+            tmp_dict['id'] = url.id
+            tmp_dict['project'] = url.project
+            tmp_dict['domain'] = url.domain
+            tmp_dict['url'] = url.url
+            url_list.append(tmp_dict)
+        return HttpResponse(json.dumps(url_list))
+        #return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
 @csrf_protect
+@login_required
 def index(request):
-    return HttpResponse("success!")
+    title = u'管理中心'
+    url = tomcat_url.objects.all()
+    tomcat_url_list = []
+    for info in url:
+        tomcat_dict = {}
+        tomcat_dict['id']      = info.id
+        tomcat_dict['project'] = info.project
+        tomcat_dict['domain']  = info.domain
+        tomcat_dict['url']     = info.url
+        tomcat_url_list.append(tomcat_dict)
+        logger.info(tomcat_dict)
+    logger.info(tomcat_url_list)
+    return render(
+        request,
+        'check_tomcat.html',
+        {
+            'tomcat_url_list':tomcat_url_list,
+            'title': title,
+        }
+    )
 

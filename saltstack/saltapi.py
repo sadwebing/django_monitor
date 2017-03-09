@@ -72,6 +72,12 @@ class SaltAPI(object):
         jid = content['return'][0]['jid']
         return jid
 
+    def checkMinion(self, tgt):
+        params = {'client':'local','tgt':tgt, 'fun':'test.ping'}
+        obj = urllib.urlencode(params)
+        content = self.postRequest(obj)
+        return content
+
     def masterToMinionContent(self, tgt, fun, arg):
         '''
             Master控制Minion，返回的结果是内容，不是jid；

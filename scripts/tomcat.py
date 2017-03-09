@@ -12,15 +12,15 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "monitor.settings")
 django.setup()
 from check_tomcat.models import tomcat_url, mail, tomcat_status, server_status
 
-
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-server = 'http://192.168.100.107:5000/monitor_server'
+server = 'http://192.168.100.107:5000/monitor_server/check/'
 requests.adapters.DEFAULT_RETRIES = 3
 logger = logging.getLogger('django')
+error_status = 'null'
 
-def send_mail(to_list,sub,content):
+def send_mail(to_list,sub,content,format=''):
     sender = 'monitor@ag866.com'
-    msg = MIMEText(str(content),'html','utf-8')#中文需参数‘utf-8’，单字节字符不需要  
+    msg = MIMEText(str(content),format,'utf-8')#中文需参数‘utf-8’，单字节字符不需要  
     msg['Subject'] = Header(sub, 'utf-8')
     msg['From'] = sender
     msg['To'] = ';'.join(to_list)
@@ -35,16 +35,36 @@ def send_mail(to_list,sub,content):
         logger.error('[failed]mail from %s, mail to %s, %s' %(sender, to_list, content))
         return False
 
-def get_mail_list(list_name):
-    url_all = mail.objects.all()
-    for mail_info in url_all:
-        if mail_info.status == 'active':
-            list_name.append(mail_info.mail_address)
-    logger.info('get mail_list successful.')
-    #return mail_list
+def get_mail_list(*names):
+    mail_list = []
+    for name in names:
+        info = mail.objects.filter(name=name).first()
+        mail_list.append(info.mail_address)
+    return mail_list
+    #url_all = mail.objects.all()
+    #for mail_info in url_all:
+    #    if mail_info.status == 'active':
+    #        list_name.append(mail_info.mail_address)
+    #logger.info('get mail_list successful.')
+    #return list_name
 
-def check_tomcat(context_body):
+def check_tomcat():
+    content_head = """\
+    <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing=\"1\" style=\"text-align:center;padding:1px\">
+    <tr style=\"font-size:14px\">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    """
+    content_body = ""
+    content = ""
     url_all = tomcat_url.objects.all()
+    code_list = ['200', '302', '405']
     for tomcat_info in url_all:
         result = {}
         result['access_time'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
@@ -52,7 +72,7 @@ def check_tomcat(context_body):
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
         try:
-            ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=connect_timeout)
+            ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=10)
             result['code'] = '%s' %ret.status_code
             try:
                 title = re.search('<title>.*?</title>', ret.content)
@@ -77,9 +97,11 @@ def check_tomcat(context_body):
             insert.save()
         if result['code'] not in code_list:
             print result['code']
-            context_body = context_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['domain'], result['url'], result['code'], result['info'])
+            content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['domain'], result['url'], result['code'], result['info'])
         #logger.info(MIMEText(str(result), 'utf-8'))
-    return context_body
+        if content_body != "":
+            content = content_head + content_body + "</table></body></html>"
+    return content
 
 def time():
     current_time = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
@@ -98,35 +120,4 @@ def check_server_status():
         return False
 
 if __name__ == '__main__':
-    current_time = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
-    error_status = 'null'
-    connect_timeout=10
-    mail_list = []
-    get_mail_list(mail_list)
-    if not check_server_status():
-        os.system('nohup python %s/manage.py runserver 0.0.0.0:5000 &' %basedir)
-        send_mail(mail_list, 'Server Down!', "%s 不可用！" %server)
-        logger.error('%s 不可用！' %server)
-        sleep(3)
-        if not check_server_status():
-            send_mail(mail_list, 'Server is unable to start, pls check!', "%s 服务起不来！" %server)
-            logger.error('%s 服务起不来！' %server)
-    #code_list = ['200', '302']
-    code_list = ['200', '302', '405']
-    content_head = """\
-    <html><head><title>HTML email</title></head><body>
-    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing=\"1\" style=\"text-align:center;padding:1px\">
-    <tr style=\"font-size:14px\">
-    <th style="width:120px">时间</th> 
-    <th style="width:120px">工程</th> 
-    <th style="width:120px">域名</th> 
-    <th style="width:300px">路径</th> 
-    <th style="width:60px">状态</th> 
-    <th style="width:120px">备注</th>
-    </tr>
-    """
-    content_body=""
-    content_body = check_tomcat(content_body)
-    if content_body != "":
-        content = content_head + content_body + "</table></body></html>"
-        send_mail(mail_list,'tomcat报警',content)
+    print "使用check.py"

@@ -1,11 +1,12 @@
 #!/usr//bin/env python
 #-_- coding:utf-8 -_-
-import os,sys,logging
+import os,sys,logging,datetime
 import django
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "monitor.settings")
 django.setup()
 from check_tomcat.models import tomcat_project, tomcat_url, mail
+from monitor.settings import DATABASES as databases
 
 #获取当前目录
 current_dir = os.path.abspath(os.path.dirname(__file__))
@@ -26,8 +27,14 @@ def get_list(filename, list_name):
             #print line.split('|')
             list_name.append(line.replace('\n', '').split('|'))
 
+def backup_table(table_name):
+    backup_time = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
+    os.system('mysql -h%s -u%s -p%s -e "select * from %s.%s" > %s/backup/%s.txt.%s ' 
+            %(databases['default']['HOST'], databases['default']['USER'], databases['default']['PASSWORD'], databases['default']['NAME'], table_name, current_dir, table_name, backup_time))
+
 def update_tomcat_project():
     get_list('tomcat_project.txt', tomcat_project_list)
+    backup_table('check_tomcat_tomcat_project')
     info_list = tomcat_project.objects.all()
     for info in info_list:
         info.delete()
@@ -40,7 +47,8 @@ def update_tomcat_project():
             info.save()
 
 def update_tomcat_url():
-    get_list('tomcat_info.txt', tomcat_info_list)
+    get_list('tomcat_url.txt', tomcat_info_list)
+    backup_table('check_tomcat_tomcat_url')
     info_list = tomcat_url.objects.all()
     for info in info_list:
         info.delete()
@@ -49,11 +57,14 @@ def update_tomcat_url():
         if len(url_info) != 3:
             continue
         else:
-            info = tomcat_url(project=url_info[0], url=url_info[0],domain=url_info[2])
+            info = tomcat_url(project=url_info[1], url=url_info[0],domain=url_info[2])
             info.save()
 
 def update_mail():
     get_list('mail.txt', mail_list)
+    backup_table('check_tomcat_mail')
+    #os.system('mysql -h192.168.100.164 -umonitor -pag866.com -e "select * from monitor.check_tomcat_mail" > %s/backup/mail.txt.%s ' %(current_dir, backup_time))
+    #cursor.execute('select * from check_tomcat_mail into outfile "%s/backup/mail.txt.%s" '%(current_dir, backup_time))
     info_list = mail.objects.all()
     for info in info_list:
         info.delete()
@@ -66,6 +77,8 @@ def update_mail():
             info.save()
 
 if __name__ == '__main__':
+    if not os.path.isdir('%s/backup' %current_dir):
+        os.mkdir('%s/backup' %current_dir)
     if len(sys.argv) == 1:
         logging.error('No table specified.')
     elif sys.argv[1] == 'tomcat_url':
