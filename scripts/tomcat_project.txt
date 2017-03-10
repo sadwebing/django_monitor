@@ -61,4 +61,6 @@ P02_OLD|P02_WEB_WS|P02_WEB_WS|tomcat-7.0_p02_web_ws_6080|6080|tomcat7_p02webws|j
 P02_OLD|P02_OFFICE|P02_OFFICE|tomcat-7.0_p02_office_6100|6100|tomcat7_p02office|jdk1.7|inactive
 P02_OLD|P02_OFFICE_WS|P02_OFFICE_WS|tomcat-7.0_p02_office_ws_6110|6110|tomcat7_p02officews|jdk1.7|inactive
 
-
+E02|E02_OFFICE|E02_OFFICE|tomcat-7.0_e02_office_2100|2100|tomcat7_e02office|jdk1.6|active
+E02|E02_WS|E02_WS|tomcat-7.0_e02_ws_2080|2080|tomcat7_e02ws|jdk1.6|active
+NWF|NWF_GI|NWF_GI|tomcat-7.0_NWF_GI_2040|2040|tomcat7_nwfgi|jdk1.8|active

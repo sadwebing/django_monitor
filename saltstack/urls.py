@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     url('^check_minion$', views.CheckMinion),
     url('^index$', views.index),
+    url('^$', views.index),
 ]

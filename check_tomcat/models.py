@@ -19,6 +19,7 @@ class tomcat_url(models.Model):
     project = models.CharField(max_length=64)
     domain = models.CharField(max_length=128)
     url = models.CharField(max_length=128, unique=True)
+    status = models.CharField(max_length=20, default='active')
 
 class mail(models.Model):
     name = models.CharField(max_length=20)

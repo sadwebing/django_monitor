@@ -57,9 +57,44 @@ def TomcatUrl(request):
             tmp_dict['project'] = url.project
             tmp_dict['domain'] = url.domain
             tmp_dict['url'] = url.url
+            tmp_dict['status_'] = url.status
             url_list.append(tmp_dict)
         return HttpResponse(json.dumps(url_list))
         #return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt 
+def Add(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        #data = json.loads(request.body)
+        data = request.POST
+        logger.info('%s' %data)
+        info = tomcat_url(project=data['project'], domain=data['domain'], url=data['url'], status=data['status_'])
+        info.save()
+        return HttpResponse('success!')
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt 
+def Update(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        #data = json.loads(request.body)
+        data = request.POST
+        logger.info('%s' %data)
+        info = tomcat_url.objects.get(id=data['id'])
+        info.project = data['project']
+        info.domain  = data['domain']
+        info.url     = data['url']
+        info.status = data['status_']
+        info.save()
+        return HttpResponse('success!')
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
 
@@ -67,22 +102,12 @@ def TomcatUrl(request):
 @login_required
 def index(request):
     title = u'管理中心'
-    url = tomcat_url.objects.all()
-    tomcat_url_list = []
-    for info in url:
-        tomcat_dict = {}
-        tomcat_dict['id']      = info.id
-        tomcat_dict['project'] = info.project
-        tomcat_dict['domain']  = info.domain
-        tomcat_dict['url']     = info.url
-        tomcat_url_list.append(tomcat_dict)
-        logger.info(tomcat_dict)
-    logger.info(tomcat_url_list)
+    clientip = request.META['REMOTE_ADDR']
+    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
         'check_tomcat.html',
         {
-            'tomcat_url_list':tomcat_url_list,
             'title': title,
         }
     )

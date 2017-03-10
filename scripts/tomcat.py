@@ -63,7 +63,7 @@ def check_tomcat():
     """
     content_body = ""
     content = ""
-    url_all = tomcat_url.objects.all()
+    url_all = tomcat_url.objects.filter(status='active').all()
     code_list = ['200', '302', '405']
     for tomcat_info in url_all:
         result = {}
@@ -72,7 +72,7 @@ def check_tomcat():
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
         try:
-            ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=10)
+            ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=5)
             result['code'] = '%s' %ret.status_code
             try:
                 title = re.search('<title>.*?</title>', ret.content)

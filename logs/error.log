@@ -32134,3 +32134,604 @@ Traceback (most recent call last):
   File "/django/saltstack/views.py", line 25, in CheckMinion
     logger.info('%s is requesting. %s' %(ip, data))
 NameError: global name 'ip' is not defined
+2017-03-10 11:07:55,866 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:11:40,877 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:20:43,494 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:21:14,936 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:21:46,432 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:21:48,709 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:22:49,883 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:22:58,853 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:23:09,529 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:51:35,349 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:52:13,555 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:53:04,750 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:53:12,754 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:54:13,131 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:54:32,674 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:55:47,947 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:56:58,922 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 11:57:15,613 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 12:14:48,028 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 12:15:09,561 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/saltstack/views.py", line 26, in CheckMinion
+    result   = sapi.checkMinion(data['tgt'])
+  File "/django/saltstack/saltapi.py", line 78, in checkMinion
+    content = self.postRequest(obj)
+  File "/django/saltstack/saltapi.py", line 52, in postRequest
+    opener = urllib2.urlopen(req)
+  File "/usr/local/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/local/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/local/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/local/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/local/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 401: Unauthorized
+2017-03-10 13:29:11,563 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/Add
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/django/check_tomcat/views.py", line 70, in Add
+    data = json.loads(request.body)
+  File "/usr/local/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python2.7/json/decoder.py", line 369, in decode
+    raise ValueError(errmsg("Extra data", s, end, len(s)))
+ValueError: Extra data: line 1 column 2 - line 1 column 387 (char 1 - 386)
+2017-03-10 20:09:43,742 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/django/check_tomcat/views.py", line 111, in index
+    'title': title,
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for '/' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-03-10 20:17:55,014 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/django/check_tomcat/views.py", line 111, in index
+    'title': title,
+  File "/usr/local/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'index' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []

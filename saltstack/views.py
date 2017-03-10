@@ -23,6 +23,7 @@ def CheckMinion(request):
         #return HttpResponse("%s" %request.body)
         data     = json.loads(request.body)
         logger.info('%s is requesting. %s' %(clientip, data))
+        #logger.info('%s' %(data['tgt']))
         result   = sapi.checkMinion(data['tgt'])
         if len(result['return'][0]) != 0:
             return HttpResponse("True")

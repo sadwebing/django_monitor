@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   <head>
     {% load staticfiles %}
     {% if title %}
@@ -7,23 +7,30 @@
     {% else %}
     <title>管理中心</title>
     {% endif %}
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <link rel='shortcut icon' href="static/images/meng.ico" type="image/x-icon" />
-    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/static/bootstrap/js/jquery.min.js"></script>
+    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/bootstrap-table/src/bootstrap-table.css" rel="stylesheet">
+    <script src="/static/otherjs/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap-table-angular.js"></script>
     <script src="/static/bootstrap-table/src/bootstrap-table.js"></script>
     <script src="/static/bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="/static/otherjs/knockout-3.4.2.js"></script>
+    <script src="/static/otherjs/knockout.mapping.js"></script>
   </head>
   <body>
-    <div>
-        <a href="/">Tomcat工程</a>
-    </div>
-    <div>
-        <a href="/saltstack/index">saltstack</a>
-    </div>
+          <ul class="nav navbar-nav navbar-right">
+             <li><a href="/admin/logout">退出</a></li>
+          </ul>
+<div>
+   <ul class="nav nav-sidebar">
+   <li><a></a></li>
+   {% block nav %}{% endblock %}
+   </ul>
+</div>
+
     {% block content %}{% endblock %}
   </body>
 </html>
