@@ -20,6 +20,6 @@ if __name__ == '__main__':
             logger.error('%s %s 服务起不来！' %(time(), server))
     content = check_tomcat()
     if content != "":
-        send_mail(get_mail_list('arno'),'tomcat报警',content,format='html')
+        send_mail(get_mail_list('arno', 'sa'),'tomcat报警',content,format='html')
     if len(minionsdown) != 0:
         send_mail(get_mail_list('arno', 'vincent'),'Attention','Minion Down:'+ '\n\t' +'\n\t'.join(minionsdown))
