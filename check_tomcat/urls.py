@@ -6,6 +6,7 @@ urlpatterns = [
     url('^check/$', views.MonitorServer),
     url('index/$', views.index),
     url('project/$', views.project),
+    url('tomcat_project/query$', views.ProjectQuery),
     url('tomcat_url/$', views.TomcatUrl),
     url('Add$', views.Add),
     url('Update$', views.Update),

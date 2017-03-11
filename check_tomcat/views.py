@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from models import tomcat_status,tomcat_url
+from models import tomcat_status,tomcat_url, tomcat_project
 import json, logging
 
 logger = logging.getLogger('django')
@@ -60,6 +60,32 @@ def TomcatUrl(request):
             tmp_dict['status_'] = url.status
             url_list.append(tmp_dict)
         return HttpResponse(json.dumps(url_list))
+        #return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt 
+def ProjectQuery(request):
+    clientip = request.META['REMOTE_ADDR']
+    if request.method == 'POST':
+        return HttpResponse('You get nothing!')
+    elif request.method == 'GET':
+        data = tomcat_project.objects.all()
+        project_list = []
+        logger.info('%s is requesting. tomcat_url' %clientip)
+        for project in data:
+            tmp_dict = {}
+            tmp_dict['id'] = project.id
+            tmp_dict['product'] = project.product
+            tmp_dict['project'] = project.project
+            tmp_dict['code_dir'] = project.code_dir
+            tmp_dict['tomcat'] = project.tomcat
+            tmp_dict['main_port'] = project.main_port
+            tmp_dict['jdk'] = project.jdk
+            tmp_dict['script'] = project.script
+            tmp_dict['status_'] = project.status
+            project_list.append(tmp_dict)
+        return HttpResponse(json.dumps(project_list))
         #return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
