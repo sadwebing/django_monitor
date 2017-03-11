@@ -30,7 +30,7 @@ CSRF_COOKIE_SECURE = False
 
 ADMINS = [('Arno', 'Arno@ag866.com')]
 
-ALLOWED_HOSTS = ['192.168.100.107', '43.241.204.107']
+ALLOWED_HOSTS = ['192.168.100.107', '43.241.204.107', '10.11.15.218']
 
 LOGIN_REDIRECT_URL = '/tomcat/index/'
 
@@ -100,7 +100,7 @@ DATABASES = {
         'PORT': '3306',                      # Set to empty string for default.
         'OPTIONS': {
             #'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
-            'charset': 'utf8mb4',
+            'charset': 'utf8',
         },
     }
 }

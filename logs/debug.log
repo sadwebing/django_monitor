@@ -647,3 +647,625 @@
 2017-03-11 08:25:08,173 utils.py [django.db.backends:89] [DEBUG]- (0.001) INSERT INTO `check_tomcat_server_status` (`access_time`, `url`, `status`, `info`) VALUES ('2017/03/11 08:25:08', 'http://192.168.100.107:5000/monitor_server/check/', '200', 'You get nothing!'); args=['2017/03/11 08:25:08', 'http://192.168.100.107:5000/monitor_server/check/', u'200', u'You get nothing!']
 2017-03-11 08:25:08,175 tomcat.py [django:115] [INFO]- http://192.168.100.107:5000/monitor_server/check/ is running.
 2017-03-11 08:25:08,180 utils.py [django.db.backends:89] [DEBUG]- (0.002) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-03-11 08:57:32,891 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:00:53,039 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:00:53,385 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:00:53,516 utils.py [django.db.backends:89] [DEBUG]- (0.130) SHOW FULL TABLES; args=None
+2017-03-11 09:00:53,565 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-11 09:01:04,461 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:01:05,249 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:05:40,977 base.py [django.request:256] [ERROR]- Internal Server Error: /admin
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:05:41,359 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:10:37,088 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:10:37,424 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:10:37,471 utils.py [django.db.backends:89] [DEBUG]- (0.047) SHOW FULL TABLES; args=None
+2017-03-11 09:10:37,520 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-11 09:10:40,391 utils.py [django.db.backends:89] [DEBUG]- (0.058) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:10:40,726 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:10:40,773 utils.py [django.db.backends:89] [DEBUG]- (0.047) SHOW FULL TABLES; args=None
+2017-03-11 09:10:40,822 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-11 09:10:58,407 base.py [django.request:256] [ERROR]- Internal Server Error: /admin
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:10:58,842 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:11:38,119 base.py [django.request:256] [ERROR]- Internal Server Error: /admin
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:11:38,520 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:21:10,996 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:11,335 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:11,381 utils.py [django.db.backends:89] [DEBUG]- (0.047) SHOW FULL TABLES; args=None
+2017-03-11 09:21:11,447 utils.py [django.db.backends:89] [DEBUG]- (0.064) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-11 09:21:31,331 base.py [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-03-11 09:21:37,137 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:37,438 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:37,486 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'arno'; args=(u'arno',)
+2017-03-11 09:21:37,558 utils.py [django.db.backends:89] [DEBUG]- (0.043) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' LIMIT 1; args=(u'bat4est512nvohpgv5o2zx85jlfxp0f3',)
+2017-03-11 09:21:37,644 utils.py [django.db.backends:89] [DEBUG]- (0.044) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('bat4est512nvohpgv5o2zx85jlfxp0f3', 'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', '2017-03-25 09:21:37.558000'); args=(u'bat4est512nvohpgv5o2zx85jlfxp0f3', u'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', u'2017-03-25 09:21:37.558000')
+2017-03-11 09:21:37,776 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3'; args=(u'bat4est512nvohpgv5o2zx85jlfxp0f3',)
+2017-03-11 09:21:37,868 utils.py [django.db.backends:89] [DEBUG]- (0.045) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('bat4est512nvohpgv5o2zx85jlfxp0f3'); args=(u'bat4est512nvohpgv5o2zx85jlfxp0f3',)
+2017-03-11 09:21:38,056 utils.py [django.db.backends:89] [DEBUG]- (0.055) UPDATE `auth_user` SET `last_login` = '2017-03-11 09:21:37.955000' WHERE `auth_user`.`id` = 6; args=(u'2017-03-11 09:21:37.955000', 6)
+2017-03-11 09:21:38,237 utils.py [django.db.backends:89] [DEBUG]- (0.047) UPDATE `django_session` SET `session_data` = 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', `expire_date` = '2017-03-25 09:21:38.147000' WHERE `django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3'; args=(u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 09:21:38.147000', u'bat4est512nvohpgv5o2zx85jlfxp0f3')
+2017-03-11 09:21:38,282 utils.py [django.db.backends:89] [DEBUG]- (0.044) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('bat4est512nvohpgv5o2zx85jlfxp0f3', 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', '2017-03-25 09:21:38.147000'); args=(u'bat4est512nvohpgv5o2zx85jlfxp0f3', u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 09:21:38.147000')
+2017-03-11 09:21:38,691 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:38,993 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:39,040 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:21:38.378000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:21:38.378000')
+2017-03-11 09:21:39,088 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:21:39,164 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON ( `django_admin_log`.`user_id` = `auth_user`.`id` ) LEFT OUTER JOIN `django_content_type` ON ( `django_admin_log`.`content_type_id` = `django_content_type`.`id` ) WHERE `django_admin_log`.`user_id` = 6 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(6,)
+2017-03-11 09:21:44,174 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:44,476 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:44,522 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:21:43.851000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:21:43.851000')
+2017-03-11 09:21:44,569 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:21:44,571 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 09:21:45,035 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 09:21:45,336 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:21:45,388 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 09:22:28,124 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:22:28,433 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:22:28,479 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:22:27.819000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:22:27.819000')
+2017-03-11 09:22:28,526 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:22:28,528 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 09:22:28,686 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 09:22:28,989 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:22:29,040 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 09:25:07,220 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:25:07,523 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:25:07,569 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:25:06.918000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:25:06.918000')
+2017-03-11 09:25:07,618 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:25:07,618 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 09:25:07,744 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 09:25:08,049 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:25:08,104 utils.py [django.db.backends:89] [DEBUG]- (0.054) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 09:25:18,076 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:25:18,377 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:25:18,424 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:25:17.773000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:25:17.773000')
+2017-03-11 09:25:18,471 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:25:18,473 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 09:25:18,599 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 09:25:18,904 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:25:18,956 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 09:29:18,417 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:29:18,726 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:29:18,776 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:29:18.111000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:29:18.111000')
+2017-03-11 09:29:18,825 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:29:18,825 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 09:29:18,905 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 09:29:19,209 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:29:19,259 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 09:34:07,507 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:07,859 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:07,911 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:34:07.205000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:34:07.205000')
+2017-03-11 09:34:07,960 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:34:07,960 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 09:34:08,161 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 09:34:08,469 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:08,520 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 09:34:27,016 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:27,325 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:27,371 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:34:26.706000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:34:26.706000')
+2017-03-11 09:34:27,420 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:34:27,420 views.py [django:43] [INFO]- 127.0.0.1 is requesting.
+2017-03-11 09:34:27,492 base.py [django.request:170] [WARNING]- Not Found: /saltstack/static/images/meng.ico
+2017-03-11 09:34:29,158 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:29,473 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:29,519 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3' AND `django_session`.`expire_date` > '2017-03-11 09:34:28.856000'); args=('bat4est512nvohpgv5o2zx85jlfxp0f3', u'2017-03-11 09:34:28.856000')
+2017-03-11 09:34:29,568 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:34:29,614 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'bat4est512nvohpgv5o2zx85jlfxp0f3'; args=('bat4est512nvohpgv5o2zx85jlfxp0f3',)
+2017-03-11 09:34:29,700 utils.py [django.db.backends:89] [DEBUG]- (0.043) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('bat4est512nvohpgv5o2zx85jlfxp0f3'); args=(u'bat4est512nvohpgv5o2zx85jlfxp0f3',)
+2017-03-11 09:34:44,703 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:45,006 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:45,052 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'arno'; args=(u'arno',)
+2017-03-11 09:34:45,124 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'd9facwcfpjf4vnxs4styowvftb2pj91g' LIMIT 1; args=(u'd9facwcfpjf4vnxs4styowvftb2pj91g',)
+2017-03-11 09:34:45,216 utils.py [django.db.backends:89] [DEBUG]- (0.049) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('d9facwcfpjf4vnxs4styowvftb2pj91g', 'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', '2017-03-25 09:34:45.124000'); args=(u'd9facwcfpjf4vnxs4styowvftb2pj91g', u'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', u'2017-03-25 09:34:45.124000')
+2017-03-11 09:34:45,355 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'd9facwcfpjf4vnxs4styowvftb2pj91g'; args=(u'd9facwcfpjf4vnxs4styowvftb2pj91g',)
+2017-03-11 09:34:45,447 utils.py [django.db.backends:89] [DEBUG]- (0.047) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('d9facwcfpjf4vnxs4styowvftb2pj91g'); args=(u'd9facwcfpjf4vnxs4styowvftb2pj91g',)
+2017-03-11 09:34:45,628 utils.py [django.db.backends:89] [DEBUG]- (0.043) UPDATE `auth_user` SET `last_login` = '2017-03-11 09:34:45.540000' WHERE `auth_user`.`id` = 6; args=(u'2017-03-11 09:34:45.540000', 6)
+2017-03-11 09:34:45,805 utils.py [django.db.backends:89] [DEBUG]- (0.044) UPDATE `django_session` SET `session_data` = 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', `expire_date` = '2017-03-25 09:34:45.719000' WHERE `django_session`.`session_key` = 'd9facwcfpjf4vnxs4styowvftb2pj91g'; args=(u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 09:34:45.719000', u'd9facwcfpjf4vnxs4styowvftb2pj91g')
+2017-03-11 09:34:45,851 utils.py [django.db.backends:89] [DEBUG]- (0.044) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('d9facwcfpjf4vnxs4styowvftb2pj91g', 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', '2017-03-25 09:34:45.719000'); args=(u'd9facwcfpjf4vnxs4styowvftb2pj91g', u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 09:34:45.719000')
+2017-03-11 09:34:46,257 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:46,561 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:46,607 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'd9facwcfpjf4vnxs4styowvftb2pj91g' AND `django_session`.`expire_date` > '2017-03-11 09:34:45.950000'); args=('d9facwcfpjf4vnxs4styowvftb2pj91g', u'2017-03-11 09:34:45.950000')
+2017-03-11 09:34:46,654 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:34:46,655 views.py [django:43] [INFO]- 127.0.0.1 is requesting.
+2017-03-11 09:34:49,509 utils.py [django.db.backends:89] [DEBUG]- (0.060) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:52,112 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:34:52,161 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'd9facwcfpjf4vnxs4styowvftb2pj91g' AND `django_session`.`expire_date` > '2017-03-11 09:34:49.044000'); args=('d9facwcfpjf4vnxs4styowvftb2pj91g', u'2017-03-11 09:34:49.044000')
+2017-03-11 09:34:52,209 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:34:52,255 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'd9facwcfpjf4vnxs4styowvftb2pj91g'; args=('d9facwcfpjf4vnxs4styowvftb2pj91g',)
+2017-03-11 09:34:52,349 utils.py [django.db.backends:89] [DEBUG]- (0.051) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('d9facwcfpjf4vnxs4styowvftb2pj91g'); args=(u'd9facwcfpjf4vnxs4styowvftb2pj91g',)
+2017-03-11 09:35:04,464 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:35:04,766 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:35:04,812 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'arno'; args=(u'arno',)
+2017-03-11 09:35:04,882 utils.py [django.db.backends:89] [DEBUG]- (0.043) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'phfbw2br7770ty3fmetjgm6lkeynmm6l' LIMIT 1; args=(u'phfbw2br7770ty3fmetjgm6lkeynmm6l',)
+2017-03-11 09:35:04,970 utils.py [django.db.backends:89] [DEBUG]- (0.043) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('phfbw2br7770ty3fmetjgm6lkeynmm6l', 'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', '2017-03-25 09:35:04.884000'); args=(u'phfbw2br7770ty3fmetjgm6lkeynmm6l', u'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', u'2017-03-25 09:35:04.884000')
+2017-03-11 09:35:05,101 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'phfbw2br7770ty3fmetjgm6lkeynmm6l'; args=(u'phfbw2br7770ty3fmetjgm6lkeynmm6l',)
+2017-03-11 09:35:05,197 utils.py [django.db.backends:89] [DEBUG]- (0.053) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('phfbw2br7770ty3fmetjgm6lkeynmm6l'); args=(u'phfbw2br7770ty3fmetjgm6lkeynmm6l',)
+2017-03-11 09:35:05,374 utils.py [django.db.backends:89] [DEBUG]- (0.043) UPDATE `auth_user` SET `last_login` = '2017-03-11 09:35:05.286000' WHERE `auth_user`.`id` = 6; args=(u'2017-03-11 09:35:05.286000', 6)
+2017-03-11 09:35:05,563 utils.py [django.db.backends:89] [DEBUG]- (0.044) UPDATE `django_session` SET `session_data` = 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', `expire_date` = '2017-03-25 09:35:05.469000' WHERE `django_session`.`session_key` = 'phfbw2br7770ty3fmetjgm6lkeynmm6l'; args=(u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 09:35:05.469000', u'phfbw2br7770ty3fmetjgm6lkeynmm6l')
+2017-03-11 09:35:05,608 utils.py [django.db.backends:89] [DEBUG]- (0.044) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('phfbw2br7770ty3fmetjgm6lkeynmm6l', 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', '2017-03-25 09:35:05.469000'); args=(u'phfbw2br7770ty3fmetjgm6lkeynmm6l', u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 09:35:05.469000')
+2017-03-11 09:35:06,000 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:35:06,302 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 09:35:06,348 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'phfbw2br7770ty3fmetjgm6lkeynmm6l' AND `django_session`.`expire_date` > '2017-03-11 09:35:05.700000'); args=('phfbw2br7770ty3fmetjgm6lkeynmm6l', u'2017-03-11 09:35:05.700000')
+2017-03-11 09:35:06,397 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 09:35:06,467 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON ( `django_admin_log`.`user_id` = `auth_user`.`id` ) LEFT OUTER JOIN `django_content_type` ON ( `django_admin_log`.`content_type_id` = `django_content_type`.`id` ) WHERE `django_admin_log`.`user_id` = 6 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(6,)
+2017-03-11 10:47:59,319 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:47:59,622 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:47:59,668 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'phfbw2br7770ty3fmetjgm6lkeynmm6l' AND `django_session`.`expire_date` > '2017-03-11 10:47:59.014000'); args=('phfbw2br7770ty3fmetjgm6lkeynmm6l', u'2017-03-11 10:47:59.014000')
+2017-03-11 10:47:59,717 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 10:47:59,717 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 10:47:59,923 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 10:48:00,232 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:48:00,282 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 10:50:03,651 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:50:03,964 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:50:04,012 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'phfbw2br7770ty3fmetjgm6lkeynmm6l' AND `django_session`.`expire_date` > '2017-03-11 10:50:03.335000'); args=('phfbw2br7770ty3fmetjgm6lkeynmm6l', u'2017-03-11 10:50:03.335000')
+2017-03-11 10:50:04,059 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 10:50:04,131 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `django_admin_log`.`id`, `django_admin_log`.`action_time`, `django_admin_log`.`user_id`, `django_admin_log`.`content_type_id`, `django_admin_log`.`object_id`, `django_admin_log`.`object_repr`, `django_admin_log`.`action_flag`, `django_admin_log`.`change_message`, `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined`, `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_admin_log` INNER JOIN `auth_user` ON ( `django_admin_log`.`user_id` = `auth_user`.`id` ) LEFT OUTER JOIN `django_content_type` ON ( `django_admin_log`.`content_type_id` = `django_content_type`.`id` ) WHERE `django_admin_log`.`user_id` = 6 ORDER BY `django_admin_log`.`action_time` DESC LIMIT 10; args=(6,)
+2017-03-11 10:52:33,536 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:52:33,848 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:52:33,898 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'arno'; args=(u'arno',)
+2017-03-11 10:52:33,969 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' LIMIT 1; args=(u'dp8cseyx142gtd5rri89m8uh7zq098oy',)
+2017-03-11 10:52:34,055 utils.py [django.db.backends:89] [DEBUG]- (0.044) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('dp8cseyx142gtd5rri89m8uh7zq098oy', 'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', '2017-03-25 10:52:33.969000'); args=(u'dp8cseyx142gtd5rri89m8uh7zq098oy', u'OGU3ZDgwOWE3NzAxN2Q5ODQ4YzQwNmNiZWVmYTlmZjhjZTc4MGYxNzp7fQ==', u'2017-03-25 10:52:33.969000')
+2017-03-11 10:52:34,200 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy'; args=(u'dp8cseyx142gtd5rri89m8uh7zq098oy',)
+2017-03-11 10:52:34,286 utils.py [django.db.backends:89] [DEBUG]- (0.044) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('dp8cseyx142gtd5rri89m8uh7zq098oy'); args=(u'dp8cseyx142gtd5rri89m8uh7zq098oy',)
+2017-03-11 10:52:34,469 utils.py [django.db.backends:89] [DEBUG]- (0.044) UPDATE `auth_user` SET `last_login` = '2017-03-11 10:52:34.378000' WHERE `auth_user`.`id` = 6; args=(u'2017-03-11 10:52:34.378000', 6)
+2017-03-11 10:52:34,650 utils.py [django.db.backends:89] [DEBUG]- (0.050) UPDATE `django_session` SET `session_data` = 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', `expire_date` = '2017-03-25 10:52:34.556000' WHERE `django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy'; args=(u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 10:52:34.556000', u'dp8cseyx142gtd5rri89m8uh7zq098oy')
+2017-03-11 10:52:34,694 utils.py [django.db.backends:89] [DEBUG]- (0.044) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('dp8cseyx142gtd5rri89m8uh7zq098oy', 'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', '2017-03-25 10:52:34.556000'); args=(u'dp8cseyx142gtd5rri89m8uh7zq098oy', u'YjlmNDkzOTRkY2M5YTI1MjQwYzFjNDJmZDdjNjAzMDYxMzQ1Y2ZkNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkYzUwMGEyMTBhOGNkZDI4ZDM3NWEzZTBmMDVhOTkwYTA3ZmZjNWMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=', u'2017-03-25 10:52:34.556000')
+2017-03-11 10:52:35,091 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:52:35,398 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:52:35,444 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 10:52:34.787000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 10:52:34.787000')
+2017-03-11 10:52:35,492 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 10:52:35,493 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 10:52:35,740 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 10:52:36,046 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:52:36,104 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 10:56:05,130 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:56:05,436 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:56:05,483 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 10:56:04.827000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 10:56:04.827000')
+2017-03-11 10:56:05,532 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 10:56:05,532 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 10:56:05,778 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 10:56:06,102 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:56:06,154 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 10:57:25,651 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:57:25,957 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:57:26,006 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 10:57:25.350000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 10:57:25.350000')
+2017-03-11 10:57:26,055 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 10:57:26,056 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 10:57:26,296 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 10:57:26,605 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 10:57:26,661 utils.py [django.db.backends:89] [DEBUG]- (0.056) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 11:29:10,838 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:29:11,145 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:29:11,191 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:29:10.534000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:29:10.534000')
+2017-03-11 11:29:11,240 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:29:11,240 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:29:11,483 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 11:29:11,789 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:29:11,842 utils.py [django.db.backends:89] [DEBUG]- (0.053) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 11:33:29,256 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:33:29,569 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:33:29,615 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:33:28.940000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:33:28.940000')
+2017-03-11 11:33:29,664 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:33:29,664 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:33:50,578 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:33:50,884 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:33:50,931 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:33:50.276000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:33:50.276000')
+2017-03-11 11:33:50,980 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:33:50,980 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:33:51,213 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 11:33:51,519 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:33:51,573 utils.py [django.db.backends:89] [DEBUG]- (0.054) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 11:44:19,171 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:44:19,474 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:44:19,520 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:44:18.859000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:44:18.859000')
+2017-03-11 11:44:19,569 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:44:19,569 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:53:51,562 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:53:51,877 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:53:51,924 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:53:51.246000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:53:51.246000')
+2017-03-11 11:53:51,974 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:53:51,974 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:53:52,213 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 11:53:52,523 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:53:52,573 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 11:56:53,859 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:56:54,161 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:56:54,209 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:56:53.559000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:56:53.559000')
+2017-03-11 11:56:54,256 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:56:54,257 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:56:54,273 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 111, in index
+    'title': title,
+  File "D:\django\monitor\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: check_tomcat.html
+2017-03-11 11:57:26,108 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:57:26,474 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:57:26,522 utils.py [django.db.backends:89] [DEBUG]- (0.046) SHOW FULL TABLES; args=None
+2017-03-11 11:57:26,579 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-11 11:57:28,844 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:57:29,186 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:57:29,232 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:57:28.531000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:57:28.531000')
+2017-03-11 11:57:29,280 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:57:29,282 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:57:29,423 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 11:57:29,727 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:57:29,779 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 11:59:27,415 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:27,776 utils.py [django.db.backends:89] [DEBUG]- (0.055) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:27,822 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:59:27.053000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:59:27.053000')
+2017-03-11 11:59:27,884 utils.py [django.db.backends:89] [DEBUG]- (0.062) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:59:27,884 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:59:27,969 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 11:59:28,308 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:28,378 utils.py [django.db.backends:89] [DEBUG]- (0.070) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 11:59:31,631 utils.py [django.db.backends:89] [DEBUG]- (0.100) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:31,987 utils.py [django.db.backends:89] [DEBUG]- (0.054) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:32,033 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:59:30.995000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:59:30.995000')
+2017-03-11 11:59:32,088 utils.py [django.db.backends:89] [DEBUG]- (0.054) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:59:32,088 views.py [django:43] [INFO]- 127.0.0.1 is requesting.
+2017-03-11 11:59:34,717 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 11:59:35,063 utils.py [django.db.backends:89] [DEBUG]- (0.053) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:35,118 utils.py [django.db.backends:89] [DEBUG]- (0.054) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-11 11:59:54,973 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:55,279 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:55,325 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dp8cseyx142gtd5rri89m8uh7zq098oy' AND `django_session`.`expire_date` > '2017-03-11 11:59:54.670000'); args=('dp8cseyx142gtd5rri89m8uh7zq098oy', u'2017-03-11 11:59:54.670000')
+2017-03-11 11:59:55,374 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-11 11:59:55,375 views.py [django:106] [INFO]- 127.0.0.1 is requesting /
+2017-03-11 11:59:55,502 views.py [django:53] [INFO]- 127.0.0.1 is requesting. tomcat_url
+2017-03-11 11:59:55,803 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-11 11:59:55,861 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()

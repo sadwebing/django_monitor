@@ -106,7 +106,7 @@ def index(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'check_tomcat.html',
+        'tomcat_index.html',
         {
             'title': title,
         }

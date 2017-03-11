@@ -21,16 +21,14 @@
     <script src="/static/otherjs/knockout.mapping.js"></script>
   </head>
   <body>
-          <ul class="nav navbar-nav navbar-right">
-             <li><a href="/admin/logout">退出</a></li>
-          </ul>
-<div>
+  <div class="comtainer">
+    <ul class="nav navbar-nav navbar-right">
+       <li><a href="/admin/logout">退出</a></li>
+    </ul>
    <ul class="nav nav-sidebar">
-   <li><a></a></li>
-   {% block nav %}{% endblock %}
+      {% block nav %}{% endblock %}
    </ul>
-</div>
-
-    {% block content %}{% endblock %}
+      {% block content %}{% endblock %}
+  </div>
   </body>
 </html>

@@ -32735,3 +32735,374 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for 'index' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-03-11 09:01:04,461 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:01:05,249 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:05:40,977 base.py [django.request:256] [ERROR]- Internal Server Error: /admin
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:05:41,359 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:10:58,407 base.py [django.request:256] [ERROR]- Internal Server Error: /admin
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:10:58,842 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:11:38,119 base.py [django.request:256] [ERROR]- Internal Server Error: /admin
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 09:11:38,520 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 11, in __init__
+    self.__token_id = self.saltLogin()
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 20, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "C:\Python27\Lib\urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python27\Lib\urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "C:\Python27\Lib\urllib2.py", line 449, in _open
+    '_open', req)
+  File "C:\Python27\Lib\urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "C:\Python27\Lib\urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "C:\Python27\Lib\urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)>
+2017-03-11 11:56:54,273 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 111, in index
+    'title': title,
+  File "D:\django\monitor\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: check_tomcat.html

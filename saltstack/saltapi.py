@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import urllib2, urllib, json
+import urllib2, urllib, json, ssl
 
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class SaltAPI(object):
     def __init__(self, url, username, password):
