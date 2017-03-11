@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     url('^check/$', views.MonitorServer),
     url('index/$', views.index),
+    url('project/$', views.project),
     url('tomcat_url/$', views.TomcatUrl),
     url('Add$', views.Add),
     url('Update$', views.Update),

@@ -111,4 +111,17 @@ def index(request):
             'title': title,
         }
     )
+@csrf_protect
+@login_required
+def project(request):
+    title = u'管理中心'
+    clientip = request.META['REMOTE_ADDR']
+    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+    return render(
+        request,
+        'tomcat_project.html',
+        {
+            'title': title,
+        }
+    )
 
