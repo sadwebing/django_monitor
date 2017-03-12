@@ -25,6 +25,7 @@ var operate = {
     operateInit: function () {
         this.operateAdd();
         this.operateUpdate();
+        this.operateconfirmDelete();
         this.operateDelete();
         this.DepartmentModel = {
             id: ko.observable(),
@@ -77,6 +78,25 @@ var operate = {
             });
         });
     },
+
+    operateconfirmDelete: function () {
+        $('#btn_confirm_delete').on("click", function () {
+            var arrselectedData = tableInit.myViewModel.getSelections();
+            if (arrselectedData.length <= 0){
+                alert("请至少选择一行数据");
+                return false;
+            }
+            $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
+                ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
+                ko.applyBindings(operate.DepartmentModel, document.getElementById("confirmDeleteModal"));
+                operate.operateDelete();
+            }).on('hidden.bs.modal', function () {
+                //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+                ko.cleanNode(document.getElementById("confirmDeleteModal"));
+            });
+        });
+    },
+
     //删除
     operateDelete: function () {
         $('#btn_delete').on("click", function () {
@@ -91,29 +111,20 @@ var operate = {
             //        tableInit.myViewModel.refresh();
             //    }
             //});
-            $.ajax({
-                url: "/tomcat/tomcat_project/Delete",
-                type: "get",
-                success: function (status) {
-                    alert(status);
-                    tableInit.myViewModel.refresh();
-                }
-            });
+            var oViewModel = operate.DepartmentModel;
+            //var oDataModel = ko.toJS(oViewModel);
+            //$.ajax({
+            //    url: "/tomcat/tomcat_project/Delete",
+            //    type: "post",
+            //    data: oDataModel,
+            //    success: function (data, status) {
+            //        alert(status);
+            //        tableInit.myViewModel.refresh();
+            //    }
+            //});
         });
     },
 
-    operateconfirmDelete: function () {
-        $('#btn_confirm_delete').on("click", function () {
-            var arrselectedData = tableInit.myViewModel.getSelections();
-            if (arrselectedData.length <= 0){
-                alert("请至少选择一行数据");
-                return false;
-            }
-            $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
-                operate.operateDelete();
-            });
-        });
-    },
 
     //保存数据
     operateSave: function () {

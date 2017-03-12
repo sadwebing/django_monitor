@@ -20,21 +20,20 @@
         </button>
     </div>
     <table id="project_table" class="table table-bordered" data-bind="myBootstrapTable:$root">
-            <thead>
-                <tr>
-                    <th data-checkbox="true"></th>
-                    <th data-field="id">id</th>
-                    <th data-field="product">product</th>
-                    <th data-field="project">project</th>
-                    <th data-field="code_dir">code_dir</th>
-                    <th data-field="tomcat">tomcat</th>
-                    <th data-field="main_port">main_port</th>
-                    <th data-field="jdk">jdk</th>
-                    <th data-field="script">script</th>
-                    <th data-field="status_">status</th>
-                </tr>
-            </thead>
-
+        <thead>
+            <tr>
+                <th data-checkbox="true"></th>
+                <th data-field="id">id</th>
+                <th data-field="product">product</th>
+                <th data-field="project">project</th>
+                <th data-field="code_dir">code_dir</th>
+                <th data-field="tomcat">tomcat</th>
+                <th data-field="main_port">main_port</th>
+                <th data-field="jdk">jdk</th>
+                <th data-field="script">script</th>
+                <th data-field="status_">status</th>
+            </tr>
+        </thead>
     </table>
         <div class="modal hide fade" id="mytomcatproductModal" tabindex="-1" role="dialog" aria-labelledby="mytomcatproductModalLabel">
             <div class="modal-dialog" role="document">
@@ -96,12 +95,37 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="confirmDeleteModalLabel">请确认</h4>
                     </div>
-                    {% comment %}
+                        <table class="table table-bordered">
+                            <th>
+                                <tr>
+                                    <td>id</td>
+                                    <td>product</td>
+                                    <td>project</td>
+                                    <td>code_dir</td>
+                                    <td>tomcat</td>
+                                    <td>main_port</td>
+                                    <td>jdk</td>
+                                    <td>script</td>
+                                    <td>status</td>
+                                </tr>
+                            </th>
+                            <tr>
+                                <th data-bind="value:script"></th>
+                                <th data-bind="value:product"></th>
+                                <th data-bind="value:project"></th>
+                                <th data-bind="value:code_dir"></th>
+                                <th data-bind="value:tomcat"></th>
+                                <th data-bind="value:main_port"></th>
+                                <th data-bind="value:jdk"></th>
+                                <th data-bind="value:script"></th>
+                                <th data-bind="value:status_"></th>
+                            </tr>
+                        </table>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
                         <button type="button" id="btn_delete" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
                     </div>
-                    {% endcomment %}
                 </div>
             </div>
         </div>
