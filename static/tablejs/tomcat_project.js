@@ -2,13 +2,12 @@ $(function () {
     tableInit.Init();
     operate.operateInit();
 });
-
 //初始化表格
 var tableInit = {
     Init: function () {
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
-            url: '/tomcat/tomcat_project',         //请求后台的URL（*）
+            url: '/tomcat/tomcat_project/Query',         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
@@ -85,13 +84,13 @@ var operate = {
         $('#btn_delete').on("click", function () {
             var arrselectedData = tableInit.myViewModel.getSelections();
             $.ajax({
-                url: "/tomcat/Delete",
+                url: "/tomcat/tomcat_project/Delete",
                 type: "post",
                 contentType: 'application/json',
                 data: JSON.stringify(arrselectedData),
                 success: function (data, status) {
                     alert(status);
-                    //tableInit.myViewModel.refresh();
+                    tableInit.myViewModel.refresh();
                 }
             });
         });
@@ -101,10 +100,42 @@ var operate = {
         $('#btn_submit').on("click", function () {
             //取到当前的viewmodel
             var oViewModel = operate.DepartmentModel;
+            var jdkarray = ko.observableArray(['jdk1.6', 'jdk1.7', 'jdk1.8']);
+            if (!oViewModel.product()){
+                alert("product 不能为空!");
+                return false;
+            }
+            if (!oViewModel.project()){
+                alert("project 不能为空!");
+                return false;
+            }
+            if (!oViewModel.code_dir()){
+                alert("code_dir 不能为空!");
+                return false;
+            }
+            if (!oViewModel.tomcat()){
+                oViewModel.tomcat('')
+            }
+            if (!oViewModel.main_port()){
+                oViewModel.main_port('')
+            }
+            if (!oViewModel.jdk()){
+                oViewModel.jdk('')
+            }else if(!$.inArray(oViewModel.jdk(), jdkarray())){
+                alert("jdk 版本不正确!");
+                return false;
+            }
+            if (!oViewModel.script()){
+                oViewModel.script('')
+            }
+            if (!oViewModel.status_()){
+                oViewModel.status_('')
+            }
             //将Viewmodel转换为数据model
-            var oDataModel = ko.toJS(oViewModel);var funcName = oDataModel.id?"Update":"Add";
+            var oDataModel = ko.toJS(oViewModel);
+            var funcName = oDataModel.id?"Update":"Add";
             $.ajax({
-                url: "/tomcat/"+funcName,
+                url: "/tomcat/tomcat_project/"+funcName,
                 type: "post",
                 data: oDataModel,
                 success: function (data, status) {
