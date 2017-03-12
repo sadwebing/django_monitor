@@ -7,7 +7,11 @@ var tableInit = {
     Init: function () {
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
+<<<<<<< HEAD
             url: '/tomcat/tomcat_project/Query',         //请求后台的URL（*）
+=======
+            url: '/tomcat/tomcat_project/query',         //请求后台的URL（*）
+>>>>>>> 9fc7d037d7bd5eadabf6a6ace93719a19384a120
             method: 'get',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器

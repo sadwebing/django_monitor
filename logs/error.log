@@ -33106,6 +33106,7 @@ Traceback (most recent call last):
   File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 46, in get_template
     raise TemplateDoesNotExist(template_name)
 TemplateDoesNotExist: check_tomcat.html
+<<<<<<< HEAD
 2017-03-12 08:49:06,503 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/Update
 Traceback (most recent call last):
   File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
@@ -33932,3 +33933,209 @@ Traceback (most recent call last):
   File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
     super(Connection, self).__init__(*args, **kwargs2)
 OperationalError: (2003, "Can't connect to MySQL server on '192.168.100.164' (10060)")
+=======
+2017-03-11 21:26:33,789 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 12, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 21, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 60] Operation timed out>
+2017-03-11 21:27:48,900 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 12, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 21, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 60] Operation timed out>
+2017-03-11 21:29:38,618 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 12, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 21, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 60] Operation timed out>
+2017-03-11 21:32:01,959 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 14, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 12, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 21, in saltLogin
+    opener = urllib2.urlopen(req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 154, in urlopen
+    return opener.open(url, data, timeout)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1240, in https_open
+    context=self._context)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 1197, in do_open
+    raise URLError(err)
+URLError: <urlopen error [Errno 60] Operation timed out>
+2017-03-11 22:01:13,694 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/project/
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 9, in <module>
+    rl('project/query$', views.ProjectQuery),
+NameError: name 'rl' is not defined
+2017-03-11 22:01:13,834 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 9, in <module>
+    rl('project/query$', views.ProjectQuery),
+NameError: name 'rl' is not defined
+>>>>>>> 9fc7d037d7bd5eadabf6a6ace93719a19384a120
