@@ -81,6 +81,9 @@ def ProjectUpdate(request):
 @csrf_exempt 
 def ProjectDelete(request):
     clientip = request.META['REMOTE_ADDR']
+    data = json.loads(request.body)
+    logger.info('%s' %data)
+    return HttpResponse('success!')
     if request.method == 'POST':
         for data in json.loads(request.body):
         	logger.info('%s' %data)

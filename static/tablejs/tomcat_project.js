@@ -7,11 +7,7 @@ var tableInit = {
     Init: function () {
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
-<<<<<<< HEAD
             url: '/tomcat/tomcat_project/Query',         //请求后台的URL（*）
-=======
-            url: '/tomcat/tomcat_project/query',         //请求后台的URL（*）
->>>>>>> 9fc7d037d7bd5eadabf6a6ace93719a19384a120
             method: 'get',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
@@ -71,8 +67,6 @@ var operate = {
             var arrselectedData = tableInit.myViewModel.getSelections();
             if (!operate.operateCheck(arrselectedData)) { return; }
             $("#mytomcatproductModal").modal().on("shown.bs.modal", function () {
-                var arrselectedData = tableInit.myViewModel.getSelections();
-                if (!operate.operateCheck(arrselectedData)) { return; }
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("mytomcatproductModal"));
@@ -86,25 +80,48 @@ var operate = {
     //删除
     operateDelete: function () {
         $('#btn_delete').on("click", function () {
-            var arrselectedData = tableInit.myViewModel.getSelections();
+            //var arrselectedData = tableInit.myViewModel.getSelections();
+            //$.ajax({
+            //    url: "/tomcat/tomcat_project/Delete",
+            //    type: "post",
+            //    contentType: 'application/json',
+            //    data: JSON.stringify(arrselectedData),
+            //    success: function (data, status) {
+            //        alert(status);
+            //        tableInit.myViewModel.refresh();
+            //    }
+            //});
             $.ajax({
                 url: "/tomcat/tomcat_project/Delete",
-                type: "post",
-                contentType: 'application/json',
-                data: JSON.stringify(arrselectedData),
-                success: function (data, status) {
+                type: "get",
+                success: function (status) {
                     alert(status);
                     tableInit.myViewModel.refresh();
                 }
             });
         });
     },
+
+    operateconfirmDelete: function () {
+        $('#btn_confirm_delete').on("click", function () {
+            var arrselectedData = tableInit.myViewModel.getSelections();
+            if (arrselectedData.length <= 0){
+                alert("请至少选择一行数据");
+                return false;
+            }
+            $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
+                operate.operateDelete();
+            });
+        });
+    },
+
     //保存数据
     operateSave: function () {
         $('#btn_submit').on("click", function () {
             //取到当前的viewmodel
             var oViewModel = operate.DepartmentModel;
             var jdkarray = ko.observableArray(['jdk1.6', 'jdk1.7', 'jdk1.8']);
+            //var jdkarray = new Array('jdk1.6', 'jdk1.7', 'jdk1.8');
             if (!oViewModel.product()){
                 alert("product 不能为空!");
                 return false;
@@ -125,7 +142,7 @@ var operate = {
             }
             if (!oViewModel.jdk()){
                 oViewModel.jdk('')
-            }else if(!$.inArray(oViewModel.jdk(), jdkarray())){
+            }else if(!operate.contains(oViewModel.jdk(), jdkarray)){
                 alert("jdk 版本不正确!");
                 return false;
             }
@@ -148,6 +165,15 @@ var operate = {
                 }
             });
         });
+    },
+    contains:function(obj, arr) {
+        var i = arr.length;
+        while (i--) {
+            if (arr[i] === obj) {
+            return true;
+            }
+        }
+        return false;
     },
     //数据校验
     operateCheck:function(arr){
