@@ -1,4 +1,7 @@
 # coding: utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
@@ -38,14 +41,18 @@ def ProjectAdd(request):
         clientip = request.META['REMOTE_ADDR']
         #data = json.loads(request.body)
         data = request.POST
-        logger.info('%s' %data)
-        if data['status_'] == '':
-        	status_ = 'active'
-        else:
-        	status_ = data['status_']
-        info = tomcat_project(product=data['product'], project=data['project'], code_dir=data['code_dir'], tomcat=data['tomcat'], main_port=data['main_port'], jdk=data['jdk'], script=data['script'], status=status_)
-        info.save()
-        return HttpResponse('success!')
+        try:
+            info = tomcat_project.objects.get(project=data['project'])
+            return HttpResponse('PROJECT: %s  already exists!' %info.project)
+        except:
+            logger.info('%s' %data)
+            if data['status_'] == '':
+            	status_ = 'active'
+            else:
+            	status_ = data['status_']
+            info = tomcat_project(product=data['product'], project=data['project'], code_dir=data['code_dir'], tomcat=data['tomcat'], main_port=data['main_port'], jdk=data['jdk'], script=data['script'], status=status_)
+            info.save()
+            return HttpResponse('success!')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
@@ -80,10 +87,10 @@ def ProjectUpdate(request):
 
 @csrf_exempt 
 def ProjectDelete(request):
-    clientip = request.META['REMOTE_ADDR']
-    data = json.loads(request.body)
-    logger.info('%s' %data)
-    return HttpResponse('success!')
+    #clientip = request.META['REMOTE_ADDR']
+    #data = json.loads(request.body)
+    #logger.info('%s' %data)
+    #return HttpResponse('success!')
     if request.method == 'POST':
         for data in json.loads(request.body):
         	logger.info('%s' %data)

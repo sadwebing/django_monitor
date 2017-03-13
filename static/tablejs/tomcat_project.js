@@ -165,10 +165,11 @@ var operate = {
             }
             if (!oViewModel.jdk()){
                 oViewModel.jdk('')
-            }else if(!operate.contains(oViewModel.jdk(), jdkarray)){
-                alert("jdk 版本不正确!");
-                return false;
             }
+            //else if(!operate.contains(oViewModel.jdk(), jdkarray)){
+            //    alert("jdk 版本不正确!");
+            //    return false;
+            //}
             if (!oViewModel.script()){
                 oViewModel.script('')
             }
@@ -192,7 +193,7 @@ var operate = {
     contains:function(obj, arr) {
         var i = arr.length;
         while (i--) {
-            if (arr[i] == obj) {
+            if (arr[i] === obj) {
             return true;
             }
         }

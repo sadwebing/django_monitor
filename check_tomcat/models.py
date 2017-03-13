@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class tomcat_project(models.Model):
     product = models.CharField(max_length=10)
-    project = models.CharField(max_length=64)
+    project = models.CharField(max_length=64, unique=True)
     code_dir = models.CharField(max_length=32, null=True)
     tomcat = models.CharField(max_length=64, null=True)
     main_port = models.CharField(max_length=10, null=True)
