@@ -39,6 +39,10 @@ var operate = {
             status_: ko.observable(),
         };
     },
+    function ViewModel() {
+                var self = this;
+                self.datas = ko.observableArray();
+    }
     //新增
     operateAdd: function(){
         $('#btn_add').on("click", function () {
@@ -86,9 +90,13 @@ var operate = {
                 alert("请至少选择一行数据");
                 return false;
             }
+            var vm = new operate.ViewModel();
+            for (var i=0;i<arrselectedData.length;i++){
+                vm.datas.push(ko.mapping.fromJS(arrselectedData[i]));
+            }
             $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
-                ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
-                ko.applyBindings(operate.DepartmentModel, document.getElementById("confirmDeleteModal"));
+                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData));
+                ko.applyBindings(vm, document.getElementById("confirmDeleteModal"));
                 operate.operateDelete();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
@@ -180,7 +188,7 @@ var operate = {
     contains:function(obj, arr) {
         var i = arr.length;
         while (i--) {
-            if (arr[i] === obj) {
+            if (arr[i] == obj) {
             return true;
             }
         }

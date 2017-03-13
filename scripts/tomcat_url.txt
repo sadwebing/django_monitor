@@ -152,8 +152,8 @@ http://172.20.0.194:1310|ALL_SMS_API|smsapi.agg060.com
 #http://59.188.133.168:7060|b79_gci|gci.agg028.com
 
 ###市场部推广###
-http://192.168.100.114:7010|b79_new_web_推广|ag9.info
-http://192.168.100.111:7010|b79_new_web_推广|ag9.info
+http://192.168.100.182:7010|b79_new_web_推广|ag9.info
+http://192.168.100.167:7010|b79_new_web_推广|ag9.info
 #http://192.168.100.112:6020|p02_new_web_推广|yt605.com
 #http://192.168.100.113:6020|p02_new_web_推广|yt605.com
 #http://192.168.100.112:6010|p02_web|agsun0.com
