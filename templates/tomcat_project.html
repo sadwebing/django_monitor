@@ -94,7 +94,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="confirmDeleteModalLabel">请确认</h4>
+                        删除总记录数：<span data-bind="text: datas().length"></span>
                     </div>
+                    {% comment %}
                     <div class="modal-body">  
                         <table class="table table-bordered">
                             <thead>
@@ -110,7 +112,7 @@
                                     <td>status</td>
                                 </tr>
                             </thead>
-                            <tbody data-bind="foreach:datas">
+                            <tbody data-bind="foreach: datas">
                                 <tr>
                                     <td><label data-bind="text:id"></label></td>
                                     <td><label data-bind="text:product"></label></td>
@@ -125,6 +127,7 @@
                             </tbody>
                         </table>
                     </div>
+                    {% endcomment %}
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
                         <button type="button" id="btn_delete" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>确认删除</button>

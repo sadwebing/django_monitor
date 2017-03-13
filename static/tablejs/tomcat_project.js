@@ -39,10 +39,6 @@ var operate = {
             status_: ko.observable(),
         };
     },
-    function ViewModel() {
-                var self = this;
-                self.datas = ko.observableArray();
-    }
     //新增
     operateAdd: function(){
         $('#btn_add').on("click", function () {
@@ -83,6 +79,11 @@ var operate = {
         });
     },
 
+    ViewModel: function() {
+                var self = this;
+                self.datas = ko.observableArray();
+    },
+
     operateconfirmDelete: function () {
         $('#btn_confirm_delete').on("click", function () {
             var arrselectedData = tableInit.myViewModel.getSelections();
@@ -92,12 +93,15 @@ var operate = {
             }
             var vm = new operate.ViewModel();
             for (var i=0;i<arrselectedData.length;i++){
+                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[i]));
+                //vm.datas.push(operate.DepartmentModel);
                 vm.datas.push(ko.mapping.fromJS(arrselectedData[i]));
             }
             $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
-                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData));
+                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(vm, document.getElementById("confirmDeleteModal"));
                 operate.operateDelete();
+                //vm.datas.valueHasMutated();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
                 ko.cleanNode(document.getElementById("confirmDeleteModal"));
@@ -108,18 +112,18 @@ var operate = {
     //删除
     operateDelete: function () {
         $('#btn_delete').on("click", function () {
-            //var arrselectedData = tableInit.myViewModel.getSelections();
-            //$.ajax({
-            //    url: "/tomcat/tomcat_project/Delete",
-            //    type: "post",
-            //    contentType: 'application/json',
-            //    data: JSON.stringify(arrselectedData),
-            //    success: function (data, status) {
-            //        alert(status);
-            //        tableInit.myViewModel.refresh();
-            //    }
-            //});
-            var oViewModel = operate.DepartmentModel;
+            var arrselectedData = tableInit.myViewModel.getSelections();
+            $.ajax({
+                url: "/tomcat/tomcat_project/Delete",
+                type: "post",
+                contentType: 'application/json',
+                data: JSON.stringify(arrselectedData),
+                success: function (data, status) {
+                    alert(status);
+                    tableInit.myViewModel.refresh();
+                }
+            });
+            //var oViewModel = operate.DepartmentModel;
             //var oDataModel = ko.toJS(oViewModel);
             //$.ajax({
             //    url: "/tomcat/tomcat_project/Delete",

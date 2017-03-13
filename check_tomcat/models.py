@@ -11,7 +11,7 @@ class tomcat_project(models.Model):
     main_port = models.CharField(max_length=10, null=True)
     jdk = models.CharField(max_length=10, null=True)
     script = models.CharField(max_length=64, null=True)
-    status = models.CharField(max_length=10, null=True)
+    status = models.CharField(max_length=10, null=True,  default='active')
     class Meta:
         unique_together = ('product', 'project')
 

@@ -72,7 +72,7 @@ def check_tomcat():
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
         try:
-            ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=5)
+            ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=10)
             result['code'] = '%s' %ret.status_code
             try:
                 title = re.search('<title>.*?</title>', ret.content)
@@ -96,7 +96,6 @@ def check_tomcat():
             )
             insert.save()
         if result['code'] not in code_list:
-            print result['code']
             content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['domain'], result['url'], result['code'], result['info'])
         #logger.info(MIMEText(str(result), 'utf-8'))
         if content_body != "":
