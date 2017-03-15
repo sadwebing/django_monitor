@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block nav %}
-  <li class="active"><a href="/"><i class="glyphicon glyphicon-dashboard"></i>TOMCAT</a></li>
-  <li ><a href="/saltstack/"><i class="glyphicon glyphicon-th-list"></i>SALTSTACK</a></li>
+    <li class="active"><a href="/"><i class="glyphicon glyphicon-dashboard"></i>TOMCAT</a></li>
+    <li ><a href="/saltstack/"><i class="glyphicon glyphicon-th-list"></i>SALTSTACK</a></li>
 {% endblock %}
 {% block content %}
     <ul class="nav nav-tabs">
         <li><a href="/">TOMCAT_URL</a></li>
         <li class="active"><a href="/tomcat/project/">TOMCAT_PROJECT</a></li>
+        <li class="navbar-text pull-right""><a href="/admin">管理后台</a></li>
     </ul>
     <div id="toolbar" class="btn-group">
         <button id="btn_add" type="button" class="btn btn-default" >
@@ -49,15 +50,15 @@
                         </div>
                         <div class="form-group">
                             <label for="txt_product">product</label>
-                            <input type="text" name="txt_product" data-bind="value:product" class="form-control" id="txt_product" placeholder="所属产品">
+                            <input type="text" name="txt_product" data-bind="value:product" class="form-control" id="txt_product" placeholder="所属产品">[不能为空]
                         </div>
                         <div class="form-group">
                             <label for="txt_project">project</label>
-                            <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名">
+                            <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名">[不能为空，且唯一]
                         </div>
                         <div class="form-group">
                             <label for="txt_code_dir">code_dir</label>
-                            <input type="text" name="txt_code_dir" data-bind="value:code_dir" class="form-control" id="txt_code_dir" placeholder="代码目录">
+                            <input type="text" name="txt_code_dir" data-bind="value:code_dir" class="form-control" id="txt_code_dir" placeholder="代码目录">[不能为空]
                         </div>
                         <div class="form-group">
                             <label for="txt_tomcat">tomcat</label>
@@ -73,7 +74,7 @@
                         </div>
                         <div class="form-group">
                             <label for="txt_script">script</label>
-                            <input type="text" name="txt_script" data-bind="value:script" class="form-control" id="txt_script" placeholder="script">
+                            <input type="text" name="txt_script" data-bind="value:script" class="form-control" id="txt_script" placeholder="重启脚本">
                         </div>
                         <div class="form-group">
                             <label for="txt_script">status</label>

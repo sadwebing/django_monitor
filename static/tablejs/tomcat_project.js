@@ -119,21 +119,14 @@ var operate = {
                 contentType: 'application/json',
                 data: JSON.stringify(arrselectedData),
                 success: function (data, status) {
-                    alert(status);
+                    alert(data);
+                    tableInit.myViewModel.refresh();
+                },
+                error:function(msg){
+                    alert("失败，请检查日志！");
                     tableInit.myViewModel.refresh();
                 }
             });
-            //var oViewModel = operate.DepartmentModel;
-            //var oDataModel = ko.toJS(oViewModel);
-            //$.ajax({
-            //    url: "/tomcat/tomcat_project/Delete",
-            //    type: "post",
-            //    data: oDataModel,
-            //    success: function (data, status) {
-            //        alert(status);
-            //        tableInit.myViewModel.refresh();
-            //    }
-            //});
         });
     },
 
@@ -184,7 +177,11 @@ var operate = {
                 type: "post",
                 data: oDataModel,
                 success: function (data, status) {
-                    alert(status);
+                    alert(data);
+                    tableInit.myViewModel.refresh();
+                },
+                error:function(msg){
+                    alert("失败，请检查日志！");
                     tableInit.myViewModel.refresh();
                 }
             });

@@ -34330,3 +34330,380 @@ Traceback (most recent call last):
     tomcat_project.objects.get(project=data['project']):
                                                        ^
 SyntaxError: invalid syntax
+2017-03-15 19:15:55,343 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_project/Delete
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 3, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/views.py", line 8, in <module>
+    from tomcat_project import *
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_project.py", line 95
+    logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), %data))
+                                                                                     ^
+SyntaxError: invalid syntax
+2017-03-15 19:45:25,222 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/project/
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 3, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/views.py", line 8, in <module>
+    from tomcat_project import *
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_project.py", line 48
+    logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas)a)
+                                                                                           ^
+SyntaxError: invalid syntax
+2017-03-15 19:45:40,495 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/project/
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 13, in <module>
+    url('tomcat_url/Query$', views.UrlQuery),
+AttributeError: 'module' object has no attribute 'UrlQuery'
+2017-03-15 19:46:22,510 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/project/
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 13, in <module>
+    url('tomcat_url/Query$', views.UrlQuery),
+AttributeError: 'module' object has no attribute 'UrlQuery'
+2017-03-15 19:47:21,419 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/project/
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 3, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/views.py", line 9, in <module>
+    from tomcat_url import *
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 13
+    def UrlQuery(request):
+    ^
+IndentationError: unexpected indent
+2017-03-15 19:47:43,293 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/project/
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 23, in <module>
+    url(r'^$', include('check_tomcat.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/urls.py", line 17, in <module>
+    url('tomcat_url/$', views.TomcatUrl),
+AttributeError: 'module' object has no attribute 'TomcatUrl'
+2017-03-15 19:51:42,684 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Update
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 56, in UrlUpdate
+    logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
+NameError: global name 'datas' is not defined
+2017-03-15 19:59:41,120 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 43, in UrlAdd
+    info.save()
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '123' for key 'url'")
+2017-03-15 20:01:36,531 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Delete
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 79, in UrlDelete
+    info = tomcat_url.objects.get(id=data['id'],)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: tomcat_url matching query does not exist.
+2017-03-15 20:06:14,973 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Delete
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 79, in UrlDelete
+    info = tomcat_url.objects.get(id=data['id'],)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: tomcat_url matching query does not exist.
+2017-03-15 20:06:36,984 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Delete
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 79, in UrlDelete
+    info = tomcat_url.objects.get(id=data['id'],)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: tomcat_url matching query does not exist.
+2017-03-15 20:15:05,976 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Delete
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 83, in UrlDelete
+    info = tomcat_url.objects.get(id=datas['id'],)
+TypeError: list indices must be integers, not str
+2017-03-15 20:15:05,977 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Delete
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 83, in UrlDelete
+    info = tomcat_url.objects.get(id=datas['id'],)
+TypeError: list indices must be integers, not str
+2017-03-15 20:18:03,707 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 47, in UrlAdd
+    info.save()
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry 'http://192.168.100.123:1270' for key 'url'")
+2017-03-15 20:29:18,609 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_project/Add
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_project.py", line 48, in ProjectAdd
+    logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
+NameError: global name 'datas' is not defined
+2017-03-15 20:40:54,245 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 48, in UrlAdd
+    info.save()
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 963, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry 'http://172.20.0.197:1250' for key 'url'")
+2017-03-15 20:43:51,484 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 42, in UrlAdd
+    logger.info('%s is requesting. %s url: %s  already exists!' %(clientip, request.get_full_path(), data, info.url))
+TypeError: not all arguments converted during string formatting
+2017-03-15 22:05:16,714 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Delete
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 81, in UrlDelete
+    logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
+UnboundLocalError: local variable 'datas' referenced before assignment
+2017-03-15 22:07:11,006 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 41, in UrlAdd
+    info = tomcat_url.objects.get(url=data['url'])
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: tomcat_url matching query does not exist.
+2017-03-15 22:07:24,257 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/check_tomcat/tomcat_url.py", line 41, in UrlAdd
+    info = tomcat_url.objects.get(url=data['url'])
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/db/models/query.py", line 334, in get
+    self.model._meta.object_name
+DoesNotExist: tomcat_url matching query does not exist.

@@ -45,14 +45,14 @@ def ProjectAdd(request):
             info = tomcat_project.objects.get(project=data['project'])
             return HttpResponse('PROJECT: %s  already exists!' %info.project)
         except:
-            logger.info('%s' %data)
+            logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
             if data['status_'] == '':
             	status_ = 'active'
             else:
             	status_ = data['status_']
             info = tomcat_project(product=data['product'], project=data['project'], code_dir=data['code_dir'], tomcat=data['tomcat'], main_port=data['main_port'], jdk=data['jdk'], script=data['script'], status=status_)
             info.save()
-            return HttpResponse('success!')
+            return HttpResponse('添加成功！')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
@@ -64,7 +64,7 @@ def ProjectUpdate(request):
         clientip = request.META['REMOTE_ADDR']
         #data = json.loads(request.body)
         data = request.POST
-        logger.info('%s' %data)
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
         if data['status_'] == '':
         	status_ = 'inactive'
         else:
@@ -87,16 +87,20 @@ def ProjectUpdate(request):
 
 @csrf_exempt 
 def ProjectDelete(request):
-    #clientip = request.META['REMOTE_ADDR']
+    clientip = request.META['REMOTE_ADDR']
     #data = json.loads(request.body)
     #logger.info('%s' %data)
     #return HttpResponse('success!')
+    username = request.user.username
+    if username != u'arno':
+        return HttpResponse('你没有删除的权限，请联系管理员。')
     if request.method == 'POST':
-        for data in json.loads(request.body):
-        	logger.info('%s' %data)
+        datas = json.loads(request.body)
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
+        for data in datas:
         	info = tomcat_project.objects.get(id=data['id'],)
         	info.delete()
-        return HttpResponse('success!')
+        return HttpResponse('删除成功！')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:

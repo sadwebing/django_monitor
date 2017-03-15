@@ -8,7 +8,7 @@ var tableInit = {
     Init: function () {
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
-            url: '/tomcat/tomcat_url',         //请求后台的URL（*）
+            url: '/tomcat/tomcat_url/Query',         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
@@ -26,6 +26,7 @@ var operate = {
     operateInit: function () {
         this.operateAdd();
         this.operateUpdate();
+        this.operateconfirmDelete();
         this.operateDelete();
         this.DepartmentModel = {
             id: ko.observable(),
@@ -54,6 +55,7 @@ var operate = {
             });
         });
     },
+
     //编辑
     operateUpdate: function () {
         $('#btn_edit').on("click", function () {
@@ -72,18 +74,53 @@ var operate = {
             });
         });
     },
+
+    ViewModel: function() {
+                var self = this;
+                self.datas = ko.observableArray();
+    },
+
+    operateconfirmDelete: function () {
+        $('#btn_confirm_delete').on("click", function () {
+            var arrselectedData = tableInit.myViewModel.getSelections();
+            if (arrselectedData.length <= 0){
+                alert("请至少选择一行数据");
+                return false;
+            }
+            var vm = new operate.ViewModel();
+            for (var i=0;i<arrselectedData.length;i++){
+                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[i]));
+                //vm.datas.push(operate.DepartmentModel);
+                vm.datas.push(ko.mapping.fromJS(arrselectedData[i]));
+            }
+            $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
+                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
+                ko.applyBindings(vm, document.getElementById("confirmDeleteModal"));
+                operate.operateDelete();
+                //vm.datas.valueHasMutated();
+            }).on('hidden.bs.modal', function () {
+                //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+                ko.cleanNode(document.getElementById("confirmDeleteModal"));
+            });
+        });
+    },
+
     //删除
     operateDelete: function () {
         $('#btn_delete').on("click", function () {
             var arrselectedData = tableInit.myViewModel.getSelections();
             $.ajax({
-                url: "/tomcat/Delete",
+                url: "/tomcat/tomcat_url/Delete",
                 type: "post",
                 contentType: 'application/json',
                 data: JSON.stringify(arrselectedData),
                 success: function (data, status) {
-                    alert(status);
-                    //tableInit.myViewModel.refresh();
+                    alert(data);
+                    tableInit.myViewModel.refresh();
+                },
+                error:function(msg){
+                    alert("失败，请检查日志！");
+                    tableInit.myViewModel.refresh();
                 }
             });
         });
@@ -96,11 +133,15 @@ var operate = {
             //将Viewmodel转换为数据model
             var oDataModel = ko.toJS(oViewModel);var funcName = oDataModel.id?"Update":"Add";
             $.ajax({
-                url: "/tomcat/"+funcName,
+                url: "/tomcat/tomcat_url/"+funcName,
                 type: "post",
                 data: oDataModel,
                 success: function (data, status) {
-                    alert(status);
+                    alert(data);
+                    tableInit.myViewModel.refresh();
+                },
+                error:function(msg){
+                    alert("失败，请检查日志！");
                     tableInit.myViewModel.refresh();
                 }
             });
