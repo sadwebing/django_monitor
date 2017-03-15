@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 #-_- coding:utf-8 -_-
-import os,sys,datetime,logging
+import os,sys,datetime,logging,json
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 reload(sys)
 sys.setdefaultencoding('utf8')
 from monitor import settings
 from saltstack.saltapi import SaltAPI
+#from saltstack.saltapi_bak import SaltAPI
 from scripts.tomcat import get_mail_list
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
@@ -15,6 +16,14 @@ sapi = SaltAPI(
     username = settings.SALT_API['user'],
     password = settings.SALT_API['password']
     )
-print sapi.checkMinion('GLB_10_153')
+
+#data = sapi.ClientLocal(["GLB_10_153", "GLB_10_154"], 'cmd.run', '#uptime')
+##data = sapi.masterToMinionContent("GLB_10_153, GLB_10_154", #'cmd.run', 'uptime')
+#print data
+#sys.exit()
+
+data = sapi.checkMinion(['GLB_10_153','GLB_10_154'])
+print type(data)
+print data['return']
 sys.exit()
 minionsup, minionsdown= sapi.mini_status()

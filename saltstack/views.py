@@ -1,3 +1,4 @@
+# coding: utf-8
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
@@ -39,11 +40,11 @@ def CheckMinion(request):
 def index(request):
     global clientip
     clientip = request.META['REMOTE_ADDR']
-    title = u'saltstack'
+    title = u'SALTSTACK-命令管理'
     logger.info('%s is requesting.' %clientip)
     return render(
         request,
-        'saltstack.html',
+        'saltstack_index.html',
         {
             'clientip':clientip,
             'title': title,
