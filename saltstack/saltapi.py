@@ -22,7 +22,7 @@ class SaltAPI(object):
         else:
             params = {'client': 'local', 'tgt': tgt, 'fun': 'test.ping', 'expr_form': expr_form}
         ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
-        return ret.json()
+        return ret.json()['return']
 
     def ClientLocal(self, tgt, fun, arg, expr_form='list'):
         if tgt == '*':
@@ -30,4 +30,10 @@ class SaltAPI(object):
         else:
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
         ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
-        return eval(ret.text)['return']
+        return ret.json()['return']
+
+    def MinionStatus(self):
+        params = {"client":"runner","fun":"manage.status"}
+        ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
+        data = ret.json()
+        return data['return'][0]['up'], data['return'][0]['down']

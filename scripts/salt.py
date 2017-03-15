@@ -16,4 +16,4 @@ sapi = SaltAPI(
     password = settings.SALT_API['password']
     )
 
-minionsup, minionsdown= sapi.mini_status()
+minionsup, minionsdown= sapi.MinionStatus()
