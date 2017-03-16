@@ -3,6 +3,8 @@ from . import views
 
 urlpatterns = [
     url('^check_minion$', views.CheckMinion),
-    url('^command$', views.index),
-    url('^$', views.index),
+    url('^command$', views.command),
+    url('^command/execute$', views.CommandExecute),
+    url('^id$', views.id),
+    url('^$', views.command),
 ]

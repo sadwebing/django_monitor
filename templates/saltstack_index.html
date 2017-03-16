@@ -6,11 +6,33 @@
 {% block content %}
     <ul class="nav nav-tabs">
         <li class="active"><a href="/saltstack/command">命令管理</a></li>
-        <li><a href="/saltstack/command">ID管理</a></li>
+        <li><a href="/saltstack/id">ID管理</a></li>
         <li class="navbar-text pull-right"><a href="/admin">管理后台</a></li>
     </ul>
-    {% if clientip %}
-        <p>{{ clientip }}</p>
-    {% endif %}
 
+    <form id="commandform" class="form-inline" role="form">
+        <select class="form-control span1" id="expr_form"> 
+            <option value="glob">默认</option> 
+            <option value="list">列表</option> 
+            <option value="pcre">正则</option> 
+            <option value="nodegroup">组</option>
+            <option value="grain">grain</option> 
+            <option value="pillar">pillar</option>  
+        </select>
+        <input type="text" class="form-control" id="target" placeholder="请输入执行ID" required>
+        <input type="text" class="form-control" id="function" placeholder="请输入执行功能" required>
+        <input type="text" class="form-control" id="arguments" placeholder="请输入执行参数" required>
+        <button id="btn_submit" type="submit" class="btn btn-default">提交</button>
+    </form>
+    <div class="row">
+        <div class="col-md-4 panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">返回结果</h4>
+            </div>
+            <div class="panel-body">
+              <pre class="pre-scrollable" id="commandresults"></pre>
+            </div>
+        </div>
+    </div>
+<script src="/static/tablejs/saltstack_command.js" type="text/javascript"></script>
 {% endblock %}

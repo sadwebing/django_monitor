@@ -23,11 +23,11 @@ sapi = SaltAPI(
 #sys.exit()
 
 #data = sapi.checkMinion(['GLB_10_153','GLB_10_154'])
-#data = sapi.ClientLocal(["GLB_10_153", "GLB_10_154"], 'cmd.run', '#ifconfig eth1')
-#print type(data)
-#print data
-up, down = sapi.MinionStatus()
-print up+down
+data = sapi.ClientLocal(["GLB_10_153", "GLB_10_154"], 'cmd.run', 'uptime')
+print type(data)
+print data[0]['GLB_10_153']
+#up, down = sapi.MinionStatus()
+#print up+down
 
 sys.exit()
 minionsup, minionsdown= sapi.mini_status()

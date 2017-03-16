@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block nav %}
+    <li><a href="/"><i class="glyphicon glyphicon-dashboard"></i>TOMCAT</a></li>
+    <li class="active"><a href="/saltstack/"><i class="glyphicon glyphicon-th-list"></i>SALTSTACK</a></li>
+{% endblock %}
+{% block content %}
+    <ul class="nav nav-tabs">
+        <li><a href="/saltstack/command">命令管理</a></li>
+        <li class="active"><a href="/saltstack/id">ID管理</a></li>
+        <li class="navbar-text pull-right"><a href="/admin">管理后台</a></li>
+    </ul>
+    {% if clientip %}
+        <p>{{ clientip }}</p>
+    {% endif %}
+
+{% endblock %}

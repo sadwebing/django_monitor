@@ -35,9 +35,28 @@ def CheckMinion(request):
     else:
         return HttpResponse('nothing!')
 
+@csrf_exempt
+def CommandExecute(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        data     = json.loads(request.body)
+        logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+        results = sapi.ClientLocal(
+            tgt       = data['target'],
+            fun       = data['function'],
+            arg       = data['arguments'],
+            expr_form = data['expr_form'],
+            )
+        #logger.info(results[0]['GLB_10_153'])
+        return HttpResponse(results)
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
 @csrf_protect
 @login_required
-def index(request):
+def command(request):
     global clientip
     clientip = request.META['REMOTE_ADDR']
     title = u'SALTSTACK-命令管理'
@@ -45,6 +64,22 @@ def index(request):
     return render(
         request,
         'saltstack_index.html',
+        {
+            'clientip':clientip,
+            'title': title,
+        }
+    )
+
+@csrf_protect
+@login_required
+def id(request):
+    global clientip
+    clientip = request.META['REMOTE_ADDR']
+    title = u'SALTSTACK-ID管理'
+    logger.info('%s is requesting.' %clientip)
+    return render(
+        request,
+        'saltstack_id.html',
         {
             'clientip':clientip,
             'title': title,
