@@ -35334,3 +35334,12 @@ Traceback (most recent call last):
   File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/adapters.py", line 487, in send
     raise ConnectionError(e, request=request)
 ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107139690>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-03-17 20:00:14,820 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 48, in CommandExecute
+    expr_form = data['expr_form'],
+TypeError: checkMinion() got an unexpected keyword argument 'fun'

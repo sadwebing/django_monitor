@@ -41,14 +41,20 @@ def CommandExecute(request):
         clientip = request.META['REMOTE_ADDR']
         data     = json.loads(request.body)
         logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
-        results = sapi.ClientLocal(
-            tgt       = data['target'],
-            fun       = data['function'],
-            arg       = data['arguments'],
-            expr_form = data['expr_form'],
-            )
+        if data['function'] == 'test.ping':
+            results = sapi.checkMinion(
+                tgt       = data['target'],
+                expr_form = data['expr_form'],
+                )
+        else:
+            results = sapi.ClientLocal(
+                tgt       = data['target'],
+                fun       = data['function'],
+                arg       = data['arguments'],
+                expr_form = data['expr_form'],
+                )
         #logger.info(results[0]['GLB_10_153'])
-        return HttpResponse(results)
+        return HttpResponse(results[0][data['target']])
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:

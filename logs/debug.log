@@ -12574,3 +12574,93 @@ ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max ret
 2017-03-17 19:51:42,859 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'minion1'], u'arguments': u'cat /etc/redhat-release'}
 2017-03-17 19:51:50,813 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'minion1'], u'arguments': u'uname -a'}
 2017-03-17 19:51:55,423 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'minion1'], u'arguments': u'uname -a'}
+2017-03-17 19:54:40,215 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:40,217 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:40,217 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:40.212722'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:40.212722')
+2017-03-17 19:54:40,218 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:40,219 views.py [django:79] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:41,236 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:41,238 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:41,239 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:41.234036'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:41.234036')
+2017-03-17 19:54:41,240 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:41,240 views.py [django:63] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:42,303 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:42,305 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:42,305 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:42.301002'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:42.301002')
+2017-03-17 19:54:42,306 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:42,307 views.py [django:79] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:43,212 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:43,214 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:43,214 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:43.209696'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:43.209696')
+2017-03-17 19:54:43,215 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:43,216 views.py [django:63] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:43,983 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:43,985 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:43,985 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:43.981636'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:43.981636')
+2017-03-17 19:54:43,987 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:43,987 views.py [django:79] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:44,700 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:44,702 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:44,702 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:44.698464'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:44.698464')
+2017-03-17 19:54:44,703 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:44,704 views.py [django:63] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:45,515 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:45,517 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:45,518 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:45.513503'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:45.513503')
+2017-03-17 19:54:45,519 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:45,519 views.py [django:79] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:46,483 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:46,485 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:46,486 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:46.481495'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:46.481495')
+2017-03-17 19:54:46,487 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:46,488 views.py [django:63] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:47,455 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:47,457 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:47,458 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:47.453473'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:47.453473')
+2017-03-17 19:54:47,460 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:47,460 views.py [django:79] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:54:48,196 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:48,198 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:54:48,199 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:54:48.194565'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:54:48.194565')
+2017-03-17 19:54:48,200 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:54:48,200 views.py [django:63] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:56:15,296 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'if'}
+2017-03-17 19:56:28,338 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u''}
+2017-03-17 19:58:01,891 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:58:01,931 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:58:01,940 utils.py [django.db.backends:89] [DEBUG]- (0.009) SHOW FULL TABLES; args=None
+2017-03-17 19:58:01,945 utils.py [django.db.backends:89] [DEBUG]- (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 19:58:10,860 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u''}
+2017-03-17 20:00:11,984 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 20:00:12,028 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 20:00:12,030 utils.py [django.db.backends:89] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 20:00:12,032 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 20:00:14,820 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u''}
+2017-03-17 20:00:14,820 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 48, in CommandExecute
+    expr_form = data['expr_form'],
+TypeError: checkMinion() got an unexpected keyword argument 'fun'
+2017-03-17 20:00:45,500 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 20:00:45,536 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 20:00:45,537 utils.py [django.db.backends:89] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 20:00:45,539 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 20:00:47,724 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u''}
+2017-03-17 20:01:08,250 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'asdf'}
+2017-03-17 20:01:09,894 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'asdf'}
+2017-03-17 20:01:13,983 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u''}
+2017-03-17 20:01:36,378 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/profile'}
+2017-03-17 20:01:46,130 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'vim /etc/profile'}
+2017-03-17 20:01:46,969 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'vim /etc/profile'}
+2017-03-17 20:01:48,558 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'vim /etc/profile'}
+2017-03-17 20:01:54,714 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/profile'}
+2017-03-17 20:01:56,148 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/profile'}
+2017-03-17 20:02:09,153 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/salt/master'}
+2017-03-17 20:02:16,360 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/salt/minion'}
+2017-03-17 20:02:26,241 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/salt/minion'}
+2017-03-17 20:04:26,747 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/salt/minion'}
+2017-03-17 20:04:28,739 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'cat /etc/salt/minion'}
