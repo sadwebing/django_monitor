@@ -35167,3 +35167,170 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
     raise ValueError("No JSON object could be decoded")
 ValueError: No JSON object could be decoded
+2017-03-17 17:25:03,422 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 7, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 3, in <module>
+    import requests,json
+ImportError: No module named requests
+2017-03-17 17:25:03,614 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 7, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 3, in <module>
+    import requests,json
+ImportError: No module named requests
+2017-03-17 17:26:59,098 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 15, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 10, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 15, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107100110>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-03-17 17:28:14,919 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 15, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 10, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 15, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107119190>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-03-17 19:16:03,955 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 15, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 10, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 15, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107139690>: Failed to establish a new connection: [Errno 60] Operation timed out',))

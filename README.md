@@ -8,3 +8,6 @@ http://www.jianshu.com/p/7085dcc70d0e
 
 bootstrap 2.3.2教程
 http://v2.bootcss.com/base-css.html#forms
+
+saltstack
+https://github.com/saltstack/salt/blob/develop/pkg/rpm/salt-minion

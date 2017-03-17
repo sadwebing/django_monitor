@@ -12351,3 +12351,226 @@ Traceback (most recent call last):
     raise ValueError("No JSON object could be decoded")
 ValueError: No JSON object could be decoded
 2017-03-17 07:44:39,878 views.py [django:43] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'WTT_100_55', u'arguments': u'ps -ef |grep tomcat'}
+2017-03-17 17:24:57,550 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 17:24:57,592 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 17:24:57,594 utils.py [django.db.backends:89] [DEBUG]- (0.001) SHOW FULL TABLES; args=None
+2017-03-17 17:24:57,596 utils.py [django.db.backends:89] [DEBUG]- (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-17 17:25:03,422 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 7, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 3, in <module>
+    import requests,json
+ImportError: No module named requests
+2017-03-17 17:25:03,614 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 7, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 3, in <module>
+    import requests,json
+ImportError: No module named requests
+2017-03-17 17:26:59,098 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 15, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 10, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 15, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107100110>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-03-17 17:28:14,919 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 15, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 10, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 15, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107119190>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-03-17 19:16:03,955 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/monitor/urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/urls.py", line 2, in <module>
+    from . import views
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/views.py", line 15, in <module>
+    password = settings.SALT_API['password']
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 10, in __init__
+    self.__token_id = self.saltLogin()
+  File "/Users/arno/Desktop/django/monitor/monitor/saltstack/saltapi.py", line 15, in saltLogin
+    ret = requests.post(url, data=params, verify=False)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/arno/Desktop/django/monitor/lib/python2.7/site-packages/requests/adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='192.168.100.109', port=8000): Max retries exceeded with url: /login (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x107139690>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+2017-03-17 19:22:56,900 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:22:56,902 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:22:56,907 utils.py [django.db.backends:89] [DEBUG]- (0.004) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:22:51.504245'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:22:51.504245')
+2017-03-17 19:22:56,909 utils.py [django.db.backends:89] [DEBUG]- (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:22:56,910 views.py [django:41] [INFO]- 192.168.100.1 is requesting /
+2017-03-17 19:22:56,989 tomcat_url.py [django:21] [INFO]- 192.168.100.1 is requesting. /tomcat/tomcat_url/Query?limit=10&offset=0&_=1489749776940
+2017-03-17 19:22:56,992 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:22:56,994 utils.py [django.db.backends:89] [DEBUG]- (0.002) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-17 19:22:58,932 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:22:58,934 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:22:58,935 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:22:58.930031'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:22:58.930031')
+2017-03-17 19:22:58,936 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:22:58,936 views.py [django:63] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:48:07,764 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'ifconfig'}
+2017-03-17 19:48:12,108 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:39,420 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:40,565 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:41,532 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:42,260 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:42,828 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:43,020 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:43,187 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:43,372 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:43,538 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:43,693 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:43,884 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:44,012 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:44,179 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:44,332 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:44,493 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:44,643 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:44,796 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:44,947 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:45,110 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:45,270 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:45,420 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:45,572 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:45,724 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:48:45,892 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'minion1', u'arguments': u'uptime'}
+2017-03-17 19:51:08,405 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:51:08,407 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:51:08,413 utils.py [django.db.backends:89] [DEBUG]- (0.006) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:51:08.393596'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:51:08.393596')
+2017-03-17 19:51:08,415 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:51:08,415 views.py [django:79] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:51:09,267 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:51:09,270 utils.py [django.db.backends:89] [DEBUG]- (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-17 19:51:09,270 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'jqk96uoos14lteyhgmuey0o8v6sz7kin' AND `django_session`.`expire_date` > '2017-03-17 19:51:09.265267'); args=('jqk96uoos14lteyhgmuey0o8v6sz7kin', u'2017-03-17 19:51:09.265267')
+2017-03-17 19:51:09,272 utils.py [django.db.backends:89] [DEBUG]- (0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2017-03-17 19:51:09,272 views.py [django:63] [INFO]- 192.168.100.1 is requesting.
+2017-03-17 19:51:42,859 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'minion1'], u'arguments': u'cat /etc/redhat-release'}
+2017-03-17 19:51:50,813 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'minion1'], u'arguments': u'uname -a'}
+2017-03-17 19:51:55,423 views.py [django:43] [INFO]- 192.168.100.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'minion1'], u'arguments': u'uname -a'}
