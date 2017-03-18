@@ -1,0 +1,9 @@
+pre{
+    width:100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.pre-scrollable {
+    max-height: 500px;
+    overflow-y: scroll;
+}

@@ -35471,3 +35471,377 @@ Traceback (most recent call last):
     for data in datas;
                      ^
 SyntaxError: invalid syntax
+2017-03-18 22:50:56,973 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 70, in CommandExecute
+    expr_form = data['expr_form'],
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 33, in ClientLocal
+    return ret.json()['return']
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-18 22:51:06,864 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 70, in CommandExecute
+    expr_form = data['expr_form'],
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 33, in ClientLocal
+    return ret.json()['return']
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-18 22:52:19,392 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 63, in CommandExecute
+    expr_form = data['expr_form'],
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 25, in checkMinion
+    return ret.json()['return']
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-18 22:52:21,688 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 63, in CommandExecute
+    expr_form = data['expr_form'],
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 25, in checkMinion
+    return ret.json()['return']
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-18 22:53:02,894 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 70, in CommandExecute
+    expr_form = data['expr_form'],
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 33, in ClientLocal
+    return ret.json()['return']
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-18 23:04:09,493 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 73, in CommandExecute
+    return HttpResponse(results[0][data['target']])
+TypeError: unhashable type: 'list'
+2017-03-18 23:29:23,167 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 102, in CommandRestart
+    result = ["\t"+i for i in result]
+TypeError: cannot concatenate 'str' and 'dict' objects
+2017-03-18 23:30:27,638 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 103, in CommandRestart
+    info = "%s:\n"%restart + result
+TypeError: coercing to Unicode: need string or buffer, list found
+2017-03-18 23:41:50,243 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 104, in CommandRestart
+    return HttpResponse(joson.dumps(info))
+NameError: global name 'joson' is not defined
+2017-03-19 02:26:50,213 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 103, in CommandRestart
+    info[project] = result[0][data['target']]
+KeyError: u'GLB_10_148sadf'
+2017-03-19 02:27:20,454 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 103, in CommandRestart
+    info[project] = result[0][data['target']]
+KeyError: u'GLB_10_148adsf'
+2017-03-19 02:31:10,503 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 87, in CommandRestart
+    for project in data['project']:
+TypeError: 'bool' object has no attribute '__getitem__'
+2017-03-19 04:16:11,888 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 67, in CommandExecute
+    return HttpResponse(results[0][data['target']])
+KeyError: 0
+2017-03-19 04:17:37,558 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 63, in CommandExecute
+    results = commandexe.TestPing()['return']
+TypeError: list indices must be integers, not str
+2017-03-19 04:18:05,726 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 63, in CommandExecute
+    results = commandexe.TestPing()[0]['return']
+KeyError: 'return'
+2017-03-19 04:37:52,549 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 2, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\saltstack\views.py", line 65
+    for minionid in commandexe.TestPing.tgt_list
+                                               ^
+SyntaxError: invalid syntax
+2017-03-19 04:38:07,786 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 64, in CommandExecute
+    results = commandexe.TestPing()[0]
+  File "D:\django\monitor\monitor\saltstack\command.py", line 40, in TestPing
+    tgt_list = results.keys()
+AttributeError: 'list' object has no attribute 'keys'
+2017-03-19 04:39:27,621 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 64, in CommandExecute
+    results = commandexe.TestPing()[0]
+KeyError: 0
+2017-03-19 04:40:37,828 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 65, in CommandExecute
+    for minionid in commandexe.TestPing.tgt_list:
+AttributeError: 'function' object has no attribute 'tgt_list'
+2017-03-19 04:42:12,065 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 64, in CommandExecute
+    results, tgt_list = commandexe.TestPing()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 36, in TestPing
+    tgt_list.append(self.__tgt)
+UnboundLocalError: local variable 'tgt_list' referenced before assignment
+2017-03-19 04:56:16,444 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 72, in CommandExecute
+    results, tgt_list = commandexe.CmdRun()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 51, in CmdRun
+    tgt_list.append(self.__tgt)
+UnboundLocalError: local variable 'tgt_list' referenced before assignment
+2017-03-19 05:07:21,240 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 66, in CommandExecute
+    info = commandexe.CmdRun()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 62, in CmdRun
+    self.tgt_list = results[0].keys()
+KeyError: 0
+2017-03-19 05:07:57,572 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 66, in CommandExecute
+    info = commandexe.CmdRun()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 63, in CmdRun
+    self.tgt_list = results[0].keys()
+KeyError: 0
+2017-03-19 05:24:45,927 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 98, in CommandRestart
+    info[project] = result[0][data['target']]
+KeyError: 0
+2017-03-19 05:28:08,121 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 98, in CommandRestart
+    info[project] = result['return'][0][data['target']]
+KeyError: u'GLB_10_1488'
+2017-03-19 05:58:55,927 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 61, in CommandExecute
+    commandexe = Command(data['target'], data['function'], data['arguments'], data['expr_form'], {'Accept': application/YAML})
+NameError: global name 'application' is not defined
+2017-03-19 05:59:23,341 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 33, in ClientLocal
+    return ret.json()
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-19 06:01:56,273 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 70, in CommandExecute
+    return HttpResponse(json.dumps(info))
+  File "C:\Python27\Lib\json\__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python27\Lib\json\encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python27\Lib\json\encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python27\Lib\json\encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <Response [406]> is not JSON serializable
+2017-03-19 06:13:10,296 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in StateSls
+    return ret.json()
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 858, in json
+    self.content.decode(encoding), **kwargs
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded

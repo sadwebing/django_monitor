@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from monitor import settings
 from check_tomcat.models import tomcat_project
 from saltstack.saltapi import SaltAPI
+from command import Command
 import json, logging
 
 logger = logging.getLogger('django')
@@ -57,20 +58,17 @@ def CommandExecute(request):
         clientip = request.META['REMOTE_ADDR']
         data     = json.loads(request.body)
         logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+        commandexe = Command(data['target'], data['function'], data['arguments'], data['expr_form'], {'Accept': 'application/x-yaml'})
+        info = {}
         if data['function'] == 'test.ping':
-            results = sapi.checkMinion(
-                tgt       = data['target'],
-                expr_form = data['expr_form'],
-                )
-        else:
-            results = sapi.ClientLocal(
-                tgt       = data['target'],
-                fun       = data['function'],
-                arg       = data['arguments'],
-                expr_form = data['expr_form'],
-                )
-        #logger.info(results[0]['GLB_10_153'])
-        return HttpResponse(results[0][data['target']])
+            info = commandexe.TestPing()
+        elif data['function'] == 'cmd.run':
+            info = commandexe.CmdRun()
+        elif data['function'] == 'state.sls':
+            info = commandexe.StateSls()
+        logger.info(info)
+        #return HttpResponse(json.dumps(info))
+        return HttpResponse(info)
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
@@ -83,10 +81,14 @@ def CommandRestart(request):
         data     = json.loads(request.body)
         logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
         results = []
+        info = {}
         for project in data['project']:
             restart = tomcat_project.objects.filter(project=project).first().script
+            if restart == '':
+                arg = "/web/%s/bin/restart.sh" %project
+            else:
+                arg = "%s restart" %restart
             #logger.info(restart)
-            arg = "%s restart" %restart
             arglist = ["runas=tomcat"]
             arglist.append(arg)
             logger.info("重启参数：%s"%arglist)
@@ -96,9 +98,9 @@ def CommandRestart(request):
                 arg       = arglist,
                 expr_form = data['expr_form'],
                 )
-            results.append(result[0][data['target']])
-
-        return HttpResponse(results)
+            info[project] = result['return'][0][data['target']]
+            logger.info(info)
+        return HttpResponse(json.dumps(info))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
