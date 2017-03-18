@@ -1,31 +1,48 @@
 {% extends "base.html" %}
-{% block nav %}
-    <li><a href="/"><i class="glyphicon glyphicon-dashboard"></i>TOMCAT</a></li>
+{% block mainnav %}
+    <li><a href="/"><i class="glyphicon glyphicon-th"></i>TOMCAT</a></li>
     <li class="active"><a href="/saltstack/"><i class="glyphicon glyphicon-th-list"></i>SALTSTACK</a></li>
 {% endblock %}
+{% block secondnav %}
+    <li class="active"><a href="/saltstack/command">基本命令</a></li>
+    <li><a href="/saltstack/restart">服务重启</a></li>
+    <li><a href="/saltstack/id">ID管理</a></li>
+    <li class="navbar-right"><a href="/admin">管理后台</a></li>
+{% endblock %}
 {% block content %}
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="/saltstack/command">命令管理</a></li>
-        <li><a href="/saltstack/id">ID管理</a></li>
-        <li class="navbar-text pull-right"><a href="/admin">管理后台</a></li>
-    </ul>
 
-    <form id="commandform" class="form-inline" role="form">
-        <select class="form-control span1" id="expr_form"> 
-            <option value="glob">默认</option> 
-            <option value="list">列表</option> 
-            <option value="pcre">正则</option> 
-            <option value="nodegroup">组</option>
-            <option value="grain">grain</option> 
-            <option value="pillar">pillar</option>  
-        </select>
-        <input type="text" class="form-control" id="target" placeholder="请输入执行ID" required>
-        <input type="text" class="form-control" id="function" placeholder="请输入执行功能" required>
-        <input type="text" class="form-control" id="arguments" placeholder="请输入执行参数" required>
-        <button id="btn_submit" type="submit" class="btn btn-default">提交</button>
-    </form>
-    <div class="row">
-        <div class="col-md-4 panel panel-primary">
+    <style type="text/css">
+        pre{width:100%;}
+        .pre-scrollable {
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+    </style>
+    <div class="col-lg-9 col-md-9 placeholder">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">执行参数</h4>
+            </div>
+            <div class="panel-body">
+                <form id="commandform" class="form-inline" role="form">
+                    <select class="form-control span1" id="expr_form"> 
+                        <option value="glob">默认</option> 
+                        <option value="list">列表</option> 
+                        <option value="pcre">正则</option> 
+                        <option value="nodegroup">组</option>
+                        <option value="grain">grain</option> 
+                        <option value="pillar">pillar</option>  
+                    </select>
+                    <input type="text" class="form-control" id="target" placeholder="ID" value="GLB_10_153" required>
+                    <input type="text" class="form-control" id="function" placeholder="功能" value="cmd.run" required>
+                    <input type="text" class="form-control" id="arguments" placeholder="参数" value="cat /etc/profile" required>
+                    <button id="btn_submit" type="submit" class="btn btn-default">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-9 placeholder">
+        <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">返回结果</h4>
             </div>

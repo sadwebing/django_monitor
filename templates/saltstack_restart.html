@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block mainnav %}
+    <li><a href="/"><i class="glyphicon glyphicon-th"></i>TOMCAT</a></li>
+    <li class="active"><a href="/saltstack/"><i class="glyphicon glyphicon-th-list"></i>SALTSTACK</a></li>
+{% endblock %}
+{% block secondnav %}
+    <li><a href="/saltstack/command">基本命令</a></li>
+    <li class="active"><a href="/saltstack/restart">服务重启</a></li>
+    <li><a href="/saltstack/id">ID管理</a></li>
+    <li class="navbar-right"><a href="/admin">管理后台</a></li>
+{% endblock %}
+{% block content %}
+
+    <style type="text/css">
+        pre{width:100%;}
+        .pre-scrollable {
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+    </style>
+    <div class="col-lg-9 col-md-9 placeholder">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">执行参数</h4>
+            </div>
+            <div class="panel-body">
+                <form id="commandform" class="form-inline" role="form">
+                    <select class="form-control span1" id="expr_form">
+                        <option value="glob">默认</option> 
+                        <option value="list">列表</option> 
+                        <option value="pcre">正则</option> 
+                        <option value="nodegroup">组</option>
+                        <option value="grain">grain</option> 
+                        <option value="pillar">pillar</option>  
+                    </select>
+                    <input type="text" class="form-control" id="target" placeholder="ID" value="GLB_10_148" required>
+                    <select class="js-example-basic-multiple js-states form-control" style="width: 50%" id="project" name="project" multiple="multiple">
+                    </select>
+                    <button id="btn_submit" type="submit" class="btn btn-default">重启</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-9 placeholder">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">返回结果</h4>
+            </div>
+            <div class="panel-body">
+              <pre class="pre-scrollable" id="commandresults"></pre>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+$(".js-example-basic-multiple").select2({
+    placeholder: "请选择要重启的服务"
+});
+
+$(function () {
+    operate.operateInit();
+});
+
+//操作
+var operate = {
+    //初始化按钮事件
+    operateInit: function () {
+        this.GetProject();
+        this.Getform();
+        this.Submit();
+    },
+
+    GetProject: function(){
+        $.ajax({
+            url: "/saltstack/restart/get_project",
+            type: "post",
+            contentType: 'application/json',
+            //data: JSON.stringify(postData),
+            success: function (datas, status) {
+                //alert(datas);
+                var data = eval(datas);
+                //var html = "<option value=''></option>";
+                var html = "";
+                $.each(data, function (index, item) { 
+                    //循环获取数据 
+                    var name = data[index];
+                    html_name = "<option value='"+name+"'>"+name+"</option>";
+                    html = html + html_name
+                }); 
+                $("#project").html(html);
+                //for (var data in datas){
+                //    $("#project").html("<option value='"+data+"'>"+data+"</option>");
+                //}
+                return false;
+            },
+            error:function(msg){
+                alert("获取项目失败！");
+                return false;
+            }
+        });
+    },
+
+    Getform: function getEntity(commandform) {
+        var formdata = {
+            expr_form:document.getElementById("expr_form").value,
+            target:document.getElementById("target").value,
+            project:[],
+        };
+        var target = document.getElementById("target").value;
+        if (formdata['expr_form'] == 'list'){
+            formdata['target'] = target.replace(/[\s*]/g, '').split(',');
+        }
+        if (formdata['target'] == ''){
+            $("#target").html("target 不能为空！");
+        }
+        var project = [];
+        $("#project :selected").each(function(){
+            project.push($(this).val())
+        });
+        formdata['project'] = project;
+        return formdata;
+    },
+    
+    Submit: function(){
+        $("#btn_submit").bind('click',function () {
+            var postData=operate.Getform();
+            //alert("获取到的表单数据为:"+JSON.stringify(postData));
+            $.ajax({
+                url: "/saltstack/command/restart",
+                type: "post",
+                contentType: 'application/json',
+                data: JSON.stringify(postData),
+                success: function (data, status) {
+                    //alert(data);
+                    $("#commandresults").html(data);
+                    return false;
+                },
+                error:function(msg){
+                    alert("参数输入错误！");
+                    return false;
+                }
+            });
+            return false;
+        });
+    },
+
+};
+</script>
+{% endblock %}

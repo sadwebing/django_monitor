@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib.auth.decorators import login_required
 from monitor import settings
+from check_tomcat.models import tomcat_project
 from saltstack.saltapi import SaltAPI
 import json, logging
 
@@ -36,6 +37,21 @@ def CheckMinion(request):
         return HttpResponse('nothing!')
 
 @csrf_exempt
+def GetProject(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        datas     = tomcat_project.objects.raw('select id,project from check_tomcat_tomcat_project where status="active";')
+        projectlist = []
+        for data in datas:
+            projectlist.append(data.project)
+        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), projectlist))
+        return HttpResponse(json.dumps(projectlist))
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
 def CommandExecute(request):
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
@@ -60,6 +76,34 @@ def CommandExecute(request):
     else:
         return HttpResponse('nothing!')
 
+@csrf_exempt
+def CommandRestart(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        data     = json.loads(request.body)
+        logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+        results = []
+        for project in data['project']:
+            restart = tomcat_project.objects.filter(project=project).first().script
+            #logger.info(restart)
+            arg = "%s restart" %restart
+            arglist = ["runas=tomcat"]
+            arglist.append(arg)
+            logger.info("重启参数：%s"%arglist)
+            result = sapi.ClientLocal(
+                tgt       = data['target'],
+                fun       = 'cmd.run',
+                arg       = arglist,
+                expr_form = data['expr_form'],
+                )
+            results.append(result[0][data['target']])
+
+        return HttpResponse(results)
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
 @csrf_protect
 @login_required
 def command(request):
@@ -70,6 +114,22 @@ def command(request):
     return render(
         request,
         'saltstack_index.html',
+        {
+            'clientip':clientip,
+            'title': title,
+        }
+    )
+
+@csrf_protect
+@login_required
+def restart(request):
+    global clientip
+    clientip = request.META['REMOTE_ADDR']
+    title = u'SALTSTACK-服务重启'
+    logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+    return render(
+        request,
+        'saltstack_restart.html',
         {
             'clientip':clientip,
             'title': title,
