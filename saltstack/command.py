@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from monitor import settings
 from check_tomcat.models import tomcat_project
 from saltstack.saltapi import SaltAPI
-import json, logging
+import json, logging, yaml
 
 logger = logging.getLogger('django')
 #get saltapi url
@@ -20,12 +20,11 @@ sapi = SaltAPI(
     )
 
 class Command(object):
-    def __init__(self, tgt, fun, arg, expr_form, headers):
+    def __init__(self, tgt, fun, arg, expr_form):
         self.__tgt = tgt
         self.__fun = fun
         self.__arg = arg
         self.__expr_form = expr_form
-        self.__headers = headers
         self.tgt_list = []
         self.info = {}
 
@@ -70,24 +69,22 @@ class Command(object):
         return self.info
 
     def StateSls(self):
-        results = sapi.StateSls(
+        results = sapi.ClientLocal(
             tgt       = self.__tgt,
             fun       = self.__fun,
             arg       = self.__arg,
             expr_form = self.__expr_form,
-            headers   = self.__headers
             )
-        logger.info("%s: %s"%(results, dir(results)))
-        #if self.__expr_form == 'glob':
-        #    self.tgt_list.append(self.__tgt)
-        #elif self.__expr_form == 'list':
-        #    self.tgt_list = self.__tgt
-        #else:
-        #    self.tgt_list = results['return'][0].keys()
-        #for minionid in self.tgt_list:
-        #    try:
-        #        self.info[minionid] = results['return'][0][minionid]
-        #    except:
-        #        self.info[minionid] = "not return"
-        #return self.info
-        return results
+        #logger.info(results)
+        if self.__expr_form == 'glob':
+            self.tgt_list.append(self.__tgt)
+        elif self.__expr_form == 'list':
+            self.tgt_list = self.__tgt
+        else:
+            self.tgt_list = results['return'][0].keys()
+        for minionid in self.tgt_list:
+            try:
+                self.info[minionid] = yaml.safe_dump(results['return'][0][minionid], default_flow_style=False, allow_unicode=True)
+            except:
+                self.info[minionid] = "not return"
+        return self.info

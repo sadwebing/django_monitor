@@ -17491,3 +17491,656 @@ ValueError: No JSON object could be decoded
 2017-03-19 06:15:32,180 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
 2017-03-19 06:15:32,226 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
 2017-03-19 06:15:32,275 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:31:24,230 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:31:28,706 command.py [django:80] [INFO]- <Response [200]>: ['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2017-03-19 06:31:28,706 views.py [django:69] [INFO]- <Response [200]>
+2017-03-19 06:32:04,038 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:32:04,388 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:32:04,434 utils.py [django.db.backends:89] [DEBUG]- (0.046) SHOW FULL TABLES; args=None
+2017-03-19 06:32:04,482 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:32:06,029 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:32:10,555 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in StateSls
+    return ret.text()
+TypeError: 'unicode' object is not callable
+2017-03-19 06:33:06,588 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:33:06,963 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:33:07,009 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 06:33:07,058 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:33:08,851 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:33:13,272 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in StateSls
+    return ret.text()
+TypeError: 'unicode' object is not callable
+2017-03-19 06:34:58,736 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:34:59,066 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:34:59,112 utils.py [django.db.backends:89] [DEBUG]- (0.046) SHOW FULL TABLES; args=None
+2017-03-19 06:34:59,161 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:36:26,234 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:36:26,236 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 40, in StateSls
+    ret = requests.post(url=self.__url, data=params, headers=dict({'X-Auth-Token': self.__token_id}, **headers), verify=False)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 474, in request
+    prep = self.prepare_request(req)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 407, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 303, in prepare
+    self.prepare_headers(headers)
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 443, in prepare_headers
+    check_header_validity(header)
+  File "D:\django\monitor\lib\site-packages\requests\utils.py", line 796, in check_header_validity
+    "not %s" % (value, type(value)))
+InvalidHeader: Header value {'Accept': 'application/x-yaml'} must be of type str or bytes, not <type 'dict'>
+2017-03-19 06:37:45,482 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:37:45,802 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:37:45,848 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 06:37:45,895 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:38:58,832 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:39:03,420 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 76, in StateSls
+    expr_form = self.__expr_form,
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in StateSls
+    return ret.text()
+TypeError: 'unicode' object is not callable
+2017-03-19 06:41:12,661 utils.py [django.db.backends:89] [DEBUG]- (0.056) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:41:12,993 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:41:13,039 utils.py [django.db.backends:89] [DEBUG]- (0.044) SHOW FULL TABLES; args=None
+2017-03-19 06:41:13,086 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:41:23,076 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:41:27,542 command.py [django:78] [INFO]- <Response [200]>
+2017-03-19 06:41:27,542 views.py [django:69] [INFO]- <Response [200]>
+2017-03-19 06:42:00,687 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:42:01,032 utils.py [django.db.backends:89] [DEBUG]- (0.052) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:42:01,078 utils.py [django.db.backends:89] [DEBUG]- (0.046) SHOW FULL TABLES; args=None
+2017-03-19 06:42:01,130 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:42:02,773 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:42:07,226 command.py [django:79] [INFO]- <Response [200]>: ['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2017-03-19 06:42:07,226 views.py [django:69] [INFO]- <Response [200]>
+2017-03-19 06:42:57,401 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:42:57,723 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:42:57,767 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 06:42:57,816 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:43:30,552 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:43:35,088 command.py [django:79] [INFO]- <Response [200]>: ['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+2017-03-19 06:43:35,101 command.py [django:80] [INFO]- return:
+- GLB_10_154:
+    cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:
+      __id__: rsync.sh
+      __run_num__: 2
+      changes: {}
+      comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present
+      duration: 13.486000000000001
+      name: /bin/sh /etc/rsync.sh > /dev/null 2>&1
+      result: true
+      start_time: '06:43:32.839762'
+    file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:
+      __id__: /etc/rsync.sh
+      __run_num__: 1
+      changes: {}
+      comment: File /etc/rsync.sh is in the correct state
+      duration: 275.88200000000001
+      name: /etc/rsync.sh
+      pchanges: {}
+      result: true
+      start_time: '06:43:32.563236'
+    file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:
+      __id__: /etc/rsyncd.pass
+      __run_num__: 0
+      changes: {}
+      comment: File /etc/rsyncd.pass is in the correct state
+      duration: 361.42399999999998
+      name: /etc/rsyncd.pass
+      pchanges: {}
+      result: true
+      start_time: '06:43:32.201705'
+    pkg_|-epel-release_|-epel-release_|-installed:
+      __id__: epel-release
+      __run_num__: 4
+      changes: {}
+      comment: unless execution succeeded
+      duration: 223.56299999999999
+      name: epel-release
+      result: true
+      skip_watch: true
+      start_time: '06:43:33.597661'
+    pkg_|-rsync_|-rsync_|-installed:
+      __id__: rsync
+      __run_num__: 3
+      changes: {}
+      comment: unless execution succeeded
+      duration: 367.79199999999997
+      name: rsync
+      result: true
+      skip_watch: true
+      start_time: '06:43:33.229616'
+
+2017-03-19 06:43:35,102 views.py [django:69] [INFO]- <Response [200]>
+2017-03-19 06:44:37,471 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:44:37,792 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 06:44:37,838 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 06:44:37,885 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 06:44:59,618 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_154', u'arguments': u'crontab.rsync'}
+2017-03-19 06:45:04,046 command.py [django:78] [INFO]- return:
+- GLB_10_154:
+    cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:
+      __id__: rsync.sh
+      __run_num__: 2
+      changes: {}
+      comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present
+      duration: 13.249000000000001
+      name: /bin/sh /etc/rsync.sh > /dev/null 2>&1
+      result: true
+      start_time: '06:45:01.778895'
+    file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:
+      __id__: /etc/rsync.sh
+      __run_num__: 1
+      changes: {}
+      comment: File /etc/rsync.sh is in the correct state
+      duration: 274.88499999999999
+      name: /etc/rsync.sh
+      pchanges: {}
+      result: true
+      start_time: '06:45:01.503300'
+    file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:
+      __id__: /etc/rsyncd.pass
+      __run_num__: 0
+      changes: {}
+      comment: File /etc/rsyncd.pass is in the correct state
+      duration: 362.17099999999999
+      name: /etc/rsyncd.pass
+      pchanges: {}
+      result: true
+      start_time: '06:45:01.141002'
+    pkg_|-epel-release_|-epel-release_|-installed:
+      __id__: epel-release
+      __run_num__: 4
+      changes: {}
+      comment: unless execution succeeded
+      duration: 222.267
+      name: epel-release
+      result: true
+      skip_watch: true
+      start_time: '06:45:02.535925'
+    pkg_|-rsync_|-rsync_|-installed:
+      __id__: rsync
+      __run_num__: 3
+      changes: {}
+      comment: unless execution succeeded
+      duration: 366.06999999999999
+      name: rsync
+      result: true
+      skip_watch: true
+      start_time: '06:45:02.169602'
+
+2017-03-19 06:45:04,046 views.py [django:69] [INFO]- return:
+- GLB_10_154:
+    cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:
+      __id__: rsync.sh
+      __run_num__: 2
+      changes: {}
+      comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present
+      duration: 13.249000000000001
+      name: /bin/sh /etc/rsync.sh > /dev/null 2>&1
+      result: true
+      start_time: '06:45:01.778895'
+    file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:
+      __id__: /etc/rsync.sh
+      __run_num__: 1
+      changes: {}
+      comment: File /etc/rsync.sh is in the correct state
+      duration: 274.88499999999999
+      name: /etc/rsync.sh
+      pchanges: {}
+      result: true
+      start_time: '06:45:01.503300'
+    file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:
+      __id__: /etc/rsyncd.pass
+      __run_num__: 0
+      changes: {}
+      comment: File /etc/rsyncd.pass is in the correct state
+      duration: 362.17099999999999
+      name: /etc/rsyncd.pass
+      pchanges: {}
+      result: true
+      start_time: '06:45:01.141002'
+    pkg_|-epel-release_|-epel-release_|-installed:
+      __id__: epel-release
+      __run_num__: 4
+      changes: {}
+      comment: unless execution succeeded
+      duration: 222.267
+      name: epel-release
+      result: true
+      skip_watch: true
+      start_time: '06:45:02.535925'
+    pkg_|-rsync_|-rsync_|-installed:
+      __id__: rsync
+      __run_num__: 3
+      changes: {}
+      comment: unless execution succeeded
+      duration: 366.06999999999999
+      name: rsync
+      result: true
+      skip_watch: true
+      start_time: '06:45:02.169602'
+
+2017-03-19 06:46:20,338 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'list', u'target': [u'GLB_10_154', u'GLB_10_153'], u'arguments': u'crontab.rsync'}
+2017-03-19 06:46:25,417 command.py [django:78] [INFO]- return:
+- GLB_10_153:
+    cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:
+      __id__: rsync.sh
+      __run_num__: 2
+      changes: {}
+      comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present
+      duration: 13.262
+      name: /bin/sh /etc/rsync.sh > /dev/null 2>&1
+      result: true
+      start_time: '06:46:22.464121'
+    file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:
+      __id__: /etc/rsync.sh
+      __run_num__: 1
+      changes: {}
+      comment: File /etc/rsync.sh is in the correct state
+      duration: 273.399
+      name: /etc/rsync.sh
+      pchanges: {}
+      result: true
+      start_time: '06:46:22.190135'
+    file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:
+      __id__: /etc/rsyncd.pass
+      __run_num__: 0
+      changes: {}
+      comment: File /etc/rsyncd.pass is in the correct state
+      duration: 360.93700000000001
+      name: /etc/rsyncd.pass
+      pchanges: {}
+      result: true
+      start_time: '06:46:21.829086'
+    pkg_|-epel-release_|-epel-release_|-installed:
+      __id__: epel-release
+      __run_num__: 4
+      changes: {}
+      comment: unless execution succeeded
+      duration: 222.92699999999999
+      name: epel-release
+      result: true
+      skip_watch: true
+      start_time: '06:46:23.261336'
+    pkg_|-rsync_|-rsync_|-installed:
+      __id__: rsync
+      __run_num__: 3
+      changes: {}
+      comment: unless execution succeeded
+      duration: 367.31400000000002
+      name: rsync
+      result: true
+      skip_watch: true
+      start_time: '06:46:22.893768'
+  GLB_10_154:
+    cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:
+      __id__: rsync.sh
+      __run_num__: 2
+      changes: {}
+      comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present
+      duration: 13.529
+      name: /bin/sh /etc/rsync.sh > /dev/null 2>&1
+      result: true
+      start_time: '06:46:23.150132'
+    file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:
+      __id__: /etc/rsync.sh
+      __run_num__: 1
+      changes: {}
+      comment: File /etc/rsync.sh is in the correct state
+      duration: 273.75299999999999
+      name: /etc/rsync.sh
+      pchanges: {}
+      result: true
+      start_time: '06:46:22.875738'
+    file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:
+      __id__: /etc/rsyncd.pass
+      __run_num__: 0
+      changes: {}
+      comment: File /etc/rsyncd.pass is in the correct state
+      duration: 360.36900000000003
+      name: /etc/rsyncd.pass
+      pchanges: {}
+      result: true
+      start_time: '06:46:22.515261'
+    pkg_|-epel-release_|-epel-release_|-installed:
+      __id__: epel-release
+      __run_num__: 4
+      changes: {}
+      comment: unless execution succeeded
+      duration: 223.01900000000001
+      name: epel-release
+      result: true
+      skip_watch: true
+      start_time: '06:46:23.907275'
+    pkg_|-rsync_|-rsync_|-installed:
+      __id__: rsync
+      __run_num__: 3
+      changes: {}
+      comment: unless execution succeeded
+      duration: 365.51600000000002
+      name: rsync
+      result: true
+      skip_watch: true
+      start_time: '06:46:23.541502'
+
+2017-03-19 06:46:25,417 views.py [django:69] [INFO]- return:
+- GLB_10_153:
+    cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:
+      __id__: rsync.sh
+      __run_num__: 2
+      changes: {}
+      comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present
+      duration: 13.262
+      name: /bin/sh /etc/rsync.sh > /dev/null 2>&1
+      result: true
+      start_time: '06:46:22.464121'
+    file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:
+      __id__: /etc/rsync.sh
+      __run_num__: 1
+      changes: {}
+      comment: File /etc/rsync.sh is in the correct state
+      duration: 273.399
+      name: /etc/rsync.sh
+      pchanges: {}
+      result: true
+      start_time: '06:46:22.190135'
+    file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:
+      __id__: /etc/rsyncd.pass
+      __run_num__: 0
+      changes: {}
+      comment: File /etc/rsyncd.pass is in the correct state
+      duration: 360.93700000000001
+      name: /etc/rsyncd.pass
+      pchanges: {}
+      result: true
+      start_time: '06:46:21.829086'
+    pkg_|-epel-release_|-epel-release_|-installed:
+      __id__: epel-release
+      __run_num__: 4
+      changes: {}
+      comment: unless execution succeeded
+      duration: 222.92699999999999
+      name: epel-release
+      result: true
+      skip_watch: true
+      start_time: '06:46:23.261336'
+    pkg_|-rsync_|-rsync_|-installed:
+      __id__: rsync
+      __run_num__: 3
+      changes: {}
+      comment: unless execution succeeded
+      duration: 367.31400000000002
+      name: rsync
+      result: true
+      skip_watch: true
+      start_time: '06:46:22.893768'
+  GLB_10_154:
+    cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:
+      __id__: rsync.sh
+      __run_num__: 2
+      changes: {}
+      comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present
+      duration: 13.529
+      name: /bin/sh /etc/rsync.sh > /dev/null 2>&1
+      result: true
+      start_time: '06:46:23.150132'
+    file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:
+      __id__: /etc/rsync.sh
+      __run_num__: 1
+      changes: {}
+      comment: File /etc/rsync.sh is in the correct state
+      duration: 273.75299999999999
+      name: /etc/rsync.sh
+      pchanges: {}
+      result: true
+      start_time: '06:46:22.875738'
+    file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:
+      __id__: /etc/rsyncd.pass
+      __run_num__: 0
+      changes: {}
+      comment: File /etc/rsyncd.pass is in the correct state
+      duration: 360.36900000000003
+      name: /etc/rsyncd.pass
+      pchanges: {}
+      result: true
+      start_time: '06:46:22.515261'
+    pkg_|-epel-release_|-epel-release_|-installed:
+      __id__: epel-release
+      __run_num__: 4
+      changes: {}
+      comment: unless execution succeeded
+      duration: 223.01900000000001
+      name: epel-release
+      result: true
+      skip_watch: true
+      start_time: '06:46:23.907275'
+    pkg_|-rsync_|-rsync_|-installed:
+      __id__: rsync
+      __run_num__: 3
+      changes: {}
+      comment: unless execution succeeded
+      duration: 365.51600000000002
+      name: rsync
+      result: true
+      skip_watch: true
+      start_time: '06:46:23.541502'
+
+2017-03-19 07:05:24,157 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'list', u'target': [u'GLB_10_154', u'GLB_10_153'], u'arguments': u'uptime'}
+2017-03-19 07:05:27,206 command.py [django:78] [INFO]- return:
+- GLB_10_153:
+  - No matching sls found for 'uptime' in env 'base'
+  GLB_10_154:
+  - No matching sls found for 'uptime' in env 'base'
+
+2017-03-19 07:05:27,206 views.py [django:69] [INFO]- return:
+- GLB_10_153:
+  - No matching sls found for 'uptime' in env 'base'
+  GLB_10_154:
+  - No matching sls found for 'uptime' in env 'base'
+
+2017-03-19 07:05:39,460 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'GLB_10_154', u'GLB_10_153'], u'arguments': u'uptime'}
+2017-03-19 07:05:39,960 views.py [django:69] [INFO]- {u'GLB_10_153': u' 07:05:38 up 25 days, 21:43,  0 users,  load average: 0.00, 0.00, 0.00', u'GLB_10_154': u' 07:05:38 up 25 days, 21:40,  0 users,  load average: 0.00, 0.00, 0.00'}
+2017-03-19 07:06:22,898 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'GLB_10_154', u'GLB_10_153'], u'arguments': u'uptime'}
+2017-03-19 07:06:23,401 views.py [django:69] [INFO]- {u'GLB_10_153': u' 07:06:22 up 25 days, 21:44,  0 users,  load average: 0.00, 0.00, 0.00', u'GLB_10_154': u' 07:06:22 up 25 days, 21:41,  0 users,  load average: 0.00, 0.00, 0.00'}
+2017-03-19 07:06:52,726 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:06:53,019 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:06:53,063 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:06:52.403000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:06:52.403000')
+2017-03-19 07:06:53,111 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:06:53,111 views.py [django:115] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:07:00,464 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'uptime'}
+2017-03-19 07:07:00,970 views.py [django:69] [INFO]- {u'GLB_10_153': u' 07:06:59 up 25 days, 21:44,  0 users,  load average: 0.00, 0.00, 0.00'}
+2017-03-19 07:08:20,464 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:08:20,779 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:08:20,823 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:08:20.170000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:08:20.170000')
+2017-03-19 07:08:20,871 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:08:20,871 views.py [django:115] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:08:29,030 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'uptime'}
+2017-03-19 07:08:29,535 views.py [django:69] [INFO]- {u'GLB_10_153': u' 07:08:28 up 25 days, 21:46,  0 users,  load average: 0.00, 0.00, 0.00'}
+2017-03-19 07:09:00,020 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:00,342 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:00,388 utils.py [django.db.backends:89] [DEBUG]- (0.046) SHOW FULL TABLES; args=None
+2017-03-19 07:09:00,437 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:09:02,546 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:02,846 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:02,891 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:09:02.253000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:09:02.253000')
+2017-03-19 07:09:02,938 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:09:02,938 views.py [django:115] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:09:05,157 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:05,450 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:05,497 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:09:04.863000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:09:04.863000')
+2017-03-19 07:09:05,543 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:09:05,545 views.py [django:41] [INFO]- 127.0.0.1 is requesting /
+2017-03-19 07:09:05,709 tomcat_url.py [django:21] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/Query?limit=10&offset=0&_=1489878545584
+2017-03-19 07:09:06,003 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:06,056 utils.py [django.db.backends:89] [DEBUG]- (0.054) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status` FROM `check_tomcat_tomcat_url`; args=()
+2017-03-19 07:09:08,161 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:08,457 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:08,503 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:09:07.856000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:09:07.856000')
+2017-03-19 07:09:08,549 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:09:08,549 views.py [django:115] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:09:13,576 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'uptime'}
+2017-03-19 07:09:14,075 views.py [django:69] [INFO]- {u'GLB_10_153': u' 07:09:12 up 25 days, 21:46,  0 users,  load average: 0.00, 0.00, 0.00'}
+2017-03-19 07:09:28,723 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:29,020 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:09:29,065 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:09:28.430000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:09:28.430000')
+2017-03-19 07:09:29,112 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:09:29,114 views.py [django:115] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:09:33,825 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'uptime'}
+2017-03-19 07:09:34,336 views.py [django:69] [INFO]- {u'GLB_10_153': u' 07:09:33 up 25 days, 21:47,  0 users,  load average: 0.00, 0.00, 0.00'}
+2017-03-19 07:19:58,888 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:19:59,240 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:19:59,286 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 07:19:59,335 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:20:54,313 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:20:54,608 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:20:54,651 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:20:54.021000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:20:54.021000')
+2017-03-19 07:20:54,700 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:20:54,700 views.py [django:113] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:20:55,257 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:20:55,555 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:20:55,601 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:20:54.964000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:20:54.964000')
+2017-03-19 07:20:55,648 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:20:55,648 views.py [django:113] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:20:57,867 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:21:02,265 views.py [django:67] [INFO]- {u'GLB_10_153': {u'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed': {u'comment': u'File /etc/rsync.sh is in the correct state', u'pchanges': {}, u'name': u'/etc/rsync.sh', u'start_time': u'07:20:59.592871', u'result': True, u'duration': 274.398, u'__run_num__': 1, u'changes': {}, u'__id__': u'/etc/rsync.sh'}, u'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present': {u'comment': u'Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present', u'name': u'/bin/sh /etc/rsync.sh > /dev/null 2>&1', u'start_time': u'07:20:59.867839', u'result': True, u'duration': 12.993, u'__run_num__': 2, u'changes': {}, u'__id__': u'rsync.sh'}, u'pkg_|-epel-release_|-epel-release_|-installed': {u'comment': u'unless execution succeeded', u'name': u'epel-release', u'start_time': u'07:21:00.657265', u'skip_watch': True, u'__id__': u'epel-release', u'duration': 223.549, u'__run_num__': 4, u'changes': {}, u'result': True}, u'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed': {u'comment': u'File /etc/rsyncd.pass is in the correct state', u'pchanges': {}, u'name': u'/etc/rsyncd.pass', u'start_time': u'07:20:59.231485', u'result': True, u'duration': 361.273, u'__run_num__': 0, u'changes': {}, u'__id__': u'/etc/rsyncd.pass'}, u'pkg_|-rsync_|-rsync_|-installed': {u'comment': u'unless execution succeeded', u'name': u'rsync', u'start_time': u'07:21:00.288640', u'skip_watch': True, u'__id__': u'rsync', u'duration': 368.384, u'__run_num__': 3, u'changes': {}, u'result': True}}}
+2017-03-19 07:21:51,631 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:21:51,980 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:21:52,025 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 07:21:52,073 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:22:28,204 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:22:32,707 views.py [django:67] [INFO]- {u'GLB_10_153': "!!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present':\n  !!python/unicode '__id__': !!python/unicode 'rsync.sh'\n  !!python/unicode '__run_num__': 2\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'Cron /bin/sh /etc/rsync.sh > /dev/null\n    2>&1 already present'\n  !!python/unicode 'duration': 12.983\n  !!python/unicode 'name': !!python/unicode '/bin/sh /etc/rsync.sh > /dev/null 2>&1'\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:22:30.283972'\n!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode '__run_num__': 1\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsync.sh is in the correct\n    state'\n  !!python/unicode 'duration': 273.804\n  !!python/unicode 'name': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:22:30.009588'\n!!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode '__run_num__': 0\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsyncd.pass is in the correct\n    state'\n  !!python/unicode 'duration': 360.332\n  !!python/unicode 'name': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:22:29.649148'\n!!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'epel-release'\n  !!python/unicode '__run_num__': 4\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 222.504\n  !!python/unicode 'name': !!python/unicode 'epel-release'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:22:31.073113'\n!!python/unicode 'pkg_|-rsync_|-rsync_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'rsync'\n  !!python/unicode '__run_num__': 3\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 366.682\n  !!python/unicode 'name': !!python/unicode 'rsync'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:22:30.706187'\n"}
+2017-03-19 07:23:16,986 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:23:17,335 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:23:17,381 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 07:23:17,428 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:23:22,779 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:23:27,345 views.py [django:67] [INFO]- {u'GLB_10_153': "!!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present':\n  !!python/unicode '__id__': !!python/unicode 'rsync.sh'\n  !!python/unicode '__run_num__': 2\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'Cron /bin/sh /etc/rsync.sh > /dev/null\n    2>&1 already present'\n  !!python/unicode 'duration': 13.133\n  !!python/unicode 'name': !!python/unicode '/bin/sh /etc/rsync.sh > /dev/null 2>&1'\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:23:24.936452'\n!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode '__run_num__': 1\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsync.sh is in the correct\n    state'\n  !!python/unicode 'duration': 274.69\n  !!python/unicode 'name': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:23:24.661176'\n!!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode '__run_num__': 0\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsyncd.pass is in the correct\n    state'\n  !!python/unicode 'duration': 360.765\n  !!python/unicode 'name': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:23:24.300296'\n!!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'epel-release'\n  !!python/unicode '__run_num__': 4\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 222.364\n  !!python/unicode 'name': !!python/unicode 'epel-release'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:23:25.721909'\n!!python/unicode 'pkg_|-rsync_|-rsync_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'rsync'\n  !!python/unicode '__run_num__': 3\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 364.451\n  !!python/unicode 'name': !!python/unicode 'rsync'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:23:25.357221'\n"}
+2017-03-19 07:24:30,288 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'uptime'}
+2017-03-19 07:24:30,790 views.py [django:67] [INFO]- {u'GLB_10_153': "!!python/unicode ' 07:24:29 up 25 days, 22:02,  0 users,  load average: 0.04, 0.03,\n  0.00'\n"}
+2017-03-19 07:25:40,349 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:25:40,691 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:25:40,736 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 07:25:40,789 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:25:44,119 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'uptime'}
+2017-03-19 07:25:44,618 views.py [django:67] [INFO]- {u'GLB_10_153': u' 07:25:43 up 25 days, 22:03,  0 users,  load average: 0.01, 0.02, 0.00'}
+2017-03-19 07:25:47,957 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:25:48,250 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:25:48,296 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:25:47.659000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:25:47.659000')
+2017-03-19 07:25:48,342 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:25:48,342 views.py [django:113] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:25:50,302 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:25:54,803 views.py [django:67] [INFO]- {u'GLB_10_153': {u'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed': {u'comment': u'File /etc/rsync.sh is in the correct state', u'pchanges': {}, u'name': u'/etc/rsync.sh', u'start_time': u'07:25:52.113031', u'result': True, u'duration': 273.555, u'__run_num__': 1, u'changes': {}, u'__id__': u'/etc/rsync.sh'}, u'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present': {u'comment': u'Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present', u'name': u'/bin/sh /etc/rsync.sh > /dev/null 2>&1', u'start_time': u'07:25:52.387181', u'result': True, u'duration': 13.314, u'__run_num__': 2, u'changes': {}, u'__id__': u'rsync.sh'}, u'pkg_|-epel-release_|-epel-release_|-installed': {u'comment': u'unless execution succeeded', u'name': u'epel-release', u'start_time': u'07:25:53.176765', u'skip_watch': True, u'__id__': u'epel-release', u'duration': 228.256, u'__run_num__': 4, u'changes': {}, u'result': True}, u'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed': {u'comment': u'File /etc/rsyncd.pass is in the correct state', u'pchanges': {}, u'name': u'/etc/rsyncd.pass', u'start_time': u'07:25:51.752343', u'result': True, u'duration': 360.582, u'__run_num__': 0, u'changes': {}, u'__id__': u'/etc/rsyncd.pass'}, u'pkg_|-rsync_|-rsync_|-installed': {u'comment': u'unless execution succeeded', u'name': u'rsync', u'start_time': u'07:25:52.808833', u'skip_watch': True, u'__id__': u'rsync', u'duration': 367.589, u'__run_num__': 3, u'changes': {}, u'result': True}}}
+2017-03-19 07:27:31,763 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:27:32,055 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:27:32,099 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:27:31.462000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:27:31.462000')
+2017-03-19 07:27:32,147 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:27:32,147 views.py [django:113] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:27:35,138 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:27:39,539 views.py [django:67] [INFO]- {u'GLB_10_153': {u'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed': {u'comment': u'File /etc/rsync.sh is in the correct state', u'pchanges': {}, u'name': u'/etc/rsync.sh', u'start_time': u'07:27:36.847669', u'result': True, u'duration': 273.543, u'__run_num__': 1, u'changes': {}, u'__id__': u'/etc/rsync.sh'}, u'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present': {u'comment': u'Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present', u'name': u'/bin/sh /etc/rsync.sh > /dev/null 2>&1', u'start_time': u'07:27:37.121800', u'result': True, u'duration': 13.522, u'__run_num__': 2, u'changes': {}, u'__id__': u'rsync.sh'}, u'pkg_|-epel-release_|-epel-release_|-installed': {u'comment': u'unless execution succeeded', u'name': u'epel-release', u'start_time': u'07:27:37.909945', u'skip_watch': True, u'__id__': u'epel-release', u'duration': 223.761, u'__run_num__': 4, u'changes': {}, u'result': True}, u'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed': {u'comment': u'File /etc/rsyncd.pass is in the correct state', u'pchanges': {}, u'name': u'/etc/rsyncd.pass', u'start_time': u'07:27:36.487025', u'result': True, u'duration': 360.531, u'__run_num__': 0, u'changes': {}, u'__id__': u'/etc/rsyncd.pass'}, u'pkg_|-rsync_|-rsync_|-installed': {u'comment': u'unless execution succeeded', u'name': u'rsync', u'start_time': u'07:27:37.546184', u'skip_watch': True, u'__id__': u'rsync', u'duration': 363.526, u'__run_num__': 3, u'changes': {}, u'result': True}}}
+2017-03-19 07:40:28,122 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:40:30,013 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:40:30,309 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:40:30,355 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:40:29.721000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:40:29.721000')
+2017-03-19 07:40:30,401 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:40:30,403 views.py [django:113] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:40:32,726 views.py [django:67] [INFO]- {u'GLB_10_153': {u'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed': {u'comment': u'File /etc/rsync.sh is in the correct state', u'pchanges': {}, u'name': u'/etc/rsync.sh', u'start_time': u'07:40:29.950007', u'result': True, u'duration': 275.43, u'__run_num__': 1, u'changes': {}, u'__id__': u'/etc/rsync.sh'}, u'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present': {u'comment': u'Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present', u'name': u'/bin/sh /etc/rsync.sh > /dev/null 2>&1', u'start_time': u'07:40:30.226040', u'result': True, u'duration': 13.336, u'__run_num__': 2, u'changes': {}, u'__id__': u'rsync.sh'}, u'pkg_|-epel-release_|-epel-release_|-installed': {u'comment': u'unless execution succeeded', u'name': u'epel-release', u'start_time': u'07:40:31.017462', u'skip_watch': True, u'__id__': u'epel-release', u'duration': 223.831, u'__run_num__': 4, u'changes': {}, u'result': True}, u'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed': {u'comment': u'File /etc/rsyncd.pass is in the correct state', u'pchanges': {}, u'name': u'/etc/rsyncd.pass', u'start_time': u'07:40:29.589245', u'result': True, u'duration': 360.645, u'__run_num__': 0, u'changes': {}, u'__id__': u'/etc/rsyncd.pass'}, u'pkg_|-rsync_|-rsync_|-installed': {u'comment': u'unless execution succeeded', u'name': u'rsync', u'start_time': u'07:40:30.650505', u'skip_watch': True, u'__id__': u'rsync', u'duration': 366.693, u'__run_num__': 3, u'changes': {}, u'result': True}}}
+2017-03-19 07:40:34,048 utils.py [django.db.backends:89] [DEBUG]- (0.052) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:40:34,342 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:40:34,387 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:40:33.715000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:40:33.715000')
+2017-03-19 07:40:34,433 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:40:34,434 views.py [django:113] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:40:38,051 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:40:42,046 views.py [django:67] [INFO]- {u'GLB_10_153': {u'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed': {u'comment': u'File /etc/rsync.sh is in the correct state', u'pchanges': {}, u'name': u'/etc/rsync.sh', u'start_time': u'07:40:39.316052', u'result': True, u'duration': 273.611, u'__run_num__': 1, u'changes': {}, u'__id__': u'/etc/rsync.sh'}, u'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present': {u'comment': u'Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present', u'name': u'/bin/sh /etc/rsync.sh > /dev/null 2>&1', u'start_time': u'07:40:39.590243', u'result': True, u'duration': 13.08, u'__run_num__': 2, u'changes': {}, u'__id__': u'rsync.sh'}, u'pkg_|-epel-release_|-epel-release_|-installed': {u'comment': u'unless execution succeeded', u'name': u'epel-release', u'start_time': u'07:40:40.375666', u'skip_watch': True, u'__id__': u'epel-release', u'duration': 224.146, u'__run_num__': 4, u'changes': {}, u'result': True}, u'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed': {u'comment': u'File /etc/rsyncd.pass is in the correct state', u'pchanges': {}, u'name': u'/etc/rsyncd.pass', u'start_time': u'07:40:38.955526', u'result': True, u'duration': 360.417, u'__run_num__': 0, u'changes': {}, u'__id__': u'/etc/rsyncd.pass'}, u'pkg_|-rsync_|-rsync_|-installed': {u'comment': u'unless execution succeeded', u'name': u'rsync', u'start_time': u'07:40:40.010178', u'skip_watch': True, u'__id__': u'rsync', u'duration': 365.226, u'__run_num__': 3, u'changes': {}, u'result': True}}}
+2017-03-19 07:43:52,516 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:43:52,861 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:43:52,905 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 07:43:52,953 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:44:39,519 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:44:44,009 views.py [django:69] [INFO]- {u'GLB_10_153': "!!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present':\n  !!python/unicode '__id__': !!python/unicode 'rsync.sh'\n  !!python/unicode '__run_num__': 2\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'Cron /bin/sh /etc/rsync.sh > /dev/null\n    2>&1 already present'\n  !!python/unicode 'duration': 13.398\n  !!python/unicode 'name': !!python/unicode '/bin/sh /etc/rsync.sh > /dev/null 2>&1'\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:44:41.526463'\n!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode '__run_num__': 1\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsync.sh is in the correct\n    state'\n  !!python/unicode 'duration': 274.992\n  !!python/unicode 'name': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:44:41.250870'\n!!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode '__run_num__': 0\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsyncd.pass is in the correct\n    state'\n  !!python/unicode 'duration': 360.564\n  !!python/unicode 'name': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:44:40.890201'\n!!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'epel-release'\n  !!python/unicode '__run_num__': 4\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 223.013\n  !!python/unicode 'name': !!python/unicode 'epel-release'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:44:42.317627'\n!!python/unicode 'pkg_|-rsync_|-rsync_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'rsync'\n  !!python/unicode '__run_num__': 3\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 366.643\n  !!python/unicode 'name': !!python/unicode 'rsync'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:44:41.950739'\n"}
+2017-03-19 07:48:44,793 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:48:45,145 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:48:45,190 utils.py [django.db.backends:89] [DEBUG]- (0.044) SHOW FULL TABLES; args=None
+2017-03-19 07:48:45,240 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:48:53,035 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:48:57,539 views.py [django:69] [INFO]- {u'GLB_10_153': "!!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present':\n  !!python/unicode '__id__': !!python/unicode 'rsync.sh'\n  !!python/unicode '__run_num__': 2\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'Cron /bin/sh /etc/rsync.sh > /dev/null\n    2>&1 already present'\n  !!python/unicode 'duration': 13.456\n  !!python/unicode 'name': !!python/unicode '/bin/sh /etc/rsync.sh > /dev/null 2>&1'\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:48:55.037304'\n!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode '__run_num__': 1\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsync.sh is in the correct\n    state'\n  !!python/unicode 'duration': 273.828\n  !!python/unicode 'name': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:48:54.762864'\n!!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode '__run_num__': 0\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsyncd.pass is in the correct\n    state'\n  !!python/unicode 'duration': 361.998\n  !!python/unicode 'name': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:48:54.400756'\n!!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'epel-release'\n  !!python/unicode '__run_num__': 4\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 222.923\n  !!python/unicode 'name': !!python/unicode 'epel-release'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:48:55.830871'\n!!python/unicode 'pkg_|-rsync_|-rsync_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'rsync'\n  !!python/unicode '__run_num__': 3\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 366.441\n  !!python/unicode 'name': !!python/unicode 'rsync'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:48:55.464194'\n"}
+2017-03-19 07:49:02,082 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:49:02,407 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:49:02,450 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'ogsnsh8wuiisg2p9u5sfcdlttite4ukd' AND `django_session`.`expire_date` > '2017-03-19 07:49:01.771000'); args=('ogsnsh8wuiisg2p9u5sfcdlttite4ukd', u'2017-03-19 07:49:01.771000')
+2017-03-19 07:49:02,499 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-03-19 07:49:02,499 views.py [django:115] [INFO]- 127.0.0.1 is requesting.
+2017-03-19 07:49:05,312 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:49:09,390 views.py [django:69] [INFO]- {u'GLB_10_153': "!!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present':\n  !!python/unicode '__id__': !!python/unicode 'rsync.sh'\n  !!python/unicode '__run_num__': 2\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'Cron /bin/sh /etc/rsync.sh > /dev/null\n    2>&1 already present'\n  !!python/unicode 'duration': 12.935\n  !!python/unicode 'name': !!python/unicode '/bin/sh /etc/rsync.sh > /dev/null 2>&1'\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:49:06.898993'\n!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode '__run_num__': 1\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsync.sh is in the correct\n    state'\n  !!python/unicode 'duration': 273.48\n  !!python/unicode 'name': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:49:06.624931'\n!!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode '__run_num__': 0\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsyncd.pass is in the correct\n    state'\n  !!python/unicode 'duration': 360.631\n  !!python/unicode 'name': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:49:06.264191'\n!!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'epel-release'\n  !!python/unicode '__run_num__': 4\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 223.651\n  !!python/unicode 'name': !!python/unicode 'epel-release'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:49:07.682114'\n!!python/unicode 'pkg_|-rsync_|-rsync_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'rsync'\n  !!python/unicode '__run_num__': 3\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 364.32\n  !!python/unicode 'name': !!python/unicode 'rsync'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:49:07.317545'\n"}
+2017-03-19 07:51:51,987 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:51:52,332 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:51:52,377 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 07:51:52,431 utils.py [django.db.backends:89] [DEBUG]- (0.052) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:52:00,201 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:52:04,674 views.py [django:69] [INFO]- {u'GLB_10_153': "---\n!!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present':\n  !!python/unicode '__id__': !!python/unicode 'rsync.sh'\n  !!python/unicode '__run_num__': 2\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'Cron /bin/sh /etc/rsync.sh > /dev/null\n    2>&1 already present'\n  !!python/unicode 'duration': 13.625\n  !!python/unicode 'name': !!python/unicode '/bin/sh /etc/rsync.sh > /dev/null 2>&1'\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:52:02.161425'\n!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode '__run_num__': 1\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsync.sh is in the correct\n    state'\n  !!python/unicode 'duration': 274.602\n  !!python/unicode 'name': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:52:01.886208'\n!!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode '__run_num__': 0\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsyncd.pass is in the correct\n    state'\n  !!python/unicode 'duration': 362.204\n  !!python/unicode 'name': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:52:01.523901'\n!!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'epel-release'\n  !!python/unicode '__run_num__': 4\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 225.08\n  !!python/unicode 'name': !!python/unicode 'epel-release'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:52:02.951266'\n!!python/unicode 'pkg_|-rsync_|-rsync_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'rsync'\n  !!python/unicode '__run_num__': 3\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 365.763\n  !!python/unicode 'name': !!python/unicode 'rsync'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:52:02.585259'\n"}
+2017-03-19 07:52:37,447 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:52:37,785 utils.py [django.db.backends:89] [DEBUG]- (0.041) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:52:37,831 utils.py [django.db.backends:89] [DEBUG]- (0.044) SHOW FULL TABLES; args=None
+2017-03-19 07:52:37,878 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:52:48,921 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:52:53,371 views.py [django:69] [INFO]- {u'GLB_10_153': "!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed'\n--- !!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present'\n--- !!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed'\n--- !!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed'\n--- !!python/unicode 'pkg_|-rsync_|-rsync_|-installed'\n"}
+2017-03-19 07:53:12,900 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:53:13,243 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:53:13,292 utils.py [django.db.backends:89] [DEBUG]- (0.048) SHOW FULL TABLES; args=None
+2017-03-19 07:53:13,339 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:53:15,052 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:53:19,017 views.py [django:69] [INFO]- {u'GLB_10_153': "!!python/unicode 'cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present':\n  !!python/unicode '__id__': !!python/unicode 'rsync.sh'\n  !!python/unicode '__run_num__': 2\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'Cron /bin/sh /etc/rsync.sh > /dev/null\n    2>&1 already present'\n  !!python/unicode 'duration': 13.096\n  !!python/unicode 'name': !!python/unicode '/bin/sh /etc/rsync.sh > /dev/null 2>&1'\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:53:16.513076'\n!!python/unicode 'file_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode '__run_num__': 1\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsync.sh is in the correct\n    state'\n  !!python/unicode 'duration': 273.653\n  !!python/unicode 'name': !!python/unicode '/etc/rsync.sh'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:53:16.238821'\n!!python/unicode 'file_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed':\n  !!python/unicode '__id__': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode '__run_num__': 0\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'File /etc/rsyncd.pass is in the correct\n    state'\n  !!python/unicode 'duration': 360.934\n  !!python/unicode 'name': !!python/unicode '/etc/rsyncd.pass'\n  !!python/unicode 'pchanges': {}\n  !!python/unicode 'result': true\n  !!python/unicode 'start_time': !!python/unicode '07:53:15.877780'\n!!python/unicode 'pkg_|-epel-release_|-epel-release_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'epel-release'\n  !!python/unicode '__run_num__': 4\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 222.991\n  !!python/unicode 'name': !!python/unicode 'epel-release'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:53:17.297393'\n!!python/unicode 'pkg_|-rsync_|-rsync_|-installed':\n  !!python/unicode '__id__': !!python/unicode 'rsync'\n  !!python/unicode '__run_num__': 3\n  !!python/unicode 'changes': {}\n  !!python/unicode 'comment': !!python/unicode 'unless execution succeeded'\n  !!python/unicode 'duration': 364.15\n  !!python/unicode 'name': !!python/unicode 'rsync'\n  !!python/unicode 'result': true\n  !!python/unicode 'skip_watch': true\n  !!python/unicode 'start_time': !!python/unicode '07:53:16.932977'\n"}
+2017-03-19 07:56:19,207 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:56:19,545 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:56:19,591 utils.py [django.db.backends:89] [DEBUG]- (0.045) SHOW FULL TABLES; args=None
+2017-03-19 07:56:19,638 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:56:25,292 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:56:29,746 views.py [django:69] [INFO]- {u'GLB_10_153': 'not return'}
+2017-03-19 07:56:44,914 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:56:48,927 views.py [django:69] [INFO]- {u'GLB_10_153': 'not return'}
+2017-03-19 07:57:04,604 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:57:04,953 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 07:57:05,002 utils.py [django.db.backends:89] [DEBUG]- (0.048) SHOW FULL TABLES; args=None
+2017-03-19 07:57:05,051 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 07:57:51,954 views.py [django:60] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'state.sls', u'expr_form': u'glob', u'target': u'GLB_10_153', u'arguments': u'crontab.rsync'}
+2017-03-19 07:57:56,364 views.py [django:69] [INFO]- {u'GLB_10_153': "cron_|-rsync.sh_|-/bin/sh /etc/rsync.sh > /dev/null 2>&1_|-present:\n  __id__: rsync.sh\n  __run_num__: 2\n  changes: {}\n  comment: Cron /bin/sh /etc/rsync.sh > /dev/null 2>&1 already present\n  duration: 13.387\n  name: /bin/sh /etc/rsync.sh > /dev/null 2>&1\n  result: true\n  start_time: '07:57:53.833828'\nfile_|-/etc/rsync.sh_|-/etc/rsync.sh_|-managed:\n  __id__: /etc/rsync.sh\n  __run_num__: 1\n  changes: {}\n  comment: File /etc/rsync.sh is in the correct state\n  duration: 273.932\n  name: /etc/rsync.sh\n  pchanges: {}\n  result: true\n  start_time: '07:57:53.559299'\nfile_|-/etc/rsyncd.pass_|-/etc/rsyncd.pass_|-managed:\n  __id__: /etc/rsyncd.pass\n  __run_num__: 0\n  changes: {}\n  comment: File /etc/rsyncd.pass is in the correct state\n  duration: 361.428\n  name: /etc/rsyncd.pass\n  pchanges: {}\n  result: true\n  start_time: '07:57:53.197762'\npkg_|-epel-release_|-epel-release_|-installed:\n  __id__: epel-release\n  __run_num__: 4\n  changes: {}\n  comment: unless execution succeeded\n  duration: 223.613\n  name: epel-release\n  result: true\n  skip_watch: true\n  start_time: '07:57:54.629201'\npkg_|-rsync_|-rsync_|-installed:\n  __id__: rsync\n  __run_num__: 3\n  changes: {}\n  comment: unless execution succeeded\n  duration: 366.309\n  name: rsync\n  result: true\n  skip_watch: true\n  start_time: '07:57:54.262614'\n"}

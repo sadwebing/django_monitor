@@ -58,7 +58,7 @@ def CommandExecute(request):
         clientip = request.META['REMOTE_ADDR']
         data     = json.loads(request.body)
         logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
-        commandexe = Command(data['target'], data['function'], data['arguments'], data['expr_form'], {'Accept': 'application/x-yaml'})
+        commandexe = Command(data['target'], data['function'], data['arguments'], data['expr_form'])
         info = {}
         if data['function'] == 'test.ping':
             info = commandexe.TestPing()
@@ -67,8 +67,8 @@ def CommandExecute(request):
         elif data['function'] == 'state.sls':
             info = commandexe.StateSls()
         logger.info(info)
-        #return HttpResponse(json.dumps(info))
-        return HttpResponse(info)
+        return HttpResponse(json.dumps(info))
+        #return HttpResponse(info)
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:

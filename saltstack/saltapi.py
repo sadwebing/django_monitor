@@ -24,21 +24,13 @@ class SaltAPI(object):
         ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
         return ret.json()['return']
 
-    def ClientLocal(self, tgt, fun, arg, expr_form='list', headers={}):
+    def ClientLocal(self, tgt, fun, arg, expr_form='list'):
         if tgt == '*':
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg}
         else:
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
-        ret = requests.post(url=self.__url, data=params, headers=dict({'X-Auth-Token': self.__token_id}, **headers), verify=False)
+        ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
         return ret.json()
-
-    def StateSls(self, tgt, fun, arg, expr_form='list', headers={}):
-        if tgt == '*':
-            params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg}
-        else:
-            params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
-        ret = requests.post(url=self.__url, data=params, headers=dict({'X-Auth-Token': self.__token_id}, **headers), verify=False)
-        return ret.text()
 
     def MinionStatus(self):
         params = {"client":"runner","fun":"manage.status"}

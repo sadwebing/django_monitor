@@ -38,14 +38,14 @@ var operate = {
                 success: function (data, status) {
                     //alert(data);
                     var html = "";
-                    data = JSON.parse(data)
+                    data = JSON.parse(data);
                     if (postData['function'] == 'test.ping' || postData['function'] == 'cmd.run'){
                         for (var tgt in data){
                             html = html + "<p><strong>"+tgt+"</strong></p><pre>"+data[tgt]+"</pre>";
                         }
                     }else {
                         for (var tgt in data){
-                            alert(data)
+                            //alert(data[tgt])
                             html = html + "<p><strong>"+tgt+"</strong></p><pre>"+data[tgt]+"</pre>";
                         }
                     }

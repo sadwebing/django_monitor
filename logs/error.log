@@ -35845,3 +35845,69 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
     raise ValueError("No JSON object could be decoded")
 ValueError: No JSON object could be decoded
+2017-03-19 06:32:10,555 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in StateSls
+    return ret.text()
+TypeError: 'unicode' object is not callable
+2017-03-19 06:33:13,272 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in StateSls
+    return ret.text()
+TypeError: 'unicode' object is not callable
+2017-03-19 06:36:26,236 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    headers   = self.__headers
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 40, in StateSls
+    ret = requests.post(url=self.__url, data=params, headers=dict({'X-Auth-Token': self.__token_id}, **headers), verify=False)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 474, in request
+    prep = self.prepare_request(req)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 407, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 303, in prepare
+    self.prepare_headers(headers)
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 443, in prepare_headers
+    check_header_validity(header)
+  File "D:\django\monitor\lib\site-packages\requests\utils.py", line 796, in check_header_validity
+    "not %s" % (value, type(value)))
+InvalidHeader: Header value {'Accept': 'application/x-yaml'} must be of type str or bytes, not <type 'dict'>
+2017-03-19 06:39:03,420 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 68, in CommandExecute
+    info = commandexe.StateSls()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 76, in StateSls
+    expr_form = self.__expr_form,
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in StateSls
+    return ret.text()
+TypeError: 'unicode' object is not callable
