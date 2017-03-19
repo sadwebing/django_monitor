@@ -64,7 +64,7 @@ def ProjectUpdate(request):
         clientip = request.META['REMOTE_ADDR']
         #data = json.loads(request.body)
         data = request.POST
-        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
         if data['status_'] == '':
         	status_ = 'inactive'
         else:

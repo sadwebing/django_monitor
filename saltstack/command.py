@@ -52,7 +52,7 @@ class Command(object):
             tgt       = self.__tgt,
             fun       = self.__fun,
             arg       = self.__arg,
-            expr_form = self.__expr_form,
+            expr_form = self.__expr_form
             )
         #logger.info(results)
         if self.__expr_form == 'glob':
@@ -73,7 +73,7 @@ class Command(object):
             tgt       = self.__tgt,
             fun       = self.__fun,
             arg       = self.__arg,
-            expr_form = self.__expr_form,
+            expr_form = self.__expr_form
             )
         #logger.info(results)
         if self.__expr_form == 'glob':

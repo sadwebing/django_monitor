@@ -96,7 +96,7 @@ def CommandRestart(request):
                 tgt       = data['target'],
                 fun       = 'cmd.run',
                 arg       = arglist,
-                expr_form = data['expr_form'],
+                expr_form = data['expr_form']
                 )
             info[project] = result['return'][0][data['target']]
             logger.info(info)
