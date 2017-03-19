@@ -94,9 +94,20 @@ var operate = {
                 vm.datas.push(ko.mapping.fromJS(arrselectedData[i]));
             }
             $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
-                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
+                //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData));
+                //ko.applyBindings(operate.DepartmentModel, document.getElementById("confirmDeleteModal"));
                 ko.applyBindings(vm, document.getElementById("confirmDeleteModal"));
-                operate.operateDelete();
+                //datas = ko.mapping.fromJS(arrselectedData)
+                var html = "";
+                $.each(vm.datas(), function (index, item) { 
+                    //循环获取数据
+                    var name = vm.datas()[index];
+                    //alert(name)
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.project()+"</td><td>"+name.domain()+"</td><td>"+name.url()+"</td><td>"+name.status_()+"</td></tr>";
+                    html = html + html_name
+                }); 
+                $("#DeleteDatas").html(html);
+                //operate.operateDelete();
                 //vm.datas.valueHasMutated();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)

@@ -65,7 +65,7 @@ def UrlUpdate(request):
         info.url     = data['url']
         info.status = data['status_']
         info.save()
-        return HttpResponse('success!')
+        return HttpResponse('更新成功！')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
@@ -77,7 +77,7 @@ def UrlDelete(request):
     logger.info('user: %s' %request.user.username)
     username = request.user.username
     if username != u'arno':
-        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+        logger.info('%s %s is requesting. %s' %(clientip, username, request.get_full_path()))
         return HttpResponse('你没有删除的权限，请联系管理员。')
     #data = json.loads(request.body)
     #logger.info('%s' %data)

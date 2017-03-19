@@ -41,25 +41,20 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="mytomcatproductModalLabel">操作</h4>
+                        <h4 class="modal-title text-center" id="mytomcatproductModalLabel">操作</h4>
                     </div>
                     <div class="modal-body">
-
-                        <div class="form-group">
-                            <label for="txt_project">id:</label>
-                            <label data-bind="text:id"></label>
-                        </div>
                         <div class="form-group">
                             <label for="txt_product">product</label>
-                            <input type="text" name="txt_product" data-bind="value:product" class="form-control" id="txt_product" placeholder="所属产品">[不能为空]
+                            <input type="text" name="txt_product" data-bind="value:product" class="form-control" id="txt_product" placeholder="所属产品[不能为空]">
                         </div>
                         <div class="form-group">
                             <label for="txt_project">project</label>
-                            <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名">[不能为空，且唯一]
+                            <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名[不能为空，且唯一]">
                         </div>
                         <div class="form-group">
                             <label for="txt_code_dir">code_dir</label>
-                            <input type="text" name="txt_code_dir" data-bind="value:code_dir" class="form-control" id="txt_code_dir" placeholder="代码目录">[不能为空]
+                            <input type="text" name="txt_code_dir" data-bind="value:code_dir" class="form-control" id="txt_code_dir" placeholder="代码目录[不能为空]">
                         </div>
                         <div class="form-group">
                             <label for="txt_tomcat">tomcat</label>
@@ -71,7 +66,14 @@
                         </div>
                         <div class="form-group">
                             <label for="txt_jdk">jdk</label>
+                            <select type="text" name="txt_jdk" data-bind="value:jdk" class="form-control" id="txt_jdk" placeholder="jdk版本[jdk1.6 jdk1.7 jdk1.8]"> 
+                                <option value="jdk1.6">jdk1.6</option>
+                                <option value="jdk1.7">jdk1.7</option>
+                                <option value="jdk1.8">jdk1.8</option>
+                            </select>
+                            {% comment %}
                             <input type="text" name="txt_jdk" data-bind="value:jdk" class="form-control" id="txt_jdk" placeholder="jdk版本[jdk1.6 jdk1.7 jdk1.8]">
+                            {% endcomment %}
                         </div>
                         <div class="form-group">
                             <label for="txt_script">script</label>
@@ -79,7 +81,13 @@
                         </div>
                         <div class="form-group">
                             <label for="txt_script">status</label>
+                            <select type="text" name="txt_status" data-bind="value:status_" class="form-control" id="txt_status" placeholder="默认为active，可不填"> 
+                                <option value="active">active</option>
+                                <option value="inactive">inactive</option>
+                            </select>
+                            {% comment %}
                             <input type="text" name="txt_status" data-bind="value:status_" class="form-control" id="txt_status" placeholder="默认为active，可不填">
+                            {% endcomment %}
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -90,16 +98,14 @@
             </div>
         </div>
 
-        <div class="modal fade" id="confirmDeleteModal" role="dialog" aria-labelledby="confirmDeleteModalLabel">
-            <div class="modal-dialog">
+        <div class="modal fade text-center" id="confirmDeleteModal" role="dialog" aria-labelledby="confirmDeleteModalLabel">
+            <div class="modal-dialog" style="display:inline-block; width: auto;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="confirmDeleteModalLabel">请确认</h4>
-                        删除总记录数：<span data-bind="text: datas().length"></span>
                     </div>
-                    {% comment %}
-                    <div class="modal-body">  
+                    <div class="modal-body">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -114,29 +120,17 @@
                                     <td>status</td>
                                 </tr>
                             </thead>
-                            <tbody data-bind="foreach: datas">
-                                <tr>
-                                    <td><label data-bind="text:id"></label></td>
-                                    <td><label data-bind="text:product"></label></td>
-                                    <td><label data-bind="text:project"></label></td>
-                                    <td><label data-bind="text:code_dir"></label></td>
-                                    <td><label data-bind="text:tomcat"></label></td>
-                                    <td><label data-bind="text:main_port"></label></td>
-                                    <td><label data-bind="text:jdk"></label></td>
-                                    <td><label data-bind="text:script"></label></td>
-                                    <td><label data-bind="text:status_"></label></td>
-                                </tr>
+                            <tbody id="DeleteDatas">
                             </tbody>
                         </table>
                     </div>
-                    {% endcomment %}
                     <div class="modal-footer">
+                        <p style="text-align: left">删除记录总数：<span data-bind="text: datas().length"></span></p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
                         <button type="button" id="btn_delete" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>确认删除</button>
                     </div>
                 </div>
             </div>
         </div>
-<script src="/static/custom/tablejs/kobootstraptable.js"></script> 
 <script src="/static/custom/tablejs/tomcat_project.js"></script>
 {% endblock %}

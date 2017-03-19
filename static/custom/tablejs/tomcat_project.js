@@ -100,7 +100,15 @@ var operate = {
             $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
                 //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(vm, document.getElementById("confirmDeleteModal"));
-                operate.operateDelete();
+                var html = "";
+                $.each(vm.datas(), function (index, item) { 
+                    //循环获取数据 
+                    var name = vm.datas()[index];
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.product()+"</td><td>"+name.project()+"</td><td>"+name.code_dir()+"</td><td>"+name.tomcat()+"</td><td>"+name.main_port()+"</td><td>"+name.jdk()+"</td><td>"+name.script()+"</td><td>"+name.status_()+"</td></tr>";
+                    html = html + html_name
+                }); 
+                $("#DeleteDatas").html(html);
+                //operate.operateDelete();
                 //vm.datas.valueHasMutated();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
@@ -136,8 +144,8 @@ var operate = {
         $('#btn_submit').on("click", function () {
             //取到当前的viewmodel
             var oViewModel = operate.DepartmentModel;
-            var jdkarray = ko.observableArray(['jdk1.6', 'jdk1.7', 'jdk1.8']);
-            //var jdkarray = new Array('jdk1.6', 'jdk1.7', 'jdk1.8');
+            //var jdkarray = ko.observableArray(['jdk1.6', 'jdk1.7', 'jdk1.8']);
+            var jdkarray = new Array('jdk1.6', 'jdk1.7', 'jdk1.8');
             if (!oViewModel.product()){
                 alert("product 不能为空!");
                 return false;
@@ -159,10 +167,10 @@ var operate = {
             if (!oViewModel.jdk()){
                 oViewModel.jdk('')
             }
-            //else if(!operate.contains(oViewModel.jdk(), jdkarray)){
-            //    alert("jdk 版本不正确!");
-            //    return false;
-            //}
+            else if(!operate.contains(oViewModel.jdk(), jdkarray)){
+                alert("jdk 版本不正确!");
+                return false;
+            }
             if (!oViewModel.script()){
                 oViewModel.script('')
             }

@@ -79,10 +79,10 @@ def check_tomcat():
                 result['info'] = title.group().replace('<title>', '').replace('</title>', '')
             except AttributeError:
                 result['info'] = error_status
-        except requests.exceptions.ConnectionError:
+        except:
             result['code'] = error_status
             result['info'] = error_status
-        print result['code']
+        print "%s: %s" %(result['url'], result['code'])
         try:
             ret = requests.post(server, data=json.dumps(result), timeout=3)
         except requests.exceptions.ConnectionError:

@@ -37,14 +37,9 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">操作</h4>
+                        <h4 class="modal-title text-center" id="myModalLabel">操作</h4>
                     </div>
                     <div class="modal-body">
-
-                        <div class="form-group">
-                            <label for="txt_project">id:</label>
-                            <label data-bind="text:id">id</label>
-                        </div>
                         <div class="form-group">
                             <label for="txt_project">project</label>
                             <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名">
@@ -59,7 +54,13 @@
                         </div>
                         <div class="form-group">
                             <label for="txt_status">status</label>
+                            <select type="text" name="txt_status" data-bind="value:status_" class="form-control" id="txt_status" placeholder="默认为active，可不填"> 
+                                <option value="active">active</option>
+                                <option value="inactive">inactive</option>
+                            </select>
+                            {% comment %}
                             <input type="text" name="txt_status" data-bind="value:status_" class="form-control" id="txt_status" placeholder="状态">
+                            {% endcomment %}
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -69,15 +70,13 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="confirmDeleteModal" role="dialog" aria-labelledby="confirmDeleteModalLabel">
-            <div class="modal-dialog">
-                <div class="modal-content">
+        <div class="modal fade text-center" id="confirmDeleteModal" role="dialog" aria-labelledby="confirmDeleteModalLabel">
+            <div class="modal-dialog" style="display:inline-block; width: auto;">
+                <div class="modal-content" style="width:auto;">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="confirmDeleteModalLabel">请确认</h4>
-                        删除总记录数：<span data-bind="text: datas().length"></span>
                     </div>
-                    {% comment %}
                     <div class="modal-body">  
                         <table class="table table-bordered">
                             <thead>
@@ -89,7 +88,11 @@
                                     <td>status</td>
                                 </tr>
                             </thead>
+                            {% comment %}
                             <tbody data-bind="foreach: datas">
+                            {% endcomment %}
+                            <tbody id="DeleteDatas">
+                                {% comment %}
                                 <tr>
                                     <td><label data-bind="text:id"></label></td>
                                     <td><label data-bind="text:project"></label></td>
@@ -97,17 +100,17 @@
                                     <td><label data-bind="text:url"></label></td>
                                     <td><label data-bind="text:status_"></label></td>
                                 </tr>
+                                {% endcomment %}
                             </tbody>
                         </table>
                     </div>
-                    {% endcomment %}
                     <div class="modal-footer">
+                        <p style="text-align: left">删除记录总数：<span data-bind="text: datas().length"></span></p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
                         <button type="button" id="btn_delete" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>确认删除</button>
                     </div>
                 </div>
             </div>
         </div>
-<script src="/static/custom/tablejs/kobootstraptable.js"></script> 
 <script src="/static/custom/tablejs/tomcat_url.js"></script>
 {% endblock %}

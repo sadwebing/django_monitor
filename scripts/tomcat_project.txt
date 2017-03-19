@@ -28,7 +28,7 @@ PUBLIC|ALL_ACTIVITY_OFFICE|ALL_ACTIVITY_OFFICE|tomcat-7.0_all_activity_office_11
 PUBLIC|ALL_ACTIVITY_BUSINESS|ALL_ACTIVITY_BUSINESS|||||active
 B79|B79_NEW_WEB|B79_NEW_WEB|tomcat-7.0_b79_new_web_7010|7010|tomcat7_b79newweb|jdk1.7|active
 B79|B79_MOBILE|B79_MOBILE|tomcat-8.0_b79_mobile_7030|7030|tomcat8_b79mobile|jdk1.7|active
-B79|B79_GI_NEW|B79_GI_NEW|tomcat-7.0_b79_new_gi_7040|7040|tomcat7_b79newgi|jdk1.7|active
+B79|B79_GI_NEW|B79_GI_NEW|tomcat-7.0_b79_new_gi_7040|7040|tomcat7_b79ginew|jdk1.7|active
 B79|B79_GIFW|B79_GI_NEW|tomcat-7.0_b79_gifw_7050|7050|tomcat7_b79gifw|jdk1.7|active
 B79|B79_GCI_NEW|B79_GCI_NEW|tomcat-7.0_b79_gci_7060|7060|tomcat7_b79gci|jdk1.7|active
 B79|B79_FENGCAI|FENGCAI|tomcat-7.0_b79_fengcai_7070|7070|tomcat7_b79fengcai|jdk1.7|active
@@ -47,7 +47,6 @@ PUBLIC|ALL_ZXZF_WS|ALL_ZXZF_WS|tomcat-7.0_all_zxzf_ws_8040|8040|tomcat7_allzxzfw
 PUBLIC|ALL_ZJ_CASH|ZJ_CASH|tomcat-7.0_zj_cash_8050|8050|tomcat7_zjcash|jdk1.7|active
 PUBLIC|ALL_OA|ALL_OA|tomcat-7.0_all_oa_8060|8060|tomcat7_alloa|jdk1.7|active
 PUBLIC|ALL_AGENT|ALL_AGENT|tomcat-7.0_all_agent_8070|8070|tomcat7_allagent|jdk1.7|active
-
 P02|P02_WEB_OLD|P02_WEB|tomcat-7.0_p02_web_6010|6010|tomcat7_p02web|jdk1.7|inactive
 P02|P02_NEW_WEB_OLD|P02_NEW_WEB|tomcat-8.0_p02_new_web_6020|6020|tomcat8_p02newweb|jdk1.7|inactive
 P02|P02_MOBILE_OLD|P02_MOBILE|tomcat-8.0_p02_mobile_6030|6030|tomcat8_p02mobile|jdk1.7|inactive
@@ -60,7 +59,10 @@ P02|P02_PARTNER_OLD|P02_PARTNER|tomcat-7.0_p02_partner_6120|6120|tomcat7_p02part
 P02|P02_WEB_WS_OLD|P02_WEB_WS|tomcat-7.0_p02_web_ws_6080|6080|tomcat7_p02webws|jdk1.7|inactive
 P02|P02_OFFICE_OLD|P02_OFFICE|tomcat-7.0_p02_office_6100|6100|tomcat7_p02office|jdk1.7|inactive
 P02|P02_OFFICE_WS_OLD|P02_OFFICE_WS|tomcat-7.0_p02_office_ws_6110|6110|tomcat7_p02officews|jdk1.7|inactive
-
 E02|E02_OFFICE|E02_OFFICE|tomcat-7.0_e02_office_2100|2100|tomcat7_e02office|jdk1.6|active
 E02|E02_WS|E02_WS|tomcat-7.0_e02_ws_2080|2080|tomcat7_e02ws|jdk1.6|active
 NWF|NWF_GI|NWF_GI|tomcat-7.0_NWF_GI_2040|2040|tomcat7_nwfgi|jdk1.8|active
+B79|B79_OFFICE_APP_IVI|B79_OFFICE_APP|||||active
+B79|B79_OFFICE_IVI|B79_OFFICE|tomcat-7.0_b79_office_6100|6100|tomcat7_b79office|jdk1.6|active
+B79|B79_OFFICE_WS_IVI|B79_OFFICE_WS|tomcat-7.0_b79_office_ws_6080|6080|tomcat7_b79officews|jdk1.6|active
+B79|B79_NEW_WEB_V3|B79_NEW_WEB_V3|tomcat-8.0_b79_new_web_v3_6020|6020|tomcat8_b79newwebv3|jdk1.8|active

@@ -79,7 +79,7 @@ def ProjectUpdate(request):
         info.script    = data['script']
         info.status    = status_
         info.save()
-        return HttpResponse('success!')
+        return HttpResponse('更新成功！')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
