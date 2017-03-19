@@ -35991,3 +35991,21 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
     raise ValueError("No JSON object could be decoded")
 ValueError: No JSON object could be decoded
+2017-03-20 04:56:12,655 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 101, in CommandRestart
+    info[project] = result['return'][0][data['target']]
+KeyError: u'GLB_10_1485'
+2017-03-20 05:46:10,578 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 101, in CommandRestart
+    info[project] = result['return'][0][data['target']]
+KeyError: u'123'

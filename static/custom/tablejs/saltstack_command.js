@@ -26,6 +26,13 @@ var operate = {
         return formdata;
     },
     
+    Reset: function (){
+        $("#btn_reset").bind('click',function () {
+            document.getElementById("commandform").reset();
+            return false;
+        });
+    },
+
     Submit: function(){
         $("#btn_submit").bind('click',function () {
             var postData=operate.Getform();

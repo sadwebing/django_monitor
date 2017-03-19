@@ -25,13 +25,14 @@
                         <option value="grain">grain</option> 
                         <option value="pillar">pillar</option>  
                     </select>
-                    <input type="text" class="form-control" id="target" placeholder="ID" value="GLB_10_153" required>
+                    <input type="text" class="form-control" id="target" placeholder="ID" value="" required>
                     <select class="form-control" id="function"> 
                         <option value="cmd.run">cmd.run</option>
                         <option value="state.sls">state.sls</option>
                         <option value="test.ping">test.ping</option>
                     </select>
-                    <input type="text" class="form-control" id="arguments" placeholder="参数" value="crontab.rsync" required>
+                    <input type="text" class="form-control" id="arguments" placeholder="参数" value="" required>
+                    <button id="btn_reset" type="reset" class="btn btn-default">重置参数</button>
                     <button id="btn_submit" type="submit" class="btn btn-default">提交</button>
                 </form>
             </div>
@@ -40,10 +41,10 @@
     <div class="col-lg-9 col-md-9 placeholder">
         <div class="panel panel-default">
             <div class="panel-heading">
-              <h4 class="panel-title">返回结果</h4>
+                <h4 class="panel-title">返回结果</h4>
             </div>
             <div class="panel-body">
-              <pre class="pre-scrollable" id="commandresults"></pre>
+                <pre class="pre-scrollable" id="commandresults"></pre>
             </div>
         </div>
     </div>

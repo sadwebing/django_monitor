@@ -45,6 +45,14 @@ var operate = {
         });
     },
 
+    Reset: function (){
+        $("#btn_reset").bind('click',function () {
+            document.getElementById("commandform").reset();
+            document.getElementById("project").reset();
+            return false;
+        });
+    },
+
     Getform: function getEntity(commandform) {
         var formdata = {
             expr_form:document.getElementById("expr_form").value,
