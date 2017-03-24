@@ -27,7 +27,7 @@ var operate = {
         this.operateAdd();
         this.operateUpdate();
         this.operateconfirmDelete();
-        this.operateDelete();
+        //this.operateDelete();
         this.DepartmentModel = {
             id: ko.observable(),
             project: ko.observable(),
@@ -107,7 +107,7 @@ var operate = {
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);
-                //operate.operateDelete();
+                operate.operateDelete();
                 //vm.datas.valueHasMutated();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)

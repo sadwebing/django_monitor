@@ -36319,3 +36319,14 @@ Traceback (most recent call last):
   File "D:\django\monitor\monitor\saltstack\views.py", line 101, in CommandRestart
     info[project] = result['return'][0][data['target']]
 KeyError: u'wtt_100_167'
+2017-03-25 07:10:39,772 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 64, in CommandExecute
+    info = commandexe.TestPing()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 41, in TestPing
+    self.tgt_list = results[0].keys()
+AttributeError: 'unicode' object has no attribute 'keys'
