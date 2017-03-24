@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import requests,json
+from monitor import settings
+import json, logging
+logger = logging.getLogger('django')
 
 class SaltAPI(object):
     def __init__(self, url, username, password):
@@ -30,7 +33,11 @@ class SaltAPI(object):
         else:
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
         ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
-        return ret.json()
+        logger.info("%s: %s, %s" %(ret.status_code, ret.text, dir(ret)))
+        if ret.status_code == 200:
+            return ret.json()
+        else:
+            return False
 
     def MinionStatus(self):
         params = {"client":"runner","fun":"manage.status"}

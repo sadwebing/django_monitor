@@ -66,7 +66,7 @@ def CommandExecute(request):
             info = commandexe.CmdRun()
         elif data['function'] == 'state.sls':
             info = commandexe.StateSls()
-        logger.info(info)
+        logger.info(json.dumps(info))
         return HttpResponse(json.dumps(info))
         #return HttpResponse(info)
     elif request.method == 'GET':

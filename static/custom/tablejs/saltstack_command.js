@@ -42,12 +42,14 @@ var operate = {
                 type: "post",
                 contentType: 'application/json',
                 data: JSON.stringify(postData),
-                success: function (data, status) {
+                success: function (datas, status) {
                     //alert(data);
                     var html = "";
-                    data = JSON.parse(data);
+                    var data = JSON.parse(datas);
+                    //data = eval('('+data+')');
                     if (postData['function'] == 'test.ping' || postData['function'] == 'cmd.run'){
                         for (var tgt in data){
+                            //alert(data[tgt])
                             html = html + "<p><strong>"+tgt+"</strong></p><pre>"+data[tgt]+"</pre>";
                         }
                     }else {
