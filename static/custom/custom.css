@@ -7,3 +7,17 @@ pre{
     max-height: 500px;
     overflow-y: scroll;
 }
+
+xmp {
+	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  	margin-bottom: 10px;
+  	overflow: auto;
+  	width: auto;
+  	padding: 5px;
+  	background-color: #eee;
+  	width: 650px!ie7;
+  	padding-bottom: 20px!ie7;
+	width:100%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}

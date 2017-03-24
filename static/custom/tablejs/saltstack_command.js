@@ -8,6 +8,7 @@ var operate = {
     operateInit: function () {
         this.Getform();
         this.Submit();
+        this.Results();
     },
     Getform: function getEntity(commandform) {
         var formdata = {
@@ -41,24 +42,26 @@ var operate = {
                 url: "/saltstack/command/execute",
                 type: "post",
                 contentType: 'application/json',
+                dataType: "json",
                 data: JSON.stringify(postData),
-                success: function (datas, status) {
-                    //alert(data);
+                success: function (data, status) {
+                    //alert(data["zabbix.ag866.com"]);
                     var html = "";
-                    var data = JSON.parse(datas);
-                    //data = eval('('+data+')');
-                    if (postData['function'] == 'test.ping' || postData['function'] == 'cmd.run'){
-                        for (var tgt in data){
-                            //alert(data[tgt])
-                            html = html + "<p><strong>"+tgt+"</strong></p><pre>"+data[tgt]+"</pre>";
-                        }
-                    }else {
-                        for (var tgt in data){
-                            //alert(data[tgt])
-                            html = html + "<p><strong>"+tgt+"</strong></p><pre>"+data[tgt]+"</pre>";
-                        }
+                    var button = "";
+                    for (var tgt in data){
+                        //alert(tgt+data[tgt])
+                        button = button + "<div class='btn-group'><button data-toggle='modal' data-target='#"+tgt+"' id='#"+tgt+"' type='button' class='btn btn-primary'>"+tgt+"</button></div><div class='modal fade' id='"+tgt+"' tabindex='-1' role='dialog' dialaria-labelledby='"+tgt+"'><div class='modal-dialog' role='document' style='width:1000px;'><div class='modal-content'><xmp>"+data[tgt]+"</xmp></div></div></div>";
+                        //$("#" + tgt).modal({keyboard: true});
+                        //button = button + "<button class='btn btn-primary' data-toggle='modal' data-target='#show_results'>"+tgt+"</button>"
+                        html = html + "<p><strong>"+tgt+"</strong></p><pre class='pre-scrollable'><xmp>"+data[tgt]+"</xmp></pre>";
                     }
-                    $("#commandresults").html(html);
+                    button = "<div class='btn-toolbar' role='toolbar'>" + button +"</div>" + "<hr>"
+                    $("#commandresults").html(button+html);
+                    for (var tgt in data){
+                        $("#"+tgt).click(function(){
+                            $(this).modal({keyboard: true});
+                        });
+                    }
                     return false;
                 },
                 error:function(msg){
@@ -69,4 +72,11 @@ var operate = {
             return false;
         });
     },
+
+    Results: function(){
+        $("#show_results").modal({
+            keyboard: true
+        })
+    },
+
 };
