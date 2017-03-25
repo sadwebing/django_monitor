@@ -93,7 +93,7 @@ var operate = {
                     data = JSON.parse(data)
                     //html = "<strong>"+postData['project']+"</strong>"
                     for (var project in data){
-                        html = html + "<p><strong>"+project+"</strong></p><xmp>"+data[project]+"</xmp>";
+                        html = html + "<p><strong>"+project+"</strong></p><pre class='pre-scrollable'><xmp>"+data[project]+"</xmp></pre>";
                     }
                     $("#commandresults").html(html);
                     return false;

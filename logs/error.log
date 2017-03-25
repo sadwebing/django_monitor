@@ -36383,3 +36383,119 @@ Traceback (most recent call last):
   File "D:\django\monitor\monitor\saltstack\command.py", line 51, in CmdRun
     results = sapi.ClientLocal(
 NameError: global name 'sapi' is not defined
+2017-03-26 02:09:26,503 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 88, in CommandRestart
+    result = sapi.ClientLocal(
+NameError: global name 'sapi' is not defined
+2017-03-26 02:09:45,785 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 88, in CommandRestart
+    result = sapi.ClientLocal(
+NameError: global name 'sapi' is not defined
+2017-03-26 03:22:42,374 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^saltstack/', include('saltstack.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\saltstack\urls.py", line 12, in <module>
+    url('^saltstack_id/Query$', views.IdQuery),
+AttributeError: 'module' object has no attribute 'IdQuery'
+2017-03-26 05:22:03,098 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/saltstack_id/QueryMinion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 184, in QueryMinion
+    info[data['minion_id']] = data['minion_status']
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'minion_status'"
+2017-03-26 05:23:29,177 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/saltstack_id/QueryMinion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 185, in QueryMinion
+    info[data['minion_id']] = data['minion_status']
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'minion_status'"
+2017-03-26 05:23:36,727 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/saltstack_id/QueryMinion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 185, in QueryMinion
+    info[data['minion_id']] = data['minion_status']
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'minion_status'"
+2017-03-26 05:37:54,112 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/saltstack_id/QueryMinion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 184, in QueryMinion
+    info = sapi.GetGrains(minion_id)
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 51, in GetGrains
+    data = ret.json()
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-26 05:39:13,164 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/saltstack_id/QueryMinion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 184, in QueryMinion
+    info = sapi.GetGrains(minion_id)
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 51, in GetGrains
+    data = ret.json()
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded

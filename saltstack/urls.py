@@ -8,6 +8,8 @@ urlpatterns = [
     url('^restart/get_project$', views.GetProject),
     url('^command/execute$', views.CommandExecute),
     url('^command/restart$', views.CommandRestart),
-    url('^id$', views.id),
+    url('^saltstack_id$', views.Id),
+    url('^saltstack_id/Query$', views.IdQuery),
+    url('^saltstack_id/QueryMinion$', views.QueryMinion),
     url('^$', views.command),
 ]

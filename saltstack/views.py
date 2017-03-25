@@ -73,7 +73,7 @@ def CommandRestart(request):
         clientip = request.META['REMOTE_ADDR']
         data     = json.loads(request.body)
         logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
-        results = []
+        #results = []
         info = {}
         for project in data['project']:
             restart = tomcat_project.objects.filter(project=project).first().script
@@ -85,14 +85,9 @@ def CommandRestart(request):
             arglist = ["runas=tomcat"]
             arglist.append(arg)
             logger.info("重启参数：%s"%arglist)
-            result = sapi.ClientLocal(
-                tgt       = data['target'],
-                fun       = 'cmd.run',
-                arg       = arglist,
-                expr_form = data['expr_form']
-                )
-            info[project] = result['return'][0][data['target']]
-            logger.info(info)
+            commandexe = Command(data['target'], 'cmd.run', arglist, data['expr_form'])
+            info[project] = commandexe.CmdRun()[data['target']]
+            #logger.info(json.dumps(info))
         return HttpResponse(json.dumps(info))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
@@ -133,11 +128,11 @@ def restart(request):
 
 @csrf_protect
 @login_required
-def id(request):
+def Id(request):
     global clientip
     clientip = request.META['REMOTE_ADDR']
     title = u'SALTSTACK-ID管理'
-    logger.info('%s is requesting.' %clientip)
+    logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
         'saltstack_id.html',
@@ -147,3 +142,48 @@ def id(request):
         }
     )
 
+@csrf_exempt
+def IdQuery(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        sapi = SaltAPI(
+            url      = settings.SALT_API['url'],
+            username = settings.SALT_API['user'],
+            password = settings.SALT_API['password']
+            )
+        minionsup, minionsdown= sapi.MinionStatus()
+        minion_list = []
+        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+        for minion_id in minionsup:
+            minion_dict = {}
+            minion_dict['minion_id'] = minion_id
+            minion_dict['minion_status'] = 'up'
+            minion_list.append(minion_dict)
+        for minion_id in minionsdown:
+            minion_dict = {}
+            minion_dict['minion_id'] = minion_id
+            minion_dict['minion_status'] = 'down'
+            minion_list.append(minion_dict)
+        return HttpResponse(json.dumps(minion_list))
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
+def QueryMinion(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        sapi = SaltAPI(
+            url      = settings.SALT_API['url'],
+            username = settings.SALT_API['user'],
+            password = settings.SALT_API['password']
+            )
+        data = json.loads(request.body)
+        minion_id = data[0]['minion_id']
+        info = sapi.GetGrains(minion_id)
+        return HttpResponse(json.dumps(info['return'][0]))
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')

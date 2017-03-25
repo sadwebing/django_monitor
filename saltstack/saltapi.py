@@ -33,7 +33,7 @@ class SaltAPI(object):
         else:
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
         ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
-        logger.info("%s: %s, %s" %(ret.status_code, ret.text, dir(ret)))
+        #logger.info("%s: %s, %s" %(ret.status_code, ret.text, dir(ret)))
         if ret.status_code == 200:
             return ret.json()
         else:
@@ -44,3 +44,9 @@ class SaltAPI(object):
         ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
         data = ret.json()
         return data['return'][0]['up'], data['return'][0]['down']
+
+    def GetGrains(self, tgt):
+        url = self.__url + '/minions/' + tgt
+        ret = requests.get(url=url, headers={'X-Auth-Token': self.__token_id}, verify=False)
+        data = ret.json()
+        return data
