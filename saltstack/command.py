@@ -12,12 +12,6 @@ from saltstack.saltapi import SaltAPI
 import json, logging, yaml
 
 logger = logging.getLogger('django')
-#get saltapi url
-sapi = SaltAPI(
-    url      = settings.SALT_API['url'],
-    username = settings.SALT_API['user'],
-    password = settings.SALT_API['password']
-    )
 
 class Command(object):
     def __init__(self, tgt, fun, arg, expr_form):
@@ -27,6 +21,13 @@ class Command(object):
         self.__expr_form = expr_form
         self.tgt_list = []
         self.info = {}
+        #get saltapi url
+        global sapi
+        sapi = SaltAPI(
+            url      = settings.SALT_API['url'],
+            username = settings.SALT_API['user'],
+            password = settings.SALT_API['password']
+            )
 
     def TestPing(self):
         results = sapi.checkMinion(

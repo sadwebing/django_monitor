@@ -36330,3 +36330,56 @@ Traceback (most recent call last):
   File "D:\django\monitor\monitor\saltstack\command.py", line 41, in TestPing
     self.tgt_list = results[0].keys()
 AttributeError: 'unicode' object has no attribute 'keys'
+2017-03-25 22:58:52,875 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 64, in CommandExecute
+    info = commandexe.TestPing()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 34, in TestPing
+    expr_form = self.__expr_form,
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 28, in checkMinion
+    return ret.json()['return']
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-25 22:58:56,375 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 64, in CommandExecute
+    info = commandexe.TestPing()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 34, in TestPing
+    expr_form = self.__expr_form,
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 28, in checkMinion
+    return ret.json()['return']
+  File "D:\django\monitor\lib\site-packages\requests\models.py", line 866, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-03-25 23:42:45,381 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 67, in CommandExecute
+    info = commandexe.CmdRun()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 51, in CmdRun
+    results = sapi.ClientLocal(
+NameError: global name 'sapi' is not defined

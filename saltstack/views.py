@@ -10,16 +10,12 @@ from command import Command
 import json, logging
 
 logger = logging.getLogger('django')
-#get saltapi url
-sapi = SaltAPI(
-    url      = settings.SALT_API['url'],
-    username = settings.SALT_API['user'],
-    password = settings.SALT_API['password']
-    )
+
 
 # Create your views here.
 @csrf_exempt
 def CheckMinion(request):
+    sapi = Command.sapi
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         #print request.body
