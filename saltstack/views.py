@@ -15,19 +15,16 @@ logger = logging.getLogger('django')
 # Create your views here.
 @csrf_exempt
 def CheckMinion(request):
-    sapi = Command.sapi
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         #print request.body
         #return HttpResponse("%s" %request.body)
         data     = json.loads(request.body)
-        logger.info('%s is requesting. %s' %(clientip, data))
+        logger.info('%s is requesting %s. data: %s' %(clientip, request.get_full_path(), data))
         #logger.info('%s' %(data['tgt']))
-        result   = sapi.checkMinion(data['tgt'])
-        if len(result['return'][0]) != 0:
-            return HttpResponse("True")
-        else:
-            return HttpResponse("False")
+        commandexe = Command(data['tgt'], 'test.ping')
+        result   = commandexe.TestPing()
+        return HttpResponse(result[data['tgt']])
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
