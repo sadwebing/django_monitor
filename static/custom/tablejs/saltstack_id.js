@@ -37,6 +37,8 @@ var operate = {
             var arrselectedData = tableInit.myViewModel.getSelections();
             ko.utils.extend(operate.QueryModel, ko.mapping.fromJS(arrselectedData[0]))
             if (!operate.operateCheck(arrselectedData)) { return; }
+            html = "<p align='left'>正在加载，请稍后！</p>";
+            $("#queryresults").html(html);
             $.ajax({
                 url: "/saltstack/saltstack_id/QueryMinion",
                 type: "post",
@@ -46,20 +48,25 @@ var operate = {
                 success: function (data, status) {
                     var minion_id = operate.QueryModel.minion_id();
                     var datas = JSON.parse(data);
-                    //alert(datas[minion_id]);
                     var html = "";
-                    html = html + "<p align='left'>主机ID: "+minion_id+"</p>";
-                    html = html + "<p align='left'>CPU: "+datas[minion_id]['num_cpus']+"核</p>";
-                    html = html + "<p align='left'>系统版本: "+datas[minion_id]['osfullname']+ " "+datas[minion_id]['osrelease']+"</p>";
-                    var ip_list = datas[minion_id]['ip4_interfaces'];
-                    var ip = " ";       
-                    for (var key in ip_list){
-                        if (key !== 'lo' ){
-                            //alert(ip)
-                            ip = ip + ip_list[key] + " ";
+                    if (JSON.stringify(datas) !== "{}"){
+                        //alert(datas[minion_id]);
+                        html = html + "<p align='left'>主机ID: "+minion_id+"</p>";
+                        html = html + "<p align='left'>CPU: "+datas[minion_id]['num_cpus']+"核</p>";
+                        html = html + "<p align='left'>系统版本: "+datas[minion_id]['osfullname']+ " "+datas[minion_id]['osrelease']+"</p>";
+                        var ip_list = datas[minion_id]['ip4_interfaces'];
+                        var ip = " ";       
+                        for (var key in ip_list){
+                            if (key !== 'lo' ){
+                                //alert(ip)
+                                ip = ip + ip_list[key] + " ";
+                            }
                         }
+                        html = html + "<p align='left'>IP地址: "+ip+"</p>";
+                    }else{
+                        html = html + "<p align='left'>主机ID: "+minion_id+"</p>";
+                        html = html + "<p align='left'>主机已DOWN，请检查！</p>";
                     }
-                    html = html + "<p align='left'>IP地址: "+ip+"</p>";
                     $("#queryresults").html(html);
                     //tableInit.myViewModel.refresh();
                 },
