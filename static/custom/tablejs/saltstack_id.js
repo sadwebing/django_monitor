@@ -12,6 +12,8 @@ var tableInit = {
             method: 'post',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
+            singleSelect:true,
+            //clickToSelect:true,
             queryParams: function (param) {
                 return { limit: param.limit, offset: param.offset };
             },//传递参数（*）
@@ -27,6 +29,7 @@ var operate = {
     //初始化按钮事件
     operateInit: function () {
         this.QueryMinion();
+        this.CancelSelect();
         this.QueryModel = {
             minion_id: ko.observable(),
             minion_status: ko.observable(),
@@ -35,6 +38,8 @@ var operate = {
     QueryMinion: function(){
         $('#btn_query_minion').on("click", function () {
             var arrselectedData = tableInit.myViewModel.getSelections();
+            var index = arrselectedData.length - 1;
+            //console.log(index, arrselectedData[index])
             ko.utils.extend(operate.QueryModel, ko.mapping.fromJS(arrselectedData[0]))
             if (!operate.operateCheck(arrselectedData)) { return; }
             html = "<p align='left'>正在加载，请稍后！</p>";
@@ -89,5 +94,14 @@ var operate = {
             return false;
         }
         return true;
+    },
+
+    CancelSelect:function (){
+        $('#btn_cancel_select').on("click", function () {
+            $("input[type='checkbox']").each( function() {
+                $(this).parents('.checkbox').find('tr').removeClass('selected');
+            });
+            console.log("cancel select.");
+        });
     }
 };

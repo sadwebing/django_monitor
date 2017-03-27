@@ -25,7 +25,7 @@ ko.bindingHandlers.myBootstrapTable = {
             sortable: false,
             pageNumber: 1,
             pageSize: 10,
-            pageList: [10, 25, 50, 100],
+            pageList: [10, 25, 50, 100, 'ALL'],
             search: true,
             uniqueId: "id",
             showColumns: true,
@@ -69,3 +69,11 @@ $(function () {
         }
     });
 });
+
+//$(document).ready(function () {
+//    $('ul.nav > li').click(function (e) {
+//        e.preventDefault();
+//        $('ul.nav > li').removeClass('active');
+//        $(this).addClass('active');
+//    });
+//});

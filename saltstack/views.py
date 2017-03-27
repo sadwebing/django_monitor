@@ -180,9 +180,10 @@ def QueryMinion(request):
             password = settings.SALT_API['password']
             )
         data = json.loads(request.body)
-        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+        logger.info('%s is requesting %s. minion: %s' %(clientip, request.get_full_path(), data))
         minion_id = data[0]['minion_id']
         info = sapi.GetGrains(minion_id)
+        #logger.info(info['return'][0])
         return HttpResponse(json.dumps(info['return'][0]))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
