@@ -29,6 +29,7 @@
                 <th data-field="project">project</th>
                 <th data-field="code_dir">code_dir</th>
                 <th data-field="tomcat">tomcat</th>
+                <th data-field="tomcat_version">tomcat_version</th>
                 <th data-field="main_port">main_port</th>
                 <th data-field="jdk">jdk</th>
                 <th data-field="script">script</th>
@@ -59,6 +60,14 @@
                         <div class="form-group">
                             <label for="txt_tomcat">tomcat</label>
                             <input type="text" name="txt_tomcat" data-bind="value:tomcat" class="form-control" id="txt_tomcat" placeholder="tomcat名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="txt_tomcat_version">tomcat_version</label>
+                            <select type="text" name="txt_tomcat_version" data-bind="value:tomcat_version" class="form-control" id="txt_tomcat_version" placeholder="tomcat版本[7 8]">
+                                <option value=""></option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="txt_main_port">main_port</label>
@@ -114,6 +123,7 @@
                                     <td>project</td>
                                     <td>code_dir</td>
                                     <td>tomcat</td>
+                                    <td>tomcat_version</td>
                                     <td>main_port</td>
                                     <td>jdk</td>
                                     <td>script</td>

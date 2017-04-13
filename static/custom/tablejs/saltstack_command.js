@@ -37,6 +37,14 @@ var operate = {
     Submit: function(){
         $("#btn_submit").bind('click',function () {
             var postData=operate.Getform();
+            if (postData['target'] == ''){
+                alert("Minion ID 不能为空！");
+                return false;
+            }
+            if (postData['function'] != 'test.ping' &  postData['arguments'] == ''){
+                alert("执行参数 不能为空！");
+                return false;
+            }
             //alert("获取到的表单数据为:"+JSON.stringify(postData));
             $.ajax({
                 url: "/saltstack/command/execute",

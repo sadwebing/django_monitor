@@ -8,6 +8,7 @@ class tomcat_project(models.Model):
     project = models.CharField(max_length=64, unique=True)
     code_dir = models.CharField(max_length=32, null=True)
     tomcat = models.CharField(max_length=64, null=True)
+    tomcat_version = models.CharField(max_length=10, null=True, default='7')
     main_port = models.CharField(max_length=10, null=True)
     jdk = models.CharField(max_length=10, null=True)
     script = models.CharField(max_length=64, null=True)

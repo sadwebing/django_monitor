@@ -33,6 +33,7 @@ var operate = {
             project: ko.observable(),
             code_dir: ko.observable(),
             tomcat: ko.observable(),
+            tomcat_version: ko.observable(),
             main_port: ko.observable(),
             jdk: ko.observable(),
             script: ko.observable(),
@@ -49,6 +50,7 @@ var operate = {
                    project: ko.observable(),
                    code_dir: ko.observable(),
                    tomcat: ko.observable(),
+                   tomcat_version: ko.observable(),
                    main_port: ko.observable(),
                    jdk: ko.observable(),
                    script: ko.observable(),
@@ -104,7 +106,7 @@ var operate = {
                 $.each(vm.datas(), function (index, item) { 
                     //循环获取数据 
                     var name = vm.datas()[index];
-                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.product()+"</td><td>"+name.project()+"</td><td>"+name.code_dir()+"</td><td>"+name.tomcat()+"</td><td>"+name.main_port()+"</td><td>"+name.jdk()+"</td><td>"+name.script()+"</td><td>"+name.status_()+"</td></tr>";
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.product()+"</td><td>"+name.project()+"</td><td>"+name.code_dir()+"</td><td>"+name.tomcat()+"</td><td>"+name.tomcat_version()+"</td><td>"+name.main_port()+"</td><td>"+name.jdk()+"</td><td>"+name.script()+"</td><td>"+name.status_()+"</td></tr>";
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);

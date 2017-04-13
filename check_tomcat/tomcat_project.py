@@ -25,11 +25,13 @@ def ProjectQuery(request):
             tmp_dict['project'] = project.project
             tmp_dict['code_dir'] = project.code_dir
             tmp_dict['tomcat'] = project.tomcat
+            tmp_dict['tomcat_version'] = project.tomcat_version
             tmp_dict['main_port'] = project.main_port
             tmp_dict['jdk'] = project.jdk
             tmp_dict['script'] = project.script
             tmp_dict['status_'] = project.status
             project_list.append(tmp_dict)
+        logger.info(project_list)
         return HttpResponse(json.dumps(project_list))
         #return HttpResponse('You get nothing!')
     else:
@@ -50,7 +52,7 @@ def ProjectAdd(request):
             	status_ = 'active'
             else:
             	status_ = data['status_']
-            info = tomcat_project(product=data['product'], project=data['project'], code_dir=data['code_dir'], tomcat=data['tomcat'], main_port=data['main_port'], jdk=data['jdk'], script=data['script'], status=status_)
+            info = tomcat_project(product=data['product'], project=data['project'], code_dir=data['code_dir'], tomcat=data['tomcat'], tomcat_version=data['tomcat_version'], main_port=data['main_port'], jdk=data['jdk'], script=data['script'], status=status_)
             info.save()
             return HttpResponse('添加成功！')
     elif request.method == 'GET':
@@ -74,6 +76,7 @@ def ProjectUpdate(request):
         info.project   = data['project']
         info.code_dir  = data['code_dir']
         info.tomcat    = data['tomcat']
+        info.tomcat_version    = data['tomcat_version']
         info.main_port = data['main_port']
         info.jdk       = data['jdk']
         info.script    = data['script']
