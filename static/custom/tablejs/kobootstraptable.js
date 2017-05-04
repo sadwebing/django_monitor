@@ -70,10 +70,15 @@ $(function () {
     });
 });
 
-//$(document).ready(function () {
-//    $('ul.nav > li').click(function (e) {
-//        e.preventDefault();
-//        $('ul.nav > li').removeClass('active');
-//        $(this).addClass('active');
-//    });
-//});
+$(function (){
+    $(".form_datetime").datetimepicker({
+        format: "yyyy-mm-dd hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        language:'zh-CN',
+        minView: 0,
+        maxView: 1,
+        todayHighlight: 1,
+        pickerPosition:"bottom-right"
+    });
+});
