@@ -22,7 +22,7 @@ ko.bindingHandlers.myBootstrapTable = {
             striped: true,
             cache: false,
             pagination: true,
-            sortable: false,
+            sortable: true,
             pageNumber: 1,
             pageSize: 10,
             pageList: [10, 25, 50, 100, 'ALL'],

@@ -7,5 +7,6 @@ urlpatterns = [
     url('Query$', views.MalfunctionQuery),
     url('Update$', views.MalfunctionUpdate),
     url('Add$', views.MalfunctionAdd),
+    url('Delete$', views.MalfunctionDelete),
     url('done$', views.MalfunctionDone),
 ]

@@ -26,6 +26,8 @@ def MalfunctionIndex(request):
         }
     )
 
+@csrf_protect
+@login_required
 def MalfunctionDone(request):
     title = u'管理中心-故障登记'
     clientip = request.META['REMOTE_ADDR']
@@ -47,7 +49,7 @@ def MalfunctionQuery(request):
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         #datas = malfunction.objects.all()
-        datas = malfunction.objects.filter(mal_status='已处理')
+        datas = malfunction.objects.filter(mal_status='已处理').order_by('-id')
         malfunction_list = []
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
         for data in datas:
@@ -66,7 +68,7 @@ def MalfunctionQuery(request):
     elif request.method == 'GET':
         clientip = request.META['REMOTE_ADDR']
         #datas = malfunction.objects.all()
-        datas = malfunction.objects.filter(mal_status='未处理')
+        datas = malfunction.objects.filter(mal_status='未处理').order_by('-id')
         malfunction_list = []
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
         for data in datas:
@@ -130,6 +132,28 @@ def MalfunctionUpdate(request):
         info.handle_user = data['handle_user']
         info.save()
         return HttpResponse('更新成功！')
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
+def MalfunctionDelete(request):
+    clientip = request.META['REMOTE_ADDR']
+    logger.info('user: %s' %request.user.username)
+    username = request.user.username
+    role = request.user.userprofile.role
+    logger.info('%s %s is requesting. %s' %(clientip, username, request.get_full_path()))
+    if role != u'cs':
+        return HttpResponse('你没有删除的权限，请联系客服删除。')
+    if request.method == 'POST':
+        datas = json.loads(request.body)
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
+        for data in datas:
+            info = malfunction.objects.get(id=data['id'],)
+            #return HttpResponse(info.record_time)
+            info.delete()
+        return HttpResponse('删除成功！')
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:

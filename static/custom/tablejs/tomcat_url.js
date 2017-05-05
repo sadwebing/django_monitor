@@ -96,7 +96,7 @@ var operate = {
             $("#confirmDeleteModal").modal().on("shown.bs.modal", function () {
                 //ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData));
                 //ko.applyBindings(operate.DepartmentModel, document.getElementById("confirmDeleteModal"));
-                //ko.applyBindings(vm, document.getElementById("confirmDeleteModal"));
+                ko.applyBindings(vm, document.getElementById("confirmDeleteModal"));
                 //datas = ko.mapping.fromJS(arrselectedData)
                 var html = "";
                 $.each(vm.datas(), function (index, item) { 
@@ -111,7 +111,7 @@ var operate = {
                 //vm.datas.valueHasMutated();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
-                //ko.cleanNode(document.getElementById("confirmDeleteModal"));
+                ko.cleanNode(document.getElementById("confirmDeleteModal"));
             });
         });
     },
