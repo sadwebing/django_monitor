@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block mainnav %}
+    {% include "saltstack/mainnav.html" %}
+{% endblock %}
+
+{% block secondnav %}
+    <li class="active"><a href="/saltstack/command">基本命令</a></li>
+    <li><a href="/saltstack/restart">服务重启</a></li>
+    <li><a href="/saltstack/saltstack_id">ID管理</a></li>
+    <li class="navbar-right"><a href="/admin">管理后台</a></li>
+{% endblock %}
+{% block content %}
+    <div class="col-lg-9 col-md-9 placeholder">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">执行参数</h4>
+            </div>
+            <div class="panel-body">
+                <form id="commandform" class="form-inline" role="form">
+                    <select class="form-control" id="expr_form"> 
+                        <option value="glob">默认</option> 
+                        <option value="list">列表</option> 
+                        <option value="pcre">正则</option> 
+                        <option value="nodegroup">组</option>
+                        <option value="grain">grain</option> 
+                        <option value="pillar">pillar</option>  
+                    </select>
+                    <input type="text" class="form-control" id="target" placeholder="ID" value="WTT_100_107" required>
+                    <select class="form-control" id="function"> 
+                        <option value="cmd.run">cmd.run</option>
+                        <option value="state.sls">state.sls</option>
+                        <option value="test.ping">test.ping</option>
+                    </select>
+                    <input type="text" class="form-control" id="arguments" placeholder="参数" style="width: 30%" value="ps -ef |grep zabbix" required>
+                    <button id="btn_submit" type="submit" class="btn btn-default">提交</button>
+                    <button class="form-control pull-right" id="btn_reset" type="reset" class="btn btn-default">重置参数</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-9 placeholder">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">返回结果</h4>
+            </div>
+            <div class="panel-body">
+                <pre class="pre-scrollable" id="commandresults"></pre>
+            </div>
+        </div>
+    </div>
+<script src="/static/custom/tablejs/saltstack_command.js" type="text/javascript"></script>
+{% endblock %}

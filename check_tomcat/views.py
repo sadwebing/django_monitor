@@ -41,7 +41,7 @@ def index(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'tomcat_index.html',
+        'tomcat/tomcat_index.html',
         {
             'title': title,
         }
@@ -54,7 +54,7 @@ def project(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'tomcat_project.html',
+        'tomcat/tomcat_project.html',
         {
             'title': title,
         }

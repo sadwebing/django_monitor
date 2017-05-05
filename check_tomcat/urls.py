@@ -4,8 +4,8 @@ from . import views
 
 urlpatterns = [
     url('^check/$', views.MonitorServer),
-    url('index/$', views.index),
-    url('project/$', views.project),
+    url('index$', views.index),
+    url('project$', views.project),
     url('tomcat_project/Query$', views.ProjectQuery),
     url('tomcat_project/Update$', views.ProjectUpdate),
     url('tomcat_project/Add$', views.ProjectAdd),

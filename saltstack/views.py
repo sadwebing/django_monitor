@@ -103,7 +103,7 @@ def command(request):
     logger.info('%s is requesting.' %clientip)
     return render(
         request,
-        'saltstack_index.html',
+        'saltstack/saltstack_index.html',
         {
             'clientip':clientip,
             'title': title,
@@ -119,7 +119,7 @@ def restart(request):
     logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'saltstack_restart.html',
+        'saltstack/saltstack_restart.html',
         {
             'clientip':clientip,
             'title': title,
@@ -135,7 +135,7 @@ def Id(request):
     logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'saltstack_id.html',
+        'saltstack/saltstack_id.html',
         {
             'clientip':clientip,
             'title': title,

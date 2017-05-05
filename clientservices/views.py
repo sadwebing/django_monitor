@@ -19,7 +19,7 @@ def MalfunctionIndex(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'malfunction.html',
+        'malfunction/malfunction.html',
         {
             'title': title,
             'role': role,
@@ -35,7 +35,7 @@ def MalfunctionDone(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'malfunction_done.html',
+        'malfunction/malfunction_done.html',
         {
             'title': title,
             'role': role,
