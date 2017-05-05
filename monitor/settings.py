@@ -38,7 +38,8 @@ ALLOWED_HOSTS = ['192.168.100.107', '43.241.204.107', '10.11.15.218', '192.168.1
 
 LOGIN_REDIRECT_URL = '/tomcat/index/'
 
-LOGIN_URL = '/admin/login/'
+#LOGIN_URL = '/admin/login/'
+LOGIN_URL = '/accounts/login'
 
 # Application definition
 
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
     'check_tomcat',
     'saltstack',
     'djcelery',

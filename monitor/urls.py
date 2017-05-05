@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib import auth
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponseRedirect
@@ -22,6 +23,7 @@ from django.http import HttpResponseRedirect
 urlpatterns = [
     url(r'^$', include('clientservices.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('accounts.urls')),
     url(r'^monitor_server/', include('check_tomcat.urls')),
     #url(r'^accounts/', include('accounts.urls')),
     url(r'^tomcat/', include('check_tomcat.urls')),
