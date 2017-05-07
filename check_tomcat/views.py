@@ -37,7 +37,7 @@ def MonitorServer(request):
 @login_required
 def index(request):
     title = u'管理中心-TOMCAT_URL'
-    global username, role
+    global username, role, clientip
     username = request.user.username
     try:
         role = request.user.userprofile.role
@@ -50,6 +50,7 @@ def index(request):
         'tomcat/tomcat_index.html',
         {
             'title': title,
+            'clientip':clientip,
             'role': role,
             'username': username,
         }
@@ -65,6 +66,7 @@ def project(request):
         'tomcat/tomcat_project.html',
         {
             'title': title,
+            'clientip':clientip,
             'role': role,
             'username': username,
         }

@@ -97,7 +97,7 @@ def CommandRestart(request):
 @csrf_protect
 @login_required
 def command(request):
-    global username, role
+    global username, role, clientip
     username = request.user.username
     try:
         role = request.user.userprofile.role

@@ -12,7 +12,7 @@ logger = logging.getLogger('django')
 @login_required
 def MalfunctionIndex(request):
     title = u'管理中心-故障登记'
-    global username, role
+    global username, role, clientip
     username = request.user.username
     clientip = request.META['REMOTE_ADDR']
     try:
@@ -27,6 +27,7 @@ def MalfunctionIndex(request):
         'malfunction/malfunction.html',
         {
             'title': title,
+            'clientip':clientip,
             'role': role,
             'username': username,
         }
@@ -45,6 +46,7 @@ def MalfunctionDone(request):
         'malfunction/malfunction_done.html',
         {
             'title': title,
+            'clientip':clientip,
             'role': role,
             'username': username,
         }
