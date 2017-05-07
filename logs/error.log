@@ -38441,3 +38441,122 @@ Traceback (most recent call last):
   File "D:\django\monitor\lib\site-packages\django\template\debug.py", line 65, in unclosed_block_tag
     raise self.source_error(source, msg)
 TemplateSyntaxError: Unclosed tag 'if'. Looking for one of: endif 
+2017-05-07 16:38:32,845 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/op_history
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 59, in OpHistory
+    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+NameError: global name 'clientip' is not defined
+2017-05-07 16:39:20,378 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/op_history
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 67, in OpHistory
+    'role': role,
+NameError: global name 'role' is not defined
+2017-05-07 16:39:21,665 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/op_history
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 67, in OpHistory
+    'role': role,
+NameError: global name 'role' is not defined
+2017-05-07 16:40:28,559 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/op_history
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 67, in OpHistory
+    'role': role,
+NameError: global name 'role' is not defined
+2017-05-07 16:40:38,993 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/project
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 70, in project
+    'role': role,
+NameError: global name 'role' is not defined
+2017-05-07 16:57:39,852 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 24, in <module>
+    url(r'^$', include('clientservices.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\clientservices\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\clientservices\views.py", line 170
+    op_addr = clientip
+          ^
+SyntaxError: invalid syntax
+2017-05-07 17:02:50,688 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/Update
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 190, in MalfunctionUpdate
+    op_before = '%s, %s, %s, %s, %s, %s' %(info.record_time, info.mal_details, info.record_user, info.mal_reasons, info.mal_status, info.recovery_time, info.time_all, info.handle_user)
+TypeError: not all arguments converted during string formatting
+2017-05-07 17:17:30,417 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/Update
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 205, in MalfunctionUpdate
+    op_after = '[%s], [%s], [%s], [%s], [%s], [%s], [%s], [%s]' %(data['record_time'], data['mal_details'], data['record_user'], data['mal_reasons'], data['mal_status'], data['recovery_time'], data['time_all'], data['handle_user']),
+  File "D:\django\monitor\monitor\clientservices\views.py", line 244, in op_history_update
+    op_time = current_time
+NameError: global name 'current_time' is not defined
+2017-05-07 17:18:40,512 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/Update
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 201, in MalfunctionUpdate
+    op_user = username,
+NameError: global name 'username' is not defined
+2017-05-07 17:21:01,295 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/Update
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 224, in MalfunctionUpdate
+    op_after = '[%s], [%s], [%s], [%s], [%s], [%s], [%s], [%s]' %(data['record_time'], data['mal_details'], data['record_user'], data['mal_reasons'], data['mal_status'], data['recovery_time'], data['time_all'], data['handle_user']),
+  File "D:\django\monitor\monitor\clientservices\views.py", line 268, in op_history_update
+    op_time = current_time
+NameError: global name 'current_time' is not defined

@@ -11,3 +11,11 @@ class malfunction(models.Model):
     recovery_time = models.CharField(max_length=128)
     time_all = models.CharField(max_length=128)
     handle_user = models.CharField(max_length=128)
+
+class mal_history(models.Model):
+	op_time = models.CharField(max_length=128, blank=False)
+	op_user = models.CharField(max_length=128, blank=False)
+	op_addr = models.CharField(max_length=32, blank=False)
+	op_type = models.CharField(max_length=64, blank=False)
+	op_before = models.CharField(max_length=2048, blank=False)
+	op_after = models.CharField(max_length=2048, blank=False)

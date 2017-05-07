@@ -59,6 +59,12 @@ def index(request):
 @login_required
 def project(request):
     title = u'管理中心-TOMCAT_PROJECT'
+    global username, role, clientip
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
     clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(

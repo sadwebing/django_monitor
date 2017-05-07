@@ -9,4 +9,6 @@ urlpatterns = [
     url('Add$', views.MalfunctionAdd),
     url('Delete$', views.MalfunctionDelete),
     url('done$', views.MalfunctionDone),
+    url('op_history$', views.OpHistory),
+    url('QueryOpHistory$', views.QueryOpHistory),
 ]
