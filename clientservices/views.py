@@ -12,8 +12,13 @@ logger = logging.getLogger('django')
 @login_required
 def MalfunctionIndex(request):
     title = u'管理中心-故障登记'
+    global username, role
+    username = request.user.username
     clientip = request.META['REMOTE_ADDR']
-    role = request.user.userprofile.role
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
     #logger.info(dir(request.user))
     #logger.info(request.user.userprofile.role)
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
@@ -23,6 +28,7 @@ def MalfunctionIndex(request):
         {
             'title': title,
             'role': role,
+            'username': username,
         }
     )
 
@@ -31,7 +37,6 @@ def MalfunctionIndex(request):
 def MalfunctionDone(request):
     title = u'管理中心-故障登记'
     clientip = request.META['REMOTE_ADDR']
-    role = request.user.userprofile.role
     #logger.info(dir(request.user))
     #logger.info(request.user.userprofile.role)
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
@@ -41,6 +46,7 @@ def MalfunctionDone(request):
         {
             'title': title,
             'role': role,
+            'username': username,
         }
     )
 

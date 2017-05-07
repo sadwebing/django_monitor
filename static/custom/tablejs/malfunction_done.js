@@ -53,6 +53,7 @@ var operate = {
                 };
                 ko.utils.extend(operate.DepartmentModel, oEmptyModel);
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("csAddModal"));
+                operate.form_datetime();
                 operate.operatecsadd();
             }).on('hidden.bs.modal', function () {
                 ko.cleanNode(document.getElementById("csAddModal"));
@@ -71,6 +72,7 @@ var operate = {
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("csEditModal"));
+                operate.form_datetime();
                 operate.operatecssubmit();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
@@ -89,6 +91,7 @@ var operate = {
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("saEditModal"));
+                operate.form_datetime();
                 operate.operatesasubmit();
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
@@ -143,6 +146,19 @@ var operate = {
                     tableInit.myViewModel.refresh();
                 }
             });
+        });
+    },
+
+    form_datetime: function () {
+        $(".form_datetime").datetimepicker({
+            format: "yyyy-mm-dd hh:ii",
+            autoclose: true,
+            todayBtn: true,
+            language:'zh-CN',
+            minView: 0,
+            maxView: 1,
+            todayHighlight: 1,
+            pickerPosition:"bottom-right"
         });
     },
 

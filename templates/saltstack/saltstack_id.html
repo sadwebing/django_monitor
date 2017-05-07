@@ -1,16 +1,13 @@
 {% extends "base.html" %}
 {% block mainnav %}
-    {% include "saltstack/mainnav.html" %}
+    {% include "mainnav.html" %}
 {% endblock %}
 
-{% block secondnav %}
-    <li><a href="/saltstack/command">命令管理</a></li>
-    <li><a href="/saltstack/restart">服务重启</a></li>
-    <li class="active"><a href="/saltstack/saltstack_id">ID管理</a></li>
-    <li class="navbar-right"><a href="/accounts/logout">退出</a></li>
-    <li class="navbar-right"><a href="/admin">管理后台</a></li>
-{% endblock %}
 {% block content %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">ID信息列表</h4>
+    </div>
     <div id="toolbar" class="btn-group">
         <button data-toggle="modal" data-target="btn_query_minion" id="btn_query_minion" type="button" class="btn btn-default">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>查询
@@ -44,5 +41,6 @@
             </div>
         </div>
     </div>
+</div>
 <script src="/static/custom/tablejs/saltstack_id.js"></script>
 {% endblock %}

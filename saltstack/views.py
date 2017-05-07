@@ -97,6 +97,12 @@ def CommandRestart(request):
 @csrf_protect
 @login_required
 def command(request):
+    global username, role
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
     global clientip
     clientip = request.META['REMOTE_ADDR']
     title = u'SALTSTACK-命令管理'
@@ -107,6 +113,8 @@ def command(request):
         {
             'clientip':clientip,
             'title': title,
+            'role': role,
+            'username': username,
         }
     )
 
@@ -123,6 +131,8 @@ def restart(request):
         {
             'clientip':clientip,
             'title': title,
+            'role': role,
+            'username': username,
         }
     )
 
@@ -139,6 +149,8 @@ def Id(request):
         {
             'clientip':clientip,
             'title': title,
+            'role': role,
+            'username': username,
         }
     )
 

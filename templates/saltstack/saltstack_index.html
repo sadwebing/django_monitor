@@ -1,15 +1,8 @@
 {% extends "base.html" %}
 {% block mainnav %}
-    {% include "saltstack/mainnav.html" %}
+    {% include "mainnav.html" %}
 {% endblock %}
 
-{% block secondnav %}
-    <li class="active"><a href="/saltstack/command">基本命令</a></li>
-    <li><a href="/saltstack/restart">服务重启</a></li>
-    <li><a href="/saltstack/saltstack_id">ID管理</a></li>
-    <li class="navbar-right"><a href="/accounts/logout">退出</a></li>
-    <li class="navbar-right"><a href="/admin">管理后台</a></li>
-{% endblock %}
 {% block content %}
     <div class="col-lg-9 col-md-9 placeholder">
         <div class="panel panel-default">
@@ -26,13 +19,13 @@
                         <option value="grain">grain</option> 
                         <option value="pillar">pillar</option>  
                     </select>
-                    <input type="text" class="form-control" id="target" placeholder="ID" value="WTT_100_107" required>
+                    <input type="text" class="form-control" id="target" placeholder="ID" value="" required>
                     <select class="form-control" id="function"> 
                         <option value="cmd.run">cmd.run</option>
                         <option value="state.sls">state.sls</option>
                         <option value="test.ping">test.ping</option>
                     </select>
-                    <input type="text" class="form-control" id="arguments" placeholder="参数" style="width: 30%" value="ps -ef |grep zabbix" required>
+                    <input type="text" class="form-control" id="arguments" placeholder="参数" style="width: 30%" value="" required>
                     <button id="btn_submit" type="submit" class="btn btn-default">提交</button>
                     <button class="form-control pull-right" id="btn_reset" type="reset" class="btn btn-default">重置参数</button>
                 </form>

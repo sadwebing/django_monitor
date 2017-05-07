@@ -37,6 +37,12 @@ def MonitorServer(request):
 @login_required
 def index(request):
     title = u'管理中心-TOMCAT_URL'
+    global username, role
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
     clientip = request.META['REMOTE_ADDR']
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
@@ -44,6 +50,8 @@ def index(request):
         'tomcat/tomcat_index.html',
         {
             'title': title,
+            'role': role,
+            'username': username,
         }
     )
 @csrf_protect
@@ -57,6 +65,8 @@ def project(request):
         'tomcat/tomcat_project.html',
         {
             'title': title,
+            'role': role,
+            'username': username,
         }
     )
 
