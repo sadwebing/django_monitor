@@ -1,6 +1,6 @@
 $(function () {
     tableInit.Init();
-    operate.operateInit();
+    //operate.operateInit();
 });
 
 //初始化表格
