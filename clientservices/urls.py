@@ -3,12 +3,15 @@ from django.views.generic.base import RedirectView
 from . import views
 
 urlpatterns = [
-    url('^$', views.MalfunctionIndex),
+	url('^$', views.MalfunctionAll),
+    url('all$', views.MalfunctionAll),
+    url('undone$', views.MalfunctionIndex),
+    url('done$', views.MalfunctionDone),
+    url('QueryAll$', views.MalfunctionQueryAll),
     url('Query$', views.MalfunctionQuery),
     url('Update$', views.MalfunctionUpdate),
     url('Add$', views.MalfunctionAdd),
     url('Delete$', views.MalfunctionDelete),
-    url('done$', views.MalfunctionDone),
     url('op_history$', views.OpHistory),
     url('QueryOpHistory$', views.QueryOpHistory),
 ]

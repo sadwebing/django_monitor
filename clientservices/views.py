@@ -24,7 +24,7 @@ def MalfunctionIndex(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'malfunction/malfunction.html',
+        'malfunction/malfunction_undone.html',
         {
             'title': title,
             'clientip':clientip,
@@ -58,6 +58,29 @@ def MalfunctionDone(request):
 
 @csrf_protect
 @login_required
+def MalfunctionAll(request):
+    title = u'管理中心-故障登记'
+    global username, role, clientip
+    username = request.user.username
+    clientip = request.META['REMOTE_ADDR']
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+    return render(
+        request,
+        'malfunction/malfunction_all.html',
+        {
+            'title': title,
+            'clientip':clientip,
+            'role': role,
+            'username': username,
+        }
+    )
+
+@csrf_protect
+@login_required
 def OpHistory(request):
     title = u'管理中心-历史操作记录'
     global username, role, clientip
@@ -80,6 +103,37 @@ def OpHistory(request):
     )
 
 @csrf_exempt
+def MalfunctionQueryAll(request):
+    username = request.user.username
+    clientip = request.META['REMOTE_ADDR']
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
+    if request.method == 'POST':
+        return HttpResponse('You get nothing!')
+    elif request.method == 'GET':
+        #datas = malfunction.objects.all()
+        datas = malfunction.objects.all().order_by('-id')
+        malfunction_list = []
+        for data in datas:
+            tmp_dict = {}
+            tmp_dict['id'] = data.id
+            tmp_dict['record_time'] = data.record_time
+            tmp_dict['mal_details'] = data.mal_details
+            tmp_dict['record_user'] = data.record_user
+            tmp_dict['mal_reasons'] = data.mal_reasons
+            tmp_dict['mal_status'] = data.mal_status
+            tmp_dict['recovery_time'] = data.recovery_time
+            tmp_dict['time_all'] = data.time_all
+            tmp_dict['handle_user'] = data.handle_user
+            malfunction_list.append(tmp_dict)
+        return HttpResponse(json.dumps(malfunction_list))
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
 def MalfunctionQuery(request):
     username = request.user.username
     clientip = request.META['REMOTE_ADDR']
@@ -87,11 +141,11 @@ def MalfunctionQuery(request):
         role = request.user.userprofile.role
     except:
         role = 'none'
+    logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     if request.method == 'POST':
         #datas = malfunction.objects.all()
         datas = malfunction.objects.filter(mal_status='已处理').order_by('-id')
         malfunction_list = []
-        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
         for data in datas:
             tmp_dict = {}
             tmp_dict['id'] = data.id

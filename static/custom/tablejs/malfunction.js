@@ -1,25 +1,6 @@
 $(function () {
-    tableInit.Init_undone();
     operate.operateInit();
 });
-
-//初始化表格
-var tableInit = {
-    Init_undone: function () {
-        //绑定table的viewmodel
-        this.myViewModel = new ko.bootstrapTableViewModel({
-            url: '/malfunction/Query',         //请求后台的URL（*）
-            method: 'get',                      //请求方式（*）
-            dataType: "json",
-            toolbar: '#toolbar',                //工具按钮用哪个容器
-            //singleSelect:true,
-            queryParams: function (param) {
-                return { limit: param.limit, offset: param.offset };
-            },//传递参数（*）
-        });
-        ko.applyBindings(this.myViewModel, document.getElementById("undone_table"));
-    },
-};
 
 //操作
 var operate = {
@@ -30,6 +11,7 @@ var operate = {
         this.csoperateUpdate();
         this.saoperateUpdate();
         this.form_datetime();
+        //this.set_time_all();
         //this.operateSave();
         this.DepartmentModel = {
             id: ko.observable(),
@@ -136,16 +118,6 @@ var operate = {
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("csEditModal"));
-                //$(".form_datetime").datetimepicker({
-                //    format: "yyyy-mm-dd hh:ii",
-                //    autoclose: true,
-                //    todayBtn: true,
-                //    language:'zh-CN',
-                //    minView: 0,
-                //    maxView: 1,
-                //    todayHighlight: 1,
-                //    pickerPosition:"bottom-right"
-                //});
                 operate.form_datetime();
                 operate.operatecssubmit();
             }).on('hidden.bs.modal', function () {
@@ -165,7 +137,7 @@ var operate = {
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("saEditModal"));
-                console.log(operate.DepartmentModel.record_time())
+                //console.log(operate.DepartmentModel.record_time())
                 operate.form_datetime();
                 operate.operatesasubmit();
             }).on('hidden.bs.modal', function () {
@@ -173,6 +145,36 @@ var operate = {
                 ko.cleanNode(document.getElementById("saEditModal"));
             });
         });
+    },
+
+    GetDateDiff: function (startTime, endTime, diffType) {
+        //将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式
+        startTime = startTime.replace(/\-/g, "/");
+        endTime = endTime.replace(/\-/g, "/");
+    
+        //将计算间隔类性字符转换为小写
+        diffType = diffType.toLowerCase();
+        var sTime =new Date(startTime); //开始时间
+        var eTime =new Date(endTime); //结束时间
+        //作为除数的数字
+        var divNum =1;
+        switch (diffType) {
+            case"second":
+                divNum =1000;
+            break;
+            case"minute":
+                divNum =1000*60;
+            break;
+            case"hour":
+                divNum =1000*3600;
+            break;
+            case"day":
+                divNum =1000*3600*24;
+            break;
+                default:
+            break;
+        }
+        return parseInt((eTime.getTime() - sTime.getTime()) / parseInt(divNum));
     },
 
     //保存数据
@@ -222,6 +224,17 @@ var operate = {
                 }
             });
         });
+    },
+
+    set_time_all: function(val1, val2) {
+        //console.log('welcome!')
+        time_all = operate.GetDateDiff(val1, val2, 'minute') + "分钟";
+        //console.log(val1);
+        //console.log(val2);
+        //console.log(time_all);
+        //$('#txt_time_all').val(time_all);
+        operate.DepartmentModel.time_all=time_all;
+        document.getElementById('txt_time_all').value=time_all;
     },
 
     form_datetime: function () {
