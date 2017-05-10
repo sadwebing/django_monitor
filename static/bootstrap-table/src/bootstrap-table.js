@@ -2792,6 +2792,12 @@
         if (params && params.pageNumber) {
             this.options.pageNumber = params.pageNumber;
         }
+        if (params && params.method) {
+            this.options.method = params.method;
+        }
+        if (params && params.singleSelect) {
+            this.options.singleSelect = params.singleSelect;
+        }
         if (params && params.pageSize) {
             this.options.pageSize = params.pageSize;
         }

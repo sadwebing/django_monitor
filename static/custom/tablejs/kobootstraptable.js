@@ -26,7 +26,7 @@ ko.bindingHandlers.myBootstrapTable = {
             sortOrder: "asc",
             pageNumber: 1,
             pageSize: 10,
-            pageList: [10, 25, 50, 100, 'ALL'],
+            pageList: [5, 10, 25, 50, 100, 'ALL'],
             search: true,
             uniqueId: "id",
             showColumns: true,
@@ -44,10 +44,24 @@ ko.bindingHandlers.myBootstrapTable = {
             var arrRes = that.bootstrapTable("getSelections")
             return arrRes;
         };
-
         //刷新
-        this.refresh = function () {
-            that.bootstrapTable("refresh");
+        this.refresh = function (params) {
+            if (params){
+                that.bootstrapTable("refresh", params);
+            }else {that.bootstrapTable("refresh");}
+        };
+        this.destroy = function () {
+            that.bootstrapTable("destroy");
+        };
+        this.getOptions = function () {
+            var arrRes = that.bootstrapTable("getOptions");
+            return arrRes;
+        };
+        this.removeAll = function () {
+            that.bootstrapTable("removeAll");
+        };
+        this.refreshOptions = function () {
+            that.bootstrapTable("refreshOptions");
         };
     };
 })(jQuery);

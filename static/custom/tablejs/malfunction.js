@@ -253,6 +253,7 @@ var operate = {
     operatesasubmit: function () {
         $('#btn_sa_submit').on("click", function () {
             //取到当前的viewmodel
+            tableInit.myViewModel.refresh();
             var oViewModel = operate.DepartmentModel;
             //将Viewmodel转换为数据model
             var oDataModel = ko.toJS(oViewModel);
@@ -263,7 +264,7 @@ var operate = {
                 type: "post",
                 data: oDataModel,
                 success: function (data, status) {
-                    alert(data);
+                    //alert(data);
                     tableInit.myViewModel.refresh();
                 },
                 error:function(msg){
