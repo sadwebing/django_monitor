@@ -18,7 +18,7 @@ var operate = {
     GetProject: function(){
         $.ajax({
             url: "/saltstack/restart/get_project",
-            type: "get",
+            type: "post",
             contentType: 'application/json',
             //data: JSON.stringify(postData),
             success: function (datas, status) {
