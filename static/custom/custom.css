@@ -21,3 +21,28 @@ xmp {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+#left{
+    position:absolute;
+    top:55px;
+    left:0;
+    bottom:0;
+    width:150px;
+    background-color: #F0F8FF;
+    /*
+    border-top:1px solid rgba(42, 171, 210, 0.36);
+    */
+    overflow-x:hidden;
+    overflow-y:auto;
+    z-index: 100;
+}
+
+#right{
+    position:absolute;
+    background-color: #F0F8FF;
+    top:55px;
+    left:155px;
+    bottom:0;
+    right:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
