@@ -14,4 +14,8 @@ urlpatterns = [
     url('Delete$', views.MalfunctionDelete),
     url('op_history$', views.OpHistory),
     url('QueryOpHistory$', views.QueryOpHistory),
+    url('angular$', views.angular),
+    url('PageTab$', views.PageTab),
+    url('Page1$', views.Page1),
+    url('Page2$', views.Page2),
 ]

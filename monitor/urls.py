@@ -21,7 +21,9 @@ from django.conf.urls.static import static
 from django.http import HttpResponseRedirect
 
 urlpatterns = [
-    url(r'^$', include('clientservices.urls')),
+    #url(r'^', include('clientservices.urls')),
+    #url(r'^$', include('clientservices.urls')),
+    url(r'^', include('check_tomcat.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^monitor_server/', include('check_tomcat.urls')),

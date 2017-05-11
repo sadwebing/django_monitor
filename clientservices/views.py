@@ -103,6 +103,33 @@ def OpHistory(request):
     )
 
 @csrf_exempt
+def angular(request):
+    return render(
+        request,
+        'angular.html',
+    )
+
+@csrf_exempt
+def PageTab(request):
+    return render(
+        request,
+        'angular/PageTab.html',
+    )
+@csrf_exempt
+def Page1(request):
+    return render(
+        request,
+        'angular/Page1.html',
+    )
+@csrf_exempt
+def Page2(request):
+    return render(
+        request,
+        'angular/Page2.html',
+    )
+
+
+@csrf_exempt
 def MalfunctionQueryAll(request):
     username = request.user.username
     clientip = request.META['REMOTE_ADDR']

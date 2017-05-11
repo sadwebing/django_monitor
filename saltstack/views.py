@@ -14,6 +14,21 @@ logger = logging.getLogger('django')
 
 # Create your views here.
 @csrf_exempt
+def GetProjectActive(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        datas     = tomcat_project.objects.raw('select id,project from check_tomcat_tomcat_project where status="active";')
+        projectlist = []
+        for data in datas:
+            projectlist.append(data.project)
+        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), projectlist))
+        return HttpResponse(json.dumps(projectlist))
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
 def CheckMinion(request):
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
@@ -31,22 +46,8 @@ def CheckMinion(request):
         return HttpResponse('nothing!')
 
 @csrf_exempt
-def GetProject(request):
-    if request.method == 'POST':
-        clientip = request.META['REMOTE_ADDR']
-        datas     = tomcat_project.objects.raw('select id,project from check_tomcat_tomcat_project where status="active";')
-        projectlist = []
-        for data in datas:
-            projectlist.append(data.project)
-        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), projectlist))
-        return HttpResponse(json.dumps(projectlist))
-    elif request.method == 'GET':
-        return HttpResponse('You get nothing!')
-    else:
-        return HttpResponse('nothing!')
-
-@csrf_exempt
 def CommandExecute(request):
+    logger.info('welcome1!!!!!')
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         data     = json.loads(request.body)
@@ -63,7 +64,16 @@ def CommandExecute(request):
         return HttpResponse(json.dumps(info))
         #return HttpResponse(info)
     elif request.method == 'GET':
-        return HttpResponse('You get nothing!')
+        logger.info('welcome2!!!!!')
+        clientip = request.META['REMOTE_ADDR']
+        datas     = tomcat_project.objects.raw('select id,project from check_tomcat_tomcat_project where status="active";')
+        logger.info(datas)
+        projectlist = []
+        for data in datas:
+            projectlist.append(data.project)
+        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), projectlist))
+        return HttpResponse(json.dumps(projectlist))
+        #return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
 

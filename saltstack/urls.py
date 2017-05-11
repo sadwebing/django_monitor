@@ -1,11 +1,12 @@
 from django.conf.urls import url, include
 from . import views
+from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     url('^check_minion$', views.CheckMinion),
     url('^command$', views.command),
     url('^restart$', views.restart),
-    url('^restart/get_project$', views.GetProject),
+    url('^restart/get_project$', views.CommandExecute),
     url('^command/execute$', views.CommandExecute),
     url('^command/restart$', views.CommandRestart),
     url('^saltstack_id$', views.Id),

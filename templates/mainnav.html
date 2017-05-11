@@ -1,28 +1,35 @@
-<li>
-	<a data-target="#dashboard-menu-mal" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  故障登记</a>  
-	<ul id="dashboard-menu-mal" class="nav nav-list collapse in ">  
-		<li><a href="/malfunction/all"><i class="glyphicon glyphicon-chevron-right"></i> 故障列表</a></li>  
-		{% comment %}
-	    <li><a href="/malfunction/undone"><i class="glyphicon glyphicon-chevron-right"></i> 未处理</a></li>  
-	    <li><a href="/malfunction/done"><i class="glyphicon glyphicon-chevron-right"></i> 已处理</a></li>
-	    {% endcomment %}
-	    <li><a href="/malfunction/op_history"><i class="glyphicon glyphicon-chevron-right"></i> 操作记录</a></li>  
-	</ul>
-</li>
-{% if role = 'sa' %}
-<li>
-	<a data-target="#dashboard-menu-tomcat" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  TOMCAT</a>  
-	<ul id="dashboard-menu-tomcat" class="nav nav-list collapse in">  
-	    <li><a href="/tomcat/index"><i class="glyphicon glyphicon-chevron-right"></i>   假死监控</a></li>  
-	    <li><a href="/tomcat/project"><i class="glyphicon glyphicon-chevron-right"></i>   工程信息</a></li>  
-	</ul>
-</li>
-<li>
-	<a data-target="#dashboard-menu-saltstack" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  SALTSTACK</a>  
-	<ul id="dashboard-menu-saltstack" class="nav nav-list collapse in">  
-	    <li><a href="/saltstack/command"><i class="glyphicon glyphicon-chevron-right"></i>   基础命令</a></li>  
-	    <li><a href="/saltstack/restart"><i class="glyphicon glyphicon-chevron-right"></i>   服务重启</a></li> 
-	    <li><a href="/saltstack/saltstack_id"><i class="glyphicon glyphicon-chevron-right"></i>   ID管理</a></li>  
-	</ul>
-</li>
-{% endif %}
+<div class="row">
+    <div id="left" >
+        <nav class="navbar navbar-default" role="navigation">
+            <ul class="nav nav-pills nav-stacked">
+				<li>
+					<a data-target="#dashboard-menu-mal" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  故障登记</a>  
+					<ul id="dashboard-menu-mal" class="nav nav-list collapse in ">  
+						<li><a ui-sref=".malfunction_all"><i class="glyphicon glyphicon-chevron-right"></i> 故障列表</a></li>  
+					    <li><a ui-sref=".malfunction_op_history"><i class="glyphicon glyphicon-chevron-right"></i> 操作记录</a></li>  
+					</ul>
+				</li>
+				{% if role = 'sa' %}
+				<li>
+					<a data-target="#dashboard-menu-tomcat" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  TOMCAT</a>  
+					<ul id="dashboard-menu-tomcat" class="nav nav-list collapse">  
+					    <li><a ui-sref=".tomcat_tomcat_url"><i class="glyphicon glyphicon-chevron-right"></i>   假死监控</a></li>  
+					    <li><a ui-sref=".tomcat_project"><i class="glyphicon glyphicon-chevron-right"></i>   工程信息</a></li>  
+					</ul>
+				</li>
+				<li>
+					<a data-target="#dashboard-menu-saltstack" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  SALTSTACK</a>  
+					<ul id="dashboard-menu-saltstack" class="nav nav-list collapse">  
+					    <li><a ui-sref=".saltstack_command"><i class="glyphicon glyphicon-chevron-right"></i>   基础命令</a></li>  
+					    <li><a ui-sref=".saltstack_restart"><i class="glyphicon glyphicon-chevron-right"></i>   服务重启</a></li> 
+					    <li><a ui-sref=".saltstack_saltstack_id"><i class="glyphicon glyphicon-chevron-right"></i>   ID管理</a></li>  
+					</ul>
+				</li>
+				{% endif %}
+            </ul>
+        </nav>
+    </div>
+    <div id="right" ui-view="">
+    </div>
+</div>
+
