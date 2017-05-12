@@ -57,50 +57,12 @@
                 </ul> 
             </div>
         </nav>
-        <div class="container-fluid" data-ui-view="">
+        <div class="container-fluid">
+            {% include "mainnav.html" %}
         </div>
     </body>
     <script src="/static/angular/angular.min.js"></script>
     <script src="/static/angular/angular-ui-router.js"></script>
     <script src="/static/angular/angular-animate.js"></script>
-    <script type="text/javascript">
-        var TcbsApp = angular.module("TcbsApp",  ['ngAnimate', 'ui.router']);
-        TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
-        
-            $urlRouterProvider.when("", "mainnav");
-            $stateProvider
-                .state("mainnav", {
-                    url: "/mainnav",
-                    templateUrl: "mainnav"
-                })
-                .state("mainnav.malfunction_all", {
-                    url:"/malfunction_all",
-                    templateUrl: "/malfunction/all"
-                })
-                .state("mainnav.malfunction_op_history", {
-                    url:"/op_history",
-                    templateUrl: "/malfunction/op_history"
-                })
-                .state("mainnav.tomcat_tomcat_url", {
-                    url:"/tomcat_url",
-                    templateUrl: "/tomcat/tomcat_url"
-                })
-                .state("mainnav.tomcat_project", {
-                    url:"/tomcat_project",
-                    templateUrl: "/tomcat/project/"
-                })
-                .state("mainnav.saltstack_command", {
-                    url:"/saltstack_command",
-                    templateUrl: "/saltstack/command"
-                })
-                .state("mainnav.saltstack_restart", {
-                    url:"/saltstack_restart",
-                    templateUrl: "/saltstack/restart"
-                })
-                .state("mainnav.saltstack_saltstack_id", {
-                    url:"/saltstack_id",
-                    templateUrl: "/saltstack/saltstack_id"
-                })
-        });
-    </script>
+    <script src="/static/angular/TcbsApp.js"></script>
 </html>
