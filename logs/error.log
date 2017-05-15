@@ -39408,3 +39408,69 @@ Traceback (most recent call last):
   File "D:\django\monitor\monitor\saltstack\views.py", line 109, in CommandRestart
     info[project] = commandexe.CmdRun()[data['target']]
 KeyError: 'target'
+2017-05-15 14:46:16,928 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 64, in UrlAdd
+    info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'project'"
+2017-05-15 14:50:41,812 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 64, in UrlAdd
+    info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'project'"
+2017-05-15 14:50:52,233 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 64, in UrlAdd
+    info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'server_ip'"
+2017-05-15 14:52:09,091 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 64, in UrlAdd
+    info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'server_ip'"
+2017-05-15 14:53:05,967 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 64, in UrlAdd
+    info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'server_ip'"
+2017-05-15 14:53:39,108 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/Add
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 64, in UrlAdd
+    info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'project'"

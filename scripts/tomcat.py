@@ -72,8 +72,20 @@ def check_tomcat():
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
         try:
-            ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=10)
-            result['code'] = '%s' %ret.status_code
+            if result['url'] == 'null':
+                datas = {}
+                datas['target'] = tomcat_info.server_ip
+                datas['function'] = 'cmd.run'
+                datas['arguments'] = 'ps -ef |grep -i app |grep -v grep'
+                datas['expr_form'] = 'glob'
+                ret = requests.post('http://192.168.100.107:5000/saltstack/command/execute', data=json.dumps(datas), timeout=10)
+                if json.loads(ret.text)[datas['target']] == '':
+                    result['code'] = 'null'
+                else:
+                    result['code'] = '%s' %ret.status_code
+            else:
+                ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=10)
+                result['code'] = '%s' %ret.status_code
             try:
                 title = re.search('<title>.*?</title>', ret.content)
                 result['info'] = title.group().replace('<title>', '').replace('</title>', '')

@@ -193,6 +193,24 @@ var operate = {
         $('#btn_submit').on("click", function () {
             //取到当前的viewmodel
             var oViewModel = operate.DepartmentModel;
+            console.log(oViewModel.project())
+            if (! oViewModel.project()){
+                alert('项目名 不能为空！')
+                return false;
+            }
+            if (! oViewModel.server_ip()){
+                alert('服务器地址 不能为空！')
+                return false;
+            }
+            if (! oViewModel.domain()){
+                oViewModel.domain = 'null';
+            }
+            if (! oViewModel.info()){
+                oViewModel.info = '';
+            }
+            if (! oViewModel.url()){
+                oViewModel.url = 'null';
+            }
             //将Viewmodel转换为数据model
             var oDataModel = ko.toJS(oViewModel);var funcName = oDataModel.id?"Update":"Add";
             $.ajax({
