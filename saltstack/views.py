@@ -43,6 +43,7 @@ def GetProjectServers(request):
         for data in datas:
             tmpdict = {}
             tmpdict['server_ip'] = data.server_ip
+            tmpdict['role'] = data.role
             tmpdict['status'] = data.status
             tmpdict['info'] = data.info
             serverlist.append(tmpdict)

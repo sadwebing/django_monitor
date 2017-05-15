@@ -98,11 +98,11 @@ var operate = {
                     //循环获取数据 
                     var name = data[index];
                     //html_name = "<option>"+name+"</option>";
-                    console.log(name)
+                    console.log(name.role)
                     if (name.status === 'inactive') {
-                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+"' disabled>"+name.server_ip+"</option>";
+                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name.server_ip+"</option>";
                     }else {
-                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+"'>"+name.server_ip+"</option>";
+                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"'>"+name.server_ip+"</option>";
                     }
                     
                     html = html + html_name
