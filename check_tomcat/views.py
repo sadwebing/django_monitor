@@ -58,29 +58,6 @@ def index(request):
 
 @csrf_protect
 @login_required
-def mainnav(request):
-    title = u'管理中心-主页'
-    global username, role, clientip
-    username = request.user.username
-    try:
-        role = request.user.userprofile.role
-    except:
-        role = 'none'
-    clientip = request.META['REMOTE_ADDR']
-    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
-    return render(
-        request,
-        'mainnav.html',
-        {
-            'title': title,
-            'clientip':clientip,
-            'role': role,
-            'username': username,
-        }
-    )
-
-@csrf_protect
-@login_required
 def tomcat_url(request):
     title = u'管理中心-TOMCAT_URL'
     global username, role, clientip

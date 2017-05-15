@@ -15,7 +15,6 @@ urlpatterns = [
     url('tomcat_url/Add$', views.UrlAdd),
     url('tomcat_url/Delete$', views.UrlDelete),
     url('^$', views.index),
-    url('mainnav', views.mainnav),
     #url('favicon.ico',RedirectView.as_view(url='/static/images/favicon.ico')),
     #url(r'^favicon.ico$', lambda x: HttpResponseRedirect(settings.STATIC_URL+'images/favicon.ico')),
 ]

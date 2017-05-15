@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib.auth.decorators import login_required
 from monitor import settings
-from check_tomcat.models import tomcat_project
+from check_tomcat.models import tomcat_project, tomcat_url
 from saltstack.saltapi import SaltAPI
 from command import Command
 import json, logging
@@ -17,12 +17,37 @@ logger = logging.getLogger('django')
 def GetProjectActive(request):
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
-        datas     = tomcat_project.objects.raw('select id,project from check_tomcat_tomcat_project where status="active";')
+        datas     = tomcat_project.objects.filter(status='active')
         projectlist = []
         for data in datas:
-            projectlist.append(data.project)
+            tmpdict = {}
+            tmpdict['product'] = data.product
+            tmpdict['project'] = data.project
+            projectlist.append(tmpdict)
         logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), projectlist))
         return HttpResponse(json.dumps(projectlist))
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt
+def GetProjectServers(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        #logger.info(data.getlist('project'))
+        logger.info(request.body)
+        clientip = request.META['REMOTE_ADDR']
+        datas     = tomcat_url.objects.filter(project=data['project'])
+        serverlist = []
+        for data in datas:
+            tmpdict = {}
+            tmpdict['server_ip'] = data.server_ip
+            tmpdict['status'] = data.status
+            tmpdict['info'] = data.info
+            serverlist.append(tmpdict)
+        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), serverlist))
+        return HttpResponse(json.dumps(serverlist))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:
@@ -75,19 +100,19 @@ def CommandRestart(request):
         logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
         #results = []
         info = {}
-        for project in data['project']:
-            restart = tomcat_project.objects.filter(project=project).first().script
-            if restart == '':
-                arg = "/web/%s/bin/restart.sh" %project
-            else:
-                arg = "%s restart" %restart
-            #logger.info(restart)
-            arglist = ["runas=tomcat"]
-            arglist.append(arg)
-            logger.info("重启参数：%s"%arglist)
-            commandexe = Command(data['target'], 'cmd.run', arglist, data['expr_form'])
-            info[project] = commandexe.CmdRun()[data['target']]
-            #logger.info(json.dumps(info))
+        project = data['project']
+        restart = tomcat_project.objects.filter(project=project).first().script
+        if restart == '':
+            arg = "/web/%s/bin/restart.sh" %project
+        else:
+            arg = "%s restart" %restart
+        #logger.info(restart)
+        arglist = ["runas=tomcat"]
+        arglist.append(arg)
+        logger.info("重启参数：%s"%arglist)
+        commandexe = Command(data['server_id'], 'cmd.run', arglist)
+        info[project] = commandexe.CmdRun()[data['server_id']]
+        #logger.info(json.dumps(info))
         return HttpResponse(json.dumps(info))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')

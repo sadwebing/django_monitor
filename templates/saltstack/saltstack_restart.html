@@ -4,19 +4,29 @@
                 <h4 class="panel-title">重启参数</h4>
             </div>
             <div class="panel-body">
+                {% comment %}
                 <form id="commandform" class="form-inline" role="form">
                     <select class="form-control" id="expr_form">
                         <option value="glob">默认</option>
-                        {% comment %}
                         <option value="list">列表</option> 
                         <option value="pcre">正则</option> 
                         <option value="nodegroup">组</option>
                         <option value="grain">grain</option> 
                         <option value="pillar">pillar</option>
-                        {% endcomment %}
                     </select>
                     <input type="text" class="form-control" id="target" placeholder="ID" value="" required>
                     <select class="js-example-basic-multiple js-states form-control" style="width: 30%" id="project" name="project" multiple="multiple">
+                    </select>
+                    <button class="form-control pull-right" id="btn_reset" type="reset" class="btn btn-default">重置参数</button>
+                    <button id="btn_submit" type="submit" class="btn btn-default">重启</button>
+                </form>
+                <hr>
+                {% endcomment %}
+                <form id="projectreform" class="form-inline" role="form">
+                    <select class="form-control selectpicker show-tick" data-live-search="true" onchange="operate.GetProjectServers()" id="project_active" name="project_active" title="请选择项目名">
+                        <option>test</option>
+                    </select>
+                    <select class="form-control selectpicker show-tick" id="servers_id" name="servers_id" title="请选择服务器地址">
                     </select>
                     <button class="form-control pull-right" id="btn_reset" type="reset" class="btn btn-default">重置参数</button>
                     <button id="btn_submit" type="submit" class="btn btn-default">重启</button>

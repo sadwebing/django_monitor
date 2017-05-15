@@ -12,14 +12,14 @@
 				{% if role = 'sa' %}
 				<li>
 					<a data-target="#dashboard-menu-tomcat" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  TOMCAT</a>  
-					<ul id="dashboard-menu-tomcat" class="nav nav-list collapse">  
+					<ul id="dashboard-menu-tomcat" class="nav nav-list collapse in">  
 					    <li><a ui-sref="tomcat_tomcat_url"><i class="glyphicon glyphicon-chevron-right"></i>   假死监控</a></li>  
-					    <li><a ui-sref="tomcat_project"><i class="glyphicon glyphicon-chevron-right"></i>   工程信息</a></li>  
+					    <li><a ui-sref="tomcat_project"><i class="glyphicon glyphicon-chevron-right"></i>   工程列表</a></li>
 					</ul>
 				</li>
 				<li>
 					<a data-target="#dashboard-menu-saltstack" class="nav-header" data-toggle="collapse" style="background: grey; color: black;"><i class="glyphicon glyphicon-tasks"></i>  SALTSTACK</a>  
-					<ul id="dashboard-menu-saltstack" class="nav nav-list collapse">  
+					<ul id="dashboard-menu-saltstack" class="nav nav-list collapse in">  
 					    <li><a ui-sref="saltstack_command"><i class="glyphicon glyphicon-chevron-right"></i>   基础命令</a></li>  
 					    <li><a ui-sref="saltstack_restart"><i class="glyphicon glyphicon-chevron-right"></i>   服务重启</a></li> 
 					    <li><a ui-sref="saltstack_saltstack_id"><i class="glyphicon glyphicon-chevron-right"></i>   ID管理</a></li>  

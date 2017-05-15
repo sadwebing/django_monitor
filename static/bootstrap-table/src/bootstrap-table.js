@@ -2801,6 +2801,9 @@
         if (params && params.pageSize) {
             this.options.pageSize = params.pageSize;
         }
+        if (params && params.queryParams) {
+            this.options.queryParams = params.queryParams;
+        }
         this.initServer(params && params.silent,
             params && params.query, params && params.url);
         this.trigger('refresh', params);

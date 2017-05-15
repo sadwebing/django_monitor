@@ -12,13 +12,28 @@ logger = logging.getLogger('django')
 @csrf_exempt 
 def ProjectQuery(request):
     clientip = request.META['REMOTE_ADDR']
-    if request.method == 'POST':
+    if request.method == 'GET':
         return HttpResponse('You get nothing!')
-    elif request.method == 'GET':
-        data = tomcat_project.objects.all()
+    elif request.method == 'POST':
+        logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+        try:
+            data = json.loads(request.body)
+            act = data['act']
+            #logger.info(data)
+        except:
+            act = 'null'
+        if act == 'query_all':
+            datas = tomcat_project.objects.all()
+        elif act == 'query_active':
+            datas = tomcat_project.objects.filter(status='active')
+        elif act == 'query_inactive':
+            datas = tomcat_project.objects.filter(status='inactive')
+        else:
+            return HttpResponse("参数错误！")
+        logger.info('查询参数：%s' %act)
         project_list = []
         logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
-        for project in data:
+        for project in datas:
             tmp_dict = {}
             tmp_dict['id'] = project.id
             tmp_dict['product'] = project.product

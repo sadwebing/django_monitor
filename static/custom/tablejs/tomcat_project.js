@@ -8,11 +8,11 @@ var tableInit = {
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
             url: '/tomcat/tomcat_project/Query',         //请求后台的URL（*）
-            method: 'get',                      //请求方式（*）
+            method: 'post',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
             queryParams: function (param) {
-                return { limit: param.limit, offset: param.offset };
+                return { limit: param.limit, offset: param.offset, 'act':'query_active'};
             },//传递参数（*）
         });
         ko.applyBindings(this.myViewModel, document.getElementById("project_table"));
@@ -26,6 +26,7 @@ var operate = {
         this.operateAdd();
         this.operateUpdate();
         this.operateconfirmDelete();
+        this.operateTomcatProjectSelect();
         //this.operateDelete();
         this.DepartmentModel = {
             id: ko.observable(),
@@ -40,6 +41,53 @@ var operate = {
             status_: ko.observable(),
         };
     },
+
+    operateTomcatProjectSelect: function(){
+        $('#tomcat_project_active').on("click", function () {
+            document.getElementById('tomcat_project_active').disabled = true;
+            document.getElementById('tomcat_project_inactive').disabled = false;
+            document.getElementById('tomcat_project_all').disabled = false;
+            var params = {
+                url: '/tomcat/tomcat_project/Query',
+                method: 'post',
+                singleSelect: false,
+                queryParams: function (param) {
+                    return { limit: param.limit, offset: param.offset, 'act':'query_active' };
+                },
+            }
+            tableInit.myViewModel.refresh(params);
+        });
+        $('#tomcat_project_inactive').on("click", function () {
+            document.getElementById('tomcat_project_active').disabled = false;
+            document.getElementById('tomcat_project_inactive').disabled = true;
+            document.getElementById('tomcat_project_all').disabled = false;
+            var params = {
+                url: '/tomcat/tomcat_project/Query',
+                method: 'post',
+                singleSelect: false,                                                
+                queryParams: function (param) {
+                    return { limit: param.limit, offset: param.offset, 'act':'query_inactive' };
+                },
+            }
+            tableInit.myViewModel.refresh(params);
+        });
+        $('#tomcat_project_all').on("click", function () {
+            document.getElementById('tomcat_project_active').disabled = false;
+            document.getElementById('tomcat_project_inactive').disabled = false;
+            document.getElementById('tomcat_project_all').disabled = true;
+            var params = {
+                url: '/tomcat/tomcat_project/Query',
+                method: 'post',
+                singleSelect: false,
+                queryParams: function (param) {
+                    return { limit: param.limit, offset: param.offset, 'act':'query_all' };
+                },
+            }
+            tableInit.myViewModel.refresh(params);
+        });
+    },
+
+
     //新增
     operateAdd: function(){
         $('#btn_add').on("click", function () {

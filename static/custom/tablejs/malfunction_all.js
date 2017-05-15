@@ -29,6 +29,15 @@ var operate_mal = {
         //this.set_time_all();
     },
 
+    selectpicker: function() {
+        $('.selectpicker').selectpicker({
+            style: 'btn-default',
+            width: "auto",
+            size: 10,
+            showSubtext:true,
+        });
+    },
+
     operateMalSelect: function(){
         $('#mal_undone').on("click", function () {
             document.getElementById('mal_undone').disabled = true;

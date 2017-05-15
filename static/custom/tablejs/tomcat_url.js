@@ -9,11 +9,11 @@ var tableInit = {
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
             url: '/tomcat/tomcat_url/Query',         //请求后台的URL（*）
-            method: 'get',                      //请求方式（*）
+            method: 'post',                      //请求方式（*）
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
             queryParams: function (param) {
-                return { limit: param.limit, offset: param.offset };
+                return { limit: param.limit, offset: param.offset, 'act':'query_active' };
             },//传递参数（*）
         });
         ko.applyBindings(this.myViewModel, document.getElementById("tomcat_table"));
@@ -27,25 +27,77 @@ var operate = {
         this.operateAdd();
         this.operateUpdate();
         this.operateconfirmDelete();
+        this.operateTomcatUrlSelect();
         //this.operateDelete();
         this.DepartmentModel = {
             id: ko.observable(),
             project: ko.observable(),
+            server_ip: ko.observable(),
+            role: ko.observable(),
             domain: ko.observable(),
             url: ko.observable(),
             status_: ko.observable(),
+            info: ko.observable(),
         };
     },
+
+    operateTomcatUrlSelect: function(){
+        $('#tomcat_url_active').on("click", function () {
+            document.getElementById('tomcat_url_active').disabled = true;
+            document.getElementById('tomcat_url_inactive').disabled = false;
+            document.getElementById('tomcat_url_all').disabled = false;
+            var params = {
+                url: '/tomcat/tomcat_url/Query',
+                method: 'post',
+                singleSelect: false,
+                queryParams: function (param) {
+                    return { limit: param.limit, offset: param.offset, 'act':'query_active' };
+                },
+            }
+            tableInit.myViewModel.refresh(params);
+        });
+        $('#tomcat_url_inactive').on("click", function () {
+            document.getElementById('tomcat_url_active').disabled = false;
+            document.getElementById('tomcat_url_inactive').disabled = true;
+            document.getElementById('tomcat_url_all').disabled = false;
+            var params = {
+                url: '/tomcat/tomcat_url/Query',
+                method: 'post',
+                singleSelect: false,                                                
+                queryParams: function (param) {
+                    return { limit: param.limit, offset: param.offset, 'act':'query_inactive' };
+                },
+            }
+            tableInit.myViewModel.refresh(params);
+        });
+        $('#tomcat_url_all').on("click", function () {
+            document.getElementById('tomcat_url_active').disabled = false;
+            document.getElementById('tomcat_url_inactive').disabled = false;
+            document.getElementById('tomcat_url_all').disabled = true;
+            var params = {
+                url: '/tomcat/tomcat_url/Query',
+                method: 'post',
+                singleSelect: false,
+                queryParams: function (param) {
+                    return { limit: param.limit, offset: param.offset, 'act':'query_all' };
+                },
+            }
+            tableInit.myViewModel.refresh(params);
+        });
+    },
+
     //新增
     operateAdd: function(){
         $('#btn_add').on("click", function () {
             $("#myModal").modal().on("shown.bs.modal", function () {
                 var oEmptyModel = {
-                    id: ko.observable(),
                     project: ko.observable(),
+                    server_ip: ko.observable(),
+                    role: ko.observable(),
                     domain: ko.observable(),
                     url: ko.observable(),
                     status_: ko.observable(),
+                    info: ko.observable(),
                 };
                 ko.utils.extend(operate.DepartmentModel, oEmptyModel);
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
@@ -103,7 +155,7 @@ var operate = {
                     //循环获取数据
                     var name = vm.datas()[index];
                     //alert(name)
-                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.project()+"</td><td>"+name.domain()+"</td><td>"+name.url()+"</td><td>"+name.status_()+"</td></tr>";
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.project()+"</td><td>"+name.server_ip()+"</td><td>"+name.role()+"</td><td>"+name.domain()+"</td><td>"+name.url()+"</td><td>"+name.status_()+"</td><td>"+name.info()+"</td></tr>";
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);

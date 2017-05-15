@@ -12,20 +12,37 @@ logger = logging.getLogger('django')
 
 @csrf_exempt
 def UrlQuery(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
         return HttpResponse('You get nothing!')
-    elif request.method == 'GET':
+    elif request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
-        data = tomcat_url.objects.all()
+        logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+        try:
+            data = json.loads(request.body)
+            act = data['act']
+            #logger.info(data)
+        except:
+            act = 'null'
+        if act == 'query_all':
+            datas = tomcat_url.objects.all()
+        elif act == 'query_active':
+            datas = tomcat_url.objects.filter(status='active')
+        elif act == 'query_inactive':
+            datas = tomcat_url.objects.filter(status='inactive')
+        else:
+            return HttpResponse("参数错误！")
+        logger.info('查询参数：%s' %act)
         url_list = []
-        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
-        for url in data:
+        for url in datas:
             tmp_dict = {}
             tmp_dict['id'] = url.id
             tmp_dict['project'] = url.project
+            tmp_dict['server_ip'] = url.server_ip
+            tmp_dict['role'] = url.role
             tmp_dict['domain'] = url.domain
             tmp_dict['url'] = url.url
             tmp_dict['status_'] = url.status
+            tmp_dict['info'] = url.info
             url_list.append(tmp_dict)
         return HttpResponse(json.dumps(url_list))
         #return HttpResponse('You get nothing!')
@@ -44,7 +61,7 @@ def UrlAdd(request):
             return HttpResponse('url: %s  already exists!' %info.url)
         except:
             logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
-            info = tomcat_url(project=data['project'], domain=data['domain'], url=data['url'], status=data['status_'])
+            info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
             info.save()
             return HttpResponse('添加成功！')
     elif request.method == 'GET':
@@ -61,9 +78,12 @@ def UrlUpdate(request):
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
         info = tomcat_url.objects.get(id=data['id'])
         info.project = data['project']
+        info.server_ip = data['server_ip'].strip()
+        info.role = data['role']
         info.domain  = data['domain']
         info.url     = data['url']
         info.status = data['status_']
+        info.info = data['info']
         info.save()
         return HttpResponse('更新成功！')
     elif request.method == 'GET':

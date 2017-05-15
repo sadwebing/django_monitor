@@ -7,6 +7,7 @@ urlpatterns = [
     url('^command$', views.command),
     url('^restart$', views.restart),
     url('^restart/get_project$', views.GetProjectActive),
+    url('^restart/get_project_servers$', views.GetProjectServers),
     url('^command/execute$', views.CommandExecute),
     url('^command/restart$', views.CommandRestart),
     url('^saltstack_id$', views.Id),
