@@ -33,6 +33,7 @@ var operate = {
             id: ko.observable(),
             project: ko.observable(),
             server_ip: ko.observable(),
+            server_type: ko.observable(),
             role: ko.observable(),
             domain: ko.observable(),
             url: ko.observable(),
@@ -93,6 +94,7 @@ var operate = {
                 var oEmptyModel = {
                     project: ko.observable(),
                     server_ip: ko.observable(),
+                    server_type: ko.observable(),
                     role: ko.observable(),
                     domain: ko.observable(),
                     url: ko.observable(),
@@ -155,7 +157,7 @@ var operate = {
                     //循环获取数据
                     var name = vm.datas()[index];
                     //alert(name)
-                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.project()+"</td><td>"+name.server_ip()+"</td><td>"+name.role()+"</td><td>"+name.domain()+"</td><td>"+name.url()+"</td><td>"+name.status_()+"</td><td>"+name.info()+"</td></tr>";
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.project()+"</td><td>"+name.server_ip()+"</td><td>"+name.server_type()+"</td><td>"+name.role()+"</td><td>"+name.domain()+"</td><td>"+name.url()+"</td><td>"+name.status_()+"</td><td>"+name.info()+"</td></tr>";
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);

@@ -20,11 +20,14 @@ class tomcat_project(models.Model):
 class tomcat_url(models.Model):
     project = models.CharField(max_length=64)
     server_ip = models.CharField(max_length=32, null=True)
+    server_type = models.CharField(max_length=10, default='normal')
     role = models.CharField(max_length=16, default='backup')
     domain = models.CharField(max_length=128)
-    url = models.CharField(max_length=128, unique=True)
+    url = models.CharField(max_length=128, null=True)
     status = models.CharField(max_length=20, default='active')
     info = models.CharField(max_length=128, null=True)
+    class Meta:
+        unique_together = ('project', 'server_ip')
 
 class mail(models.Model):
     name = models.CharField(max_length=20)

@@ -72,7 +72,7 @@ def check_tomcat():
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
         try:
-            if result['url'] == 'null':
+            if tomcat_info.server_type == 'app':
                 datas = {}
                 datas['target'] = tomcat_info.server_ip
                 datas['function'] = 'cmd.run'

@@ -27,6 +27,7 @@
                 <th data-sortable="true" data-field="id">id</th>
                 <th data-sortable="true" data-field="project">项目名</th>
                 <th data-sortable="true" data-field="server_ip">服务器地址</th>
+                <th data-sortable="true" data-field="server_type">服务类型</th>
                 <th data-sortable="true" data-field="role">角色</th>
                 <th data-sortable="true" data-field="domain">域名</th>
                 <th data-sortable="true" data-field="url">检测地址</th>
@@ -50,6 +51,13 @@
                         <div class="form-group">
                             <label for="txt_server_ip">服务器地址</label>
                             <input type="text" name="txt_server_ip" data-bind="value:server_ip" class="form-control" id="txt_server_ip" placeholder="服务器地址[minion id]">
+                        </div>
+                        <div class="form-group">
+                            <label for="txt_server_type">服务类型</label>
+                            <select type="text" name="txt_server_type" data-bind="value:server_type" class="form-control" id="txt_server_type" placeholder="默认为normal"> 
+                                <option value="normal">normal</option>
+                                <option value="app">app</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="txt_role">角色</label>
@@ -99,6 +107,7 @@
                                     <td>id</td>
                                     <td>项目名</td>
                                     <td>服务器地址</td>
+                                    <td>服务类型</td>
                                     <td>角色</td>
                                     <td>域名</td>
                                     <td>检测地址</td>

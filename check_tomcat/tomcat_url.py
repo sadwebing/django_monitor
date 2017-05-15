@@ -38,6 +38,7 @@ def UrlQuery(request):
             tmp_dict['id'] = url.id
             tmp_dict['project'] = url.project
             tmp_dict['server_ip'] = url.server_ip
+            tmp_dict['server_type'] = url.server_type
             tmp_dict['role'] = url.role
             tmp_dict['domain'] = url.domain
             tmp_dict['url'] = url.url
@@ -56,12 +57,12 @@ def UrlAdd(request):
         #data = json.loads(request.body)
         data = request.POST
         try:
-            info = tomcat_url.objects.get(url=data['url'])
+            info = tomcat_url.objects.get(project=data['project'], server_ip=data['server_ip'])
             logger.info('%s is requesting. %s url: %s  already exists!' %(clientip, request.get_full_path(), info.url))
-            return HttpResponse('url: %s  already exists!' %info.url)
+            return HttpResponse('记录: %s %s already exists!' %(info.project, info.server_ip))
         except:
             logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
-            info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(), role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+            info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(),server_type=data['server_type'] , role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
             info.save()
             return HttpResponse('添加成功！')
     elif request.method == 'GET':
@@ -79,6 +80,7 @@ def UrlUpdate(request):
         info = tomcat_url.objects.get(id=data['id'])
         info.project = data['project']
         info.server_ip = data['server_ip'].strip()
+        info.server_type = data['server_type']
         info.role = data['role']
         info.domain  = data['domain']
         info.url     = data['url']
