@@ -103,7 +103,7 @@ var operate = {
                 };
                 ko.utils.extend(operate.DepartmentModel, oEmptyModel);
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
-                operate.operateSave();
+                operate.operateSave('Add');
             }).on('hidden.bs.modal', function () {
                 ko.cleanNode(document.getElementById("myModal"));
             });
@@ -121,7 +121,7 @@ var operate = {
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
-                operate.operateSave();
+                operate.operateSave('Update');
             }).on('hidden.bs.modal', function () {
                 //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
                 ko.cleanNode(document.getElementById("myModal"));
@@ -191,7 +191,7 @@ var operate = {
         });
     },
     //保存数据
-    operateSave: function () {
+    operateSave: function (funcName) {
         $('#btn_submit').on("click", function () {
             //取到当前的viewmodel
             var oViewModel = operate.DepartmentModel;
@@ -214,7 +214,8 @@ var operate = {
                 oViewModel.url = 'null';
             }
             //将Viewmodel转换为数据model
-            var oDataModel = ko.toJS(oViewModel);var funcName = oDataModel.id?"Update":"Add";
+            var oDataModel = ko.toJS(oViewModel);
+            //var funcName = oDataModel.id?"Update":"Add";
             $.ajax({
                 url: "/tomcat/tomcat_url/"+funcName,
                 type: "post",
