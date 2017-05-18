@@ -84,7 +84,7 @@ def check_tomcat():
                 else:
                     result['code'] = '%s' %ret.status_code
             else:
-                ret = requests.get(result['url'], headers={'Host': result['domain']}, timeout=10)
+                ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
                 result['code'] = '%s' %ret.status_code
             try:
                 title = re.search('<title>.*?</title>', ret.content)
