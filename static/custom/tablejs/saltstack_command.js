@@ -62,7 +62,7 @@ var operate = {
                     var button = "";
                     for (var tgt in data){
                         //alert(tgt+data[tgt])
-                        button = button + "<div class='btn-group'><button data-toggle='modal' data-target='#"+tgt+"' id='#"+tgt+"' type='button' class='btn btn-primary'>"+tgt+"</button></div><div class='modal fade' id='"+tgt+"' tabindex='-1' role='dialog' dialaria-labelledby='"+tgt+"'><div class='modal-dialog' role='document' style='width:1000px;'><div class='modal-content'><xmp>"+data[tgt]+"</xmp></div></div></div>";
+                        button = button + "<div class='btn-group'><button data-toggle='modal' data-target='#"+tgt+"' id='#"+tgt+"' type='button' class='btn btn-primary'>"+tgt+"</button></div><div class='modal fade' id='"+tgt+"' tabindex='-1' role='dialog' dialaria-labelledby='"+tgt+"'><div class='modal-dialog' role='document' style='width:auto;'><div class='modal-content'><xmp>"+data[tgt]+"</xmp></div></div></div>";
                         //$("#" + tgt).modal({keyboard: true});
                         //button = button + "<button class='btn btn-primary' data-toggle='modal' data-target='#show_results'>"+tgt+"</button>"
                         html = html + "<p><strong>"+tgt+"</strong></p><pre class='pre-scrollable'><xmp>"+data[tgt]+"</xmp></pre>";
