@@ -39511,3 +39511,392 @@ Traceback (most recent call last):
   File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
     raise errorclass, errorvalue
 IntegrityError: (1062, "Duplicate entry 'null' for key 'url'")
+2017-05-22 09:10:59,308 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 22, in GetProjectActive
+    for data in datas:
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 818, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.query.where)
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\where.py", line 104, in as_sql
+    sql, params = compiler.compile(child)
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 346, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\django\monitor\lib\site-packages\django\db\models\lookups.py", line 205, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "D:\django\monitor\lib\site-packages\django\db\models\lookups.py", line 198, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "D:\django\monitor\lib\site-packages\django\db\models\fields\__init__.py", line 614, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "D:\django\monitor\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 196, in data_types
+    if self.features.supports_microsecond_precision:
+  File "D:\django\monitor\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\features.py", line 52, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "D:\django\monitor\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 371, in mysql_version
+    with self.temporary_connection():
+  File "C:\Python27\Lib\contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "D:\django\monitor\lib\site-packages\django\db\backends\base\base.py", line 462, in temporary_connection
+    cursor = self.cursor()
+  File "D:\django\monitor\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\django\monitor\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "D:\django\monitor\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "D:\django\monitor\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "D:\django\monitor\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '192.168.100.164' (10060)")
+2017-05-23 11:30:13,101 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 24
+    @csrf_protect
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:30:51,724 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 24
+    @csrf_protect
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:30:58,380 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 26
+    def Operate(request):
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:31:40,786 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 26
+    def Operate(request):
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:32:51,203 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 26
+    def Operate(request, self):
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:32:53,779 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 26
+    def Operate(request, self):
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:32:54,084 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 26
+    def Operate(request, self):
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:33:11,293 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 26
+    def Operate(self, request):
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:33:17,788 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 27
+    def Operate(self, request):
+    ^
+IndentationError: unexpected indent
+2017-05-23 11:35:01,096 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 6, in <module>
+    url('^operate$', views.initfun.Operate),
+AttributeError: 'module' object has no attribute 'initfun'
+2017-05-23 11:35:31,924 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/operate
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 33, in Operate
+    'username': username,
+  File "D:\django\monitor\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/upgrade_operate.html
+2017-05-23 11:36:31,434 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/operate
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 33, in Operate
+    'username': username,
+  File "D:\django\monitor\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/upgrade_operate.html
+2017-05-23 11:36:42,490 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/operate
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 33, in Operate
+    'username': username,
+  File "D:\django\monitor\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: saltstack/upgrade_operate.html
+2017-05-23 15:51:01,401 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 68, in QuerySvn
+    tmp_dict['server_ip'] = url.server_ip
+AttributeError: 'upgrade_op' object has no attribute 'server_ip'
+2017-05-23 15:58:18,483 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 72, in QuerySvn
+    url_list.append(tmp_dict)
+NameError: global name 'url_list' is not defined
+2017-05-23 15:58:19,444 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 72, in QuerySvn
+    url_list.append(tmp_dict)
+NameError: global name 'url_list' is not defined
+2017-05-23 15:58:49,302 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 72, in QuerySvn
+    url_list.append(tmp_dict)
+NameError: global name 'url_list' is not defined

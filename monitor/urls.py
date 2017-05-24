@@ -31,5 +31,6 @@ urlpatterns = [
     url(r'^tomcat/', include('check_tomcat.urls')),
     url(r'^saltstack/', include('saltstack.urls')),
     url(r'^malfunction/', include('clientservices.urls')),
+    url(r'^upgrade/', include('upgrade.urls')),
     url(r'^favicon$', lambda x: HttpResponseRedirect(settings.STATIC_URL+'images/favicon.ico')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

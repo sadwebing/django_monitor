@@ -33,4 +33,8 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/saltstack_id",
             templateUrl: "/saltstack/saltstack_id"
         })
+        .state("upgrade_operate", {
+            url:"/upgrade_operate",
+            templateUrl: "/upgrade/operate"
+        })
 });

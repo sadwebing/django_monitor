@@ -1,32 +1,64 @@
-    <div class="col-lg-9 col-md-9 placeholder">
+
+    <div class="placeholder">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">执行参数</h4>
             </div>
             <div class="panel-body">
-                <form id="commandform" class="form-inline" role="form">
-                    <select class="form-control" id="expr_form"> 
-                        <option value="glob">默认</option> 
-                        <option value="list">列表</option> 
-                        <option value="pcre">正则</option> 
-                        <option value="nodegroup">组</option>
-                        <option value="grain">grain</option> 
-                        <option value="pillar">pillar</option>  
+            <div class="row">
+                <div class="col-xs-7 col-sm-7 col-md-7">
+                    <form id="commandform" class="form-group form-inline" role="form">
+                        <select class="form-control selectpicker show-tick" id="expr_form" data-width="18%"> 
+                            <option value="glob">默认</option> 
+                            <option value="list">列表</option> 
+                            <option value="pcre">正则</option> 
+                            <option value="nodegroup">组</option>
+                            <option value="grain">grain</option> 
+                            <option value="pillar">pillar</option>  
+                        </select>
+                        <input type="text" class="form-control" id="target" placeholder="ID" value="" style="width: 23%;" required>
+                        <select class="form-control selectpicker show-tick" id="function" data-width="18%"> 
+                            <option value="cmd.run">cmd.run</option>
+                            <option value="state.sls">state.sls</option>
+                            <option value="test.ping">test.ping</option>
+                        </select>
+                        <input type="text" class="form-control" id="arguments" placeholder="参数" style="width: 38%;" value="" required>
+                    </form>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <input id="btn_submit" type="button" class="btn btn-default" style="width:82px;" value="执行">
+                </div>
+                {% comment %}
+                    <button class="form-control pull-right" id="btn_reset" type="reset" class="btn btn-default" >重置参数</button>
+                {% endcomment %}
+                <div class="col-xs-8 col-sm-8 col-md-8"><hr></div>
+                <div class="col-xs-7 col-sm-7 col-md-7">
+                <form class="form-group form-inline" role="form" id="projectreform" name="projectreform"> 
+                    <select class="form-control selectpicker show-tick" data-live-search="true" onchange="operate.GetProjectServers()" id="project_active" name="project_active" title="请选择项目名" multiple data-width="45%">
                     </select>
-                    <input type="text" class="form-control" id="target" placeholder="ID" value="" required>
-                    <select class="form-control" id="function"> 
-                        <option value="cmd.run">cmd.run</option>
-                        <option value="state.sls">state.sls</option>
-                        <option value="test.ping">test.ping</option>
+                    <select class="form-control selectpicker show-tick" id="servers_id" name="servers_id" title="请选择服务器地址" multiple data-actions-box="true" data-width="35%">
                     </select>
-                    <input type="text" class="form-control" id="arguments" placeholder="参数" style="width: 30%" value="" required>
-                    <button id="btn_submit" type="submit" class="btn btn-default">提交</button>
-                    <button class="form-control pull-right" id="btn_reset" type="reset" class="btn btn-default">重置参数</button>
+                    <select class="form-control selectpicker show-tick" id="function2" data-width="18%"> 
+                            <option value="cmd.run">cmd.run</option>
+                            <option value="state.sls">state.sls</option>
+                            <option value="test.ping">test.ping</option>
+                    </select>
                 </form>
+                <form class="form-group form-inline" role="form">
+                    <input type="text" class="form-control" id="arguments2" placeholder="参数" style="width: 99%;" value="" required>
+                </form>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2  ">
+                <form class="form-group form-inline" role="form">
+                    <input id="btn_exe" type="button" class="btn btn-default" style="width: 82px; height:82px;" value="执行">
+                </form>
+                </div>
+            </div>
             </div>
         </div>
     </div>
-    <div class="col-lg-9 col-md-9 placeholder">
+
+    <div class="placeholder">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">返回结果</h4>

@@ -21,6 +21,22 @@ xmp {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+
+#top{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:50px;
+    width:150px;
+    background-color: #F0F8FF;
+    /*
+    border-top:1px solid rgba(42, 171, 210, 0.36);
+    */
+    overflow-x:hidden;
+    overflow-y:auto;
+    z-index: 100;
+}
+
 #left{
     position:absolute;
     top:55px;
@@ -45,4 +61,35 @@ xmp {
     right:0;
     overflow-y:auto;
     overflow-x:hidden;
+}
+
+.right-head {
+    position:absolute;
+    width: 100%;
+    margin-left;
+    float:left;
+    top:0;
+    bottom:0;
+    right:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.right-body {
+    position:absolute;
+    top:240px;
+    width: 100%;
+    bottom:0;
+    right:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.demo_line{
+    letter-spacing: -1px;
+    color: #ddd;
+}
+.demo_line span{
+    letter-spacing: 0;
+    color: #222;
+    margin:0 20px;
 }

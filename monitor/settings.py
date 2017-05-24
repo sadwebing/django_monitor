@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'saltstack',
     'djcelery',
     'clientservices',
+    'upgrade',
     #'users',
 ]
 

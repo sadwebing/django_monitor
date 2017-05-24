@@ -38,17 +38,20 @@ def GetProjectServers(request):
         #logger.info(data.getlist('project'))
         logger.info(request.body)
         clientip = request.META['REMOTE_ADDR']
-        datas     = tomcat_url.objects.filter(project=data['project'])
-        serverlist = []
-        for data in datas:
-            tmpdict = {}
-            tmpdict['server_ip'] = data.server_ip
-            tmpdict['role'] = data.role
-            tmpdict['status'] = data.status
-            tmpdict['info'] = data.info
-            serverlist.append(tmpdict)
-        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), serverlist))
-        return HttpResponse(json.dumps(serverlist))
+        server_dict = {}
+        for project in data['project']:
+            datas     = tomcat_url.objects.filter(project=project)
+            serverlist = []
+            for data in datas:
+                tmpdict = {}
+                tmpdict['server_ip'] = data.server_ip
+                tmpdict['role'] = data.role
+                tmpdict['status'] = data.status
+                tmpdict['info'] = data.info
+                serverlist.append(tmpdict)
+            server_dict[project] = serverlist
+        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), server_dict))
+        return HttpResponse(json.dumps(server_dict))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
     else:

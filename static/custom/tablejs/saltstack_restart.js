@@ -79,10 +79,16 @@ var operate = {
         });
     },
     GetProjectServers: function(){
-        var project = document.getElementById("project_active").value;
-        console.log(project);
+        var projectlist = []
+        //var project = document.getElementById("project_active").value;
+        var objSelectproject = document.projectreform.project_active; 
+        for(var i = 0; i < objSelectproject.options.length; i++) { 
+            if (objSelectproject.options[i].selected == true) 
+            projectlist.push(objSelectproject.options[i].value);
+        }
+        console.log(projectlist);
         var postData = {};
-        postData['project'] = project;
+        postData['project'] = projectlist;
         $.ajax({
             url: "/saltstack/restart/get_project_servers",
             type: "post",
@@ -94,19 +100,23 @@ var operate = {
                 var data = eval(datas);
                 //var html = "<option value=''></option>";
                 var html = "";
-                $.each(data, function (index, item) { 
-                    //循环获取数据 
-                    var name = data[index];
-                    //html_name = "<option>"+name+"</option>";
-                    console.log(name.role)
-                    if (name.status === 'inactive') {
-                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name.server_ip+"</option>";
-                    }else {
-                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"'>"+name.server_ip+"</option>";
-                    }
-                    
-                    html = html + html_name
-                }); 
+                for (var project in data){
+                    html_tmp = "";
+                    $.each(data[project], function (index, item) { 
+                        //循环获取数据 
+                        var name = data[project][index];
+                        //html_name = "<option>"+name+"</option>";
+                        console.log(name.role)
+                        if (name.status === 'inactive') {
+                            html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name. server_ip+"</option>";
+                        }else {
+                            html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"'>"+name.server_ip+"</ option>";
+                        }
+                        html_tmp = html_tmp + html_name
+                    }); 
+                    html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
+                    html = html + html_tmp;
+                }
                 document.getElementById('servers_id').innerHTML=html;
                 //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
                 $('.selectpicker').selectpicker('refresh');
