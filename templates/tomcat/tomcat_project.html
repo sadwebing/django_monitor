@@ -25,15 +25,16 @@
             <tr>
                 <th data-checkbox="true"></th>
                 <th data-sortable="true" data-field="id">id</th>
-                <th data-sortable="true" data-field="product">product</th>
-                <th data-sortable="true" data-field="project">project</th>
-                <th data-sortable="true" data-field="code_dir">code_dir</th>
+                <th data-sortable="true" data-field="product">产品</th>
+                <th data-sortable="true" data-field="project">项目名</th>
+                <th data-sortable="true" data-field="code_dir">代码目录</th>
+                <th data-sortable="true" data-field="cur_svn_id">当前版本</th>
                 <th data-sortable="true" data-field="tomcat">tomcat</th>
-                <th data-sortable="true" data-field="tomcat_version">tomcat_version</th>
-                <th data-sortable="true" data-field="main_port">main_port</th>
+                <th data-sortable="true" data-field="tomcat_version">tomcat版本</th>
+                <th data-sortable="true" data-field="main_port">主服务端口</th>
                 <th data-sortable="true" data-field="jdk">jdk</th>
-                <th data-sortable="true" data-field="script">script</th>
-                <th data-sortable="true" data-field="status_">status</th>
+                <th data-sortable="true" data-field="script">重启脚本</th>
+                <th data-sortable="true" data-field="status_">状态</th>
             </tr>
         </thead>
     </table>
@@ -46,23 +47,27 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="txt_product">product</label>
+                            <label for="txt_product">产品</label>
                             <input type="text" name="txt_product" data-bind="value:product" class="form-control" id="txt_product" placeholder="所属产品[不能为空]">
                         </div>
                         <div class="form-group">
-                            <label for="txt_project">project</label>
+                            <label for="txt_project">项目名</label>
                             <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名[不能为空，且唯一]">
                         </div>
                         <div class="form-group">
-                            <label for="txt_code_dir">code_dir</label>
+                            <label for="txt_code_dir">代码目录</label>
                             <input type="text" name="txt_code_dir" data-bind="value:code_dir" class="form-control" id="txt_code_dir" placeholder="代码目录[不能为空]">
+                        </div>
+                        <div class="form-group">
+                            <label for="txt_cur_svn_id">当前版本</label>
+                            <input type="text" name="txt_cur_svn_id" data-bind="value:cur_svn_id" class="form-control" id="txt_cur_svn_id" placeholder="项目当前版本">
                         </div>
                         <div class="form-group">
                             <label for="txt_tomcat">tomcat</label>
                             <input type="text" name="txt_tomcat" data-bind="value:tomcat" class="form-control" id="txt_tomcat" placeholder="tomcat名称">
                         </div>
                         <div class="form-group">
-                            <label for="txt_tomcat_version">tomcat_version</label>
+                            <label for="txt_tomcat_version">tomcat版本</label>
                             <select type="text" name="txt_tomcat_version" data-bind="value:tomcat_version" class="form-control" id="txt_tomcat_version" placeholder="tomcat版本[7 8]">
                                 <option value=""></option>
                                 <option value="7">7</option>
@@ -70,7 +75,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="txt_main_port">main_port</label>
+                            <label for="txt_main_port">主服务端口</label>
                             <input type="text" name="txt_main_port" data-bind="value:main_port" class="form-control" id="txt_main_port" placeholder="主服务端口">
                         </div>
                         <div class="form-group">
@@ -86,11 +91,11 @@
                             {% endcomment %}
                         </div>
                         <div class="form-group">
-                            <label for="txt_script">script</label>
+                            <label for="txt_script">重启脚本</label>
                             <input type="text" name="txt_script" data-bind="value:script" class="form-control" id="txt_script" placeholder="重启脚本">
                         </div>
                         <div class="form-group">
-                            <label for="txt_script">status</label>
+                            <label for="txt_script">状态</label>
                             <select type="text" name="txt_status" data-bind="value:status_" class="form-control" id="txt_status" placeholder="默认为active，可不填"> 
                                 <option value="active">active</option>
                                 <option value="inactive">inactive</option>
@@ -120,15 +125,16 @@
                             <thead>
                                 <tr>
                                     <td>id</td>
-                                    <td>product</td>
-                                    <td>project</td>
-                                    <td>code_dir</td>
+                                    <td>产品</td>
+                                    <td>项目名</td>
+                                    <td>代码目录</td>
+                                    <td>当前版本</td>
                                     <td>tomcat</td>
-                                    <td>tomcat_version</td>
-                                    <td>main_port</td>
+                                    <td>tomcat版本</td>
+                                    <td>主服务端口</td>
                                     <td>jdk</td>
-                                    <td>script</td>
-                                    <td>status</td>
+                                    <td>重启脚本</td>
+                                    <td>状态</td>
                                 </tr>
                             </thead>
                             <tbody id="DeleteDatas">

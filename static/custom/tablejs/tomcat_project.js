@@ -33,6 +33,7 @@ var operate = {
             product: ko.observable(),
             project: ko.observable(),
             code_dir: ko.observable(),
+            cur_svn_id: ko.observable(),
             tomcat: ko.observable(),
             tomcat_version: ko.observable(),
             main_port: ko.observable(),
@@ -97,6 +98,7 @@ var operate = {
                    product: ko.observable(),
                    project: ko.observable(),
                    code_dir: ko.observable(),
+                   cur_svn_id: ko.observable(),
                    tomcat: ko.observable(),
                    tomcat_version: ko.observable(),
                    main_port: ko.observable(),
@@ -154,7 +156,7 @@ var operate = {
                 $.each(vm.datas(), function (index, item) { 
                     //循环获取数据 
                     var name = vm.datas()[index];
-                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.product()+"</td><td>"+name.project()+"</td><td>"+name.code_dir()+"</td><td>"+name.tomcat()+"</td><td>"+name.tomcat_version()+"</td><td>"+name.main_port()+"</td><td>"+name.jdk()+"</td><td>"+name.script()+"</td><td>"+name.status_()+"</td></tr>";
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.product()+"</td><td>"+name.project()+"</td><td>"+name.code_dir()+"</td><td>"+name.cur_svn_id()+"</td><td>"+name.tomcat()+"</td><td>"+name.tomcat_version()+"</td><td>"+name.main_port()+"</td><td>"+name.jdk()+"</td><td>"+name.script()+"</td><td>"+name.status_()+"</td></tr>";
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);
@@ -197,15 +199,19 @@ var operate = {
             //var jdkarray = ko.observableArray(['jdk1.6', 'jdk1.7', 'jdk1.8']);
             var jdkarray = new Array('jdk1.6', 'jdk1.7', 'jdk1.8');
             if (!oViewModel.product()){
-                alert("product 不能为空!");
+                alert("产品 不能为空!");
                 return false;
             }
             if (!oViewModel.project()){
-                alert("project 不能为空!");
+                alert("项目名 不能为空!");
                 return false;
             }
             if (!oViewModel.code_dir()){
-                alert("code_dir 不能为空!");
+                alert("代码目录 不能为空!");
+                return false;
+            }
+            if (!oViewModel.cur_svn_id()){
+                alert("当前版本 不能为空!");
                 return false;
             }
             if (!oViewModel.tomcat()){

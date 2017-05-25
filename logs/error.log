@@ -39900,3 +39900,207 @@ Traceback (most recent call last):
   File "D:\django\monitor\monitor\upgrade\views.py", line 72, in QuerySvn
     url_list.append(tmp_dict)
 NameError: global name 'url_list' is not defined
+2017-05-24 16:37:03,184 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 64, in QuerySvn
+    for info in datas:
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'upgrade_upgrade_op.cur_svn_id' in 'field list'")
+2017-05-24 16:37:06,621 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 64, in QuerySvn
+    for info in datas:
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'upgrade_upgrade_op.cur_svn_id' in 'field list'")
+2017-05-24 16:39:19,483 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 64, in QuerySvn
+    for info in datas:
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'upgrade_upgrade_op.cur_svn_id' in 'field list'")
+2017-05-24 16:55:30,515 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 64, in QuerySvn
+    for info in datas:
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'upgrade_upgrade_op.cur_svn_id' in 'field list'")
+2017-05-24 16:55:33,357 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 64, in QuerySvn
+    for info in datas:
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'upgrade_upgrade_op.cur_svn_id' in 'field list'")
+2017-05-24 16:55:37,266 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 64, in QuerySvn
+    for info in datas:
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 162, in __iter__
+    self._fetch_all()
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\django\monitor\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\django\monitor\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'upgrade_upgrade_op.cur_svn_id' in 'field list'")
+2017-05-24 18:11:54,413 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 70, in QuerySvn
+    tmp_dict['cur_svn_id'] = upgrade_cur_svn.objects.filter(project=info.project).cur_svn_id
+AttributeError: 'QuerySet' object has no attribute 'cur_svn_id'
+2017-05-24 18:13:28,618 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/query_svn
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 71, in QuerySvn
+    tmp_dict['cur_svn_id'] = select_id.cur_svn_id
+AttributeError: 'QuerySet' object has no attribute 'cur_svn_id'
