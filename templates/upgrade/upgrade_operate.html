@@ -2,28 +2,29 @@
     <div class="panel-heading">
         <h4 class="panel-title">升级-基本操作</h4>
     </div>
-    <div>
-        <form id="toolbar" class="form-group form-inline " role="form">
-            <label>项目名</label>
-            <select class="form-control selectpicker show-tick" data-live-search="true" onchange="operate.GetProjectServers()" id="project_active" name="project_active" title="请选择项目名[默认所有]" data-actions-box="true"  multiple data-width="auto">
-            </select>
-            <label>状态</label>
-            <select class="form-control selectpicker show-tick" id="cur_status" data-width="auto"> 
-                <option value="all">所有</option> 
-                <option value="undone">未升级</option> 
-                <option value="done">已升级</option> 
-                <option value="rollback">已回滚</option>
-            </select>
-            <label>升级人</label>
-            <select class="form-control selectpicker show-tick" id="handle_user" data-width="auto"> 
-                <option value="all">所有</option>
-                <option value="ali">ali</option>
-                <option value="arno">arno</option>
-            </select>
+    <div  class="col-xs-5 col-sm-5 col-md-5">
+        <form id="toolbar" class="form-group form-inline " role="form" name="upgradeform">
+            <div class="input-group">
+                <span class="input-group-addon">项目名</span>
+                <select class="selectpicker show-tick" data-live-search="true" id="project_active" name="project_active" title="[默认所有]" data-actions-box="true"  multiple data-width="auto">
+                </select>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">状态</span>
+                <select class="selectpicker show-tick" onchange="operate.setHandleUser()" id="cur_status" name="cur_status" data-width="auto"> 
+                </select>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">升级人</span>
+                <select class="selectpicker show-tick" id="handle_user" name="handle_user" title="[默认所有]" data-actions-box="true" data-width="auto" multiple> 
+                    <option value="ali">ali</option>
+                    <option value="arno">arno</option>
+                </select>
+            </div>
             <input id="btn_op_search" class="btn btn-default" type="button" id="arguments" value="查询">
         </form>
     </div>
-    <table id="upgrade_op_table" class="table table-condensed">
+    <table id="upgrade_op_table" class="table table-condensed" data-bind="myBootstrapTable:$root">
     </table>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">

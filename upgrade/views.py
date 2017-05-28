@@ -75,7 +75,7 @@ def QuerySvn(request):
             tmp_dict['handle_user'] = info.handle_user
             svn_list.append(tmp_dict)
         logger.info(svn_list)
-        return HttpResponse(json.dumps({"total":len(svn_list), "rows":svn_list}))
+        return HttpResponse(json.dumps(svn_list))
         #return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
