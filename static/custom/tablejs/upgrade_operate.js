@@ -124,7 +124,32 @@ var tableInit = {
 
 window.operateEvents = {
     'click .upgrade': function (e, value, row, index) {
-        console.log('click upgrade. '+row.project+" "+row.cur_status)
+        var tmp = document.getElementById("OperateUpgraderesults");
+        var tmpfooter = document.getElementById("progressFooter");
+        tmp.innerHTML = "";
+        tmpfooter.innerHTML = "";
+        var socket = new WebSocket("ws://" + window.location.host + "/upgrade/operate_upgrade");
+        socket.onopen = function () {
+            console.log('WebSocket open');//成功连接上Websocket
+            //socket.send($('#message').val());//发送数据到服务端
+        };
+        socket.onmessage = function (e) {
+            data = eval('('+ e.data +')')
+            console.log('message: ' + data.message);//打印服务端返回的数据
+            $('#OperateUpgraderesults').append('<p>' + data.message + '</p>');
+            var a = document.getElementById("progress_head");
+            a.innerHTML = "操作进行中，请勿刷新页面......";
+            $("#progress_bar").css("width", "30%");
+            p = 0;  
+            stop = 0; 
+            $('#runprogress').modal('show');  
+            run(data.count); 
+            if (data.count == 5){
+                //$('#runprogress').modal('hide'); 
+                console.log('websocket已关闭');
+                tmpfooter.innerHTML = '<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
+            }
+        }; 
         return false;
     },
     'click .diff': function (e, value, row, index) {
@@ -151,7 +176,7 @@ var operate = {
         $('#btn_op_search').on("click", function () {
             var postData = {
                 project:"all",
-                cur_status:document.getElementById("cur_status").value,
+                cur_status:"all",
                 handle_user:"all",
             };
             if (! document.getElementById("project_active").value == ""){
@@ -162,6 +187,15 @@ var operate = {
                     projectlist.push(objSelectproject.options[i].value);
                 }
                 postData['project'] = projectlist;
+            }
+            if (document.getElementById("cur_status").value != ""){
+                var statuslist = [];
+                var objSelectstatus = document.upgradeform.cur_status; 
+                for(var i = 0; i < objSelectstatus.options.length; i++) { 
+                    if (objSelectstatus.options[i].selected == true) 
+                    statuslist.push(objSelectstatus.options[i].value);
+                }
+                postData['cur_status'] = statuslist;
             }
             if (postData['cur_status'] != 'undone'){
                 if (! document.getElementById("handle_user").value == ""){
@@ -191,7 +225,13 @@ var operate = {
     },
 
     setHandleUser: function(){
-        if (document.getElementById("cur_status").value == "undone"){
+        var objSelectstatus = document.upgradeform.cur_status;
+        var count = 0;
+        for(var i = 0; i < objSelectstatus.options.length; i++) { 
+            if (objSelectstatus.options[i].selected == true) 
+            count = count + 1;
+        }
+        if (document.getElementById("cur_status").value == "undone" && count == 1){
             $('#handle_user').prop('disabled', true);
             $('#handle_user').selectpicker('refresh');
             //$("#handle_user").selectpicker('setStyle', 'btn-warning');
@@ -245,7 +285,6 @@ var operate = {
                 //$("#project_active").html(html);
                 var html = "<optgroup label='B79'>" + html_B79 + "</optgroup>" + "<optgroup label='P02'>" + html_P02 + "</optgroup>" + "<optgroup label='E02'>" + html_E02 + "</optgroup>" + "<optgroup label='NWF'>" + html_NWF + "</optgroup>" + "<optgroup label='PUBLIC'>" + html_PUBLIC + "</optgroup>"
                 var html_cur_status = [
-                    '<option value="all">所有</option>' ,
                     '<option value="undone">未升级</option> ',
                     '<option value="done">已升级</option> ',
                     '<option value="rollback">已回滚</option>',

@@ -40193,3 +40193,41 @@ Traceback (most recent call last):
   File "D:\django\monitor\lib\site-packages\MySQLdb\connections.py", line 193, in __init__
     super(Connection, self).__init__(*args, **kwargs2)
 OperationalError: (2003, "Can't connect to MySQL server on '192.168.100.164' (10060)")
+2017-05-30 02:38:13,869 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/operate_upgrade
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 29, in OperateUpgrade
+    request.websocket.send(message_dict)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\backends\default\websocket.py", line 41, in send
+    self.protocol.write(message)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\backends\default\protocols.py", line 236, in write
+    self._write_frame(True, opcode, message)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\backends\default\protocols.py", line 224, in _write_frame
+    frame += data
+TypeError: cannot concatenate 'str' and 'dict' objects
+2017-05-30 02:42:05,388 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/operate_upgrade
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 29, in OperateUpgrade
+    request.websocket.send(message_dict)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\backends\default\websocket.py", line 41, in send
+    self.protocol.write(message)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\backends\default\protocols.py", line 236, in write
+    self._write_frame(True, opcode, message)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\backends\default\protocols.py", line 224, in _write_frame
+    frame += data
+TypeError: cannot concatenate 'str' and 'dict' objects

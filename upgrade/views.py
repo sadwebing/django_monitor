@@ -8,9 +8,31 @@ from monitor import settings
 from models import upgrade_op, upgrade_cur_svn
 from check_tomcat.models import tomcat_project
 from saltstack.saltapi import SaltAPI
-import json, logging
-
+import json, logging, numpy
+from time import sleep
+from dwebsocket import require_websocket
 logger = logging.getLogger('django')
+
+
+
+
+@csrf_exempt
+@require_websocket
+def OperateUpgrade(request):
+    if request.is_websocket():
+        logger.info(dir(request.websocket))
+        #message = request.websocket.wait()
+        for count in numpy.arange(1, 6):
+            if count != 1:
+                sleep(2)
+            message_dict = {}
+            message_dict['count'] = count
+            message = "progessing step %s ......" %count
+            message_dict['message'] = message
+            logger.info(message_dict)
+            request.websocket.send(json.dumps(message_dict))
+            if count == 5:
+                request.websocket.close()
 
 @csrf_protect
 @login_required
