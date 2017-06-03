@@ -174,6 +174,9 @@ var operate = {
     //},
     
     Submit: function(){
+        var modal_results = document.getElementById("OperateRestartresults");
+        var modal_footer = document.getElementById("progressFooter");
+        var modal_head = document.getElementById("progress_head");
         $("#btn_submit").bind('click',function () {
             //var postData=operate.Getform();
             var postData = {
@@ -189,28 +192,50 @@ var operate = {
                 return false;
             }
             //alert("获取到的表单数据为:"+JSON.stringify(postData));
-            $.ajax({
-                url: "/saltstack/command/restart",
-                type: "post",
-                contentType: 'application/json',
-                data: JSON.stringify(postData),
-                success: function (data, status) {
-                    //alert(data);
-                    var html = "";
-                    data = JSON.parse(data)
-                    //html = "<strong>"+postData['project']+"</strong>"
-                    for (var project in data){
-                        html = html + "<p><strong>"+project+"</strong></p><pre class='pre-scrollable'><xmp>"+data[project]+"</xmp></pre>";
-                    }
-                    $("#commandresults").html(html);
-                    return false;
-                },
-                error:function(msg){
-                    alert("目前只支持单台服务器进行操作，请检查minion ID！");
-                    return false;
+            modal_results.innerHTML = "";
+            modal_footer.innerHTML = "";
+            $("#progress_bar").css("width", "30%");
+            modal_head.innerHTML = "操作进行中，请勿刷新页面......";
+            var socket = new WebSocket("ws://" + window.location.host + "/saltstack/command/restart");
+            socket.onopen = function () {
+                console.log('WebSocket open');//成功连接上Websocket
+                //socket.send($('#message').val());//发送数据到服务端
+                socket.send(JSON.stringify(postData))
+            };
+            $('#runprogress').modal('show');
+            socket.onmessage = function (e) {
+                //return false;
+                data = eval('('+ e.data +')')
+                console.log('message: ' + data);//打印服务端返回的数据
+                if (data.step == 'one'){
+                    $("#progress_bar").css("width", "50%");
+                    $('#OperateRestartresults').append('<p>' + data['project'] + ':&thinsp;<strong>' + data['server_id'] + '</strong></p>' );
+                }else if (data.step == 'final'){
+                    modal_head.innerHTML = "服务重启完成...";
+                    $("#progress_bar").css("width", "100%");
+                    $('#OperateRestartresults').append('<pre>' + data['result'] + '</pre>');
+                    console.log('websocket已关闭');
+                    modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
                 }
-            });
+            }; 
+
             return false;
+        });
+        $("#btn_submit").bind('click',function () {
+            $("#progress_bar").css("width", "30%");
+            modal_head.innerHTML = "操作进行中，请勿刷新页面......";
+        });
+        $("#restart_panel").bind('click',function () {
+            that = document.getElementById("projectreform")
+            if (that.style.display == "none"){
+                that.style.display = "inline";
+                document.getElementById('restart_panel').innerHTML = "-";
+                document.getElementById('restart_panel').title = "隐藏";
+            }else {
+                that.style.display = "none";
+                document.getElementById('restart_panel').innerHTML = "+";
+                document.getElementById('restart_panel').title = "展开";
+            }
         });
     },
 

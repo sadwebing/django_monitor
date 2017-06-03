@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from monitor import settings
 from check_tomcat.models import tomcat_project, tomcat_url
 from saltstack.saltapi import SaltAPI
+from dwebsocket import require_websocket
 from command import Command
 import json, logging
 
@@ -96,32 +97,44 @@ def CommandExecute(request):
     else:
         return HttpResponse('nothing!')
 
+@require_websocket
 @csrf_exempt
 def CommandRestart(request):
-    if request.method == 'POST':
+    if request.is_websocket():
+        global username, role, clientip
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
         clientip = request.META['REMOTE_ADDR']
-        data     = json.loads(request.body)
-        logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
-        #results = []
-        info = {}
-        project = data['project']
-        restart = tomcat_project.objects.filter(project=project).first().script
-        if restart == '':
-            arg = "/web/%s/bin/restart.sh" %project
-        else:
-            arg = "%s restart" %restart
-        #logger.info(restart)
-        arglist = ["runas=tomcat"]
-        arglist.append(arg)
-        logger.info("重启参数：%s"%arglist)
-        commandexe = Command(data['server_id'], 'cmd.run', arglist)
-        info[project] = commandexe.CmdRun()[data['server_id']]
-        #logger.info(json.dumps(info))
-        return HttpResponse(json.dumps(info))
-    elif request.method == 'GET':
-        return HttpResponse('You get nothing!')
-    else:
-        return HttpResponse('nothing!')
+        logger.info(dir(request.websocket))
+        #message = request.websocket.wait()
+        for postdata in request.websocket:
+            data = json.loads(postdata)
+            info_one = {}
+            info_one['step'] = 'one'
+            info_one['project'] = data['project']
+            info_one['server_id'] = data['server_id']
+            request.websocket.send(json.dumps(info_one))
+            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+            #results = []
+            info_final = {}
+            info_final['step'] = 'final'
+            project = data['project']
+            restart = tomcat_project.objects.filter(project=project).first().script
+            if restart == '':
+                arg = "/web/%s/bin/restart.sh" %project
+            else:
+                arg = "%s restart" %restart
+            #logger.info(restart)
+            arglist = ["runas=tomcat"]
+            arglist.append(arg)
+            logger.info("重启参数：%s"%arglist)
+            commandexe = Command(data['server_id'], 'cmd.run', arglist)
+            info_final['result'] = commandexe.CmdRun()[data['server_id']]
+            request.websocket.send(json.dumps(info_final))
+            request.websocket.close()
 
 @csrf_protect
 @login_required
@@ -132,7 +145,6 @@ def command(request):
         role = request.user.userprofile.role
     except:
         role = 'none'
-    global clientip
     clientip = request.META['REMOTE_ADDR']
     title = u'SALTSTACK-命令管理'
     logger.info('%s is requesting.' %clientip)
