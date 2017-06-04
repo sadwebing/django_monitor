@@ -43582,3 +43582,49 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 366, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2017-06-05 05:14:33,892 tomcat.py [django:36] [ERROR]- [failed]mail from monitor@ag866.com, mail to [u'Arno@ag866.com', u'sa@ag866.com'],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/06/05 05:14:12</td><td>B79_OFFICE_APP</td><td>null</td><td>EST_0_95</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:14:12</td><td>B79_FENGCAI</td><td>brand.ag8.com</td><td>http://183.111.157.84:7070</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:14:25</td><td>P02_OFFICE_APP</td><td>null</td><td>EST_0_101</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:14:27</td><td>ALL_DATACENTER_APP</td><td>null</td><td>EST_0_193</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:14:28</td><td>ALL_DATACENTER_APP</td><td>null</td><td>EST_0_81</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:14:30</td><td>E02_OFFICE_APP</td><td>null</td><td>EST_0_87</td><td>null</td><td>null</td></tr></table></body></html>
+2017-06-05 05:14:36,000 tomcat.py [django:36] [ERROR]- [failed]mail from monitor@ag866.com, mail to [u'Arno@ag866.com', u'vincent@ag866.com'], Minion Down:
+	EST_0_108
+	EST_0_80
+	OFFICE_252_244
+	WTT_100_130
+	WZ_171_126
+	WZ_236_101
+	WZ_34_138
+	WZ_42_39
+	XTY_20_100
+	XTY_20_101
+	XTY_20_253
+2017-06-05 05:17:43,558 tomcat.py [django:36] [ERROR]- [failed]mail from monitor@ag866.com, mail to [u'Arno@ag866.com', u'sa@ag866.com'],     <html><head><title>HTML email</title></head><body>
+    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing="1" style="text-align:center;padding:1px">
+    <tr style="font-size:14px">
+    <th style="width:120px">时间</th> 
+    <th style="width:120px">工程</th> 
+    <th style="width:120px">域名</th> 
+    <th style="width:300px">路径</th> 
+    <th style="width:60px">状态</th> 
+    <th style="width:120px">备注</th>
+    </tr>
+    <tr style="font-size:15px"><td >2017/06/05 05:17:18</td><td>B79_OFFICE_APP</td><td>null</td><td>EST_0_95</td><td>200</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:17:19</td><td>B79_FENGCAI</td><td>brand.ag8.com</td><td>http://183.111.157.84:7070</td><td>null</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:17:32</td><td>P02_OFFICE_APP</td><td>null</td><td>EST_0_101</td><td>200</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:17:35</td><td>ALL_DATACENTER_APP</td><td>null</td><td>EST_0_193</td><td>200</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:17:36</td><td>ALL_DATACENTER_APP</td><td>null</td><td>EST_0_81</td><td>200</td><td>null</td></tr><tr style="font-size:15px"><td >2017/06/05 05:17:38</td><td>E02_OFFICE_APP</td><td>null</td><td>EST_0_87</td><td>200</td><td>null</td></tr></table></body></html>
+2017-06-05 05:17:45,661 tomcat.py [django:36] [ERROR]- [failed]mail from monitor@ag866.com, mail to [u'Arno@ag866.com', u'vincent@ag866.com'], Minion Down:
+	EST_0_108
+	EST_0_80
+	OFFICE_252_244
+	WTT_100_130
+	WZ_171_126
+	WZ_236_101
+	WZ_34_138
+	WZ_42_39
+	XTY_20_100
+	XTY_20_101
+	XTY_20_253

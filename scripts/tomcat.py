@@ -3,6 +3,7 @@
 import re,os,sys,smtplib,requests,datetime,logging
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 from time import sleep
+from saltstack.command import Command
 from email.mime.text import MIMEText
 from email.header import Header
 reload(sys)
@@ -78,11 +79,12 @@ def check_tomcat():
                 datas['function'] = 'cmd.run'
                 datas['arguments'] = 'ps -ef |grep -i app |grep -v grep'
                 datas['expr_form'] = 'glob'
-                ret = requests.post('http://192.168.100.107:5000/saltstack/command/execute', data=json.dumps(datas), timeout=10)
-                if json.loads(ret.text)[datas['target']] == '':
+                commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
+                exe_result = commandexe.CmdRun()
+                if exe_result == '':
                     result['code'] = 'null'
                 else:
-                    result['code'] = '%s' %ret.status_code
+                    result['code'] = 200
             else:
                 ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
                 result['code'] = '%s' %ret.status_code

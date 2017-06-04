@@ -15,6 +15,78 @@ var tableInit = {
             queryParams: function (param) {
                 return { limit: param.limit, offset: param.offset, 'act':'query_active' };
             },//传递参数（*）
+            toolbarAlign: "left",
+            columns: [
+                //{ 
+                //    checkbox: true 
+                //},
+                {
+                    field: 'id',
+                    title: 'id',
+                    sortable: true,
+                    width:'3%',
+                    //align: 'center'
+                },{
+                    field: 'project',
+                    title: '项目名',
+                    sortable: true,
+                    width:'18%',
+                    //align: 'center'
+                }, {
+                    field: 'server_ip',
+                    title: '服务器地址',
+                    sortable: true,
+                    //align: 'center',
+                    width:'9%',
+                }, {
+                    field: 'server_type',
+                    title: '服务类型',
+                    sortable: true,
+                    width:'18%',
+                    //align: 'center'
+                },{
+                    field: 'role',
+                    title: '角色',
+                    sortable: true,
+                    width:'6%',
+                    //align: 'center'
+                }, {
+                    field: 'domain',
+                    title: '域名',
+                    sortable: true,
+                    width:'6%',
+                    //align: 'center',
+                    //events: this.cur_statusEvents,
+                    formatter: this.cur_statusFormatter
+                },{
+                    field: 'url',
+                    title: '检测地址',
+                    sortable: true,
+                    //align: 'center',
+                    width:'9%',
+                },{
+                    field: 'status_',
+                    title: '状态',
+                    sortable: true,
+                    width:'6%',
+                    //align: 'center'
+                },{
+                    field: 'info',
+                    title: '备注',
+                    sortable: true,
+                    width:'6%',
+                    //align: 'center'
+                },{
+                    field: 'operations',
+                    title: '操作项',
+                    //align: 'center',
+                    width:'10%',
+                    events: operateEvents,
+                    formatter: this.operateFormatter,
+                    //width:300,
+                },
+            ]
+
         });
         ko.applyBindings(this.myViewModel, document.getElementById("tomcat_table"));
     }
