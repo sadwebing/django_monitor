@@ -49,7 +49,7 @@ def index(request):
         request,
         'index.html',
         {
-            'title': title,
+            #'title': title,
             'clientip':clientip,
             'role': role,
             'username': username,
@@ -59,7 +59,7 @@ def index(request):
 @csrf_protect
 @login_required
 def tomcat_url(request):
-    title = u'管理中心-TOMCAT_URL'
+    title = u'TOMCAT-监控列表'
     global username, role, clientip
     username = request.user.username
     try:
@@ -82,7 +82,7 @@ def tomcat_url(request):
 @csrf_protect
 @login_required
 def project(request):
-    title = u'管理中心-TOMCAT_PROJECT'
+    title = u'TOMCAT-工程列表'
     global username, role, clientip
     username = request.user.username
     try:
