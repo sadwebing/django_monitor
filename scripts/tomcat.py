@@ -74,6 +74,7 @@ def check_tomcat():
         result['url'] = tomcat_info.url
         try:
             if tomcat_info.server_type == 'app':
+                result['info'] = error_status
                 datas = {}
                 datas['target'] = tomcat_info.server_ip
                 datas['function'] = 'cmd.run'
@@ -84,15 +85,15 @@ def check_tomcat():
                 if exe_result == '':
                     result['code'] = 'null'
                 else:
-                    result['code'] = 200
+                    result['code'] = '200'
             else:
                 ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
                 result['code'] = '%s' %ret.status_code
-            try:
-                title = re.search('<title>.*?</title>', ret.content)
-                result['info'] = title.group().replace('<title>', '').replace('</title>', '')
-            except AttributeError:
-                result['info'] = error_status
+                try:
+                    title = re.search('<title>.*?</title>', ret.content)
+                    result['info'] = title.group().replace('<title>', '').replace('</title>', '')
+                except AttributeError:
+                    result['info'] = error_status
         except:
             result['code'] = error_status
             result['info'] = error_status

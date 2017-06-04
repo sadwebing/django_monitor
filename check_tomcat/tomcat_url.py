@@ -5,10 +5,13 @@ sys.setdefaultencoding('utf8')
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from models import tomcat_status,tomcat_url, tomcat_project
-import json, logging
+from saltstack.command import Command
+import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
+error_status = 'null'
 
 @csrf_exempt
 def UrlQuery(request):
@@ -115,3 +118,60 @@ def UrlDelete(request):
         return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
+
+@require_websocket
+@csrf_exempt
+def UrlCheckServer(request):
+    if request.is_websocket():
+        global username, role, clientip
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        clientip = request.META['REMOTE_ADDR']
+        logger.info(dir(request.websocket))
+        #message = request.websocket.wait()
+        for postdata in request.websocket:
+            #logger.info(type(postdata))
+            data = json.loads(postdata)
+            ### step one ###
+            info_one = {}
+            info_one['step'] = 'one'
+            request.websocket.send(json.dumps(info_one))
+            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+            #results = []
+            ### final step ###
+            info_final = {}
+            info_final['step'] = 'final'
+
+            info_final['access_time'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
+            try:
+                if data['server_type'] == 'app':
+                    info_final['info'] = error_status
+                    datas = {}
+                    datas['target'] = data['server_ip']
+                    datas['function'] = 'cmd.run'
+                    datas['arguments'] = 'ps -ef |grep -i app |grep -v grep'
+                    datas['expr_form'] = 'glob'
+                    commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
+                    exe_result = commandexe.CmdRun()
+                    if exe_result == '':
+                        info_final['code'] = error_status
+                    else:
+                        info_final['code'] = '200'
+                else:
+                    ret = requests.head(data['url'], headers={'Host': data['domain']}, timeout=10)
+                    info_final['code'] = '%s' %ret.status_code
+                    try:
+                        title = re.search('<title>.*?</title>', ret.content)
+                        info_final['info'] = title.group().replace('<title>', '').replace('</title>', '')
+                    except AttributeError:
+                        info_final['info'] = error_status
+            except:
+                info_final['code'] = error_status
+                info_final['info'] = error_status
+
+            request.websocket.send(json.dumps(info_final))
+        ### close websocket ###
+        request.websocket.close()

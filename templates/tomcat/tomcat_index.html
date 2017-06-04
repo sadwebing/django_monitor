@@ -26,20 +26,6 @@
         </button>
     </div>
     <table id="tomcat_table" class="table table-condensed" data-bind="myBootstrapTable:$root">
-        <thead>
-            <tr>
-                <th data-checkbox="true"></th>
-                <th data-sortable="true" data-field="id">id</th>
-                <th data-sortable="true" data-field="project">项目名</th>
-                <th data-sortable="true" data-field="server_ip">服务器地址</th>
-                <th data-sortable="true" data-field="server_type">服务类型</th>
-                <th data-sortable="true" data-field="role">角色</th>
-                <th data-sortable="true" data-field="domain">域名</th>
-                <th data-sortable="true" data-field="url">检测地址</th>
-                <th data-sortable="true" data-field="status_">状态</th>
-                <th data-sortable="true" data-field="info">备注</th>
-            </tr>
-        </thead>
     </table>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -147,4 +133,23 @@
             </div>
         </div>
 </div>
+    <div class="modal fade" id="runprogress" tabindex="-1" role="dialog"   
+       aria-labelledby="runprogressLabel" aria-hidden="true" data-backdrop="static">   
+       <div class="modal-dialog">  
+           <div class="modal-content" >
+                <div class="modal-header">
+                    <span style="text-align:center;color:blue" id="progress_head">操作进行中，请勿刷新页面......</span><br/>
+                </div>
+                <div class="modal-body">
+                    <div class="progress progress-striped active">  
+                        <div class="progress-bar progress-bar-success" role="progressbar" id="progress_bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                        </div>
+                    </div>
+                    <pre class="pre-scrollable" id="Checkresults"></pre>
+                </div>
+                <div class="modal-footer" id="progressFooter">
+                </div>
+           </div>  
+       </div>  
+    </div>  
 <script src="/static/custom/tablejs/tomcat_url.js"></script>

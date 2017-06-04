@@ -3,6 +3,11 @@ $(function () {
     operate.operateInit();
 });
 
+//全局变量
+window.modal_results = document.getElementById("Checkresults");
+window.modal_footer = document.getElementById("progressFooter");
+window.modal_head = document.getElementById("progress_head");
+
 //初始化表格
 var tableInit = {
     Init: function () {
@@ -15,11 +20,10 @@ var tableInit = {
             queryParams: function (param) {
                 return { limit: param.limit, offset: param.offset, 'act':'query_active' };
             },//传递参数（*）
-            toolbarAlign: "left",
             columns: [
-                //{ 
-                //    checkbox: true 
-                //},
+                { 
+                    checkbox: true 
+                },
                 {
                     field: 'id',
                     title: 'id',
@@ -42,7 +46,7 @@ var tableInit = {
                     field: 'server_type',
                     title: '服务类型',
                     sortable: true,
-                    width:'18%',
+                    width:'8%',
                     //align: 'center'
                 },{
                     field: 'role',
@@ -81,6 +85,7 @@ var tableInit = {
                     title: '操作项',
                     //align: 'center',
                     width:'10%',
+                    checkbox: false,
                     events: operateEvents,
                     formatter: this.operateFormatter,
                     //width:300,
@@ -89,8 +94,62 @@ var tableInit = {
 
         });
         ko.applyBindings(this.myViewModel, document.getElementById("tomcat_table"));
-    }
+    },
+
+    operateFormatter: function (value,row,index){
+        content = [
+        '<a class="check_server" href="javascript:void(0)" title="检测服务">',
+        '<i class="text-primary"> 检测</i>',
+        '</a>'
+        ].join('');   
+        return content;
+    },
 };
+
+window.operateEvents = {
+    'click .check_server': function (e, value, row, index) {
+        var postData = {
+            server_ip:row.server_ip,
+            server_type:row.server_type,
+            domain:row.domain,
+            url:row.url,
+        };
+        modal_results.innerHTML = "";
+        modal_footer.innerHTML = "";
+        $("#progress_bar").css("width", "30%");
+        modal_head.style.color = 'blue';
+        modal_head.innerHTML = "操作进行中，请勿刷新页面......";
+        var socket = new WebSocket("ws://" + window.location.host + "/tomcat/tomcat_url/CheckServer");
+        socket.onopen = function () {
+            console.log('WebSocket open');//成功连接上Websocket
+            socket.send(JSON.stringify(postData));
+        };
+        $('#runprogress').modal('show');
+        socket.onmessage = function (e) {
+            data = eval('('+ e.data +')')
+            console.log('message: ' + data);//打印服务端返回的数据
+            if (data.step == 'one'){
+                $("#progress_bar").css("width", "50%");
+                $('#Checkresults').append('<p> 项目名:&thinsp;<strong>' + row.project + '</strong></p>' );
+                $('#Checkresults').append('<p> 服务器地址:&thinsp;<strong>' + row.server_ip + '</strong></p>' );
+                $('#Checkresults').append('<p> 服务类型:&thinsp;<strong>' + row.server_type + '</strong></p>' );
+                $('#Checkresults').append('<p> 角色:&thinsp;<strong>' + row.role + '</strong></p>' );
+                $('#Checkresults').append('<p> 域名:&thinsp;<strong>' + row.domain + '</strong></p>' );
+                $('#Checkresults').append('<p> 检测地址:&thinsp;<strong>' + row.url + '</strong></p>' );
+                $('#Checkresults').append('<hr>' );
+            }else if (data.step == 'final'){
+                $("#progress_bar").css("width", "100%");
+                modal_head.innerHTML = "检测完成！";
+                $('#Checkresults').append('<p> 检测时间:&thinsp;<strong>' + data.access_time + '</strong></p>' );
+                $('#Checkresults').append('<p> 检测状态:&thinsp;<strong>' + data.code + '</strong></p>' );
+                $('#Checkresults').append('<p> 头信息:&thinsp;<strong>' + data.info + '</strong></p>' );
+                console.log('websocket已关闭');
+                modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
+            }
+        }; 
+        return false;
+    },
+}; 
 
 //操作
 var operate = {

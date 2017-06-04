@@ -1742,3 +1742,1114 @@ TypeError: expected string or buffer
 	XTY_20_100
 	XTY_20_101
 	XTY_20_253
+2017-06-05 05:19:14,022 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:19:14,335 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:19:14,381 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:19:13.713000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:19:13.713000')
+2017-06-05 05:19:14,427 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:19:14,473 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:19:14,474 views.py [django:91] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'WTT_100_107'], u'exe_user': u'root', u'arguments': u'git pull -u origin master'}
+2017-06-05 05:19:14,476 views.py [django:101] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'WTT_100_107'], u'exe_user': u'root', u'arguments': u'git pull -u origin master'}
+2017-06-05 05:19:31,009 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:19:31,306 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:19:31,351 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:19:30.711000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:19:30.711000')
+2017-06-05 05:19:31,400 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:19:31,446 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:19:31,447 views.py [django:91] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'WTT_100_107'], u'exe_user': u'root', u'arguments': u'cd /django_uat && git pull -u origin master'}
+2017-06-05 05:19:31,447 views.py [django:101] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'WTT_100_107'], u'exe_user': u'root', u'arguments': u'cd /django_uat && git pull -u origin master'}
+2017-06-05 05:26:44,191 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:26:44,490 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:26:44,536 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:26:43.892000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:26:43.892000')
+2017-06-05 05:26:44,584 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:26:44,630 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:26:44,631 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:26:44,756 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:26:44,757 tomcat_url.py [django:34] [INFO]- 查询参数：query_active
+2017-06-05 05:26:45,056 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:26:45,358 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:26:45,421 utils.py [django.db.backends:89] [DEBUG]- (0.063) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:26:54,668 utils.py [django.db.backends:89] [DEBUG]- (0.099) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:26:56,400 utils.py [django.db.backends:89] [DEBUG]- (0.309) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:26:56,749 utils.py [django.db.backends:89] [DEBUG]- (0.349) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:26:54.072000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:26:54.072000')
+2017-06-05 05:26:57,150 utils.py [django.db.backends:89] [DEBUG]- (0.397) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:26:57,489 utils.py [django.db.backends:89] [DEBUG]- (0.337) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:26:57,489 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 05:26:57,496 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,496 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,496 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,497 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,497 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,499 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,499 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,499 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,500 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,500 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,500 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:57,500 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 90, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:26:58,480 utils.py [django.db.backends:89] [DEBUG]- (0.061) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:00,178 utils.py [django.db.backends:89] [DEBUG]- (0.200) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:00,289 utils.py [django.db.backends:89] [DEBUG]- (0.107) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:26:58.020000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:26:58.020000')
+2017-06-05 05:27:00,398 utils.py [django.db.backends:89] [DEBUG]- (0.108) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:27:00,459 utils.py [django.db.backends:89] [DEBUG]- (0.057) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:27:00,460 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:27:00,552 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:27:00,553 tomcat_url.py [django:34] [INFO]- 查询参数：query_active
+2017-06-05 05:27:00,888 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:01,206 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:01,272 utils.py [django.db.backends:89] [DEBUG]- (0.066) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:27:12,361 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:12,658 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:12,704 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:27:12.061000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:27:12.061000')
+2017-06-05 05:27:12,752 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:27:12,798 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:27:12,798 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 05:27:13,447 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:13,746 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:13,792 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:27:13.148000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:27:13.148000')
+2017-06-05 05:27:13,839 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:27:13,885 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:27:13,885 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:27:13,983 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:27:13,984 tomcat_url.py [django:34] [INFO]- 查询参数：query_active
+2017-06-05 05:27:14,282 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:14,582 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:14,651 utils.py [django.db.backends:89] [DEBUG]- (0.068) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:27:37,176 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:37,473 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:37,519 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:27:36.876000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:27:36.876000')
+2017-06-05 05:27:37,565 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:27:37,612 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:27:37,612 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 05:27:38,273 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:38,572 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:38,618 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:27:37.975000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:27:37.975000')
+2017-06-05 05:27:38,664 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:27:38,719 utils.py [django.db.backends:89] [DEBUG]- (0.051) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:27:38,719 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:27:38,815 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:27:38,815 tomcat_url.py [django:34] [INFO]- 查询参数：query_active
+2017-06-05 05:27:39,114 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:39,414 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:27:39,480 utils.py [django.db.backends:89] [DEBUG]- (0.066) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:28:40,548 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:28:40,851 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:28:40,894 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:28:40.251000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:28:40.251000')
+2017-06-05 05:28:40,941 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:28:40,986 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:28:40,986 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 05:28:41,522 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:28:41,822 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:28:41,868 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:28:41.223000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:28:41.223000')
+2017-06-05 05:28:41,915 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:28:41,961 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:28:41,963 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:28:42,049 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:28:42,051 tomcat_url.py [django:34] [INFO]- 查询参数：query_active
+2017-06-05 05:28:42,349 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:28:42,648 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:28:42,719 utils.py [django.db.backends:89] [DEBUG]- (0.070) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:29:46,089 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:29:46,387 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:29:46,431 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:29:45.791000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:29:45.791000')
+2017-06-05 05:29:46,479 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:29:46,523 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:29:46,523 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 05:29:47,013 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:29:47,312 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:29:47,358 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:29:46.716000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:29:46.716000')
+2017-06-05 05:29:47,405 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:29:47,451 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:29:47,453 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:29:47,536 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:29:47,538 tomcat_url.py [django:34] [INFO]- 查询参数：query_active
+2017-06-05 05:29:47,884 utils.py [django.db.backends:89] [DEBUG]- (0.078) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:29:48,265 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:29:48,427 utils.py [django.db.backends:89] [DEBUG]- (0.162) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:42:56,734 utils.py [django.db.backends:89] [DEBUG]- (0.060) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:42:57,234 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:42:57,315 utils.py [django.db.backends:89] [DEBUG]- (0.080) SHOW FULL TABLES; args=None
+2017-06-05 05:42:57,394 utils.py [django.db.backends:89] [DEBUG]- (0.074) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-06-05 05:52:08,130 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 119, in <module>
+    @require_websocket
+NameError: name 'require_websocket' is not defined
+2017-06-05 05:52:08,772 base.py [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 119, in <module>
+    @require_websocket
+NameError: name 'require_websocket' is not defined
+2017-06-05 05:52:58,798 utils.py [django.db.backends:89] [DEBUG]- (0.440) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:00,667 utils.py [django.db.backends:89] [DEBUG]- (0.160) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:00,858 utils.py [django.db.backends:89] [DEBUG]- (0.189) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:52:54.271000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:52:54.271000')
+2017-06-05 05:53:01,028 utils.py [django.db.backends:89] [DEBUG]- (0.168) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:53:01,247 utils.py [django.db.backends:89] [DEBUG]- (0.219) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:53:01,249 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 05:53:01,997 utils.py [django.db.backends:89] [DEBUG]- (0.059) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:02,371 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:02,415 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:53:01.634000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:53:01.634000')
+2017-06-05 05:53:02,466 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:53:02,515 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:53:02,515 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:53:02,605 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:53:02,607 tomcat_url.py [django:35] [INFO]- 查询参数：query_active
+2017-06-05 05:53:02,950 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:03,263 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:03,328 utils.py [django.db.backends:89] [DEBUG]- (0.065) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:53:06,871 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:07,171 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:07,217 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:53:06.570000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:53:06.570000')
+2017-06-05 05:53:07,266 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:53:07,312 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:53:07,312 tomcat_url.py [django:131] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 05:53:59,276 utils.py [django.db.backends:89] [DEBUG]- (0.059) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:59,686 utils.py [django.db.backends:89] [DEBUG]- (0.059) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:53:59,746 utils.py [django.db.backends:89] [DEBUG]- (0.060) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:53:57.413000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:53:57.413000')
+2017-06-05 05:53:59,806 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:53:59,857 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:53:59,857 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 05:53:59,869 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 135, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 05:54:00,677 utils.py [django.db.backends:89] [DEBUG]- (0.051) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:54:01,046 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:54:01,095 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:54:00.281000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:54:00.281000')
+2017-06-05 05:54:01,147 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:54:01,196 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:54:01,197 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 05:54:01,292 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 05:54:01,293 tomcat_url.py [django:35] [INFO]- 查询参数：query_active
+2017-06-05 05:54:01,677 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:54:02,028 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:54:02,096 utils.py [django.db.backends:89] [DEBUG]- (0.068) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 05:54:04,828 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:54:05,125 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:54:05,171 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 05:54:04.522000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 05:54:04.522000')
+2017-06-05 05:54:05,219 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 05:54:05,265 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 05:54:05,266 tomcat_url.py [django:131] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 05:55:09,486 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:55:09,861 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 05:55:09,908 utils.py [django.db.backends:89] [DEBUG]- (0.047) SHOW FULL TABLES; args=None
+2017-06-05 05:55:09,960 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-06-05 06:06:52,974 utils.py [django.db.backends:89] [DEBUG]- (0.110) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:06:56,894 utils.py [django.db.backends:89] [DEBUG]- (0.430) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:06:57,204 utils.py [django.db.backends:89] [DEBUG]- (0.310) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:06:52.418000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:06:52.418000')
+2017-06-05 06:06:57,404 utils.py [django.db.backends:89] [DEBUG]- (0.199) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:06:57,605 utils.py [django.db.backends:89] [DEBUG]- (0.199) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:06:57,605 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 06:06:59,174 utils.py [django.db.backends:89] [DEBUG]- (0.059) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:06:59,555 utils.py [django.db.backends:89] [DEBUG]- (0.061) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:06:59,605 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:06:58.758000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:06:58.758000')
+2017-06-05 06:06:59,654 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:06:59,744 utils.py [django.db.backends:89] [DEBUG]- (0.088) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:06:59,744 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 06:07:40,193 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:40,494 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:40,540 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:07:39.884000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:07:39.884000')
+2017-06-05 06:07:40,586 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:07:40,631 utils.py [django.db.backends:89] [DEBUG]- (0.043) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:07:40,632 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 06:07:41,299 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:41,598 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:41,644 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:07:41.002000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:07:41.002000')
+2017-06-05 06:07:41,691 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:07:41,739 utils.py [django.db.backends:89] [DEBUG]- (0.043) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:07:41,739 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 06:07:41,832 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:07:41,834 tomcat_url.py [django:37] [INFO]- 查询参数：query_active
+2017-06-05 06:07:42,132 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:42,431 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:42,496 utils.py [django.db.backends:89] [DEBUG]- (0.064) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 06:07:45,927 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:46,226 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:07:46,270 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:07:45.626000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:07:45.626000')
+2017-06-05 06:07:46,318 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:07:46,362 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:07:46,364 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:07:46,365 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.169:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_169', u'server_type': u'tomcat'}
+2017-06-05 06:08:37,907 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:08:38,207 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:08:38,253 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:08:37.606000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:08:37.606000')
+2017-06-05 06:08:38,301 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:08:38,346 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:08:38,346 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 06:08:38,357 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:08:39,056 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:08:39,355 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:08:39,401 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:08:38.755000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:08:38.755000')
+2017-06-05 06:08:39,450 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:08:39,496 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:08:39,496 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 06:08:39,601 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:08:39,601 tomcat_url.py [django:37] [INFO]- 查询参数：query_active
+2017-06-05 06:08:39,903 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:08:40,211 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:08:40,275 utils.py [django.db.backends:89] [DEBUG]- (0.062) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 06:09:37,306 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:09:37,605 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:09:37,650 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:09:37.006000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:09:37.006000')
+2017-06-05 06:09:37,697 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:09:37,743 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:09:37,743 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:09:37,744 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.169:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_169', u'server_type': u'tomcat'}
+2017-06-05 06:10:12,364 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:10:12,723 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:10:12,770 utils.py [django.db.backends:89] [DEBUG]- (0.046) SHOW FULL TABLES; args=None
+2017-06-05 06:10:12,825 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-06-05 06:10:15,530 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:10:15,832 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:10:15,878 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:10:15.230000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:10:15.230000')
+2017-06-05 06:10:15,927 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:10:15,973 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:10:15,974 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:10:15,976 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.169:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_169', u'server_type': u'tomcat'}
+2017-06-05 06:11:39,529 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:11:39,911 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:11:39,957 utils.py [django.db.backends:89] [DEBUG]- (0.046) SHOW FULL TABLES; args=None
+2017-06-05 06:11:40,009 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-06-05 06:12:01,167 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:01,516 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:01,586 utils.py [django.db.backends:89] [DEBUG]- (0.069) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:12:00.179000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:12:00.179000')
+2017-06-05 06:12:01,647 utils.py [django.db.backends:89] [DEBUG]- (0.057) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:12:01,697 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:12:01,697 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:12:01,697 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.169:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_169', u'server_type': u'tomcat'}
+2017-06-05 06:12:17,332 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:17,631 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:17,676 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:12:17.033000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:12:17.033000')
+2017-06-05 06:12:17,723 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:12:17,769 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:12:17,769 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:12:17,769 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_95', u'domain': u'null', u'server_ip': u'EST_0_95', u'server_type': u'app'}
+2017-06-05 06:12:25,082 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:25,378 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:25,424 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:12:24.780000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:12:24.780000')
+2017-06-05 06:12:25,471 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:12:25,519 utils.py [django.db.backends:89] [DEBUG]- (0.043) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:12:25,519 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:12:25,520 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_193', u'domain': u'null', u'server_ip': u'EST_0_193', u'server_type': u'app'}
+2017-06-05 06:12:29,082 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:12:29,084 tomcat_url.py [django:37] [INFO]- 查询参数：query_inactive
+2017-06-05 06:12:29,384 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:29,684 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:29,732 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'inactive'; args=('inactive',)
+2017-06-05 06:12:32,105 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:32,405 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:32,451 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:12:31.807000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:12:31.807000')
+2017-06-05 06:12:32,500 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:12:32,546 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:12:32,546 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:12:32,549 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_88', u'domain': u'null', u'server_ip': u'EST_0_88', u'server_type': u'app'}
+2017-06-05 06:12:45,642 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:45,940 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:12:45,984 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:12:45.344000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:12:45.344000')
+2017-06-05 06:12:46,032 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:12:46,078 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:12:46,078 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:12:46,078 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_88', u'domain': u'null', u'server_ip': u'EST_0_88', u'server_type': u'app'}
+2017-06-05 06:13:03,382 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:03,684 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:03,730 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:13:03.081000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:13:03.081000')
+2017-06-05 06:13:03,779 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:13:03,823 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:13:03,825 views.py [django:91] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'EST_0_88', u'exe_user': u'root', u'arguments': u'ps -ef |grep -i app |grep -v grep'}
+2017-06-05 06:13:03,825 views.py [django:101] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'EST_0_88', u'exe_user': u'root', u'arguments': u'ps -ef |grep -i app |grep -v grep'}
+2017-06-05 06:13:21,266 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:21,575 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:21,634 utils.py [django.db.backends:89] [DEBUG]- (0.060) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:13:20.958000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:13:20.958000')
+2017-06-05 06:13:21,683 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:13:21,729 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:13:21,730 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:13:21,730 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_91', u'domain': u'null', u'server_ip': u'EST_0_91', u'server_type': u'app'}
+2017-06-05 06:13:25,181 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:25,479 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:25,523 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:13:24.882000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:13:24.882000')
+2017-06-05 06:13:25,572 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:13:25,618 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:13:25,618 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:13:25,619 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'GLB_10_124', u'domain': u'null', u'server_ip': u'GLB_10_124', u'server_type': u'app'}
+2017-06-05 06:13:29,099 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:29,398 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:29,444 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:13:28.795000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:13:28.795000')
+2017-06-05 06:13:29,493 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:13:29,539 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:13:29,540 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:13:29,542 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_96', u'domain': u'null', u'server_ip': u'EST_0_96', u'server_type': u'app'}
+2017-06-05 06:13:38,470 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:13:38,471 tomcat_url.py [django:37] [INFO]- 查询参数：query_inactive
+2017-06-05 06:13:38,773 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:39,072 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:39,121 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'inactive'; args=('inactive',)
+2017-06-05 06:13:40,387 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:40,687 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:40,732 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:13:40.089000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:13:40.089000')
+2017-06-05 06:13:40,779 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:13:40,826 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:13:40,828 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:13:40,828 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_96', u'domain': u'null', u'server_ip': u'EST_0_96', u'server_type': u'app'}
+2017-06-05 06:13:51,364 utils.py [django.db.backends:89] [DEBUG]- (0.060) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:52,134 utils.py [django.db.backends:89] [DEBUG]- (0.070) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:13:52,194 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:13:50.954000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:13:50.954000')
+2017-06-05 06:13:52,243 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:13:52,293 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:13:52,295 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:13:52,295 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_88', u'domain': u'null', u'server_ip': u'EST_0_88', u'server_type': u'app'}
+2017-06-05 06:14:08,319 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:08,618 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:08,664 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:14:08.022000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:14:08.022000')
+2017-06-05 06:14:08,710 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:14:08,756 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:14:08,756 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:14:08,757 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'EST_0_88', u'domain': u'null', u'server_ip': u'EST_0_88', u'server_type': u'app'}
+2017-06-05 06:14:12,690 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:14:12,690 tomcat_url.py [django:37] [INFO]- 查询参数：query_all
+2017-06-05 06:14:12,990 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:13,055 utils.py [django.db.backends:89] [DEBUG]- (0.064) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url`; args=()
+2017-06-05 06:14:24,328 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:24,657 utils.py [django.db.backends:89] [DEBUG]- (0.051) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:24,701 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:14:24.010000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:14:24.010000')
+2017-06-05 06:14:24,747 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:14:24,792 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:14:24,792 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:14:24,793 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.169:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_169', u'server_type': u'tomcat'}
+2017-06-05 06:14:27,247 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:27,548 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:27,594 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:14:26.949000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:14:26.949000')
+2017-06-05 06:14:27,641 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:14:27,687 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:14:27,687 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:14:27,687 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.62:6040', u'domain': u'999.agbtc.net', u'server_ip': u'WTT_100_62', u'server_type': u'tomcat'}
+2017-06-05 06:14:31,681 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:31,980 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:14:32,026 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:14:31.375000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:14:31.375000')
+2017-06-05 06:14:32,072 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:14:32,118 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:14:32,118 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:14:32,119 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.108:7060', u'domain': u'gci.agg028.com', u'server_ip': None, u'server_type': u'tomcat'}
+2017-06-05 06:15:26,187 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:26,486 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:26,532 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:15:25.886000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:15:25.886000')
+2017-06-05 06:15:26,578 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:15:26,624 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:15:26,625 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 06:15:26,654 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,654 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,654 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,654 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,655 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:26,657 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:15:30,546 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:30,854 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:30,900 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:15:30.230000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:15:30.230000')
+2017-06-05 06:15:30,947 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:15:30,993 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:15:30,993 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 06:15:39,674 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:39,973 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:40,017 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:15:39.376000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:15:39.376000')
+2017-06-05 06:15:40,065 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:15:40,109 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:15:40,109 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 06:15:40,773 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:41,075 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:41,119 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:15:40.472000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:15:40.472000')
+2017-06-05 06:15:41,167 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:15:41,214 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:15:41,214 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 06:15:41,318 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:15:41,318 tomcat_url.py [django:37] [INFO]- 查询参数：query_active
+2017-06-05 06:15:41,618 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:41,917 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:41,983 utils.py [django.db.backends:89] [DEBUG]- (0.066) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 06:15:45,858 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:46,155 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:46,200 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:15:45.560000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:15:45.560000')
+2017-06-05 06:15:46,247 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:15:46,292 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:15:46,292 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:15:46,293 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.169:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_169', u'server_type': u'tomcat'}
+2017-06-05 06:15:53,081 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:53,470 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:15:53,530 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:15:51.687000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:15:51.687000')
+2017-06-05 06:15:53,591 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:15:53,651 utils.py [django.db.backends:89] [DEBUG]- (0.057) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:15:53,651 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:15:53,651 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.86:6030', u'domain': u'www.ag8vip.com', u'server_ip': u'WTT_100_86', u'server_type': u'tomcat'}
+2017-06-05 06:16:12,148 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:16:12,447 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:16:12,492 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:16:11.849000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:16:11.849000')
+2017-06-05 06:16:12,539 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:16:12,585 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:16:12,585 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:16:12,585 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://172.20.0.95:6100/office/request/XMApply2_search.do', u'domain': u'office.agbtc.net', u'server_ip': u'EST_0_95', u'server_type': u'tomcat'}
+2017-06-05 06:17:37,377 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:17:37,680 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:17:37,726 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:17:37.078000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:17:37.078000')
+2017-06-05 06:17:37,772 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:17:37,818 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:17:37,818 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:17:37,819 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.183:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_183', u'server_type': u'tomcat'}
+2017-06-05 06:19:03,326 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:19:03,328 tomcat_url.py [django:37] [INFO]- 查询参数：query_active
+2017-06-05 06:19:03,631 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:19:03,930 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:19:03,999 utils.py [django.db.backends:89] [DEBUG]- (0.069) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 06:19:05,519 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:19:05,816 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:19:05,861 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:19:05.222000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:19:05.222000')
+2017-06-05 06:19:05,908 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:19:05,953 utils.py [django.db.backends:89] [DEBUG]- (0.043) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:19:05,954 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:19:05,956 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.183:6020', u'domain': u'www.ag8.com', u'server_ip': u'WTT_100_183', u'server_type': u'tomcat'}
+2017-06-05 06:20:30,144 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:30,443 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:30,487 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:20:29.845000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:20:29.845000')
+2017-06-05 06:20:30,535 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:20:30,579 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:20:30,579 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 06:20:30,588 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:20:30,589 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:20:30,589 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:20:30,589 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:20:30,589 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 137, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-05 06:20:31,151 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:31,457 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:31,505 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:20:30.850000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:20:30.850000')
+2017-06-05 06:20:31,559 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:20:31,611 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:20:31,614 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 06:20:31,709 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:20:31,709 tomcat_url.py [django:37] [INFO]- 查询参数：query_active
+2017-06-05 06:20:32,007 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:32,306 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:32,375 utils.py [django.db.backends:89] [DEBUG]- (0.068) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 06:20:35,523 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:35,865 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:35,911 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:20:35.216000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:20:35.216000')
+2017-06-05 06:20:35,959 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:20:36,005 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:20:36,006 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-05 06:20:36,664 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:36,964 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:37,010 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:20:36.365000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:20:36.365000')
+2017-06-05 06:20:37,058 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:20:37,102 utils.py [django.db.backends:89] [DEBUG]- (0.043) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:20:37,104 views.py [django:70] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-06-05 06:20:37,194 tomcat_url.py [django:22] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-06-05 06:20:37,194 tomcat_url.py [django:37] [INFO]- 查询参数：query_active
+2017-06-05 06:20:37,492 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:37,790 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:20:37,855 utils.py [django.db.backends:89] [DEBUG]- (0.064) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`status` = 'active'; args=('active',)
+2017-06-05 06:21:02,673 utils.py [django.db.backends:89] [DEBUG]- (0.070) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:03,007 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:03,052 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:21:01.228000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:21:01.228000')
+2017-06-05 06:21:03,101 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:21:03,151 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:21:03,151 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:21:03,153 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.136:1200/gcLaunchMGGame.do', u'domain': u'walletapi.agg079.com', u'server_ip': u'WTT_100_136', u'server_type': u'tomcat'}
+2017-06-05 06:21:16,372 views.py [django:40] [INFO]- {"project":["ALL_COMMONWALLET_API"]}
+2017-06-05 06:21:16,673 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:16,973 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:17,019 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'ALL_COMMONWALLET_API'; args=(u'ALL_COMMONWALLET_API',)
+2017-06-05 06:21:17,020 views.py [django:54] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers: {u'ALL_COMMONWALLET_API': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_122'}, {'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_136'}]}
+2017-06-05 06:21:21,759 views.py [django:40] [INFO]- {"project":["ALL_COMMONWALLET_API"]}
+2017-06-05 06:21:22,063 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:22,368 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:22,417 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'ALL_COMMONWALLET_API'; args=(u'ALL_COMMONWALLET_API',)
+2017-06-05 06:21:22,417 views.py [django:54] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers: {u'ALL_COMMONWALLET_API': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_122'}, {'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_136'}]}
+2017-06-05 06:21:24,259 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:24,562 utils.py [django.db.backends:89] [DEBUG]- (0.045) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:24,621 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:21:23.940000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:21:23.940000')
+2017-06-05 06:21:24,668 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:21:24,713 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:21:24,713 views.py [django:128] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:21:24,714 views.py [django:139] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'ALL_COMMONWALLET_API', u'server_id': u'WTT_100_136'}
+2017-06-05 06:21:24,763 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `check_tomcat_tomcat_project`.`id`, `check_tomcat_tomcat_project`.`product`, `check_tomcat_tomcat_project`.`project`, `check_tomcat_tomcat_project`.`code_dir`, `check_tomcat_tomcat_project`.`cur_svn_id`, `check_tomcat_tomcat_project`.`tomcat`, `check_tomcat_tomcat_project`.`tomcat_version`, `check_tomcat_tomcat_project`.`main_port`, `check_tomcat_tomcat_project`.`jdk`, `check_tomcat_tomcat_project`.`script`, `check_tomcat_tomcat_project`.`status` FROM `check_tomcat_tomcat_project` WHERE `check_tomcat_tomcat_project`.`project` = 'ALL_COMMONWALLET_API' ORDER BY `check_tomcat_tomcat_project`.`id` ASC LIMIT 1; args=(u'ALL_COMMONWALLET_API',)
+2017-06-05 06:21:24,763 views.py [django:153] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_allcommonwalletapi restart']
+2017-06-05 06:21:35,236 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:35,536 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-05 06:21:35,582 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-05 06:21:34.937000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-05 06:21:34.937000')
+2017-06-05 06:21:35,628 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-05 06:21:35,674 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-05 06:21:35,676 tomcat_url.py [django:133] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-06-05 06:21:35,677 tomcat_url.py [django:142] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.136:1200/gcLaunchMGGame.do', u'domain': u'walletapi.agg079.com', u'server_ip': u'WTT_100_136', u'server_type': u'tomcat'}
