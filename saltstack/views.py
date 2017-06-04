@@ -75,27 +75,44 @@ def CheckMinion(request):
     else:
         return HttpResponse('nothing!')
 
+@require_websocket
 @csrf_exempt
 def CommandExecute(request):
-    if request.method == 'POST':
+    if request.is_websocket():
+        global username, role, clientip
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
         clientip = request.META['REMOTE_ADDR']
-        data     = json.loads(request.body)
-        logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
-        commandexe = Command(data['target'], data['function'], data['arguments'], data['expr_form'])
-        info = {}
-        if data['function'] == 'test.ping':
-            info = commandexe.TestPing()
-        elif data['function'] == 'cmd.run':
-            info = commandexe.CmdRun()
-        elif data['function'] == 'state.sls':
-            info = commandexe.StateSls()
-        logger.info(json.dumps(info))
-        return HttpResponse(json.dumps(info))
-        #return HttpResponse(info)
-    elif request.method == 'GET':
-        return HttpResponse('You get nothing!')
-    else:
-        return HttpResponse('nothing!')
+        for postdata in request.websocket:
+            data = json.loads(postdata)
+            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+            #request.websocket.send(json.dumps(data))
+            ### step one ##
+            info_one = {}
+            info_one['step'] = 'one'
+            request.websocket.send(json.dumps(info_one))
+            #time.sleep(2)
+            ### final step ###
+            info_final = {}
+            info_final['step'] = 'final'
+            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+            arglist = ["runas=%s" %data['exe_user']]
+            arglist.append(data['arguments'])
+            commandexe = Command(data['target'], data['function'], arglist, data['expr_form'])
+            if data['function'] == 'test.ping':
+                info_final['results'] = commandexe.TestPing()
+            elif data['function'] == 'cmd.run':
+                info_final['results'] = commandexe.CmdRun()
+            elif data['function'] == 'state.sls':
+                info_final['results'] = commandexe.StateSls()
+            #logger.info(json.dumps(info_final))
+
+            request.websocket.send(json.dumps(info_final))
+        ### close websocket ###
+        request.websocket.close()
 
 @require_websocket
 @csrf_exempt
@@ -111,7 +128,9 @@ def CommandRestart(request):
         logger.info(dir(request.websocket))
         #message = request.websocket.wait()
         for postdata in request.websocket:
+            #logger.info(type(postdata))
             data = json.loads(postdata)
+            ### step one ###
             info_one = {}
             info_one['step'] = 'one'
             info_one['project'] = data['project']
@@ -119,6 +138,7 @@ def CommandRestart(request):
             request.websocket.send(json.dumps(info_one))
             logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
             #results = []
+            ### final step ###
             info_final = {}
             info_final['step'] = 'final'
             project = data['project']
@@ -134,7 +154,8 @@ def CommandRestart(request):
             commandexe = Command(data['server_id'], 'cmd.run', arglist)
             info_final['result'] = commandexe.CmdRun()[data['server_id']]
             request.websocket.send(json.dumps(info_final))
-            request.websocket.close()
+        ### close websocket ###
+        request.websocket.close()
 
 @csrf_protect
 @login_required
