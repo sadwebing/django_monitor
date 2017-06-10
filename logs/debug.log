@@ -11758,3 +11758,263 @@ KeyError: u'WTT_100_55'
 2017-06-11 05:57:55,397 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
 2017-06-11 05:57:55,456 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `check_tomcat_tomcat_project`.`id`, `check_tomcat_tomcat_project`.`product`, `check_tomcat_tomcat_project`.`project`, `check_tomcat_tomcat_project`.`code_dir`, `check_tomcat_tomcat_project`.`cur_svn_id`, `check_tomcat_tomcat_project`.`tomcat`, `check_tomcat_tomcat_project`.`tomcat_version`, `check_tomcat_tomcat_project`.`main_port`, `check_tomcat_tomcat_project`.`jdk`, `check_tomcat_tomcat_project`.`script`, `check_tomcat_tomcat_project`.`status` FROM `check_tomcat_tomcat_project` WHERE `check_tomcat_tomcat_project`.`status` = 'active'; args=('active',)
 2017-06-11 05:57:55,460 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project: [{'project': u'P02_NEW_WEB_V3', 'product': u'P02'}, {'project': u'P02_WEB_WS_V3', 'product': u'P02'}, {'project': u'P02_STATIC_V3', 'product': u'P02'}, {'project': u'P02_BBS', 'product': u'P02'}, {'project': u'P02_GI', 'product': u'P02'}, {'project': u'P02_OFFICE', 'product': u'P02'}, {'project': u'P02_OFFICE_WS', 'product': u'P02'}, {'project': u'P02_YTSIGHT', 'product': u'P02'}, {'project': u'P02_PARTNER', 'product': u'P02'}, {'project': u'P02_OFFICE_APP', 'product': u'P02'}, {'project': u'ALL_GOLDENCMS_142', 'product': u'PUBLIC'}, {'project': u'ALL_GOLDENCMS_145', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_API', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_DATACENTER', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_APP', 'product': u'PUBLIC'}, {'project': u'ALL_EMAIL_API', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_FRONT', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CALLBACK', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_EMAIL_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_API', 'product': u'PUBLIC'}, {'project': u'ALL_TSD_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_DC', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_API', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_BUSINESS', 'product': u'PUBLIC'}, {'project': u'B79_FENGCAI', 'product': u'B79'}, {'project': u'B79_BBS', 'product': u'B79'}, {'project': u'ALL_GDC', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_API', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_OLD', 'product': u'PUBLIC'}, {'project': u'ALL_MESSAGE', 'product': u'PUBLIC'}, {'project': u'ALL_ZXZF_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ZJ_CASH', 'product': u'PUBLIC'}, {'project': u'ALL_OA', 'product': u'PUBLIC'}, {'project': u'ALL_AGENT', 'product': u'PUBLIC'}, {'project': u'P02_MOBILE', 'product': u'P02'}, {'project': u'E02_OFFICE', 'product': u'E02'}, {'project': u'E02_WS', 'product': u'E02'}, {'project': u'NWF_GI', 'product': u'NWF'}, {'project': u'B79_NEW_WEB_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CRON', 'product': u'PUBLIC'}, {'project': u'B79_NEW_MOBILE', 'product': u'B79'}, {'project': u'B79_GI', 'product': u'B79'}, {'project': u'B79_OFFICE_APP', 'product': u'B79'}, {'project': u'B79_OFFICE', 'product': u'B79'}, {'project': u'B79_OFFICE_WS', 'product': u'B79'}, {'project': u'B79_STATIC_V2', 'product': u'B79'}, {'project': u'B79_WEB_WS_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_API', 'product': u'PUBLIC'}, {'project': u'ALL_BI_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_BI_ETL', 'product': u'PUBLIC'}, {'project': u'E04_WS', 'product': u'E04'}, {'project': u'E04_OFFICE', 'product': u'E04'}, {'project': u'B79_WEB_VIP_V2', 'product': u'B79'}, {'project': u'P02_MOBILE_STATIC', 'product': u'P02'}, {'project': u'E02_MOBILE_PHP', 'product': u'E02'}, {'project': u'E02_OFFICE_APP', 'product': u'E02'}, {'project': u'E02_WEB_PHP', 'product': u'E02'}, {'project': u'NWF_SRS', 'product': u'NWF'}, {'project': u'NWF_AGENT', 'product': u'NWF'}, {'project': u'B79_EGAME_WEB', 'product': u'B79'}, {'project': u'B79_EGAME_MOBILE', 'product': u'B79'}, {'project': u'B79_EGAME_WS', 'product': u'B79'}]
+2017-06-11 06:03:32,299 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:03:32,730 utils.py [django.db.backends:89] [DEBUG]- (0.060) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:03:32,799 utils.py [django.db.backends:89] [DEBUG]- (0.070) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-11 06:03:31.899000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-11 06:03:31.899000')
+2017-06-11 06:03:32,859 utils.py [django.db.backends:89] [DEBUG]- (0.057) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-11 06:03:32,920 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-11 06:03:32,920 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-11 06:03:32,927 views.py [django:197] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：None
+2017-06-11 06:03:32,928 views.py [django:197] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：None
+2017-06-11 06:03:32,938 views.py [django:197] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：None
+2017-06-11 06:03:32,940 views.py [django:197] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：None
+2017-06-11 06:03:32,940 views.py [django:197] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：None
+2017-06-11 06:03:32,941 views.py [django:197] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：None
+2017-06-11 06:03:32,944 views.py [django:197] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：None
+2017-06-11 06:03:32,944 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 73, in CheckMinion
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,941 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 73, in CheckMinion
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,941 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 73, in CheckMinion
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,937 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 73, in CheckMinion
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,944 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 199, in DeployExe
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,944 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 73, in CheckMinion
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,944 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/check_minion
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 73, in CheckMinion
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,947 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 199, in DeployExe
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,947 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 199, in DeployExe
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,950 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 199, in DeployExe
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,951 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 199, in DeployExe
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,953 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 199, in DeployExe
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:32,953 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 199, in DeployExe
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-11 06:03:33,940 utils.py [django.db.backends:89] [DEBUG]- (0.061) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:03:34,390 utils.py [django.db.backends:89] [DEBUG]- (0.061) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:03:34,450 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-11 06:03:33.474000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-11 06:03:33.474000')
+2017-06-11 06:03:34,512 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-11 06:03:34,591 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-11 06:03:34,595 views.py [django:266] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-06-11 06:03:35,121 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:03:35,470 utils.py [django.db.backends:89] [DEBUG]- (0.046) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:03:35,588 utils.py [django.db.backends:89] [DEBUG]- (0.114) SELECT `check_tomcat_tomcat_project`.`id`, `check_tomcat_tomcat_project`.`product`, `check_tomcat_tomcat_project`.`project`, `check_tomcat_tomcat_project`.`code_dir`, `check_tomcat_tomcat_project`.`cur_svn_id`, `check_tomcat_tomcat_project`.`tomcat`, `check_tomcat_tomcat_project`.`tomcat_version`, `check_tomcat_tomcat_project`.`main_port`, `check_tomcat_tomcat_project`.`jdk`, `check_tomcat_tomcat_project`.`script`, `check_tomcat_tomcat_project`.`status` FROM `check_tomcat_tomcat_project` WHERE `check_tomcat_tomcat_project`.`status` = 'active'; args=('active',)
+2017-06-11 06:03:35,628 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project: [{'project': u'P02_NEW_WEB_V3', 'product': u'P02'}, {'project': u'P02_WEB_WS_V3', 'product': u'P02'}, {'project': u'P02_STATIC_V3', 'product': u'P02'}, {'project': u'P02_BBS', 'product': u'P02'}, {'project': u'P02_GI', 'product': u'P02'}, {'project': u'P02_OFFICE', 'product': u'P02'}, {'project': u'P02_OFFICE_WS', 'product': u'P02'}, {'project': u'P02_YTSIGHT', 'product': u'P02'}, {'project': u'P02_PARTNER', 'product': u'P02'}, {'project': u'P02_OFFICE_APP', 'product': u'P02'}, {'project': u'ALL_GOLDENCMS_142', 'product': u'PUBLIC'}, {'project': u'ALL_GOLDENCMS_145', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_API', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_DATACENTER', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_APP', 'product': u'PUBLIC'}, {'project': u'ALL_EMAIL_API', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_FRONT', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CALLBACK', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_EMAIL_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_API', 'product': u'PUBLIC'}, {'project': u'ALL_TSD_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_DC', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_API', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_BUSINESS', 'product': u'PUBLIC'}, {'project': u'B79_FENGCAI', 'product': u'B79'}, {'project': u'B79_BBS', 'product': u'B79'}, {'project': u'ALL_GDC', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_API', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_OLD', 'product': u'PUBLIC'}, {'project': u'ALL_MESSAGE', 'product': u'PUBLIC'}, {'project': u'ALL_ZXZF_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ZJ_CASH', 'product': u'PUBLIC'}, {'project': u'ALL_OA', 'product': u'PUBLIC'}, {'project': u'ALL_AGENT', 'product': u'PUBLIC'}, {'project': u'P02_MOBILE', 'product': u'P02'}, {'project': u'E02_OFFICE', 'product': u'E02'}, {'project': u'E02_WS', 'product': u'E02'}, {'project': u'NWF_GI', 'product': u'NWF'}, {'project': u'B79_NEW_WEB_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CRON', 'product': u'PUBLIC'}, {'project': u'B79_NEW_MOBILE', 'product': u'B79'}, {'project': u'B79_GI', 'product': u'B79'}, {'project': u'B79_OFFICE_APP', 'product': u'B79'}, {'project': u'B79_OFFICE', 'product': u'B79'}, {'project': u'B79_OFFICE_WS', 'product': u'B79'}, {'project': u'B79_STATIC_V2', 'product': u'B79'}, {'project': u'B79_WEB_WS_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_API', 'product': u'PUBLIC'}, {'project': u'ALL_BI_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_BI_ETL', 'product': u'PUBLIC'}, {'project': u'E04_WS', 'product': u'E04'}, {'project': u'E04_OFFICE', 'product': u'E04'}, {'project': u'B79_WEB_VIP_V2', 'product': u'B79'}, {'project': u'P02_MOBILE_STATIC', 'product': u'P02'}, {'project': u'E02_MOBILE_PHP', 'product': u'E02'}, {'project': u'E02_OFFICE_APP', 'product': u'E02'}, {'project': u'E02_WEB_PHP', 'product': u'E02'}, {'project': u'NWF_SRS', 'product': u'NWF'}, {'project': u'NWF_AGENT', 'product': u'NWF'}, {'project': u'B79_EGAME_WEB', 'product': u'B79'}, {'project': u'B79_EGAME_MOBILE', 'product': u'B79'}, {'project': u'B79_EGAME_WS', 'product': u'B79'}]
+2017-06-11 06:04:00,219 utils.py [django.db.backends:89] [DEBUG]- (0.250) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:04:00,608 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:04:00,668 utils.py [django.db.backends:89] [DEBUG]- (0.060) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-11 06:03:58.373000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-11 06:03:58.373000')
+2017-06-11 06:04:00,729 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-11 06:04:00,789 utils.py [django.db.backends:89] [DEBUG]- (0.058) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-11 06:04:00,789 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-11 06:04:01,648 utils.py [django.db.backends:89] [DEBUG]- (0.060) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:04:02,088 utils.py [django.db.backends:89] [DEBUG]- (0.047) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:04:02,134 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '6xjgj5t21ph17w5ys444edttcft8e27s' AND `django_session`.`expire_date` > '2017-06-11 06:04:01.228000'); args=('6xjgj5t21ph17w5ys444edttcft8e27s', u'2017-06-11 06:04:01.228000')
+2017-06-11 06:04:02,183 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-11 06:04:02,249 utils.py [django.db.backends:89] [DEBUG]- (0.064) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-11 06:04:02,250 views.py [django:266] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-06-11 06:04:02,680 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:04:03,009 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-11 06:04:03,071 utils.py [django.db.backends:89] [DEBUG]- (0.060) SELECT `check_tomcat_tomcat_project`.`id`, `check_tomcat_tomcat_project`.`product`, `check_tomcat_tomcat_project`.`project`, `check_tomcat_tomcat_project`.`code_dir`, `check_tomcat_tomcat_project`.`cur_svn_id`, `check_tomcat_tomcat_project`.`tomcat`, `check_tomcat_tomcat_project`.`tomcat_version`, `check_tomcat_tomcat_project`.`main_port`, `check_tomcat_tomcat_project`.`jdk`, `check_tomcat_tomcat_project`.`script`, `check_tomcat_tomcat_project`.`status` FROM `check_tomcat_tomcat_project` WHERE `check_tomcat_tomcat_project`.`status` = 'active'; args=('active',)
+2017-06-11 06:04:03,073 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project: [{'project': u'P02_NEW_WEB_V3', 'product': u'P02'}, {'project': u'P02_WEB_WS_V3', 'product': u'P02'}, {'project': u'P02_STATIC_V3', 'product': u'P02'}, {'project': u'P02_BBS', 'product': u'P02'}, {'project': u'P02_GI', 'product': u'P02'}, {'project': u'P02_OFFICE', 'product': u'P02'}, {'project': u'P02_OFFICE_WS', 'product': u'P02'}, {'project': u'P02_YTSIGHT', 'product': u'P02'}, {'project': u'P02_PARTNER', 'product': u'P02'}, {'project': u'P02_OFFICE_APP', 'product': u'P02'}, {'project': u'ALL_GOLDENCMS_142', 'product': u'PUBLIC'}, {'project': u'ALL_GOLDENCMS_145', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_API', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_DATACENTER', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_APP', 'product': u'PUBLIC'}, {'project': u'ALL_EMAIL_API', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_FRONT', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CALLBACK', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_EMAIL_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_API', 'product': u'PUBLIC'}, {'project': u'ALL_TSD_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_DC', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_API', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_BUSINESS', 'product': u'PUBLIC'}, {'project': u'B79_FENGCAI', 'product': u'B79'}, {'project': u'B79_BBS', 'product': u'B79'}, {'project': u'ALL_GDC', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_API', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_OLD', 'product': u'PUBLIC'}, {'project': u'ALL_MESSAGE', 'product': u'PUBLIC'}, {'project': u'ALL_ZXZF_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ZJ_CASH', 'product': u'PUBLIC'}, {'project': u'ALL_OA', 'product': u'PUBLIC'}, {'project': u'ALL_AGENT', 'product': u'PUBLIC'}, {'project': u'P02_MOBILE', 'product': u'P02'}, {'project': u'E02_OFFICE', 'product': u'E02'}, {'project': u'E02_WS', 'product': u'E02'}, {'project': u'NWF_GI', 'product': u'NWF'}, {'project': u'B79_NEW_WEB_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CRON', 'product': u'PUBLIC'}, {'project': u'B79_NEW_MOBILE', 'product': u'B79'}, {'project': u'B79_GI', 'product': u'B79'}, {'project': u'B79_OFFICE_APP', 'product': u'B79'}, {'project': u'B79_OFFICE', 'product': u'B79'}, {'project': u'B79_OFFICE_WS', 'product': u'B79'}, {'project': u'B79_STATIC_V2', 'product': u'B79'}, {'project': u'B79_WEB_WS_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_API', 'product': u'PUBLIC'}, {'project': u'ALL_BI_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_BI_ETL', 'product': u'PUBLIC'}, {'project': u'E04_WS', 'product': u'E04'}, {'project': u'E04_OFFICE', 'product': u'E04'}, {'project': u'B79_WEB_VIP_V2', 'product': u'B79'}, {'project': u'P02_MOBILE_STATIC', 'product': u'P02'}, {'project': u'E02_MOBILE_PHP', 'product': u'E02'}, {'project': u'E02_OFFICE_APP', 'product': u'E02'}, {'project': u'E02_WEB_PHP', 'product': u'E02'}, {'project': u'NWF_SRS', 'product': u'NWF'}, {'project': u'NWF_AGENT', 'product': u'NWF'}, {'project': u'B79_EGAME_WEB', 'product': u'B79'}, {'project': u'B79_EGAME_MOBILE', 'product': u'B79'}, {'project': u'B79_EGAME_WS', 'product': u'B79'}]
