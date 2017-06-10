@@ -22,7 +22,8 @@ var tableInit = {
             },//传递参数（*）
             columns: [
                 { 
-                    checkbox: true 
+                    checkbox: true,
+                    width:'2%',
                 },
                 {
                     field: 'id',
@@ -67,7 +68,7 @@ var tableInit = {
                     title: '检测地址',
                     sortable: true,
                     //align: 'center',
-                    width:'9%',
+                    width:'18%',
                 },{
                     field: 'status_',
                     title: '状态',
@@ -142,7 +143,7 @@ window.operateEvents = {
                 modal_head.innerHTML = "检测完成！";
                 $('#Checkresults').append('<p> 检测时间:&thinsp;<strong>' + data.access_time + '</strong></p>' );
                 $('#Checkresults').append('<p> 检测状态:&thinsp;<strong>' + data.code + '</strong></p>' );
-                $('#Checkresults').append('<p> 头信息:&thinsp;<strong>' + data.info + '</strong></p>' );
+                //$('#Checkresults').append('<p> 头信息:&thinsp;<strong>' + data.info + '</strong></p>' );
                 console.log('websocket已关闭');
                 modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
             }

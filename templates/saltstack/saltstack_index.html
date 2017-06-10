@@ -3,7 +3,7 @@
 {% else %}
     <title>管理中心</title>
 {% endif %}
- <style>
+<style>
     hr {
         margin-top:5px;
         margin-bottom: 3px;
@@ -28,10 +28,10 @@
                         <span class="form-control" style="margin-left: 20px;">执行用户
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="commandform_user" value="root" style="margin-left: 10px;" checked>root
+                                    <input type="radio" name="commandform_user" value="root" style="margin-left: 10px;" checked> root
                                 </label>
                                 <label>
-                                    <input type="radio" name="commandform_user" value="tomcat" style="margin-left: 10px;">tomcat
+                                    <input type="radio" name="commandform_user" value="tomcat" style="margin-left: 10px;"> tomcat
                                 </label>
                             </div>
                         </span>
@@ -45,9 +45,11 @@
                                 <option value="glob">默认</option> 
                                 <option value="list">列表</option> 
                                 <option value="pcre">正则</option> 
+                                {% comment %}
                                 <option value="nodegroup">组</option>
                                 <option value="grain">grain</option> 
                                 <option value="pillar">pillar</option>  
+                                {% endcomment %}
                             </select>
                             <input type="text" class="form-control" id="target" placeholder="ID" value="" style="width: 80%;" required>
                         </form>
@@ -80,10 +82,10 @@
                         <span class="form-control" style="margin-left: 20px;">执行用户
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="commandform2_user" value="root" style="margin-left: 10px;" checked>root
+                                    <input type="radio" name="commandform2_user" value="root" style="margin-left: 10px;" checked> root
                                 </label>
                                 <label>
-                                    <input type="radio" name="commandform2_user" value="tomcat" style="margin-left: 10px;">tomcat
+                                    <input type="radio" name="commandform2_user" value="tomcat" style="margin-left: 10px;"> tomcat
                                 </label>
                             </div>
                         </span>

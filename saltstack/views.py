@@ -6,9 +6,9 @@ from django.contrib.auth.decorators import login_required
 from monitor import settings
 from check_tomcat.models import tomcat_project, tomcat_url
 from saltstack.saltapi import SaltAPI
-from dwebsocket import require_websocket
+from dwebsocket import require_websocket, accept_websocket
 from command import Command
-import json, logging
+import json, logging, time
 
 logger = logging.getLogger('django')
 
@@ -57,23 +57,48 @@ def GetProjectServers(request):
         return HttpResponse('You get nothing!')
     else:
         return HttpResponse('nothing!')
-        
+  
+@accept_websocket     
 @csrf_exempt
 def CheckMinion(request):
-    if request.method == 'POST':
-        clientip = request.META['REMOTE_ADDR']
-        #print request.body
-        #return HttpResponse("%s" %request.body)
-        data     = json.loads(request.body)
-        logger.info('%s is requesting %s. data: %s' %(clientip, request.get_full_path(), data))
-        #logger.info('%s' %(data['tgt']))
-        commandexe = Command(data['tgt'], 'test.ping')
-        result   = commandexe.TestPing()
-        return HttpResponse(result[data['tgt']])
-    elif request.method == 'GET':
-        return HttpResponse('You get nothing!')
+    global username, role, clientip
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    clientip = request.META['REMOTE_ADDR']
+    if request.is_websocket():
+        for postdata in request.websocket:
+            data = json.loads(postdata)
+            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
+            result = {}
+            for minion_id in data:
+                commandexe = Command(minion_id, 'test.ping')
+                result['minion_id'] = minion_id
+                result['test_ping'] = commandexe.TestPing()[minion_id]
+                request.websocket.send(json.dumps(result))
+        ### close websocket ###
+        request.websocket.close()
     else:
-        return HttpResponse('nothing!')
+        if request.method == 'POST':
+            #print request.body
+            #return HttpResponse("%s" %request.body)
+            data = json.loads(request.body)
+            result = {}
+            for tgt in data['tgt']:
+                logger.info('%s is requesting %s. data: %s' %(clientip, request.get_full_path(), data))
+                #logger.info('%s' %(data['tgt']))
+                commandexe = Command(tgt, 'test.ping')
+                result[tgt] = commandexe.TestPing()[tgt]
+                logger.info(result)
+            return HttpResponse(json.dumps(result))
+        elif request.method == 'GET':
+            logger.info('%s is requesting %s.' %(clientip, request.get_full_path()))
+            return HttpResponse('You get nothing!')
+        else:
+            logger.info('%s is requesting %s.' %(clientip, request.get_full_path()))
+            return HttpResponse('nothing!')
 
 @require_websocket
 @csrf_exempt
@@ -157,6 +182,52 @@ def CommandRestart(request):
         ### close websocket ###
         request.websocket.close()
 
+@accept_websocket     
+@csrf_exempt
+def DeployExe(request):
+    global username, role, clientip
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    clientip = request.META['REMOTE_ADDR']
+    if request.is_websocket():
+        for postdata in request.websocket:
+            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), postdata))
+            #logger.info(type(postdata))
+            data = json.loads(postdata)
+            ### step one ###
+            info_one = {}
+            info_one['step'] = 'one'
+            request.websocket.send(json.dumps(info_one))   
+            time.sleep(1)
+            ### final step ###
+            info_final = {}
+            info_final['step'] = 'final'
+            info_final['minion_all'] = len(data['minion_id'])
+            info_final['minion_count'] = 0
+
+            for minion_id in data['minion_id']:
+                info_final['minion_id'] = minion_id
+                info_final['module'] = data['module']
+                info_final['project'] = data['project']
+                info_final['result'] = ""
+                request.websocket.send(json.dumps(info_final))
+                logger.info('部署参数：%s' %info_final)
+                info_final['minion_count'] += 1
+                if data['module'] == 'tomcat':
+                    commandexe = Command('WTT_100_109', 'cmd.run', '/srv/shell/install_tomcat.sh %s %s' %(minion_id, data['project']))
+                    info_final['result'] = commandexe.CmdRun()['WTT_100_109']
+                    logger.info("%s 部署完成。" %data['project'])
+                else:
+                    commandexe = Command(minion_id, 'state.sls', data['module'])
+                    info_final['result'] = commandexe.StateSls()[minion_id]
+                    logger.info("%s 部署完成。" %data['module'])
+                request.websocket.send(json.dumps(info_final))
+        ### close websocket ###
+        request.websocket.close()
+
 @csrf_protect
 @login_required
 def command(request):
@@ -182,7 +253,7 @@ def command(request):
 
 @csrf_protect
 @login_required
-def restart(request):
+def deploy(request):
     global username, role, clientip
     username = request.user.username
     try:
@@ -191,11 +262,11 @@ def restart(request):
         role = 'none'
     global clientip
     clientip = request.META['REMOTE_ADDR']
-    title = u'SALTSTACK-服务重启'
+    title = u'SALTSTACK-模块部署'
     logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'saltstack/saltstack_restart.html',
+        'saltstack/saltstack_deploy.html',
         {
             'clientip':clientip,
             'title': title,
