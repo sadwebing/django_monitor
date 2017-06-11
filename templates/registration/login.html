@@ -12,59 +12,93 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="/static/custom/cover.css" rel="stylesheet">
     <script src="/static/otherjs/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
   </head>
 
 <body>
+<style>
+    body {
+        color: #fff;
+        background-color: #333;
+        text-align: center;
+    }
 
-    <div class="site-wrapper">
+    #head-title {
+        top:3%;
+    }
 
-      <div class="site-wrapper-inner">
+    #alert-title {
+        position:absolute;
+        left: 20%;
+        right: 20%;
+        top: 20%;
+        bottom: 70%;
+    }
 
-        <div class="cover-container">
-            {% comment %}
-            <div class="masthead clearfix">
-                <div class="inner">
-                  <h3 class="masthead-brand">TCBS自动化运维平台</h3>
-                </div>
-            </div>
-            {% endcomment %}
-            {% if form.errors %}
-                <div class="alert alert-danger text-center">用户名或密码错误！</div>
-            {% endif %}
-            <div class="inner cover">
-                <div class="col-sm-offset-3 col-sm-6">
-                    <form class="form-signin" action="" method="post">
-                            {% csrf_token %}
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <label for="username" class="sr-only">账号</label>
-                                <input type="text" id="username" name="username" class="form-control" placeholder="账号" required=""                  autofocus="" >
-                            </div>
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <label for="password" class="sr-only">密码</label>
-                                <input type="password" id="password" name="password" class="form-control" placeholder="密码"                 required="">
-                                <br />
-                            </div>
-                            <button class="btn btn-primary btn-block" type="submit">登录</button>
-                    </form>
-                </div>
-            </div>
+    #form-head {
+        height: 15%;
+        line-height: 15%;
+        width: 100%;
+        text-align: center;
+        text-shadow: 0 1px 3px #333;
+        background-color: #E6E6FA;
+        border-radius: 4px;
+        border-bottom: 1px solid #ccc;
+        position:absolute;
+    }
 
-          <div class="mastfoot">
-            <div class="inner">
-              <p><a href="#" target="_blank">TCBS</a> &copy; 2017. All rights reserved. </p>
-            </div>
-          </div>
+    #form-body {
+        background-color: #eee;
+        border-radius: 4px;
+        border: 1px #ccc;
+        display: block;
+        position:absolute;
+        left: 35%;
+        right: 35%;
+        top: 30%;
+        bottom: 35%; 
+    }
 
-        </div>
+    #foot-title {
+        left: 20%;
+        right: 20%;
+        position:absolute;
+        bottom: 15px;
+    }
 
-      </div>
 
+</style>
+
+<div>
+    {% if form.errors %}
+    <div id="alert-title">
+        <h4>用户名或密码错误！</h>
     </div>
+    {% endif %}
+    <div id="form-body">
+        <div id="form-head">
+            <h4>Sign In</h>
+        </div>
+        <form class="form-signin" action="" method="post" style="margin-top: 15%; margin-left: 20%;margin-right: 20%;">
+            {% csrf_token %}
+            <div class="input-group" style="margin-bottom: 7%;">
+                <span class="input-group-addon" title="username"><i class="glyphicon glyphicon-user"></i></span>
+                <label for="username" class="sr-only">账号</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="账号" required="" autofocus="">
+            </div>
+            <div class="input-group" style="margin-bottom: 12%;">
+                <span class="input-group-addon" title="password"><i class="glyphicon glyphicon-lock"></i></span>
+                <label for="password" class="sr-only">密码</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="密码" required="">
+            </div>
+            <button class="btn btn-info btn-block" type="submit">登录</button>
+        </form>
+    </div>
+
+    <div id="foot-title">
+        <p><a target="_blank">TCBS</a> &copy; 2017. All rights reserved. </p>
+    </div>
+</div>
 </body>
 </html>
