@@ -106,6 +106,21 @@ def ProjectUpdate(request):
         return HttpResponse('nothing!')
 
 @csrf_exempt 
+def ProjectUpdateStatus(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        data = json.loads(request.body)
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        info = tomcat_project.objects.get(id=data['id'])
+        info.status = data['status']
+        info.save()
+        return HttpResponse('更新成功！')
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt 
 def ProjectDelete(request):
     clientip = request.META['REMOTE_ADDR']
     #data = json.loads(request.body)

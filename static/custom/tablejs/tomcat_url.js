@@ -18,7 +18,7 @@ var tableInit = {
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
             queryParams: function (param) {
-                return { limit: param.limit, offset: param.offset, 'act':'query_active' };
+                return { limit: param.limit, offset: param.offset, 'act':'query_all' };
             },//传递参数（*）
             columns: [
                 { 
@@ -146,16 +146,15 @@ window.operateStatusEvents = {
         $.ajax({
             url: "/tomcat/tomcat_url/UpdateStatus",
             type: "post",
-            contentType: 'application/json',
-            dataType: 'json',
             data: JSON.stringify(postData),
             success: function (data, status) {
+                toastr.success('状态更新成功！', row.project+": "+row.url)
                 //alert(data);
                 //tableInit.myViewModel.refresh();
             },
             error: function(msg){
                 alert("失败，请检查日志！");
-                //tableInit.myViewModel.refresh();
+                tableInit.myViewModel.refresh();
             }
         });
         return false;
@@ -177,13 +176,13 @@ window.operateEvents = {
         modal_head.innerHTML = "操作进行中，请勿刷新页面......";
         var socket = new WebSocket("ws://" + window.location.host + "/tomcat/tomcat_url/CheckServer");
         socket.onopen = function () {
-            console.log('WebSocket open');//成功连接上Websocket
+            //console.log('WebSocket open');//成功连接上Websocket
             socket.send(JSON.stringify(postData));
         };
         $('#runprogress').modal('show');
         socket.onmessage = function (e) {
             data = eval('('+ e.data +')')
-            console.log('message: ' + data);//打印服务端返回的数据
+            //console.log('message: ' + data);//打印服务端返回的数据
             if (data.step == 'one'){
                 $("#progress_bar").css("width", "50%");
                 $('#Checkresults').append('<p> 项目名:&thinsp;<strong>' + row.project + '</strong></p>' );
@@ -199,7 +198,7 @@ window.operateEvents = {
                 $('#Checkresults').append('<p> 检测时间:&thinsp;<strong>' + data.access_time + '</strong></p>' );
                 $('#Checkresults').append('<p> 检测状态:&thinsp;<strong>' + data.code + '</strong></p>' );
                 //$('#Checkresults').append('<p> 头信息:&thinsp;<strong>' + data.info + '</strong></p>' );
-                console.log('websocket已关闭');
+                //console.log('websocket已关闭');
                 modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
             }
         }; 
@@ -307,6 +306,11 @@ var operate = {
                 if (!operate.operateCheck(arrselectedData)) { return; }
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
+                if (document.getElementById(operate.DepartmentModel.id()).checked){
+                    operate.DepartmentModel.status_ = 'active';
+                }else {
+                    operate.DepartmentModel.status_ = 'inactive';
+                }
                 ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
                 operate.operateSave('Update');
             }).on('hidden.bs.modal', function () {

@@ -12,11 +12,140 @@ var tableInit = {
             dataType: "json",
             toolbar: '#toolbar',                //工具按钮用哪个容器
             queryParams: function (param) {
-                return { limit: param.limit, offset: param.offset, 'act':'query_active'};
+                return { limit: param.limit, offset: param.offset, 'act':'query_all'};
             },//传递参数（*）
+            columns: [
+                { 
+                    checkbox: true,
+                    width:'2%',
+                },
+                {
+                    field: 'id',
+                    title: 'id',
+                    sortable: true,
+                    width:'1%',
+                    //align: 'center'
+                },{
+                    field: 'product',
+                    title: '产品',
+                    sortable: true,
+                    width:'6%',
+                    //align: 'center'
+                }, {
+                    field: 'project',
+                    title: '项目名',
+                    sortable: true,
+                    //align: 'center',
+                    width:'18%',
+                }, {
+                    field: 'code_dir',
+                    title: '代码目录',
+                    sortable: true,
+                    width:'8%',
+                    //align: 'center'
+                },{
+                    field: 'cur_svn_id',
+                    title: '当前版本',
+                    sortable: true,
+                    width:'6%',
+                    //align: 'center'
+                }, {
+                    field: 'tomcat',
+                    title: 'tomcat',
+                    sortable: true,
+                    width:'20%',
+                    //align: 'center',
+                    //events: this.cur_statusEvents,
+                    formatter: this.cur_statusFormatter
+                },{
+                    field: 'tomcat_version',
+                    title: 'T版本',
+                    sortable: true,
+                    //align: 'center',
+                    width:'3%',
+                },{
+                    field: 'main_port',
+                    title: '主服务端口',
+                    sortable: true,
+                    width:'5%',
+                    //align: 'center'
+                },{
+                    field: 'jdk',
+                    title: 'jdk',
+                    sortable: true,
+                    width:'5%',
+                    //align: 'center'
+                },{
+                    field: 'script',
+                    title: '重启脚本',
+                    //align: 'center',
+                    width:'6%',
+                    checkbox: false,
+                },{
+                    field: 'status_',
+                    title: '状态',
+                    sortable: true,
+                    width:'5%',
+                    events: operateEvents,
+                    formatter: this.operateFormatter,
+                    //align: 'center'
+                },
+            ]
         });
         ko.applyBindings(this.myViewModel, document.getElementById("project_table"));
-    }
+    },
+
+    operateFormatter: function (value,row,index){
+        if (row.status_ == 'active'){
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id='+ row.id +' class="update_status" checked><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }else {
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id='+ row.id +' class="update_status"><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }
+        return content;
+    },
+};
+
+window.operateEvents = {
+    'click .update_status': function (e, value, row, index) {
+        var postData = {
+            id:row.id,
+            status,
+        };
+        if (document.getElementById(row.id).checked){
+            postData.status = 'active';
+            //console.log(postData);
+        }else {
+            postData.status = 'inactive';
+            //console.log(postData);
+        }
+        $.ajax({
+            url: "/tomcat/tomcat_project/UpdateStatus",
+            type: "post",
+            data: JSON.stringify(postData),
+            success: function (data, status) {
+                toastr.success('状态更新成功！', row.product+": "+row.project)
+                //alert(data);
+                //tableInit.myViewModel.refresh();
+            },
+            error: function(msg){
+                alert("失败，请检查日志！");
+                tableInit.myViewModel.refresh();
+            }
+        });
+        return false;
+    },
 };
 
 //操作

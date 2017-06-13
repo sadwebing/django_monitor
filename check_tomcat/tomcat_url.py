@@ -1,7 +1,4 @@
 # coding: utf8
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
@@ -97,7 +94,7 @@ def UrlUpdate(request):
         return HttpResponse('nothing!')
 
 @csrf_exempt 
-def UpdateStatus(request):
+def UrlUpdateStatus(request):
     if request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         data = json.loads(request.body)

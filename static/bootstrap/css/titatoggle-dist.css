@@ -529,7 +529,7 @@ Slider A
   transition: background 0.2s ease-in;
 }
 .checkbox-slider--a input + span {
-  padding-left: 60px;
+  padding-left: 40px;
 }
 .checkbox-slider--a input + span:before {
   padding-left: 22px;
