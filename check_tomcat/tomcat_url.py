@@ -142,7 +142,7 @@ def UrlCheckServer(request):
         except:
             role = 'none'
         clientip = request.META['REMOTE_ADDR']
-        logger.info(dir(request.websocket))
+        #logger.info(dir(request.websocket))
         #message = request.websocket.wait()
         for postdata in request.websocket:
             #logger.info(type(postdata))
@@ -167,7 +167,8 @@ def UrlCheckServer(request):
                     datas['arguments'] = 'ps -ef |grep -i app |grep -v grep'
                     datas['expr_form'] = 'glob'
                     commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
-                    exe_result = commandexe.CmdRun()
+                    exe_result = commandexe.CmdRun()[datas['target']]
+                    #logger.info("exe_result: %s" %exe_result)
                     if exe_result == '':
                         info_final['code'] = error_status
                     else:
