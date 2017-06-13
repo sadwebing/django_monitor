@@ -73,19 +73,21 @@ var tableInit = {
                     field: 'status_',
                     title: '状态',
                     sortable: true,
-                    width:'6%',
+                    width:'5%',
+                    events: operateStatusEvents,
+                    formatter: this.operateStatusFormatter,
                     //align: 'center'
                 },{
                     field: 'info',
                     title: '备注',
                     sortable: true,
-                    width:'6%',
+                    width:'15%',
                     //align: 'center'
                 },{
                     field: 'operations',
                     title: '操作项',
                     //align: 'center',
-                    width:'10%',
+                    width:'6%',
                     checkbox: false,
                     events: operateEvents,
                     formatter: this.operateFormatter,
@@ -97,6 +99,27 @@ var tableInit = {
         ko.applyBindings(this.myViewModel, document.getElementById("tomcat_table"));
     },
 
+    operateStatusFormatter: function (value,row,index){
+        if (row.status_ == 'active'){
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id='+ row.id +' class="update_status" checked><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }else {
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id='+ row.id +' class="update_status"><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }
+        return content;
+    },
+
     operateFormatter: function (value,row,index){
         content = [
         '<a class="check_server" href="javascript:void(0)" title="检测服务">',
@@ -104,6 +127,38 @@ var tableInit = {
         '</a>'
         ].join('');   
         return content;
+    },
+};
+
+window.operateStatusEvents = {
+    'click .update_status': function (e, value, row, index) {
+        var postData = {
+            id:row.id,
+            status,
+        };
+        if (document.getElementById(row.id).checked){
+            postData.status = 'active';
+            //console.log(postData);
+        }else {
+            postData.status = 'inactive';
+            //console.log(postData);
+        }
+        $.ajax({
+            url: "/tomcat/tomcat_url/UpdateStatus",
+            type: "post",
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(postData),
+            success: function (data, status) {
+                //alert(data);
+                //tableInit.myViewModel.refresh();
+            },
+            error: function(msg){
+                alert("失败，请检查日志！");
+                //tableInit.myViewModel.refresh();
+            }
+        });
+        return false;
     },
 };
 

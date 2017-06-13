@@ -12,6 +12,7 @@ urlpatterns = [
     url('tomcat_project/Delete$', views.ProjectDelete),
     url('tomcat_url/Query$', views.UrlQuery),
     url('tomcat_url/Update$', views.UrlUpdate),
+    url('tomcat_url/UpdateStatus$', views.UpdateStatus),
     url('tomcat_url/Add$', views.UrlAdd),
     url('tomcat_url/Delete$', views.UrlDelete),
     url('^tomcat_url/CheckServer$', views.UrlCheckServer),

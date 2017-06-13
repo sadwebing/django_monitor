@@ -97,6 +97,21 @@ def UrlUpdate(request):
         return HttpResponse('nothing!')
 
 @csrf_exempt 
+def UpdateStatus(request):
+    if request.method == 'POST':
+        clientip = request.META['REMOTE_ADDR']
+        data = json.loads(request.body)
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        info = tomcat_url.objects.get(id=data['id'])
+        info.status = data['status']
+        info.save()
+        return HttpResponse('更新成功！')
+    elif request.method == 'GET':
+        return HttpResponse('You get nothing!')
+    else:
+        return HttpResponse('nothing!')
+
+@csrf_exempt 
 def UrlDelete(request):
     clientip = request.META['REMOTE_ADDR']
     logger.info('user: %s' %request.user.username)
