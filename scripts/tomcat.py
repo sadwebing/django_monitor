@@ -81,7 +81,7 @@ def check_tomcat():
                 datas['arguments'] = 'ps -ef |grep -i app |grep -v grep'
                 datas['expr_form'] = 'glob'
                 commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
-                exe_result = commandexe.CmdRun()
+                exe_result = commandexe.CmdRun()[datas['target']]
                 if exe_result == '':
                     result['code'] = 'null'
                 else:
@@ -97,7 +97,8 @@ def check_tomcat():
         except:
             result['code'] = error_status
             result['info'] = error_status
-        print "%s: %s" %(result['url'], result['code'])
+        print result['project'] + ":"
+        print "  %s  %s" %(result['code'], result['url'])
         try:
             ret = requests.post(server, data=json.dumps(result), timeout=3)
         except requests.exceptions.ConnectionError:

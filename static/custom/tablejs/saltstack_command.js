@@ -15,7 +15,6 @@ var operate = {
         //this.Getform();
         //this.Submit();
         this.Results();
-        this.GetProject();
         this.selectpicker();
         this.SubmitRestart();
         //this.showSelectedValue();
@@ -84,58 +83,6 @@ var operate = {
         })
     },
 
-    GetProject: function(){
-        $.ajax({
-            url: "/saltstack/restart/get_project",
-            type: "post",
-            contentType: 'application/json',
-            //data: JSON.stringify(postData),
-            success: function (datas, status) {
-                //alert(datas);
-                var data = eval(datas);
-                //var html = "<option value=''></option>";
-                var html_B79 = "";
-                var html_P02 = "";
-                var html_E02 = "";
-                var html_NWF = "";
-                var html_PUBLIC = "";
-                $.each(data, function (index, item) { 
-                    //循环获取数据 
-                    var name = data[index];
-                    //console.log(data)
-                    //html_name = "<option>"+name+"</option>";
-                    if (name.product === 'B79') {
-                        html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
-                        html_B79 = html_B79 + html_name
-                    }else if (name.product === 'P02') {
-                        html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
-                        html_P02 = html_P02 + html_name
-                    }else if (name.product === 'E02') {
-                        html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
-                        html_E02 = html_E02 + html_name
-                    }else if (name.product === 'NWF') {
-                        html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
-                        html_NWF = html_NWF + html_name
-                    }else if (name.product === 'PUBLIC') {
-                        html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
-                        html_PUBLIC = html_PUBLIC + html_name
-                    }
-                }); 
-                //$("#project").html(html);
-                //$("#project_active").html(html);
-                var html = "<optgroup label='B79'>" + html_B79 + "</optgroup>" + "<optgroup label='P02'>" + html_P02 + "</optgroup>" + "<optgroup label='E02'>" + html_E02 + "</optgroup>" + "<optgroup label='NWF'>" + html_NWF + "</optgroup>" + "<optgroup label='PUBLIC'>" + html_PUBLIC + "</optgroup>"
-                document.getElementById('project_active').innerHTML=html;
-                document.getElementById('restart_project_active').innerHTML=html;
-                $('.selectpicker').selectpicker('refresh');
-                return false;
-            },
-            error:function(msg){
-                alert("获取项目失败！");
-                return false;
-            }
-        });
-    },
-
     GetRestartProjectServers: function(){
         var projectlist = []
         //var project = document.getElementById("project_active").value;
@@ -144,7 +91,7 @@ var operate = {
             if (objSelectproject.options[i].selected == true) 
             projectlist.push(objSelectproject.options[i].value);
         }
-        console.log(projectlist);
+        //console.log(projectlist);
         var postData = {};
         postData['project'] = projectlist;
         $.ajax({
@@ -164,7 +111,7 @@ var operate = {
                         //循环获取数据 
                         var name = data[project][index];
                         //html_name = "<option>"+name+"</option>";
-                        console.log(name.role)
+                        //console.log(name.role)
                         if (name.status === 'inactive') {
                             html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name. server_ip+"</option>";
                         }else {
@@ -195,7 +142,7 @@ var operate = {
             if (objSelectproject.options[i].selected == true) 
             projectlist.push(objSelectproject.options[i].value);
         }
-        console.log(projectlist);
+        //console.log(projectlist);
         var postData = {};
         postData['project'] = projectlist;
         $.ajax({
@@ -215,12 +162,8 @@ var operate = {
                         //循环获取数据 
                         var name = data[project][index];
                         //html_name = "<option>"+name+"</option>";
-                        console.log(name.role)
-                        if (name.status === 'inactive') {
-                            html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name. server_ip+"</option>";
-                        }else {
-                            html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"'>"+name.server_ip+"</ option>";
-                        }
+                        //console.log(name.role)
+                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"'>"+name.server_ip+"</ option>";
                         html_tmp = html_tmp + html_name
                     }); 
                     html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
@@ -280,7 +223,7 @@ var operate = {
             modal_head.innerHTML = "操作进行中，请勿刷新页面......";
             var socket = new WebSocket("ws://" + window.location.host + "/saltstack/command/restart");
             socket.onopen = function () {
-                console.log('WebSocket open');//成功连接上Websocket
+                //console.log('WebSocket open');//成功连接上Websocket
                 //socket.send($('#message').val());//发送数据到服务端
                 socket.send(JSON.stringify(postData))
             };
@@ -288,7 +231,7 @@ var operate = {
             socket.onmessage = function (e) {
                 //return false;
                 data = eval('('+ e.data +')')
-                console.log('message: ' + data);//打印服务端返回的数据
+                //console.log('message: ' + data);//打印服务端返回的数据
                 if (data.step == 'one'){
                     $("#progress_bar").css("width", "50%");
                     $('#OperateRestartresults').append('<p>' + data['project'] + ':&thinsp;<strong>' + data['server_id'] + '</strong></p>' );
@@ -302,7 +245,7 @@ var operate = {
                         modal_head.innerHTML = "服务重启完成...";
                     }
                     $('#OperateRestartresults').append('<pre>' + data['result'] + '</pre>');
-                    console.log('websocket已关闭');
+                    //console.log('websocket已关闭');
                     modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
                 }
             }; 
@@ -347,10 +290,10 @@ var operate = {
 
     Submit: function(submit){
         if (submit == 'btn_submit_command') {
-            console.log("btn_submit_command")
+            //console.log("btn_submit_command")
             var postData=operate.Getcommandform();
             postData['exe_user'] = operate.GetExeUser('commandform_user');
-            console.log(postData['exe_user']);
+            //console.log(postData['exe_user']);
             if (postData['target'] == ''){
                 alert("Minion ID 不能为空！");
                 return false;
@@ -360,10 +303,10 @@ var operate = {
                 return false;
             }
         }else if (submit == 'btn_submit_command2') {
-            console.log("btn_submit_command2")
+            //console.log("btn_submit_command2")
             var postData=operate.Getcommandform2();
             postData['exe_user'] = operate.GetExeUser('commandform2_user');
-            console.log(postData['exe_user']);
+            //console.log(postData['exe_user']);
             postData['target'] = operate.showSelectedValue();
             if (document.getElementById("project_active").value.length == 0){
                 alert("请至少选择一个服务！")
@@ -390,7 +333,7 @@ var operate = {
         $('#OperateRestartresults').append('<p>连接中......</p>' );
         var socket = new WebSocket("ws://" + window.location.host + "/saltstack/command/execute");
         socket.onopen = function () {
-            console.log('WebSocket open');//成功连接上Websocket
+            //console.log('WebSocket open');//成功连接上Websocket
             //socket.send($('#message').val());//发送数据到服务端
             socket.send(JSON.stringify(postData))
         };
@@ -398,7 +341,7 @@ var operate = {
         socket.onmessage = function (e) {
             //return false;
             data = eval('('+ e.data +')')
-            console.log('message: ' + data['target']);//打印服务端返回的数据
+            //console.log('message: ' + data['target']);//打印服务端返回的数据
             if (data.step == 'one'){
                 $("#progress_bar").css("width", "50%");
                 $('#OperateRestartresults').append('<p>连接成功......</p>' );
@@ -409,7 +352,7 @@ var operate = {
                 $("#progress_bar").css("width", "100%");
                 //$('#OperateRestartresults').append('<pre>' + data['result'] + '</pre>');
                 $('#OperateRestartresults').append('<p>执行完成......</p>' );
-                console.log('websocket已关闭');
+                //console.log('websocket已关闭');
                 setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
                 var html = "";
                 var button = ""
