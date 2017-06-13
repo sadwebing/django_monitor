@@ -164,7 +164,7 @@ def UrlCheckServer(request):
                     datas = {}
                     datas['target'] = data['server_ip']
                     datas['function'] = 'cmd.run'
-                    datas['arguments'] = 'ps -ef |grep -i app |grep -v grep'
+                    datas['arguments'] = 'ps -ef |grep -i "java -jar" |grep -v grep'
                     datas['expr_form'] = 'glob'
                     commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
                     exe_result = commandexe.CmdRun()[datas['target']]

@@ -202,7 +202,7 @@ var operate = {
         $('.selectpicker').selectpicker({
             style: 'btn-default',
             width: "auto",
-            size: 10,
+            size: 15,
             showSubtext:true,
         });
     },

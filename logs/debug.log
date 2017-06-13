@@ -411,3 +411,126 @@ TypeError: expected string or buffer
 2017-06-14 05:35:04,161 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
 2017-06-14 05:35:04,161 views.py [django:116] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_74'], u'exe_user': u'tomcat', u'arguments': u'who'}
 2017-06-14 05:35:04,161 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_74'], u'exe_user': u'tomcat', u'arguments': u'who'}
+2017-06-14 05:41:49,098 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:41:49,450 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:41:49,512 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'pr35sunyx59klsp6qxuqx4upwegh8hk3' AND `django_session`.`expire_date` > '2017-06-14 05:41:48.788000'); args=('pr35sunyx59klsp6qxuqx4upwegh8hk3', u'2017-06-14 05:41:48.788000')
+2017-06-14 05:41:49,572 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-14 05:41:49,690 utils.py [django.db.backends:89] [DEBUG]- (0.118) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-14 05:41:49,691 views.py [django:47] [INFO]- 127.0.0.1 is requesting /
+2017-06-14 05:41:49,698 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 115, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-14 05:41:49,700 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 115, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-14 05:41:49,700 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 115, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-14 05:41:49,700 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 115, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-14 05:41:50,611 utils.py [django.db.backends:89] [DEBUG]- (0.061) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:41:51,071 utils.py [django.db.backends:89] [DEBUG]- (0.070) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:41:51,131 utils.py [django.db.backends:89] [DEBUG]- (0.059) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'pr35sunyx59klsp6qxuqx4upwegh8hk3' AND `django_session`.`expire_date` > '2017-06-14 05:41:50.182000'); args=('pr35sunyx59klsp6qxuqx4upwegh8hk3', u'2017-06-14 05:41:50.182000')
+2017-06-14 05:41:51,180 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-14 05:41:51,232 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-14 05:41:51,232 views.py [django:242] [INFO]- 127.0.0.1 is requesting.
+2017-06-14 05:41:52,290 utils.py [django.db.backends:89] [DEBUG]- (0.130) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:41:52,671 utils.py [django.db.backends:89] [DEBUG]- (0.049) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:41:52,864 utils.py [django.db.backends:89] [DEBUG]- (0.192) SELECT `check_tomcat_tomcat_project`.`id`, `check_tomcat_tomcat_project`.`product`, `check_tomcat_tomcat_project`.`project`, `check_tomcat_tomcat_project`.`code_dir`, `check_tomcat_tomcat_project`.`cur_svn_id`, `check_tomcat_tomcat_project`.`tomcat`, `check_tomcat_tomcat_project`.`tomcat_version`, `check_tomcat_tomcat_project`.`main_port`, `check_tomcat_tomcat_project`.`jdk`, `check_tomcat_tomcat_project`.`script`, `check_tomcat_tomcat_project`.`status` FROM `check_tomcat_tomcat_project` WHERE `check_tomcat_tomcat_project`.`status` = 'active'; args=('active',)
+2017-06-14 05:41:52,865 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project: [{'project': u'P02_NEW_WEB_V3', 'product': u'P02'}, {'project': u'P02_WEB_WS_V3', 'product': u'P02'}, {'project': u'P02_STATIC_V3', 'product': u'P02'}, {'project': u'P02_BBS', 'product': u'P02'}, {'project': u'P02_GI', 'product': u'P02'}, {'project': u'P02_OFFICE', 'product': u'P02'}, {'project': u'P02_OFFICE_WS', 'product': u'P02'}, {'project': u'P02_YTSIGHT', 'product': u'P02'}, {'project': u'P02_PARTNER', 'product': u'P02'}, {'project': u'P02_OFFICE_APP', 'product': u'P02'}, {'project': u'ALL_GOLDENCMS_142', 'product': u'PUBLIC'}, {'project': u'ALL_GOLDENCMS_145', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_API', 'product': u'PUBLIC'}, {'project': u'ALL_COMMONWALLET_DATACENTER', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_DATACENTER_APP', 'product': u'PUBLIC'}, {'project': u'ALL_EMAIL_API', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_FRONT', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CALLBACK', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_EMAIL_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_SMS_API', 'product': u'PUBLIC'}, {'project': u'ALL_TSD_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_DC', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_API', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_OFFICE', 'product': u'PUBLIC'}, {'project': u'ALL_ACTIVITY_BUSINESS', 'product': u'PUBLIC'}, {'project': u'B79_FENGCAI', 'product': u'B79'}, {'project': u'B79_BBS', 'product': u'B79'}, {'project': u'B79_OFFICE_OLD', 'product': u'B79'}, {'project': u'B79_OFFICE_WS_OLD', 'product': u'B79'}, {'project': u'ALL_GDC', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_API', 'product': u'PUBLIC'}, {'project': u'ALL_GDC_OLD', 'product': u'PUBLIC'}, {'project': u'ALL_MESSAGE', 'product': u'PUBLIC'}, {'project': u'ALL_ZXZF_WS', 'product': u'PUBLIC'}, {'project': u'ALL_ZJ_CASH', 'product': u'PUBLIC'}, {'project': u'ALL_OA', 'product': u'PUBLIC'}, {'project': u'ALL_AGENT', 'product': u'PUBLIC'}, {'project': u'P02_MOBILE', 'product': u'P02'}, {'project': u'E02_OFFICE', 'product': u'E02'}, {'project': u'E02_WS', 'product': u'E02'}, {'project': u'NWF_GI', 'product': u'NWF'}, {'project': u'B79_NEW_WEB_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_PAYMENT_CRON', 'product': u'PUBLIC'}, {'project': u'B79_NEW_MOBILE', 'product': u'B79'}, {'project': u'B79_GI', 'product': u'B79'}, {'project': u'B79_OFFICE_APP', 'product': u'B79'}, {'project': u'B79_OFFICE', 'product': u'B79'}, {'project': u'B79_OFFICE_WS', 'product': u'B79'}, {'project': u'B79_STATIC_V2', 'product': u'B79'}, {'project': u'B79_WEB_WS_V2', 'product': u'B79'}, {'project': u'ALL_AGENT_API', 'product': u'PUBLIC'}, {'project': u'ALL_BI_WEB', 'product': u'PUBLIC'}, {'project': u'ALL_BI_ETL', 'product': u'PUBLIC'}, {'project': u'E04_WS', 'product': u'E04'}, {'project': u'E04_OFFICE', 'product': u'E04'}, {'project': u'B79_WEB_VIP_V2', 'product': u'B79'}, {'project': u'P02_MOBILE_STATIC', 'product': u'P02'}, {'project': u'E02_MOBILE_PHP', 'product': u'E02'}, {'project': u'E02_OFFICE_APP', 'product': u'E02'}, {'project': u'E02_WEB_PHP', 'product': u'E02'}, {'project': u'NWF_SRS', 'product': u'NWF'}, {'project': u'NWF_AGENT', 'product': u'NWF'}, {'project': u'B79_EGAME_WEB', 'product': u'B79'}, {'project': u'B79_EGAME_MOBILE', 'product': u'B79'}, {'project': u'B79_EGAME_WS', 'product': u'B79'}, {'project': u'E04_MOBILE_PHP', 'product': u'E04'}, {'project': u'E04_WEB_PHP', 'product': u'E04'}, {'project': u'E04_OFFICE_APP', 'product': u'E04'}]
+2017-06-14 05:42:05,592 views.py [django:40] [INFO]- {"project":["E04_WS"]}
+2017-06-14 05:42:05,993 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:06,154 views.py [django:40] [INFO]- {"project":["E04_WS","E04_OFFICE"]}
+2017-06-14 05:42:06,513 utils.py [django.db.backends:89] [DEBUG]- (0.051) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:06,523 views.py [django:40] [INFO]- {"project":["E04_WS","E04_OFFICE","E04_MOBILE_PHP"]}
+2017-06-14 05:42:06,862 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:06,923 utils.py [django.db.backends:89] [DEBUG]- (0.060) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_WS'; args=(u'E04_WS',)
+2017-06-14 05:42:06,973 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_OFFICE'; args=(u'E04_OFFICE',)
+2017-06-14 05:42:06,973 views.py [django:54] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers: {u'E04_WS': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_75'}, {'status': u'active', 'info': u'', 'role': u'backup', 'server_ip': u'EST_0_99'}], u'E04_OFFICE': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_74'}, {'status': u'active', 'info': u'', 'role': u'backup', 'server_ip': u'EST_0_98'}]}
+2017-06-14 05:42:07,273 utils.py [django.db.backends:89] [DEBUG]- (0.200) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:07,322 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_WS'; args=(u'E04_WS',)
+2017-06-14 05:42:07,323 views.py [django:54] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers: {u'E04_WS': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_75'}, {'status': u'active', 'info': u'', 'role': u'backup', 'server_ip': u'EST_0_99'}]}
+2017-06-14 05:42:08,132 utils.py [django.db.backends:89] [DEBUG]- (0.140) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:08,483 utils.py [django.db.backends:89] [DEBUG]- (0.050) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:08,532 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_WS'; args=(u'E04_WS',)
+2017-06-14 05:42:08,582 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_OFFICE'; args=(u'E04_OFFICE',)
+2017-06-14 05:42:08,632 utils.py [django.db.backends:89] [DEBUG]- (0.049) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_MOBILE_PHP'; args=(u'E04_MOBILE_PHP',)
+2017-06-14 05:42:08,634 views.py [django:54] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers: {u'E04_WS': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_75'}, {'status': u'active', 'info': u'', 'role': u'backup', 'server_ip': u'EST_0_99'}], u'E04_MOBILE_PHP': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_129'}, {'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_141'}], u'E04_OFFICE': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_74'}, {'status': u'active', 'info': u'', 'role': u'backup', 'server_ip': u'EST_0_98'}]}
+2017-06-14 05:42:16,351 views.py [django:40] [INFO]- {"project":["E04_WS","E04_OFFICE","E04_MOBILE_PHP","E04_OFFICE_APP"]}
+2017-06-14 05:42:16,650 utils.py [django.db.backends:89] [DEBUG]- (0.042) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:16,950 utils.py [django.db.backends:89] [DEBUG]- (0.044) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:16,996 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_WS'; args=(u'E04_WS',)
+2017-06-14 05:42:17,045 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_OFFICE'; args=(u'E04_OFFICE',)
+2017-06-14 05:42:17,095 utils.py [django.db.backends:89] [DEBUG]- (0.048) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_MOBILE_PHP'; args=(u'E04_MOBILE_PHP',)
+2017-06-14 05:42:17,141 utils.py [django.db.backends:89] [DEBUG]- (0.046) SELECT `check_tomcat_tomcat_url`.`id`, `check_tomcat_tomcat_url`.`project`, `check_tomcat_tomcat_url`.`server_ip`, `check_tomcat_tomcat_url`.`server_type`, `check_tomcat_tomcat_url`.`role`, `check_tomcat_tomcat_url`.`domain`, `check_tomcat_tomcat_url`.`url`, `check_tomcat_tomcat_url`.`status`, `check_tomcat_tomcat_url`.`info` FROM `check_tomcat_tomcat_url` WHERE `check_tomcat_tomcat_url`.`project` = 'E04_OFFICE_APP'; args=(u'E04_OFFICE_APP',)
+2017-06-14 05:42:17,142 views.py [django:54] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers: {u'E04_OFFICE_APP': [{'status': u'inactive', 'info': u'APP\u5907\u7528\u670d\u52a1\u4e0d\u8d77', 'role': u'backup', 'server_ip': u'EST_0_74'}, {'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_98'}], u'E04_WS': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_75'}, {'status': u'active', 'info': u'', 'role': u'backup', 'server_ip': u'EST_0_99'}], u'E04_MOBILE_PHP': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_129'}, {'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'WTT_100_141'}], u'E04_OFFICE': [{'status': u'active', 'info': u'', 'role': u'main', 'server_ip': u'EST_0_74'}, {'status': u'active', 'info': u'', 'role': u'backup', 'server_ip': u'EST_0_98'}]}
+2017-06-14 05:42:24,450 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:24,750 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:42:24,795 utils.py [django.db.backends:89] [DEBUG]- (0.045) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'pr35sunyx59klsp6qxuqx4upwegh8hk3' AND `django_session`.`expire_date` > '2017-06-14 05:42:24.151000'); args=('pr35sunyx59klsp6qxuqx4upwegh8hk3', u'2017-06-14 05:42:24.151000')
+2017-06-14 05:42:24,846 utils.py [django.db.backends:89] [DEBUG]- (0.050) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 6; args=(6,)
+2017-06-14 05:42:24,892 utils.py [django.db.backends:89] [DEBUG]- (0.044) SELECT `accounts_userprofile`.`id`, `accounts_userprofile`.`user_id`, `accounts_userprofile`.`role` FROM `accounts_userprofile` WHERE `accounts_userprofile`.`user_id` = 6; args=(6,)
+2017-06-14 05:42:24,894 views.py [django:116] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'EST_0_74', u'EST_0_98', u'EST_0_75', u'EST_0_99', u'WTT_100_129', u'WTT_100_141', u'EST_0_74', u'EST_0_98'], u'exe_user': u'root', u'arguments': u''}
+2017-06-14 05:42:24,894 views.py [django:126] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'test.ping', u'expr_form': u'list', u'target': [u'EST_0_74', u'EST_0_98', u'EST_0_75', u'EST_0_99', u'WTT_100_129', u'WTT_100_141', u'EST_0_74', u'EST_0_98'], u'exe_user': u'root', u'arguments': u''}
+2017-06-14 05:42:50,009 views.py [django:40] [INFO]- {"project":[]}
+2017-06-14 05:42:50,009 views.py [django:54] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers: {}
+2017-06-14 05:55:20,460 utils.py [django.db.backends:89] [DEBUG]- (0.048) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:55:20,831 utils.py [django.db.backends:89] [DEBUG]- (0.043) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-06-14 05:55:20,878 utils.py [django.db.backends:89] [DEBUG]- (0.047) SHOW FULL TABLES; args=None
+2017-06-14 05:55:20,930 utils.py [django.db.backends:89] [DEBUG]- (0.047) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
