@@ -148,7 +148,9 @@ window.operateStatusEvents = {
             type: "post",
             data: JSON.stringify(postData),
             success: function (data, status) {
-                toastr.success('状态更新成功！', row.project+": "+row.url)
+                toastr.success('状态更新成功！', row.project+": "+row.url);
+                //ko.cleanNode(document.getElementById("tomcat_table"));
+                row.status_ = postData.status;
                 //alert(data);
                 //tableInit.myViewModel.refresh();
             },
@@ -197,7 +199,7 @@ window.operateEvents = {
                 modal_head.innerHTML = "检测完成！";
                 $('#Checkresults').append('<p> 检测时间:&thinsp;<strong>' + data.access_time + '</strong></p>' );
                 $('#Checkresults').append('<p> 检测状态:&thinsp;<strong>' + data.code + '</strong></p>' );
-                //$('#Checkresults').append('<p> 头信息:&thinsp;<strong>' + data.info + '</strong></p>' );
+                $('#Checkresults').append('<p> 备注:&thinsp;<strong>' + data.info + '</strong></p>' );
                 //console.log('websocket已关闭');
                 modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
             }

@@ -72,31 +72,38 @@ def check_tomcat():
         result['project'] = tomcat_info.project
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
-        try:
-            if tomcat_info.server_type == 'app':
-                result['info'] = error_status
-                datas = {}
-                datas['target'] = tomcat_info.server_ip
-                datas['function'] = 'cmd.run'
-                datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
-                datas['expr_form'] = 'glob'
-                commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
-                exe_result = commandexe.CmdRun()[datas['target']]
-                if exe_result == '':
-                    result['code'] = 'null'
-                else:
-                    result['code'] = '200'
-            else:
-                ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
-                result['code'] = '%s' %ret.status_code
-                try:
-                    title = re.search('<title>.*?</title>', ret.content)
-                    result['info'] = title.group().replace('<title>', '').replace('</title>', '')
-                except AttributeError:
+        commandexe = Command(tomcat_info.server_ip, 'test.ping')
+        test_result = commandexe.TestPing()[data['server_ip']]
+        if test_result == 'not return':
+            result['code'] = 'null'
+            result['info'] = '请检查服务器是否存活'
+        else:
+            try:
+                if tomcat_info.server_type == 'app':
                     result['info'] = error_status
-        except:
-            result['code'] = error_status
-            result['info'] = error_status
+                    datas = {}
+                    datas['target'] = tomcat_info.server_ip
+                    datas['function'] = 'cmd.run'
+                    datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
+                    datas['expr_form'] = 'glob'
+                    commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
+                    exe_result = commandexe.CmdRun()[datas['target']]
+                    if exe_result == '':
+                        result['code'] = 'null'
+                    else:
+                        result['code'] = '200'
+                    #logger.info(result)
+                else:
+                    ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
+                    result['code'] = '%s' %ret.status_code
+                    try:
+                        title = re.search('<title>.*?</title>', ret.content)
+                        result['info'] = title.group().replace('<title>', '').replace('</title>', '')
+                    except AttributeError:
+                        result['info'] = error_status
+            except:
+                result['code'] = error_status
+                result['info'] = error_status
         print result['project'] + ":"
         print "  %s  %s" %(result['code'], result['url'])
         try:
