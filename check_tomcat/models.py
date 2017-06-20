@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 class tomcat_project(models.Model):
     product = models.CharField(max_length=10)
     project = models.CharField(max_length=64, unique=True)
+    server_type = models.CharField(max_length=10, default='tomcat')
     code_dir = models.CharField(max_length=32, null=True)
     cur_svn_id = models.CharField(max_length=20)
     tomcat = models.CharField(max_length=64, null=True)

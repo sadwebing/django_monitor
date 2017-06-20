@@ -113,6 +113,10 @@ var operate = {
                 return false;
             }
             var module = operate.GetModuleName('deploy_module');
+            if(module == 'undefined'){
+                alert("请选择要部署的模块！")
+                return false;
+            }
             var project = document.getElementById('project_active').value;
             if (module == 'tomcat' && project == "") {
                 alert("请选择要部署的Tomcat！")
@@ -138,7 +142,12 @@ var operate = {
                 socket.send(JSON.stringify(postData))
             };
             $('#runprogress').modal('show');
-            $('#deploy_results').append('<p>模块: '+ postData.module +'<p>');
+            if (postData.module == 'tomcat'){
+                $('#deploy_results').append('<p>模块: '+ postData.module +' - '+ postData.project +'<p>');
+            }else {
+                $('#deploy_results').append('<p>模块: '+ postData.module +'<p>');
+            }
+            
             socket.onmessage = function (e) {
                 //return false;
                 data = eval('('+ e.data +')')

@@ -21,7 +21,7 @@ var tableInit = {
                 return { limit: param.limit, offset: param.offset, 'act':'query_all' };
             },//传递参数（*）
             columns: [
-                { 
+                {
                     checkbox: true,
                     width:'2%',
                 },
@@ -59,7 +59,7 @@ var tableInit = {
                     field: 'domain',
                     title: '域名',
                     sortable: true,
-                    width:'6%',
+                    width:'15%',
                     //align: 'center',
                     //events: this.cur_statusEvents,
                     formatter: this.cur_statusFormatter
@@ -81,7 +81,7 @@ var tableInit = {
                     field: 'info',
                     title: '备注',
                     sortable: true,
-                    width:'15%',
+                    width:'auto',
                     //align: 'center'
                 },{
                     field: 'operations',

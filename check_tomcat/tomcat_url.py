@@ -179,6 +179,7 @@ def UrlCheckServer(request):
                             info_final['code'] = 'null'
                         else:
                             info_final['code'] = '200'
+                            info_final['info'] = '正常'
                         #logger.info(info_final)
                     else:
                         ret = requests.head(data['url'], headers={'Host': data['domain']}, timeout=10)
@@ -187,10 +188,10 @@ def UrlCheckServer(request):
                             title = re.search('<title>.*?</title>', ret.content)
                             info_final['info'] = title.group().replace('<title>', '').replace('</title>', '')
                         except AttributeError:
-                            info_final['info'] = error_status
+                            info_final['info'] = '正常'
                 except:
                     info_final['code'] = error_status
-                    info_final['info'] = error_status
+                    info_final['info'] = '失败'
 
             request.websocket.send(json.dumps(info_final))
         ### close websocket ###

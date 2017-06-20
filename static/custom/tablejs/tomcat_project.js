@@ -79,7 +79,7 @@ var tableInit = {
                     field: 'script',
                     title: '重启脚本',
                     //align: 'center',
-                    width:'6%',
+                    width:'15%',
                     checkbox: false,
                 },{
                     field: 'status_',

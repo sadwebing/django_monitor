@@ -58,14 +58,14 @@ def check_tomcat():
     <th style="width:120px">工程</th> 
     <th style="width:120px">域名</th> 
     <th style="width:300px">路径</th> 
-    <th style="width:60px">状态</th> 
-    <th style="width:120px">备注</th>
+    <th style="width:120px">状态</th> 
+    <th style="width:300px">备注</th>
     </tr>
     """
     content_body = ""
     content = ""
     url_all = tomcat_url.objects.filter(status='active').all()
-    code_list = ['200', '302', '405']
+    code_list = ['200', '302', '303', '405']
     for tomcat_info in url_all:
         result = {}
         result['access_time'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
@@ -73,7 +73,7 @@ def check_tomcat():
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
         commandexe = Command(tomcat_info.server_ip, 'test.ping')
-        test_result = commandexe.TestPing()[data['server_ip']]
+        test_result = commandexe.TestPing()[tomcat_info.server_ip]
         if test_result == 'not return':
             result['code'] = 'null'
             result['info'] = '请检查服务器是否存活'
@@ -92,18 +92,22 @@ def check_tomcat():
                         result['code'] = 'null'
                     else:
                         result['code'] = '200'
+                        result['info'] = '正常'
                     #logger.info(result)
                 else:
                     ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
-                    result['code'] = '%s' %ret.status_code
+                    if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == '500':
+                        result['code'] = '200'
+                    else:
+                        result['code'] = '%s' %ret.status_code
                     try:
                         title = re.search('<title>.*?</title>', ret.content)
                         result['info'] = title.group().replace('<title>', '').replace('</title>', '')
                     except AttributeError:
-                        result['info'] = error_status
+                        result['info'] = '正常'
             except:
                 result['code'] = error_status
-                result['info'] = error_status
+                result['info'] = '失败'
         print result['project'] + ":"
         print "  %s  %s" %(result['code'], result['url'])
         try:

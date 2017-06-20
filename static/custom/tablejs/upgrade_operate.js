@@ -75,7 +75,7 @@ var tableInit = {
                     field: 'operations',
                     title: '操作项',
                     //align: 'center',
-                    width:'18%',
+                    width:'9%',
                     events: operateEvents,
                     formatter: this.operateFormatter,
                     //width:300,
@@ -88,18 +88,18 @@ var tableInit = {
 
     operateFormatter: function (value,row,index){
         var content = [
-            '<a class="upgrade" href="javascript:void(0)" title="升级">',
-            '<i class="text-primary"> 升级</i>',
-            '</a> &ensp; ',
-            '<a class="diff" href="javascript:void(0)" title="比对代码">',
-            '<i class="text-primary"> 比对</i>',
-            '</a>&ensp; ',
+            '<a class="upgrade text-info" href="javascript:void(0)" title="升级">',
+                '升级',
+            '</a>&ensp;',
+            '<a class="diff text-primary" href="javascript:void(0)" title="比对代码">',
+                '比对',
+            '</a>&ensp;',
         ].join('');
         if (row.cur_status == 'rollback'){
         }else {
             content = content + [
-            '<a class="rollback" href="javascript:void(0)" title="回退">',
-            '<i class="text-primary"> 回退</i>',
+            '<a class="rollback text-muted" href="javascript:void(0)" title="回退">',
+                '回退',
             '</a>'
             ].join('');   
         }
