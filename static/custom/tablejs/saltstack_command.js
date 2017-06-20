@@ -113,16 +113,16 @@ var operate = {
                         //html_name = "<option>"+name+"</option>";
                         //console.log(name.role)
                         if (name.status === 'inactive') {
-                            html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name. server_ip+"</option>";
+                            html_name = "<option value='"+name.minion_id+"' data-subtext='"+name.info+" "+name.role+"' disabled>"+name. minion_id+"</option>";
                         }else {
-                            html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"'>"+name.server_ip+"</ option>";
+                            html_name = "<option value='"+name.minion_id+"' data-subtext='"+name.info+" "+name.role+"'>"+name.minion_id+"</ option>";
                         }
                         html_tmp = html_tmp + html_name
                     }); 
                     html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
                     html = html + html_tmp;
                 }
-                document.getElementById('restart_servers_id').innerHTML=html;
+                document.getElementById('restart_minion_id').innerHTML=html;
                 //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
                 $('.selectpicker').selectpicker('refresh');
                 return false;
@@ -163,13 +163,13 @@ var operate = {
                         var name = data[project][index];
                         //html_name = "<option>"+name+"</option>";
                         //console.log(name.role)
-                        html_name = "<option value='"+name.server_ip+"' data-subtext='"+name.info+" "+name.role+"'>"+name.server_ip+"</ option>";
+                        html_name = "<option value='"+name.minion_id+"' data-subtext='"+name.info+" "+name.role+"'>"+name.minion_id+"</ option>";
                         html_tmp = html_tmp + html_name
                     }); 
                     html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
                     html = html + html_tmp;
                 }
-                document.getElementById('servers_id').innerHTML=html;
+                document.getElementById('minions_id').innerHTML=html;
                 //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
                 $('.selectpicker').selectpicker('refresh');
                 return false;
@@ -192,7 +192,7 @@ var operate = {
 
     showSelectedValue: function (){
         var selectedValue = []; 
-        var objSelect = document.projectreform.servers_id; 
+        var objSelect = document.projectreform.minions_id; 
         for(var i = 0; i < objSelect.options.length; i++) { 
             if (objSelect.options[i].selected == true) 
             selectedValue.push(objSelect.options[i].value);
@@ -205,13 +205,13 @@ var operate = {
             //var postData=operate.Getform();
             var postData = {
                 project:document.getElementById("restart_project_active").value,
-                server_id:document.getElementById("restart_servers_id").value,
+                minion_id:document.getElementById("restart_minion_id").value,
             };
             if (postData['project'].length == 0){
                 alert("请至少选择一个服务进行重启！")
                 return false;
             }
-            if (postData['server_id'].length == 0){
+            if (postData['minion_id'].length == 0){
                 alert("请至少选择一个服务器进行重启！")
                 return false;
             }
@@ -234,7 +234,7 @@ var operate = {
                 //console.log('message: ' + data);//打印服务端返回的数据
                 if (data.step == 'one'){
                     $("#progress_bar").css("width", "50%");
-                    $('#OperateRestartresults').append('<p>' + data['project'] + ':&thinsp;<strong>' + data['server_id'] + '</strong></p>' );
+                    $('#OperateRestartresults').append('<p>' + data['project'] + ':&thinsp;<strong>' + data['minion_id'] + '</strong></p>' );
                 }else if (data.step == 'final'){
                     $("#progress_bar").css("width", "100%");
                     if (data['result'] == 'not return'){
@@ -346,7 +346,6 @@ var operate = {
                 $("#progress_bar").css("width", "50%");
                 $('#OperateRestartresults').append('<p>连接成功......</p>' );
                 modal_head.innerHTML = "命令执行中...";
-                //$('#OperateRestartresults').append('<p>' + data['project'] + ':&thinsp;<strong>' + data['server_id'] + '</strong></p>' );
             }else if (data.step == 'final'){
                 modal_head.innerHTML = "命令执行完成...";
                 $("#progress_bar").css("width", "100%");

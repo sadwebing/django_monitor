@@ -32,18 +32,30 @@ var tableInit = {
                     width:'3%',
                     //align: 'center'
                 },{
+                    field: 'envir',
+                    title: '环境',
+                    sortable: true,
+                    width:'5%',
+                    //align: 'center'
+                },{
                     field: 'project',
                     title: '项目名',
                     sortable: true,
                     width:'18%',
                     //align: 'center'
-                }, {
-                    field: 'server_ip',
-                    title: '服务器地址',
+                },{
+                    field: 'minion_id',
+                    title: 'Minion Id',
                     sortable: true,
                     //align: 'center',
                     width:'9%',
-                }, {
+                },{
+                    field: 'Ip地址',
+                    title: 'ip_addr',
+                    sortable: true,
+                    //align: 'center',
+                    width:'9%',
+                },{
                     field: 'server_type',
                     title: '服务类型',
                     sortable: true,
@@ -166,7 +178,7 @@ window.operateStatusEvents = {
 window.operateEvents = {
     'click .check_server': function (e, value, row, index) {
         var postData = {
-            server_ip:row.server_ip,
+            minion_id:row.minion_id,
             server_type:row.server_type,
             domain:row.domain,
             url:row.url,
@@ -188,7 +200,7 @@ window.operateEvents = {
             if (data.step == 'one'){
                 $("#progress_bar").css("width", "50%");
                 $('#Checkresults').append('<p> 项目名:&thinsp;<strong>' + row.project + '</strong></p>' );
-                $('#Checkresults').append('<p> 服务器地址:&thinsp;<strong>' + row.server_ip + '</strong></p>' );
+                $('#Checkresults').append('<p> 服务器地址:&thinsp;<strong>' + row.minion_id + '</strong></p>' );
                 $('#Checkresults').append('<p> 服务类型:&thinsp;<strong>' + row.server_type + '</strong></p>' );
                 $('#Checkresults').append('<p> 角色:&thinsp;<strong>' + row.role + '</strong></p>' );
                 $('#Checkresults').append('<p> 域名:&thinsp;<strong>' + row.domain + '</strong></p>' );
@@ -219,8 +231,10 @@ var operate = {
         //this.operateDelete();
         this.DepartmentModel = {
             id: ko.observable(),
+            envir: ko.observable(),
             project: ko.observable(),
-            server_ip: ko.observable(),
+            minion_id: ko.observable(),
+            ip_addr: ko.observable(),
             server_type: ko.observable(),
             role: ko.observable(),
             domain: ko.observable(),
@@ -280,8 +294,10 @@ var operate = {
         $('#btn_add').on("click", function () {
             $("#myModal").modal().on("shown.bs.modal", function () {
                 var oEmptyModel = {
+                    envir: ko.observable(),
                     project: ko.observable(),
-                    server_ip: ko.observable(),
+                    minion_id: ko.observable(),
+                    ip_addr: ko.observable(),
                     server_type: ko.observable(),
                     role: ko.observable(),
                     domain: ko.observable(),
@@ -350,7 +366,7 @@ var operate = {
                     //循环获取数据
                     var name = vm.datas()[index];
                     //alert(name)
-                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.project()+"</td><td>"+name.server_ip()+"</td><td>"+name.server_type()+"</td><td>"+name.role()+"</td><td>"+name.domain()+"</td><td>"+name.url()+"</td><td>"+name.status_()+"</td><td>"+name.info()+"</td></tr>";
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.envir()+"</td><td>"+name.project()+"</td><td>"+name.minion_id()+"</td><td>"+name.ip_addr()+"</td><td>"+name.server_type()+"</td><td>"+name.role()+"</td><td>"+name.domain()+"</td><td>"+name.url()+"</td><td>"+name.status_()+"</td><td>"+name.info()+"</td></tr>";
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);
@@ -393,8 +409,12 @@ var operate = {
                 alert('项目名 不能为空！')
                 return false;
             }
-            if (! oViewModel.server_ip()){
-                alert('服务器地址 不能为空！')
+            if (! oViewModel.minion_id()){
+                alert('Minion Id 不能为空！')
+                return false;
+            }
+            if (! oViewModel.ip_addr()){
+                alert('Ip地址 不能为空！')
                 return false;
             }
             if (! oViewModel.domain()){

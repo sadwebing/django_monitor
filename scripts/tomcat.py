@@ -96,7 +96,7 @@ def check_tomcat():
                     #logger.info(result)
                 else:
                     ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
-                    if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == '500':
+                    if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == 500:
                         result['code'] = '200'
                     else:
                         result['code'] = '%s' %ret.status_code

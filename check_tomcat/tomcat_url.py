@@ -36,8 +36,10 @@ def UrlQuery(request):
         for url in datas:
             tmp_dict = {}
             tmp_dict['id'] = url.id
+            tmp_dict['envir'] = url.envir
             tmp_dict['project'] = url.project
-            tmp_dict['server_ip'] = url.server_ip
+            tmp_dict['minion_id'] = url.minion_id
+            tmp_dict['ip_addr'] = url.ip_addr
             tmp_dict['server_type'] = url.server_type
             tmp_dict['role'] = url.role
             tmp_dict['domain'] = url.domain
@@ -57,12 +59,12 @@ def UrlAdd(request):
         #data = json.loads(request.body)
         data = request.POST
         try:
-            info = tomcat_url.objects.get(project=data['project'], server_ip=data['server_ip'])
+            info = tomcat_url.objects.get(project=data['project'], minion_id=data['minion_id'])
             logger.info('%s is requesting. %s url: %s  already exists!' %(clientip, request.get_full_path(), info.url))
-            return HttpResponse('记录: %s %s already exists!' %(info.project, info.server_ip))
+            return HttpResponse('记录: %s %s already exists!' %(info.project, info.minion_id))
         except:
             logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
-            info = tomcat_url(project=data['project'], server_ip=data['server_ip'].strip(),server_type=data['server_type'] , role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
+            info = tomcat_url(envir=data['envir'], project=data['project'], minion_id=data['minion_id'].strip(), ip_addr=data['ip_addr'].strip(), server_type=data['server_type'] , role=data['role'], domain=data['domain'], url=data['url'], status=data['status_'], info=data['info'])
             info.save()
             return HttpResponse('添加成功！')
     elif request.method == 'GET':
@@ -78,8 +80,10 @@ def UrlUpdate(request):
         data = request.POST
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
         info = tomcat_url.objects.get(id=data['id'])
+        info.envir = data['envir']
         info.project = data['project']
-        info.server_ip = data['server_ip'].strip()
+        info.minion_id = data['minion_id'].strip()
+        info.ip_addr = data['ip_addr'].strip()
         info.server_type = data['server_type']
         info.role = data['role']
         info.domain  = data['domain']
@@ -158,8 +162,8 @@ def UrlCheckServer(request):
             info_final['step'] = 'final'
 
             info_final['access_time'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
-            commandexe = Command(data['server_ip'], 'test.ping')
-            test_result = commandexe.TestPing()[data['server_ip']]
+            commandexe = Command(data['minion_id'], 'test.ping')
+            test_result = commandexe.TestPing()[data['minion_id']]
             if test_result == 'not return':
                 info_final['code'] = 'null'
                 info_final['info'] = '请检查服务器是否存活'
@@ -168,7 +172,7 @@ def UrlCheckServer(request):
                     if data['server_type'] == 'app':
                         info_final['info'] = error_status
                         datas = {}
-                        datas['target'] = data['server_ip']
+                        datas['target'] = data['minion_id']
                         datas['function'] = 'cmd.run'
                         datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
                         datas['expr_form'] = 'glob'

@@ -45,7 +45,7 @@ def GetProjectServers(request):
             serverlist = []
             for data in datas:
                 tmpdict = {}
-                tmpdict['server_ip'] = data.server_ip
+                tmpdict['minion_id'] = data.minion_id
                 tmpdict['role'] = data.role
                 tmpdict['status'] = data.status
                 tmpdict['info'] = data.info
@@ -159,7 +159,7 @@ def CommandRestart(request):
             info_one = {}
             info_one['step'] = 'one'
             info_one['project'] = data['project']
-            info_one['server_id'] = data['server_id']
+            info_one['minion_id'] = data['minion_id']
             request.websocket.send(json.dumps(info_one))
             logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
             #results = []
@@ -176,8 +176,8 @@ def CommandRestart(request):
             arglist = ["runas=tomcat"]
             arglist.append(arg)
             logger.info("重启参数：%s"%arglist)
-            commandexe = Command(data['server_id'], 'cmd.run', arglist)
-            info_final['result'] = commandexe.CmdRun()[data['server_id']]
+            commandexe = Command(data['minion_id'], 'cmd.run', arglist)
+            info_final['result'] = commandexe.CmdRun()[data['minion_id']]
             request.websocket.send(json.dumps(info_final))
         ### close websocket ###
         request.websocket.close()

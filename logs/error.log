@@ -46883,3 +46883,64 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 366, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2017-06-20 19:57:43,828 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 163, in UrlCheckServer
+    commandexe = Command(data['server_ip'], 'test.ping')
+KeyError: 'server_ip'
+2017-06-20 20:00:06,321 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 163, in UrlCheckServer
+    commandexe = Command(data['minion_id'], 'test.ping')
+KeyError: 'minion_id'
+2017-06-20 20:12:19,888 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 151, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-20 20:34:34,095 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project_servers
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 48, in GetProjectServers
+    tmpdict['server_ip'] = data.server_ip
+AttributeError: 'tomcat_url' object has no attribute 'server_ip'
+2017-06-20 20:34:34,434 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/restart/get_project_servers
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 48, in GetProjectServers
+    tmpdict['server_ip'] = data.server_ip
+AttributeError: 'tomcat_url' object has no attribute 'server_ip'

@@ -36,12 +36,23 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
+                            <label for="txt_envir">环境</label>
+                            <select type="text" name="txt_envir" data-bind="value:envir" class="form-control" id="txt_envir" placeholder="环境"> 
+                                <option value="ONLINE">运营</option>
+                                <option value="UAT">测试</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="txt_project">项目名</label>
                             <input type="text" name="txt_project" data-bind="value:project" class="form-control" id="txt_project" placeholder="项目名">
                         </div>
                         <div class="form-group">
-                            <label for="txt_server_ip">服务器地址</label>
-                            <input type="text" name="txt_server_ip" data-bind="value:server_ip" class="form-control" id="txt_server_ip" placeholder="服务器地址[minion id]">
+                            <label for="txt_minion_id">Minion Id</label>
+                            <input type="text" name="txt_minion_id" data-bind="value:minion_id" class="form-control" id="txt_minion_id" placeholder="Minion Id">
+                        </div>
+                        <div class="form-group">
+                            <label for="txt_ip_addr">Ip地址</label>
+                            <input type="text" name="txt_ip_addr" data-bind="value:ip_addr" class="form-control" id="txt_ip_addr" placeholder="Ip地址">
                         </div>
                         <div class="form-group">
                             <label for="txt_server_type">服务类型</label>
@@ -98,8 +109,10 @@
                             <thead>
                                 <tr>
                                     <td>id</td>
+                                    <td>环境</td>
                                     <td>项目名</td>
-                                    <td>服务器地址</td>
+                                    <td>Minion Id</td>
+                                    <td>Ip地址</td>
                                     <td>服务类型</td>
                                     <td>角色</td>
                                     <td>域名</td>
