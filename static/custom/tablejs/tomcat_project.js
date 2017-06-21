@@ -37,6 +37,12 @@ var tableInit = {
                     sortable: true,
                     //align: 'center',
                     width:'18%',
+                },{
+                    field: 'server_type',
+                    title: '服务类型',
+                    sortable: true,
+                    //align: 'center',
+                    width:'5%',
                 }, {
                     field: 'code_dir',
                     title: '代码目录',
@@ -44,12 +50,6 @@ var tableInit = {
                     width:'8%',
                     //align: 'center'
                 },{
-                    field: 'cur_svn_id',
-                    title: '当前版本',
-                    sortable: true,
-                    width:'6%',
-                    //align: 'center'
-                }, {
                     field: 'tomcat',
                     title: 'tomcat',
                     sortable: true,
@@ -65,7 +65,7 @@ var tableInit = {
                     width:'3%',
                 },{
                     field: 'main_port',
-                    title: '主服务端口',
+                    title: '服务端口',
                     sortable: true,
                     width:'5%',
                     //align: 'center'
@@ -161,8 +161,8 @@ var operate = {
             id: ko.observable(),
             product: ko.observable(),
             project: ko.observable(),
+            server_type: ko.observable(),
             code_dir: ko.observable(),
-            cur_svn_id: ko.observable(),
             tomcat: ko.observable(),
             tomcat_version: ko.observable(),
             main_port: ko.observable(),
@@ -226,8 +226,8 @@ var operate = {
                    id: ko.observable(),
                    product: ko.observable(),
                    project: ko.observable(),
+                   server_type: ko.observable(),
                    code_dir: ko.observable(),
-                   cur_svn_id: ko.observable(),
                    tomcat: ko.observable(),
                    tomcat_version: ko.observable(),
                    main_port: ko.observable(),
@@ -285,7 +285,7 @@ var operate = {
                 $.each(vm.datas(), function (index, item) { 
                     //循环获取数据 
                     var name = vm.datas()[index];
-                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.product()+"</td><td>"+name.project()+"</td><td>"+name.code_dir()+"</td><td>"+name.cur_svn_id()+"</td><td>"+name.tomcat()+"</td><td>"+name.tomcat_version()+"</td><td>"+name.main_port()+"</td><td>"+name.jdk()+"</td><td>"+name.script()+"</td><td>"+name.status_()+"</td></tr>";
+                    html_name = "<tr><td>"+name.id()+"</td><td>"+name.product()+"</td><td>"+name.project()+"</td><td>"+name.server_type()+"</td><td>"+name.code_dir()+"</td><td>"+name.tomcat()+"</td><td>"+name.tomcat_version()+"</td><td>"+name.main_port()+"</td><td>"+name.jdk()+"</td><td>"+name.script()+"</td><td>"+name.status_()+"</td></tr>";
                     html = html + html_name
                 }); 
                 $("#DeleteDatas").html(html);

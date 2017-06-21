@@ -50,8 +50,8 @@ var tableInit = {
                     //align: 'center',
                     width:'9%',
                 },{
-                    field: 'Ip地址',
-                    title: 'ip_addr',
+                    field: 'ip_addr',
+                    title: 'Ip地址',
                     sortable: true,
                     //align: 'center',
                     width:'9%',
@@ -224,6 +224,7 @@ window.operateEvents = {
 var operate = {
     //初始化按钮事件
     operateInit: function () {
+        this.selectpicker();
         this.operateAdd();
         this.operateUpdate();
         this.operateconfirmDelete();
@@ -242,6 +243,15 @@ var operate = {
             status_: ko.observable(),
             info: ko.observable(),
         };
+    },
+
+    selectpicker: function docombjs() {
+        $('.selectpicker').selectpicker({
+            style: 'btn-default',
+            //width: "auto",
+            size: 15,
+            showSubtext:true,
+        });
     },
 
     operateTomcatUrlSelect: function(){
@@ -320,6 +330,7 @@ var operate = {
             var arrselectedData = tableInit.myViewModel.getSelections();
             if (!operate.operateCheck(arrselectedData)) { return; }
             $("#myModal").modal().on("shown.bs.modal", function () {
+                //operate.selectpicker();
                 var arrselectedData = tableInit.myViewModel.getSelections();
                 if (!operate.operateCheck(arrselectedData)) { return; }
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
