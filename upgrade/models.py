@@ -5,7 +5,7 @@ from django.db import models
 
 class upgrade_op(models.Model):
     svn_id = models.CharField(max_length=20, blank=False)
-    id_time = models.CharField(max_length=64, blank=False)
+    id_time = models.CharField(max_length=32, blank=False)
     project = models.CharField(max_length=64)
     cur_status = models.CharField(max_length=16)
     op_time = models.CharField(max_length=64)
@@ -17,6 +17,16 @@ class upgrade_cur_svn(models.Model):
 	cur_svn_id = models.CharField(max_length=20)
 	class Meta:
 		unique_together = ('product', 'project')
+
+class svn_id(models.Model):
+    id_time = models.CharField(max_length=32, blank=False)
+    svn_id = models.CharField(max_length=32, blank=False)
+    tag = models.CharField(max_length=32, blank=True)
+    project = models.CharField(max_length=64, unique=False)
+    cur_status = models.CharField(max_length=16, default='undone')
+    info = models.CharField(max_length=128, blank=True)
+    class Meta:
+        unique_together = ('svn_id', 'project')
 
 #class upgrade_op_history(models.Model):
 #    svn_id = models.CharField(max_length=20, blank=False)

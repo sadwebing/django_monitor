@@ -162,40 +162,39 @@ def UrlCheckServer(request):
             info_final['step'] = 'final'
 
             info_final['access_time'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
-            commandexe = Command(data['minion_id'], 'test.ping')
-            test_result = commandexe.TestPing()[data['minion_id']]
-            if test_result == 'not return':
-                info_final['code'] = 'null'
-                info_final['info'] = '请检查服务器是否存活'
-            else:
-                try:
-                    if data['server_type'] == 'app':
-                        info_final['info'] = error_status
-                        datas = {}
-                        datas['target'] = data['minion_id']
-                        datas['function'] = 'cmd.run'
-                        datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
-                        datas['expr_form'] = 'glob'
-                        commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
-                        exe_result = commandexe.CmdRun()[datas['target']]
-                        #logger.info("exe_result: %s" %exe_result)
-                        if exe_result == '':
-                            info_final['code'] = 'null'
-                        else:
-                            info_final['code'] = '200'
-                            info_final['info'] = '正常'
-                        #logger.info(info_final)
+            try:
+                if data['server_type'] == 'app':
+                    info_final['info'] = error_status
+                    datas = {}
+                    datas['target'] = data['minion_id']
+                    datas['function'] = 'cmd.run'
+                    datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
+                    datas['expr_form'] = 'glob'
+                    commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
+                    exe_result = commandexe.CmdRun()[datas['target']]
+                    #logger.info("exe_result: %s" %exe_result)
+                    if exe_result == '':
+                        info_final['code'] = 'null'
                     else:
-                        ret = requests.head(data['url'], headers={'Host': data['domain']}, timeout=10)
-                        info_final['code'] = '%s' %ret.status_code
-                        try:
-                            title = re.search('<title>.*?</title>', ret.content)
-                            info_final['info'] = title.group().replace('<title>', '').replace('</title>', '')
-                        except AttributeError:
-                            info_final['info'] = '正常'
-                except:
-                    info_final['code'] = error_status
-                    info_final['info'] = '失败'
+                        info_final['code'] = '200'
+                        info_final['info'] = '正常'
+                    #logger.info(info_final)
+                else:
+                    ret = requests.head(data['url'], headers={'Host': data['domain']}, timeout=10)
+                    info_final['code'] = '%s' %ret.status_code
+                    try:
+                        title = re.search('<title>.*?</title>', ret.content)
+                        info_final['info'] = title.group().replace('<title>', '').replace('</title>', '')
+                    except AttributeError:
+                        info_final['info'] = '正常'
+            except:
+                info_final['code'] = error_status
+                info_final['info'] = '失败'
+            if info_final['code'] == error_status:
+                commandexe = Command(data['minion_id'], 'test.ping')
+                test_result = commandexe.TestPing()[data['minion_id']]
+                if test_result == 'not return':
+                    info_final['info'] = '请检查服务器是否存活'
 
             request.websocket.send(json.dumps(info_final))
         ### close websocket ###

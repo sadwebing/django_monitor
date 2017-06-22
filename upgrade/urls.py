@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     url('^operate$', views.Operate),
-    url('^query_svn$', views.QuerySvn),
+    url('^query_svn$', views.QuerySvnId),
     url('^operate_upgrade$', views.OperateUpgrade),
 ]

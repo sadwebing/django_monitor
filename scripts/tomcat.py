@@ -72,44 +72,44 @@ def check_tomcat():
         result['project'] = tomcat_info.project
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
-        commandexe = Command(tomcat_info.server_ip, 'test.ping')
-        test_result = commandexe.TestPing()[tomcat_info.server_ip]
-        if test_result == 'not return':
-            result['code'] = 'null'
-            result['info'] = '请检查服务器是否存活'
-        else:
-            try:
-                if tomcat_info.server_type == 'app':
-                    result['info'] = error_status
-                    datas = {}
-                    datas['target'] = tomcat_info.server_ip
-                    datas['function'] = 'cmd.run'
-                    datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
-                    datas['expr_form'] = 'glob'
-                    commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
-                    exe_result = commandexe.CmdRun()[datas['target']]
-                    if exe_result == '':
-                        result['code'] = 'null'
-                    else:
-                        result['code'] = '200'
-                        result['info'] = '正常'
-                    #logger.info(result)
+        try:
+            if tomcat_info.server_type == 'app':
+                result['info'] = error_status
+                datas = {}
+                datas['target'] = tomcat_info.minion_id
+                datas['function'] = 'cmd.run'
+                datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
+                datas['expr_form'] = 'glob'
+                commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
+                exe_result = commandexe.CmdRun()[datas['target']]
+                if exe_result == '':
+                    result['code'] = 'null'
                 else:
-                    ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
-                    if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == 500:
-                        result['code'] = '200'
-                    else:
-                        result['code'] = '%s' %ret.status_code
-                    try:
-                        title = re.search('<title>.*?</title>', ret.content)
-                        result['info'] = title.group().replace('<title>', '').replace('</title>', '')
-                    except AttributeError:
-                        result['info'] = '正常'
-            except:
-                result['code'] = error_status
-                result['info'] = '失败'
-        print result['project'] + ":"
-        print "  %s  %s" %(result['code'], result['url'])
+                    result['code'] = '200'
+                    result['info'] = '正常'
+                #logger.info(result)
+            else:
+                ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
+                if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == 500:
+                    result['code'] = '200'
+                else:
+                    result['code'] = '%s' %ret.status_code
+                try:
+                    title = re.search('<title>.*?</title>', ret.content)
+                    result['info'] = title.group().replace('<title>', '').replace('</title>', '')
+                except AttributeError:
+                    result['info'] = '正常'
+        except:
+            result['code'] = error_status
+            result['info'] = '失败'
+        if result['code'] == error_status:
+            commandexe = Command(tomcat_info.minion_id, 'test.ping')
+            test_result = commandexe.TestPing()[tomcat_info.minion_id]
+            if test_result == 'not return':
+                result['info'] = '请检查服务器是否存活'
+
+        print result['project'] + ":  " +  result['url']
+        print "  %s" %result['code']
         try:
             ret = requests.post(server, data=json.dumps(result), timeout=3)
         except requests.exceptions.ConnectionError:

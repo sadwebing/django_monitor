@@ -13,39 +13,6 @@ import json, logging, numpy
 from time import sleep
 from dwebsocket import require_websocket
 logger = logging.getLogger('django')
-
-#class Upgrade(object):
-#    def __init__(self, *args, **kwargs):
-#        self.request = self.origin()
-#        self.args = args
-#        self.kwargs = kwargs
-#        self.username = self.request.user.username
-#        try:
-#            self.role = self.request.user.userprofile.role
-#        except:
-#            self.role = 'none'
-#        self.clientip = self.request.META['REMOTE_ADDR']
-#
-#    def origin(self,request):
-#        return request
-#
-#    @csrf_exempt
-#    @require_websocket
-#    def OperateUpgrade(self):
-#        if self.request.is_websocket():
-#            logger.info(dir(self.request.websocket))
-#            #message = request.websocket.wait()
-#            for count in numpy.arange(1, 6):
-#                if count != 1:
-#                    sleep(2)
-#                message_dict = {}
-#                message_dict['count'] = count
-#                message = "progessing step %s ......" %count
-#                message_dict['message'] = message
-#                logger.info(message_dict)
-#                self.request.websocket.send(json.dumps(message_dict))
-#                if count == 5:
-#                    self.request.websocket.close()
        
 @csrf_exempt
 @require_websocket
@@ -91,7 +58,7 @@ def Operate(request):
 
 
 @csrf_exempt
-def QuerySvn(request):
+def QuerySvnId(request):
     if request.method == 'GET':
         return HttpResponse('You get nothing!')
     elif request.method == 'POST':

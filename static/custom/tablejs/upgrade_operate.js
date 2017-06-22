@@ -7,6 +7,7 @@ var tableInit = {
     Init: function () {
         this.operateFormatter;
         this.cur_statusFormatter;
+        this.dbclick();
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
             url: '/upgrade/query_svn',         //请求后台的URL（*）
@@ -25,8 +26,14 @@ var tableInit = {
                     field: 'id',
                     title: 'id',
                     sortable: true,
-                    width:'3%',
+                    width:'1%',
                     //align: 'center'
+                },{
+                    field: 'id_time',
+                    title: '版本时间',
+                    sortable: true,
+                    //align: 'center',
+                    width:'9%',
                 },{
                     field: 'svn_id',
                     title: '版本',
@@ -34,24 +41,12 @@ var tableInit = {
                     width:'6%',
                     //align: 'center'
                 }, {
-                    field: 'id_time',
-                    title: '版本时间',
-                    sortable: true,
-                    //align: 'center',
-                    width:'9%',
-                }, {
                     field: 'project',
                     title: '项目名',
                     sortable: true,
                     width:'18%',
                     //align: 'center'
                 },{
-                    field: 'cur_svn_id',
-                    title: '当前版本',
-                    sortable: true,
-                    width:'6%',
-                    //align: 'center'
-                }, {
                     field: 'cur_status',
                     title: '状态',
                     sortable: true,
@@ -86,7 +81,24 @@ var tableInit = {
         ko.applyBindings(this.myViewModel, document.getElementById("upgrade_op_table"));
     },
 
+    dbclick: function (){
+        $('#upgrade_op_table').on('all.bs.table', function (e, name, args) {
+            //console.log('Event:', name, ', data:', args);
+        }).on('dbl-click-cell.bs.table', function (e, field, value, row, $element) {
+            $('#upgrade_modal').modal('show');
+            modal_body = [
+                '',
+            ].join("") 
+        })
+    },
+
     operateFormatter: function (value,row,index){
+        content_n = [
+            '<a class="delete text-info" href="javascript:void(0)" title="删除">',
+                '删除',
+            '</a>',
+        ].join('');
+
         var content = [
             '<a class="upgrade text-info" href="javascript:void(0)" title="升级">',
                 '升级',
@@ -95,7 +107,7 @@ var tableInit = {
                 '比对',
             '</a>&ensp;',
         ].join('');
-        if (row.cur_status == 'rollback'){
+        if (row.cur_status == 'rollback' || row.cur_status == 'undone'){
         }else {
             content = content + [
             '<a class="rollback text-muted" href="javascript:void(0)" title="回退">',
@@ -103,7 +115,7 @@ var tableInit = {
             '</a>'
             ].join('');   
         }
-        return content;
+        return content_n;
     },
 
     cur_statusFormatter: function (value,row,index) {
@@ -158,6 +170,14 @@ window.operateEvents = {
     },
     'click .rollback': function (e, value, row, index) {
         console.log('click rollback. '+row.project+" "+row.cur_status)
+        return false;
+    },
+    'click .delete': function (e, value, row, index) {
+        $('#upgrade_op_table').bootstrapTable('remove', {
+                field: 'id',
+                values: [row.id]
+        });
+        toastr.warning('删除成功！', row.project+": "+row.svn_id)
         return false;
     }
 };  
