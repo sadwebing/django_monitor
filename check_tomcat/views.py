@@ -7,6 +7,7 @@ from models import tomcat_status,tomcat_url, tomcat_project
 import json, logging
 from tomcat_project import *
 from tomcat_url import *
+from mail import *
 
 logger = logging.getLogger('django')
 

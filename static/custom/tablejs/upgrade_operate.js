@@ -3,6 +3,13 @@ $(function () {
     operate.operateInit();
 });
 
+//全局变量
+window.modal_results = document.getElementById("upgrade_results");
+window.modal_head_content = document.getElementById("upgrade_modal_head_content");
+window.modal_head_close = document.getElementById("upgrade_modal_head_close");
+window.upgrade_progress_head = document.getElementById("upgrade_progress_head");
+window.upgrade_progress_body = document.getElementById("upgrade_progress_body");
+
 var tableInit = {
     Init: function () {
         this.operateFormatter;
@@ -40,7 +47,13 @@ var tableInit = {
                     sortable: true,
                     width:'6%',
                     //align: 'center'
-                }, {
+                },{
+                    field: 'tag',
+                    title: '标签',
+                    sortable: true,
+                    width:'5%',
+                    //align: 'center'
+                },{
                     field: 'project',
                     title: '项目名',
                     sortable: true,
@@ -55,17 +68,11 @@ var tableInit = {
                     //events: this.cur_statusEvents,
                     formatter: this.cur_statusFormatter
                 },{
-                    field: 'op_time',
-                    title: '操作时间',
+                    field: 'info',
+                    title: '备注',
                     sortable: true,
                     //align: 'center',
                     width:'9%',
-                },{
-                    field: 'handle_user',
-                    title: '操作人',
-                    sortable: true,
-                    width:'6%',
-                    //align: 'center'
                 },{
                     field: 'operations',
                     title: '操作项',
@@ -86,10 +93,52 @@ var tableInit = {
             //console.log('Event:', name, ', data:', args);
         }).on('dbl-click-cell.bs.table', function (e, field, value, row, $element) {
             $('#upgrade_modal').modal('show');
-            modal_body = [
-                '',
-            ].join("") 
-        })
+            var upgrade_parms = {
+                id_time:row.id_time,
+                svn_id:row.svn_id,
+                tag:row.tag,
+                cur_status,
+                project:row.project,
+            }
+
+            if (row.cur_status == 'done'){
+                upgrade_parms.cur_status = ko.observable('已升级');
+            }else if (row.cur_status == 'undone'){
+                upgrade_parms.cur_status = ko.observable('未升级');
+            }else if (row.cur_status == 'rollback'){
+                upgrade_parms.cur_status = ko.observable('已回退');
+            }
+
+            //初始化升级按钮
+            if (row.cur_status == 'done'){
+                document.getElementById('upgrade_deploy').disabled = false;
+                document.getElementById('upgrade_diff').disabled = false;
+                document.getElementById('upgrade_rollback').disabled = false;
+                document.getElementById('upgrade_interrupt').disabled = false;
+            }else if (row.cur_status == 'undone'){
+                document.getElementById('upgrade_deploy').disabled = false;
+                document.getElementById('upgrade_diff').disabled = false;
+                document.getElementById('upgrade_rollback').disabled = false;
+                document.getElementById('upgrade_interrupt').disabled = false;
+            }else if (row.cur_status == 'rollback'){
+                document.getElementById('upgrade_deploy').disabled = false;
+                document.getElementById('upgrade_diff').disabled = false;
+                document.getElementById('upgrade_rollback').disabled = true;
+                document.getElementById('upgrade_interrupt').disabled = false;
+            }
+
+            //初始化页面参数
+            upgrade_progress_body.hidden = true;
+            upgrade_progress_head.innerHTML= "";
+            modal_head_content.innerHTML = "请选择升级参数";
+            modal_head_close.innerHTML = "&times;";
+            selected_ip = 'ALL';
+            ko.cleanNode(document.getElementById("selected_ip"));
+            ko.applyBindings(selected_ip, document.getElementById("selected_ip"));
+            ko.cleanNode(document.getElementById("upgrade_modal_body"));
+            ko.applyBindings(upgrade_parms, document.getElementById("upgrade_modal_body"));
+            operate.GetProjectServers(row.project);
+        });
     },
 
     operateFormatter: function (value,row,index){
@@ -187,15 +236,151 @@ var operate = {
     //初始化按钮事件
     operateInit: function () {
         this.operateUpgradeSelect();
+        this.upgradeButtons();
         //this.setHandleUser();
         //this.selectpicker();
+    },
+
+    upgradeButtons: function(){
+        $('#upgrade_deploy').on("click", function () {
+            document.getElementById('upgrade_deploy').disabled = false;
+            document.getElementById('upgrade_diff').disabled = true;
+            document.getElementById('upgrade_rollback').disabled = true;
+            document.getElementById('upgrade_interrupt').disabled = false;
+            document.getElementById('upgrade_ip').disabled = true;
+            modal_head_content.innerHTML = "升级中，请勿刷新页面......"
+            modal_head_close.innerHTML = ""
+            upgrade_progress_body.hidden = false;
+            upgrade_progress_head.innerHTML="1";
+            
+            //更改页面展示的状态
+            cur_status = document.getElementById('cur_status');
+            cur_status.innerHTML = cur_status.innerHTML + ' -> ' + '升级中'
+
+            $("#upgrade_progress_bar").css("width", "30%");
+            stepone();
+            steptwo();
+            stepthree();
+            //setTimeout('$("#upgrade_progress_bar").css("width", "50%");upgrade_progress_head.innerHTML="2"', 2000)
+            //setTimeout('$("#upgrade_progress_bar").css("width", "70%");upgrade_progress_head.innerHTML="3"', 4000)
+            //setTimeout([
+            //    '$("#upgrade_progress_bar").css("width", "100%");',
+            //    'upgrade_progress_head.innerHTML="4";',
+            //    'modal_head_close.innerHTML = "&times;";',
+            //    'modal_head_content.innerHTML = "升级完成";',
+            //    'document.getElementById("upgrade_ip").disabled = false;',
+            //    'cur_status.innerHTML = cur_status.innerHTML + " -> " + "升级完成";',].join(""), 6000)
+        });
+
+        function stepone(){
+            if(document.getElementById('upgrade_interrupt').disabled !== true){
+                console.log('one true')
+                setTimeout('$("#upgrade_progress_bar").css("width", "50%");upgrade_progress_head.innerHTML="2"', 2000);
+            }
+        };
+
+        function steptwo(){
+            if(document.getElementById('upgrade_interrupt').disabled !== true){
+                console.log('two true')
+                setTimeout('$("#upgrade_progress_bar").css("width", "70%");upgrade_progress_head.innerHTML="3"', 4000)
+            }
+        };
+
+        function stepthree(){
+            if(document.getElementById('upgrade_interrupt').disabled !== true){
+                console.log('three true')
+                setTimeout([
+                    '$("#upgrade_progress_bar").css("width", "100%");',
+                    'upgrade_progress_head.innerHTML="4";',
+                    'modal_head_close.innerHTML = "&times;";',
+                    'modal_head_content.innerHTML = "升级完成";',
+                    'document.getElementById("upgrade_ip").disabled = false;',
+                    'cur_status.innerHTML = cur_status.innerHTML + " -> " + "升级完成";',].join(""), 6000)
+            }
+        };
+
+        $('#upgrade_diff').on("click", function () {
+            document.getElementById('upgrade_deploy').disabled = true;
+            document.getElementById('upgrade_diff').disabled = true;
+            document.getElementById('upgrade_rollback').disabled = true;upgrade_interrupt
+            document.getElementById('upgrade_interrupt').disabled = false;
+        });
+
+        $('#upgrade_rollback').on("click", function () {
+            document.getElementById('upgrade_deploy').disabled = true;
+            document.getElementById('upgrade_diff').disabled = true;
+            document.getElementById('upgrade_rollback').disabled = true;
+            document.getElementById('upgrade_interrupt').disabled = false;
+        });
+
+        $('#upgrade_interrupt').on("click", function () {
+            document.getElementById('upgrade_interrupt').disabled = true;
+            tableInit.dbclick = removedFunc;
+        });
+    },
+
+    DisSelectedIp: function (){
+        var selectedValue = []; 
+        var objSelect = document.getElementById('upgrade_ip'); 
+        for(var i = 0; i < objSelect.options.length; i++) { 
+            if (objSelect.options[i].selected == true) 
+            selectedValue.push(" "+objSelect.options[i].value);
+        }
+        var selected_ip = selectedValue;
+        if (selected_ip.length == 0){
+            selected_ip = 'ALL';
+        }
+        ko.cleanNode(document.getElementById("selected_ip"));
+        ko.applyBindings(selected_ip, document.getElementById("selected_ip"));
+    },
+
+    GetProjectServers: function(project){
+        var projectlist = []
+        projectlist.push(project);
+        //console.log(projectlist);
+        var postData = {};
+        postData['project'] = projectlist;
+        $.ajax({
+            url: "/saltstack/restart/get_project_servers",
+            type: "post",
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(postData),
+            success: function (datas, status) {
+                //alert(datas);
+                var data = eval(datas);
+                //var html = "<option value=''></option>";
+                var html = "";
+                for (var project in data){
+                    html_tmp = "";
+                    $.each(data[project], function (index, item) { 
+                        //循环获取数据 
+                        var name = data[project][index];
+                        //html_name = "<option>"+name+"</option>";
+                        //console.log(name.role)
+                        html_name = "<option value='"+name.ip_addr+"' data-subtext='"+name.info+" "+name.role+"'>"+name.ip_addr+"</option>";
+                        html_tmp = html_tmp + html_name
+                    }); 
+                    //html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
+                    html = html + html_tmp;
+                }
+                document.getElementById('upgrade_ip').innerHTML=html;
+                //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
+                $('.selectpicker').selectpicker('refresh');
+                return false;
+            },
+            error:function(msg){
+                alert("获取项目服务器地址失败！");
+                return false;
+            }
+        });
     },
 
     operateUpgradeSelect: function(){
         $('#btn_op_search').on("click", function () {
             var postData = {
                 project:"all",
-                cur_status:"all",
+                cur_status_sel:"all",
                 handle_user:"all",
             };
             if (! document.getElementById("project_active").value == ""){
@@ -207,9 +392,9 @@ var operate = {
                 }
                 postData['project'] = projectlist;
             }
-            if (document.getElementById("cur_status").value != ""){
+            if (document.getElementById("cur_status_sel").value != ""){
                 var statuslist = [];
-                var objSelectstatus = document.upgradeform.cur_status; 
+                var objSelectstatus = document.upgradeform.cur_status_sel; 
                 for(var i = 0; i < objSelectstatus.options.length; i++) { 
                     if (objSelectstatus.options[i].selected == true) 
                     statuslist.push(objSelectstatus.options[i].value);
@@ -244,13 +429,13 @@ var operate = {
     },
 
     setHandleUser: function(){
-        var objSelectstatus = document.upgradeform.cur_status;
+        var objSelectstatus = document.upgradeform.cur_status_sel;
         var count = 0;
         for(var i = 0; i < objSelectstatus.options.length; i++) { 
             if (objSelectstatus.options[i].selected == true) 
             count = count + 1;
         }
-        if (document.getElementById("cur_status").value == "undone" && count == 1){
+        if (document.getElementById("cur_status_sel").value == "undone" && count == 1){
             $('#handle_user').prop('disabled', true);
             $('#handle_user').selectpicker('refresh');
             //$("#handle_user").selectpicker('setStyle', 'btn-warning');

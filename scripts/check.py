@@ -2,10 +2,15 @@
 #-_- coding:utf-8 -_-
 import os,sys,datetime,logging
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
-reload(sys)
-sys.setdefaultencoding('utf8')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "monitor.settings")
+from check_tomcat.models import check_status
 from scripts.tomcat import logger, send_mail, get_mail_list, check_tomcat, time, check_server_status, error_status
-from scripts.salt import minionsdown
+
+check_salt_minion = check_status.objects.filter(program='check_salt_minion').first()
+if check_salt_minion.status == 1:
+    from scripts.salt import minionsdown
+else:
+    minionsdown = []
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
@@ -16,10 +21,12 @@ if __name__ == '__main__':
         logger.error('%s 不可用！' %server)
         sleep(3)
         if not check_server_status():
-            send_mail(get_mail_list('arno'), '%s Server is unable to start, pls check!', "%s 服务起不来！" %(time(), server))
+            send_mail(['Arno@ag866.com'], '%s Server is unable to start, pls check!', "%s 服务起不来！" %(time(), server))
             logger.error('%s %s 服务起不来！' %(time(), server))
-    content = check_tomcat()
-    if content != "":
-        send_mail(get_mail_list('arno', 'sa'),'tomcat报警',content,format='html')
+    check_services = check_status.objects.filter(program='check_services').first()
+    if check_services.status == 1:
+        content = check_tomcat()
+        if content != "":
+            send_mail(get_mail_list('check_services'),'tomcat报警',content,format='html')
     if len(minionsdown) != 0:
-        send_mail(get_mail_list('arno', 'vincent'),'Attention','Minion Down:'+ '\n\t' +'\n\t'.join(minionsdown))
+        send_mail(get_mail_list('check_salt_minion'),'Attention','Minion Down:'+ '\n\t' +'\n\t'.join(minionsdown))

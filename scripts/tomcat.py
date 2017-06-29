@@ -36,18 +36,17 @@ def send_mail(to_list,sub,content,format=''):
         logger.error('[failed]mail from %s, mail to %s, %s' %(sender, to_list, content))
         return False
 
-def get_mail_list(*names):
+def get_mail_list(program):
     mail_list = []
-    for name in names:
-        info = mail.objects.filter(name=name).first()
-        mail_list.append(info.mail_address)
+    if program == 'check_services':
+        datas = mail.objects.filter(check_services=1).all()
+    elif program == 'check_salt_minion':
+        datas = mail.objects.filter(check_salt_minion=1).all()
+    else:
+        return mail_list
+    for data in datas:
+        mail_list.append(data.mail_address)
     return mail_list
-    #url_all = mail.objects.all()
-    #for mail_info in url_all:
-    #    if mail_info.status == 'active':
-    #        list_name.append(mail_info.mail_address)
-    #logger.info('get mail_list successful.')
-    #return list_name
 
 def check_tomcat():
     content_head = """\

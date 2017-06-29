@@ -46,6 +46,7 @@ def GetProjectServers(request):
             for data in datas:
                 tmpdict = {}
                 tmpdict['minion_id'] = data.minion_id
+                tmpdict['ip_addr'] = data.ip_addr
                 tmpdict['role'] = data.role
                 tmpdict['status'] = data.status
                 tmpdict['info'] = data.info

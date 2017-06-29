@@ -47060,3 +47060,170 @@ Traceback (most recent call last):
   File "D:\django\monitor\lib\site-packages\django\db\models\query.py", line 334, in get
     self.model._meta.object_name
 DoesNotExist: tomcat_project matching query does not exist.
+2017-06-28 12:12:19,352 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 153, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-28 12:12:19,579 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 153, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-28 20:00:18,861 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+2017-06-28 20:01:01,828 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+2017-06-29 13:06:10,115 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/UpdateCheckStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 209, in UpdateCheckStatus
+    info = check_status.objects.filter(program=data['program'])
+TypeError: list indices must be integers, not str
+2017-06-29 13:10:34,147 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/UpdateCheckStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 209, in UpdateCheckStatus
+    info = check_status.objects.filter(program=data['program']).first()
+TypeError: list indices must be integers, not str
+2017-06-29 13:17:29,789 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/UpdateCheckStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 209, in UpdateCheckStatus
+    info = check_status.objects.filter(program=data['program']).first()
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'program'"
+2017-06-29 13:20:01,727 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/UpdateCheckStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 209, in UpdateCheckStatus
+    info = check_status.objects.filter(program=data['program']).first()
+  File "D:\django\monitor\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'program'"
+2017-06-29 13:21:07,292 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/UpdateCheckStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 207, in UpdateCheckStatus
+    data = json.loads(request.body)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\Lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+2017-06-29 13:22:06,611 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/UpdateCheckStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 210, in UpdateCheckStatus
+    info = check_status.objects.filter(program=data['program']).first()
+TypeError: list indices must be integers, not str
+2017-06-29 14:20:15,312 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 153, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-06-29 15:31:40,164 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/mail/Query
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\mail.py", line 26, in MailQuery
+    datas = mail.objects.all()
+UnboundLocalError: local variable 'mail' referenced before assignment
+2017-06-29 17:47:28,198 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/mail/UpdateMailStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\mail.py", line 56, in UpdateMailStatus
+    info[data['program']] = data[data['program']]
+TypeError: 'mail' object does not support item assignment
+2017-06-29 17:51:07,828 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/mail/UpdateMailStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 10, in <module>
+    from mail import *
+  File "D:\django\monitor\monitor\check_tomcat\mail.py", line 56
+    if data['program'] = 'check_services':
+                       ^
+SyntaxError: invalid syntax

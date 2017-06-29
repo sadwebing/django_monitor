@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import View
 from monitor import settings
 #from check_tomcat.models import tomcat_project, tomcat_url
-from models import upgrade_op, upgrade_cur_svn
+from models import upgrade_op, upgrade_cur_svn, svn_id
 from check_tomcat.models import tomcat_project
 from saltstack.saltapi import SaltAPI
 import json, logging, numpy
@@ -71,28 +71,27 @@ def QuerySvnId(request):
         except:
             act = 'null'
         if act == 'query_all':
-            datas = upgrade_op.objects.all().order_by('-id')
+            datas = svn_id.objects.all().order_by('-id')
         elif act == 'query_undone':
-            datas = upgrade_op.objects.filter(status='undone').order_by('-id')
+            datas = svn_id.objects.filter(status='undone').order_by('-id')
         elif act == 'query_done':
-            datas = upgrade_op.objects.filter(status='done').order_by('-id')
+            datas = svn_id.objects.filter(status='done').order_by('-id')
         elif act == 'query_rollback':
-            datas = upgrade_op.objects.filter(status='rollback').order_by('-id')
+            datas = svn_id.objects.filter(status='rollback').order_by('-id')
         else:
             return HttpResponse("参数错误！")
         logger.info('查询参数：%s' %act)
         svn_list = []
         for info in datas:
             tmp_dict = {}
-            select_id = tomcat_project.objects.filter(project=info.project).first()
+            #select_id = tomcat_project.objects.filter(project=info.project).first()
             tmp_dict['id'] = info.id
             tmp_dict['svn_id'] = info.svn_id
             tmp_dict['id_time'] = info.id_time
+            tmp_dict['tag'] = info.tag
             tmp_dict['project'] = info.project
-            tmp_dict['cur_svn_id'] = select_id.cur_svn_id
             tmp_dict['cur_status'] = info.cur_status
-            tmp_dict['op_time'] = info.op_time
-            tmp_dict['handle_user'] = info.handle_user
+            tmp_dict['info'] = info.info
             svn_list.append(tmp_dict)
         logger.info(svn_list)
         return HttpResponse(json.dumps(svn_list))

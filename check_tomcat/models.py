@@ -38,6 +38,8 @@ class mail(models.Model):
     mail_address = models.CharField(max_length=64, unique=True)
     status = models.CharField(max_length=20, null=True)
     role = models.CharField(max_length=10, null=True)
+    check_services = models.IntegerField(default=0)
+    check_salt_minion = models.IntegerField(default=0)
 
 class tomcat_status(models.Model):
     access_time = models.CharField(max_length=64)
@@ -52,3 +54,7 @@ class server_status(models.Model):
     url = models.CharField(max_length=128)
     status = models.CharField(max_length=10, null=True)
     info = models.CharField(max_length=1024, null=True)
+
+class check_status(models.Model):
+    program = models.CharField(max_length=32)
+    status = models.IntegerField(default=0)

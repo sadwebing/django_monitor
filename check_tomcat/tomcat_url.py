@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
-from models import tomcat_status,tomcat_url, tomcat_project
+from models import tomcat_status, tomcat_url, tomcat_project, check_status
 from saltstack.command import Command
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
@@ -199,3 +199,27 @@ def UrlCheckServer(request):
             request.websocket.send(json.dumps(info_final))
         ### close websocket ###
         request.websocket.close()
+
+@csrf_exempt 
+def UpdateCheckStatus(request):
+    clientip = request.META['REMOTE_ADDR']
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        #data = request.POST
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        info = check_status.objects.filter(program=data['program']).first()
+        info.status = data['status']
+        info.save()
+        return HttpResponse('更新成功！')
+    elif request.method == 'GET':
+        logger.info('%s is requesting. %s  query check_status' %(clientip, request.get_full_path()))
+        datas = check_status.objects.all()
+        status_list = []
+        for status_info in datas:
+            tmp_dict = {}
+            tmp_dict['program'] = status_info.program
+            tmp_dict['status'] = status_info.status
+            status_list.append(tmp_dict)
+        return HttpResponse(json.dumps(status_list))
+    else:
+        return HttpResponse('nothing!')

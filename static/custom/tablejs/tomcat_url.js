@@ -160,7 +160,12 @@ window.operateStatusEvents = {
             type: "post",
             data: JSON.stringify(postData),
             success: function (data, status) {
-                toastr.success('状态更新成功！', row.project+": "+row.url);
+                if (postData.status == 'active'){
+                    toastr.success(row.project+": "+row.url, '监控项已启用');
+                }else {
+                    toastr.warning(row.project+": "+row.url, '监控项已禁用');
+                }
+                
                 //ko.cleanNode(document.getElementById("tomcat_table"));
                 row.status_ = postData.status;
                 //alert(data);
@@ -220,10 +225,51 @@ window.operateEvents = {
     },
 }; 
 
+window.operateMailEvents = {
+    'click .update_mail_status': function (e, value, row, index) {
+        var program = event.target.id.replace(/[0-9]+_/g, "");
+        var postData = {
+            id:row.id,
+            program:program,
+        };
+        postData[program] = 0;
+        //console.log(row[postData.program])
+        //console.log(event.target.id.replace(/[0-9]+_/g, ""))
+        if (document.getElementById(event.target.id).checked){
+            postData[program] = 1;
+            //console.log(postData);
+        }else {
+            postData[program] = 0;
+            //console.log(postData);
+        }
+        $.ajax({
+            url: "/tomcat/mail/UpdateMailStatus",
+            type: "post",
+            data: JSON.stringify(postData),
+            success: function (data, status) {
+                if (postData[program] == 1){
+                    toastr.success(postData.program+": "+row.mail_address, '报警邮箱已启用');
+                }else {
+                    toastr.warning(postData.program+": "+row.mail_address, '报警邮箱已禁用');
+                }
+                
+                row[program] = postData[program];
+            },
+            error: function(msg){
+                alert("失败，请检查日志！");
+                //tableInit.myViewModel.refresh();
+            }
+        });
+        return false;
+    },
+};
+
 //操作
 var operate = {
     //初始化按钮事件
     operateInit: function () {
+        this.operateCheckStatus();
+        this.operateEditMail();
         this.selectpicker();
         this.operateAdd();
         this.operateUpdate();
@@ -297,6 +343,188 @@ var operate = {
             }
             tableInit.myViewModel.refresh(params);
         });
+    },
+
+    operateCheckStatus: function () {
+        $.ajax({
+            url: "/tomcat/UpdateCheckStatus",
+            type: "get",
+            success: function (datas, status) {
+                var data = eval(datas);
+                $.each(data, function (index, item) { 
+                    if (document.getElementById(data[index]['program'])){
+                        if (data[index]['status'] == 1){
+                            document.getElementById(data[index]['program']).checked = true; 
+                        }else {
+                            document.getElementById(data[index]['program']).checked = false;
+                        }
+                    }
+                }); 
+            },
+            error: function(msg){
+                alert("查询监控项状态失败，请检查日志！");
+                //tableInit.myViewModel.refresh();
+            }
+        });
+        var postData = {
+            program:'',
+            status:1,
+        };
+        $('#check_services').on("click", function () {
+            postData.program = 'check_services';
+            if (document.getElementById('check_services').checked){
+                postData.status = 1;
+                //var status = '已启用监控！'
+                //toastr.success("check_services"+": "+status, '状态已更新');
+            }else {
+                postData.status = 0;
+                //var status = '已禁用监控！'
+                //toastr.warning("check_services"+": "+status, '状态已更新');
+            }
+            updateCheckStatus(postData);
+        });
+
+        $('#check_salt_minion').on("click", function () {
+            postData.program = 'check_salt_minion';
+            if (document.getElementById('check_salt_minion').checked){
+                postData.status = 1;
+                //var status = '已启用监控！'
+                //toastr.success("check_salt_minion"+": "+status, '状态已更新');
+            }else {
+                postData.status = 0;
+                //var status = '已禁用监控！'
+                //toastr.warning("check_salt_minion"+": "+status, '状态已更新');
+            }
+            updateCheckStatus(postData);
+        });
+
+        function updateCheckStatus (postData){
+            //console.log(postData)
+            var apostData = postData;
+            $.ajax({
+                url: "/tomcat/UpdateCheckStatus",
+                type: "post",
+                data: JSON.stringify(apostData),
+                success: function (data, status) {
+                    if (postData['status'] == 1){
+                        var status = '已启用监控！'
+                        toastr.success(postData.program+": "+status, '状态已更新');
+                    }else {
+                        var status = '已禁用监控！'
+                        toastr.warning(postData.program+": "+status, '状态已更新');
+                    }
+                },
+                error: function(msg){
+                    alert("失败，请检查日志！");
+                    //tableInit.myViewModel.refresh();
+                }
+            });
+            return false;
+        };
+
+    },
+
+    operateEditMail: function (){
+        this.mailViewModel = new ko.bootstrapTableViewModel({
+            url: '/tomcat/mail/Query',         //请求后台的URL（*）
+            method: 'post',                      //请求方式（*）
+            dataType: "json",
+            //toolbar: '#toolbar',                //工具按钮用哪个容器
+            queryParams: function (param) {
+                return { limit: param.limit, offset: param.offset, 'act':'query_all' };
+            },//传递参数（*）
+            columns: [
+                {
+                    field: 'id',
+                    title: 'id',
+                    sortable: true,
+                    width:'3%',
+                    //align: 'center'
+                },{
+                    field: 'name',
+                    title: '姓名',
+                    sortable: true,
+                    width:'5%',
+                    //align: 'center'
+                },{
+                    field: 'mail_address',
+                    title: '邮箱',
+                    sortable: true,
+                    width:'18%',
+                    //align: 'center'
+                },{
+                    field: 'role',
+                    title: '角色',
+                    sortable: true,
+                    //align: 'center',
+                    width:'9%',
+                },{
+                    field: 'check_services',
+                    title: '假死监控',
+                    sortable: true,
+                    //align: 'center',
+                    width:'5%',
+                    events: operateMailEvents,
+                    formatter: operate.checkServicesFormatter,
+                },{
+                    field: 'check_salt_minion',
+                    title: 'minion监控',
+                    sortable: true,
+                    width:'5%',
+                    //align: 'center'
+                    events: operateMailEvents,
+                    formatter: operate.checkSaltMinionFormatter,
+                },
+            ]
+        });
+        ko.applyBindings(this.mailViewModel, document.getElementById("mail_table"));
+        $('#edit_mail').on("click", function () {
+            //console.log(this.mailViewModel)
+            $("#modifyMail").modal('show');
+        });
+    },
+
+    checkServicesFormatter: function (value,row,index){
+        //console.log(row)
+        if (value == 1){
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id="'+ row.id+'_check_services" class="update_mail_status" checked><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }else {
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id="'+ row.id+'_check_services" class="update_mail_status"><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }
+        return content;
+    },
+
+    checkSaltMinionFormatter: function (value,row,index){
+        if (value == 1){
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id="'+ row.id+'_check_salt_minion" class="update_mail_status" checked><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }else {
+            content = [
+            '<div class="checkbox checkbox-slider--a" style="margin:0px;">',
+                '<label>',
+                    '<input type="checkbox" id="'+ row.id+'_check_salt_minion" class="update_mail_status"><span></span>',
+                '</label>',
+            '</div>'
+            ].join('');
+        }
+        return content;
     },
 
     //新增
