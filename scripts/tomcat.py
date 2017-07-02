@@ -98,12 +98,14 @@ def check_tomcat():
                     title = re.search('<title>.*?</title>', ret.content)
                     result['info'] = title.group().replace('<title>', '').replace('</title>', '')
                 except AttributeError:
-                    result['info'] = '正常'
+                    if result['code'] in code_list:
+                        result['info'] = '正常'
+                    else:
+                        result['info'] = '失败'
         except:
             result['code'] = error_status
             result['info'] = '失败'
         if result['code'] == error_status:
-            result['server_type'] = tomcat_project.objects.filter(project=result['project']).first().server_type
             commandexe = Command(tomcat_info.minion_id, 'test.ping')
             test_result = commandexe.TestPing()[tomcat_info.minion_id]
             if test_result == 'not return':
@@ -124,6 +126,7 @@ def check_tomcat():
             )
             insert.save()
         if result['code'] not in code_list:
+            result['server_type'] = tomcat_project.objects.filter(project=result['project']).first().server_type
             content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['server_type'], result['domain'], result['url'], result['code'], result['info'])
         #logger.info(MIMEText(str(result), 'utf-8'))
         if content_body != "":

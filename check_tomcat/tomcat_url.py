@@ -148,6 +148,7 @@ def UrlCheckServer(request):
         clientip = request.META['REMOTE_ADDR']
         #logger.info(dir(request.websocket))
         #message = request.websocket.wait()
+        code_list = ['200', '302', '303', '405']
         for postdata in request.websocket:
             #logger.info(type(postdata))
             data = json.loads(postdata)
@@ -186,7 +187,10 @@ def UrlCheckServer(request):
                         title = re.search('<title>.*?</title>', ret.content)
                         info_final['info'] = title.group().replace('<title>', '').replace('</title>', '')
                     except AttributeError:
-                        info_final['info'] = '正常'
+                        if info_final['code'] in code_list:
+                            info_final['info'] = '正常'
+                        else:
+                            info_final['info'] = '失败'
             except:
                 info_final['code'] = error_status
                 info_final['info'] = '失败'
