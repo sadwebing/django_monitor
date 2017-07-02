@@ -339,10 +339,10 @@ var operate = {
                 alert("代码目录 不能为空!");
                 return false;
             }
-            if (!oViewModel.cur_svn_id()){
-                alert("当前版本 不能为空!");
-                return false;
-            }
+            //if (!oViewModel.cur_svn_id()){
+            //    alert("当前版本 不能为空!");
+            //    return false;
+            //}
             if (!oViewModel.tomcat()){
                 oViewModel.tomcat('')
             }

@@ -24,14 +24,20 @@ class svn_id(models.Model):
     tag = models.CharField(max_length=32, blank=True)
     project = models.CharField(max_length=64, unique=False)
     cur_status = models.CharField(max_length=16, default='undone')
+    deleted = models.IntegerField(default=0)
+    lock = models.IntegerField(default=0)
     info = models.CharField(max_length=128, blank=True)
     class Meta:
         unique_together = ('svn_id', 'project')
 
-#class upgrade_op_history(models.Model):
-#    svn_id = models.CharField(max_length=20, blank=False)
-#    id_time = models.CharField(max_length=64, blank=False)
-#    project = models.CharField(max_length=128)
-#    cur_status = models.CharField(max_length=16)
-#    op_time = models.CharField(max_length=64)
-#    handle_user = models.CharField(max_length=64)
+class op_history(models.Model):
+    svn_id = models.CharField(max_length=20, blank=False)
+    project = models.CharField(max_length=128)
+    ip_addr = models.GenericIPAddressField(blank=False)
+    act = models.CharField(max_length=20, blank=False)
+    op_time = models.CharField(max_length=64, blank=False)
+    op_name = models.CharField(max_length=64, blank=False)
+    op_ip_addr = models.GenericIPAddressField(blank=False)
+    op_status = models.IntegerField(default=0)
+    envir = models.CharField(max_length=10)
+    info = models.TextField(max_length=51200, blank=True)

@@ -11,7 +11,7 @@ sys.setdefaultencoding('utf8')
 import django,json
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "monitor.settings")
 django.setup()
-from check_tomcat.models import tomcat_url, mail, tomcat_status, server_status
+from check_tomcat.models import tomcat_url, mail, tomcat_status, server_status, tomcat_project
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 server = 'http://192.168.100.107:5000/monitor_server/check/'
@@ -55,6 +55,7 @@ def check_tomcat():
     <tr style=\"font-size:14px\">
     <th style="width:120px">时间</th> 
     <th style="width:120px">工程</th> 
+    <th style="width:120px">服务类型</th> 
     <th style="width:120px">域名</th> 
     <th style="width:300px">路径</th> 
     <th style="width:120px">状态</th> 
@@ -102,13 +103,14 @@ def check_tomcat():
             result['code'] = error_status
             result['info'] = '失败'
         if result['code'] == error_status:
+            result['server_type'] = tomcat_project.objects.filter(project=result['project']).first().server_type
             commandexe = Command(tomcat_info.minion_id, 'test.ping')
             test_result = commandexe.TestPing()[tomcat_info.minion_id]
             if test_result == 'not return':
                 result['info'] = '请检查服务器是否存活'
 
-        print result['project'] + ":  " +  result['url']
-        print "  %s" %result['code']
+        print result['code'] + "    " + result['project'] + ":  " +  result['url']
+        #print "  %s" %result['code']
         try:
             ret = requests.post(server, data=json.dumps(result), timeout=3)
         except requests.exceptions.ConnectionError:
@@ -122,7 +124,7 @@ def check_tomcat():
             )
             insert.save()
         if result['code'] not in code_list:
-            content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['domain'], result['url'], result['code'], result['info'])
+            content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['server_type'], result['domain'], result['url'], result['code'], result['info'])
         #logger.info(MIMEText(str(result), 'utf-8'))
         if content_body != "":
             content = content_head + content_body + "</table></body></html>"

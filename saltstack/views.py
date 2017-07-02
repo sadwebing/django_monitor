@@ -50,6 +50,7 @@ def GetProjectServers(request):
                 tmpdict['role'] = data.role
                 tmpdict['status'] = data.status
                 tmpdict['info'] = data.info
+                tmpdict['envir'] = data.envir
                 serverlist.append(tmpdict)
             server_dict[project] = serverlist
         logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), server_dict))

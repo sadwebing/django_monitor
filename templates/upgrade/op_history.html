@@ -1,0 +1,27 @@
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>管理中心</title>
+{% endif %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">历史操作记录表</h4>
+    </div>
+    <table id="upgrade_op_history" class="table table-condensed" data-bind="myBootstrapTable:$root" style="word-break:break-all; word-wrap:break-all;">
+        <thead>
+            <tr>
+                <th data-field="id" data-sortable="true">id</th>
+                <th data-field="envir" data-sortable="true">环境</th>
+                <th data-field="svn_id" data-sortable="true">版本</th>
+                <th data-field="project" data-sortable="true">项目</th>
+                <th data-field="ip_addr" data-sortable="true">Ip地址</th>
+                <th data-field="act" data-sortable="true">操作类型</th>
+                <th data-field="op_time" data-sortable="true">操作时间</th>
+                <th data-field="op_name" data-sortable="true">操作人</th>
+                <th data-field="op_status" data-sortable="true">状态</th>
+                <th data-field="info" data-sortable="true">备注</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<script src="/static/custom/tablejs/upgrade_op_history.js" type="text/javascript"></script>
