@@ -185,7 +185,7 @@ var operate = {
         $('.selectpicker').selectpicker({
             style: 'btn-default',
             //width: "auto",
-            size: 15,
+            size: 13,
             showSubtext:true,
         });
     },

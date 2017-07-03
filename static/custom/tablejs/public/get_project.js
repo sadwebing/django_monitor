@@ -22,6 +22,7 @@ var gp = {
                 var html_B79 = "";
                 var html_P02 = "";
                 var html_E02 = "";
+                var html_E03 = "";
                 var html_E04 = "";
                 var html_NWF = "";
                 var html_PUBLIC = "";
@@ -39,6 +40,9 @@ var gp = {
                     }else if (name.product === 'E02') {
                         html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
                         html_E02 = html_E02 + html_name
+                    }else if (name.product === 'E03') {
+                        html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
+                        html_E03 = html_E03 + html_name
                     }else if (name.product === 'E04') {
                         html_name = "<option value='"+name.project+"'>"+name.project+"</option>";
                         html_E04 = html_E04 + html_name
@@ -60,6 +64,9 @@ var gp = {
                             '</optgroup>',
                             '<optgroup label="E02">',
                                 html_E02,
+                            '</optgroup>',
+                            '<optgroup label="E03">',
+                                html_E03,
                             '</optgroup>',
                             '<optgroup label="E04">',
                                 html_E04,
