@@ -183,7 +183,7 @@ LOGGING = {
             'class':'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR+'/logs/','monitor.log'),
             'maxBytes': 1024*1024*50, # 5 MB
-            'backupCount': 5,
+            'backupCount': 10,
             'formatter':'standard',
         },
         #'console':{
@@ -196,7 +196,7 @@ LOGGING = {
             'class':'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR+'/logs/','debug.log'),
             'maxBytes': 1024*1024*5, # 5 MB
-            'backupCount': 5,
+            'backupCount': 10,
             'formatter':'standard',
         },
         'error': {
@@ -204,7 +204,7 @@ LOGGING = {
             'class':'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR+'/logs/','error.log'), 
             'maxBytes': 1024*1024*5, # 5 MB
-            'backupCount': 5,
+            'backupCount': 10,
             'formatter':'standard',
         },
     },
