@@ -241,7 +241,7 @@ def OpUpgradeDeploy(request):
                 envir = data['envir'],
                 info = data['result'],
                 )
-            op_record.save()
+            #op_record.save()
             request.websocket.send(json.dumps(data))
             #if data['step'] == (len(data['ip_addr']) - 1):
             #    ### close websocket ###

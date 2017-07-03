@@ -29,6 +29,17 @@ var tableInit = {
         ].join('');
         return content;
     },
+
+    opStatusFormatter: function (value,row,index){
+        if (row.op_status == 1){
+            var content = '成功';
+        }else if (row.op_status == 0){
+            var content = '失败';
+        }else {
+            var content = '未知';
+        }
+        return content;
+    },
 };
 
 window.infoEvents = {

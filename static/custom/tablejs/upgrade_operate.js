@@ -13,6 +13,7 @@ window.postUpgradeDate = {
         act:'',
         step:0,
         envir:'',
+        restart:'',
 },
 window.uat_ip_addr_list = new Array();
 window.online_ip_addr_list = new Array();
@@ -149,9 +150,15 @@ var tableInit = {
 
             //初始化页面参数
             var obj_envir = document.getElementsByName('upgrade_envir');
+            var obj_restart = document.getElementsByName('upgrade_restart');
             for(i=0;i<obj_envir.length;i++) { 
                 if(obj_envir[i].checked) { 
                     obj_envir[i].checked = false; 
+                } 
+            }
+            for(i=0;i<obj_restart.length;i++) { 
+                if(obj_restart[i].checked) { 
+                    obj_restart[i].checked = false; 
                 } 
             }
             document.getElementById('upgrade_ip').innerHTML = "";
@@ -326,10 +333,16 @@ var operate = {
     },
 
     getpostData: function (act) {
-        var obj = document.getElementsByName('upgrade_envir');
-        for(i=0;i<obj.length;i++) { 
-            if(obj[i].checked) { 
-                postUpgradeDate.envir = obj[i].value; 
+        var obj_envir = document.getElementsByName('upgrade_envir');
+        var obj_restart = document.getElementsByName('upgrade_restart');
+        for(i=0;i<obj_envir.length;i++) { 
+            if(obj_envir[i].checked) { 
+                postUpgradeDate.envir = obj_envir[i].value; 
+            } 
+        }
+        for(i=0;i<obj_restart.length;i++) { 
+            if(obj_restart[i].checked) { 
+                postUpgradeDate.restart = obj_restart[i].value; 
             } 
         }
         postUpgradeDate.svn_id = upgrade_parms.svn_id;
@@ -423,6 +436,10 @@ var operate = {
         var postData = operate.getpostData(args.act);
         if (postData.ip_addr.length == 0){
             alert('所选IP为空，请检查！');
+            return false;
+        }
+        if (postData.act == 'deploy' || postData.act == 'rollback' && postData.restart == ''){
+            alert('请选择是否重启服务！');
             return false;
         }
 
