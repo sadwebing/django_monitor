@@ -18,7 +18,7 @@ def MonitorServer(request):
         clientip = request.META['REMOTE_ADDR']
         data = json.loads(request.body)
         #status = "\t".join([data['access_time'], data['project'], data['domain'], data['url'], data['code'], data['info']])
-        logger.info('%s is requesting. %s' %(ip, data))
+        #logger.info('%s is requesting. %s' %(ip, data))
         status = tomcat_status(
             access_time = data['access_time'],
             project     = data['project'],

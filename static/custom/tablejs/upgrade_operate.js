@@ -438,7 +438,7 @@ var operate = {
             alert('所选IP为空，请检查！');
             return false;
         }
-        if (postData.act == 'deploy' || postData.act == 'rollback' && postData.restart == ''){
+        if ((postData.act == 'deploy' || postData.act == 'rollback') && postData.restart == ''){
             alert('请选择是否重启服务！');
             return false;
         }

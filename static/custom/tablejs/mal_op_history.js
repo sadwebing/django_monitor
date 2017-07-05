@@ -17,6 +17,53 @@ var tableInit = {
             queryParams: function (param) {
                 return { limit: param.limit, offset: param.offset };
             },//传递参数（*）
+                        columns: [
+                //{ 
+                //    checkbox: true 
+                //},
+                {
+                    field: 'id',
+                    title: 'id',
+                    sortable: true,
+                    width:'1%',
+                    //align: 'center'
+                },{
+                    field: 'op_time',
+                    title: '操作时间',
+                    sortable: true,
+                    //align: 'center',
+                    width:'10%',
+                },{
+                    field: 'op_user',
+                    title: '操作用户',
+                    sortable: true,
+                    //width:'6%',
+                    //align: 'center'
+                },{
+                    field: 'op_addr',
+                    title: '用户地址',
+                    sortable: true,
+                    //width:'5%',
+                    //align: 'center'
+                },{
+                    field: 'op_type',
+                    title: '操作类型',
+                    sortable: true,
+                    //width:'18%',
+                    //align: 'center'
+                },{
+                    field: 'op_before',
+                    title: '操作前',
+                    sortable: true,
+                    //width:'6%',
+                    //align: 'center',
+                },{
+                    field: 'op_after',
+                    title: '操作后',
+                    sortable: true,
+                    //align: 'center',
+                },
+            ]
         });
         ko.applyBindings(this.myViewModel, document.getElementById("op_history"));
     },
