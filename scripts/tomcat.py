@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-_- coding:utf-8 -_-
-import re,os,sys,smtplib,requests,datetime,logging
+import re,os,sys,smtplib,requests,datetime,logging,multiprocessing
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 from time import sleep
 from saltstack.command import Command
@@ -48,6 +48,69 @@ def get_mail_list(program):
         mail_list.append(data.mail_address)
     return mail_list
 
+def get_result(result, tomcat_info, code_list, content_body):
+    try:
+        if tomcat_info.server_type == 'app':
+            result['info'] = error_status
+            datas = {}
+            datas['target'] = tomcat_info.minion_id
+            datas['function'] = 'cmd.run'
+            datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
+            datas['expr_form'] = 'glob'
+            commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
+            exe_result = commandexe.CmdRun()[datas['target']]
+            if exe_result == '':
+                result['code'] = 'null'
+            else:
+                result['code'] = '200'
+                result['info'] = '正常'
+            #logger.info(result)
+        else:
+            ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
+            if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == 500:
+                result['code'] = '200'
+            else:
+                result['code'] = '%s' %ret.status_code
+            try:
+                title = re.search('<title>.*?</title>', ret.content)
+                result['info'] = title.group().replace('<title>', '').replace('</title>', '')
+            except AttributeError:
+                if result['code'] in code_list:
+                    result['info'] = '正常'
+                else:
+                    result['info'] = '失败'
+    except:
+        result['code'] = error_status
+        result['info'] = '失败'
+    if result['code'] == error_status:
+        commandexe = Command(tomcat_info.minion_id, 'test.ping')
+        test_result = commandexe.TestPing()[tomcat_info.minion_id]
+        if test_result == 'not return':
+            result['info'] = '请检查服务器是否存活'
+    print result['code'] + "    " + result['project'] + ":  " +  result['url']
+    #print "  %s" %result['code']
+    try:
+        ret = requests.post(server, data=json.dumps(result), timeout=3)
+    except requests.exceptions.ConnectionError:
+        insert = tomcat_status(
+            access_time = result['access_time'],
+            project     = result['project'],
+            domain      = result['domain'],
+            url         = result['url'],
+            code        = result['code'],
+            info        = result['info'],
+        )
+        insert.save()
+    if result['code'] not in code_list:
+        try:
+            result['server_type'] = tomcat_project.objects.filter(project=result['project']).first().server_type
+        except:
+            send_mail(['Arno@ag866.com'],'tomcat报警','%s project doesn\'t exists' %result['project'])
+            result['server_type'] = 'unknown'
+        content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['server_type'], result['domain'], result['url'], result['code'], result['info'])
+    #logger.info(MIMEText(str(result), 'utf-8'))
+    return content_body
+
 def check_tomcat():
     content_head = """\
     <html><head><title>HTML email</title></head><body>
@@ -64,77 +127,27 @@ def check_tomcat():
     """
     content_body = ""
     content = ""
+    pool = multiprocessing.Pool(processes=25)
     url_all = tomcat_url.objects.filter(status='active').all()
     code_list = ['200', '302', '303', '405']
+    start_time = time()
     for tomcat_info in url_all:
+        global result
         result = {}
         result['access_time'] = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')
         result['project'] = tomcat_info.project
         result['domain'] = tomcat_info.domain
         result['url'] = tomcat_info.url
-        try:
-            if tomcat_info.server_type == 'app':
-                result['info'] = error_status
-                datas = {}
-                datas['target'] = tomcat_info.minion_id
-                datas['function'] = 'cmd.run'
-                datas['arguments'] = 'ps -ef |grep -i "java" |grep -i " -jar" |grep -v grep'
-                datas['expr_form'] = 'glob'
-                commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
-                exe_result = commandexe.CmdRun()[datas['target']]
-                if exe_result == '':
-                    result['code'] = 'null'
-                else:
-                    result['code'] = '200'
-                    result['info'] = '正常'
-                #logger.info(result)
-            else:
-                ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
-                if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == 500:
-                    result['code'] = '200'
-                else:
-                    result['code'] = '%s' %ret.status_code
-                try:
-                    title = re.search('<title>.*?</title>', ret.content)
-                    result['info'] = title.group().replace('<title>', '').replace('</title>', '')
-                except AttributeError:
-                    if result['code'] in code_list:
-                        result['info'] = '正常'
-                    else:
-                        result['info'] = '失败'
-        except:
-            result['code'] = error_status
-            result['info'] = '失败'
-        if result['code'] == error_status:
-            commandexe = Command(tomcat_info.minion_id, 'test.ping')
-            test_result = commandexe.TestPing()[tomcat_info.minion_id]
-            if test_result == 'not return':
-                result['info'] = '请检查服务器是否存活'
 
-        print result['code'] + "    " + result['project'] + ":  " +  result['url']
-        #print "  %s" %result['code']
-        try:
-            ret = requests.post(server, data=json.dumps(result), timeout=3)
-        except requests.exceptions.ConnectionError:
-            insert = tomcat_status(
-                access_time = result['access_time'],
-                project     = result['project'],
-                domain      = result['domain'],
-                url         = result['url'],
-                code        = result['code'],
-                info        = result['info'],
-            )
-            insert.save()
-        if result['code'] not in code_list:
-            try:
-                result['server_type'] = tomcat_project.objects.filter(project=result['project']).first().server_type
-            except:
-                send_mail(['Arno@ag866.com'],'tomcat报警','%s project doesn\'t exists' %result['project'])
-                result['server_type'] = 'unknown'
-            content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['server_type'], result['domain'], result['url'], result['code'], result['info'])
-        #logger.info(MIMEText(str(result), 'utf-8'))
+        content_body = pool.apply_async(get_result, (result, tomcat_info, code_list, content_body, )).get()
+        #result['code'], result['info'] = get_result(result, tomcat_info, code_list)
+        
         if content_body != "":
             content = content_head + content_body + "</table></body></html>"
+    pool.close()
+    pool.join()
+    print "start at: " + start_time
+    print "end   at: " + time()
     return content
 
 def time():

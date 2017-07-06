@@ -109,7 +109,7 @@ def OpHistoryQuery(request):
             tmp_dict['ip_addr'] = info.ip_addr
             tmp_dict['act'] = info.act
             tmp_dict['op_time'] = info.op_time
-            tmp_dict['op_name'] = info.op_name
+            tmp_dict['op_user'] = info.op_user
             tmp_dict['op_ip_addr'] = info.op_ip_addr
             tmp_dict['op_status'] = info.op_status
             tmp_dict['envir'] = info.envir
@@ -226,7 +226,7 @@ def OpUpgradeDeploy(request):
             logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
             #request.websocket.send(json.dumps(data))
             
-            logger.info(dir(request.websocket))
+            #logger.info(dir(request.websocket))
             sleep(2)
             data['result'] =data['project'] + ": " + data['act'] + ' success!'
             op_record = op_history(
@@ -235,7 +235,7 @@ def OpUpgradeDeploy(request):
                 ip_addr = data['ip_addr'][data['step']],
                 act = data['act'],
                 op_time = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'),
-                op_name = username,
+                op_user = username,
                 op_ip_addr = clientip,
                 op_status = 1,
                 envir = data['envir'],

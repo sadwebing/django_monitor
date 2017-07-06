@@ -227,7 +227,7 @@ def QueryOpHistory(request):
             tmp_dict['id'] = data.id
             tmp_dict['op_time']   = data.op_time
             tmp_dict['op_user']   = data.op_user
-            tmp_dict['op_addr']   = data.op_addr
+            tmp_dict['op_ip_addr']   = data.op_ip_addr
             tmp_dict['op_type']   = data.op_type
             tmp_dict['op_before'] = data.op_before
             tmp_dict['op_after']  = data.op_after
@@ -262,7 +262,7 @@ def MalfunctionAdd(request):
         info.save()
         op_history_update(
             op_user = username,
-            op_addr = clientip,
+            op_ip_addr = clientip,
             op_type = '新增',
             op_before = 'null',
             op_after = '[%s], [%s], [%s]' %(data['record_time'], data['mal_details'], data['record_user']),
@@ -299,7 +299,7 @@ def MalfunctionUpdate(request):
         info.save()
         op_history_update(
             op_user = username,
-            op_addr = clientip,
+            op_ip_addr = clientip,
             op_type = '修改',
             op_before = op_before,
             op_after = '[%s], [%s], [%s], [%s], [%s], [%s], [%s], [%s]' %(data['record_time'], data['mal_details'], data['record_user'], data['mal_reasons'], data['mal_status'], data['recovery_time'], data['time_all'], data['handle_user']),
@@ -334,7 +334,7 @@ def MalfunctionDelete(request):
             info.delete()
             op_history_update(
                 op_user = username,
-                op_addr = clientip,
+                op_ip_addr = clientip,
                 op_type = '删除',
                 op_before = op_before,
                 op_after = 'null',
@@ -345,12 +345,12 @@ def MalfunctionDelete(request):
     else:
         return HttpResponse('nothing!')
 
-def op_history_update(op_user, op_addr, op_type, op_before, op_after):
+def op_history_update(op_user, op_ip_addr, op_type, op_before, op_after):
     op_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     info = mal_history(
         op_time = op_time,
         op_user = op_user,
-        op_addr = op_addr,
+        op_ip_addr = op_ip_addr,
         op_type = op_type,
         op_before = op_before,
         op_after = op_after,

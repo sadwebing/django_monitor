@@ -228,7 +228,7 @@ def DeployExe(request):
                     logger.info("%s 部署完成。" %data['module'])
                 request.websocket.send(json.dumps(info_final))
         ### close websocket ###
-        request.websocket.close()
+        #request.websocket.close()
 
 @csrf_protect
 @login_required

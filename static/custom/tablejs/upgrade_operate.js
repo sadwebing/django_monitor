@@ -340,6 +340,7 @@ var operate = {
                 postUpgradeDate.envir = obj_envir[i].value; 
             } 
         }
+        postUpgradeDate.restart = '';
         for(i=0;i<obj_restart.length;i++) { 
             if(obj_restart[i].checked) { 
                 postUpgradeDate.restart = obj_restart[i].value; 
@@ -493,7 +494,7 @@ var operate = {
             //console.log(data.step+" : "+postData.ip_addr.length)
             if (run){
                 if (data.step < postData.ip_addr.length - 1){
-                    console.log(postData);
+                    //console.log(postData);
                     socket.send(JSON.stringify(postData));
                 }else {
                     cur_status.innerHTML = args.content2;

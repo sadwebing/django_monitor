@@ -36,7 +36,7 @@ class op_history(models.Model):
     ip_addr = models.GenericIPAddressField(blank=False)
     act = models.CharField(max_length=20, blank=False)
     op_time = models.CharField(max_length=64, blank=False)
-    op_name = models.CharField(max_length=64, blank=False)
+    op_user = models.CharField(max_length=64, blank=False)
     op_ip_addr = models.GenericIPAddressField(blank=False)
     op_status = models.IntegerField(default=0)
     envir = models.CharField(max_length=10)

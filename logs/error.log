@@ -50118,3 +50118,21 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 366, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2017-07-06 17:48:19,127 base.py [django.request:256] [ERROR]- Internal Server Error: /malfunction/QueryOpHistory
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\clientservices\views.py", line 230, in QueryOpHistory
+    tmp_dict['op_addr']   = data.op_addr
+AttributeError: 'mal_history' object has no attribute 'op_addr'
+2017-07-06 17:52:27,796 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_history/Query
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 112, in OpHistoryQuery
+    tmp_dict['op_name'] = info.op_name
+AttributeError: 'op_history' object has no attribute 'op_name'

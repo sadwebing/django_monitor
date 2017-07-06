@@ -32,7 +32,7 @@ class SaltAPI(object):
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg}
         else:
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
-        ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
+        ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False, timeout=1800)
         #logger.info("%s: %s, %s" %(ret.status_code, ret.text, dir(ret)))
         if ret.status_code == 200:
             return ret.json()

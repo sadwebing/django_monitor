@@ -40,7 +40,7 @@ var tableInit = {
                     //width:'6%',
                     //align: 'center'
                 },{
-                    field: 'op_addr',
+                    field: 'op_ip_addr',
                     title: '用户地址',
                     sortable: true,
                     //width:'5%',
