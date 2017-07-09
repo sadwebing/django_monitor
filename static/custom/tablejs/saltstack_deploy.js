@@ -86,6 +86,10 @@ var operate = {
                 //console.log('WebSocket open');//成功连接上Websocket
                 socket.send(JSON.stringify(minion_id));//发送数据到服务端
             };
+            socket.onerror = function (){
+                alert('连接服务器失败，请重试！');
+                return false;
+            };
             socket.onmessage = function (e) {
                 data = eval('('+ e.data +')')
                 //console.log('message: ' + data);//打印服务端返回的数据
@@ -142,6 +146,11 @@ var operate = {
                 socket.send(JSON.stringify(postData))
             };
             $('#runprogress').modal('show');
+            socket.onerror = function (){
+                modal_head.innerHTML = "与服务器连接失败...";
+                $('#OperateDeployresults').append('<p>连接失败......</p>' );
+                setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
+            };
             if (postData.module == 'tomcat'){
                 $('#deploy_results').append('<p>模块: '+ postData.module +' - '+ postData.project +'<p>');
             }else {

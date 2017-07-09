@@ -228,6 +228,11 @@ var operate = {
                 socket.send(JSON.stringify(postData))
             };
             $('#runprogress').modal('show');
+            socket.onerror = function (){
+                modal_head.innerHTML = "与服务器连接失败...";
+                $('#OperateRestartresults').append('<p>连接失败......</p>' );
+                setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
+            };
             socket.onmessage = function (e) {
                 //return false;
                 data = eval('('+ e.data +')')
@@ -332,11 +337,19 @@ var operate = {
         modal_head.innerHTML = "操作进行中，请勿刷新页面......";
         $('#OperateRestartresults').append('<p>连接中......</p>' );
         var socket = new WebSocket("ws://" + window.location.host + "/saltstack/command/execute");
+
+        socket.onerror = function (){
+            modal_head.innerHTML = "与服务器连接失败...";
+            $('#OperateRestartresults').append('<p>连接失败......</p>' );
+            setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
+        };
+
         socket.onopen = function () {
             //console.log('WebSocket open');//成功连接上Websocket
             //socket.send($('#message').val());//发送数据到服务端
             socket.send(JSON.stringify(postData))
         };
+
         $('#runprogress').modal('show');
         socket.onmessage = function (e) {
             //return false;

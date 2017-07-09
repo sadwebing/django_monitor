@@ -1,13 +1,3 @@
-# django_monitor
-settings introdution:
-https://docs.djangoproject.com/en/1.10/ref/settings/
-logging setting
-https://docs.python.org/3/library/logging.html#logrecord-attributes
-Django后台中使用Celery计划任务
-http://www.jianshu.com/p/7085dcc70d0e
-
-bootstrap 2.3.2教程
-http://v2.bootcss.com/base-css.html#forms
-
-saltstack
-https://github.com/saltstack/salt/blob/develop/pkg/rpm/salt-minion
+20170709 django version 1.8.0
+20170709 web: H5 CSS JS BOOTSTRAP3 BOOTSTRAP-TABLE BOOTSTRAP-DATETIMEPICKER BOOTSTRAP-SELECT KNOCKOUT TOASTR TITATOGGLE-DIST SUI.NAV 
+20170709 update timeout to saltapi and add socket.onerror

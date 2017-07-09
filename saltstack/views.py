@@ -125,10 +125,9 @@ def CommandExecute(request):
             ### final step ###
             info_final = {}
             info_final['step'] = 'final'
-            logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
             arglist = ["runas=%s" %data['exe_user']]
             arglist.append(data['arguments'])
-            commandexe = Command(data['target'], data['function'], arglist, data['expr_form'])
+            commandexe = Command(data['target'], data['function'], arglist, data['expr_form'],)
             if data['function'] == 'test.ping':
                 info_final['results'] = commandexe.TestPing()
             elif data['function'] == 'cmd.run':
@@ -219,7 +218,7 @@ def DeployExe(request):
                 logger.info('部署参数：%s' %info_final)
                 info_final['minion_count'] += 1
                 if data['module'] == 'tomcat':
-                    commandexe = Command('WTT_100_109', 'cmd.run', '/srv/shell/install_tomcat.sh %s %s' %(minion_id, data['project']))
+                    commandexe = Command('WTT_100_109', 'cmd.run', '/srv/shell/install_tomcat.sh %s %s' %(minion_id, data['project']), 'glob', timeout=1200)
                     info_final['result'] = commandexe.CmdRun()['WTT_100_109']
                     logger.info("%s 部署完成。" %data['project'])
                 else:

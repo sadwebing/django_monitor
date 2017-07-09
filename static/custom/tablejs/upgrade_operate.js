@@ -241,9 +241,13 @@ window.operateEvents = {
             console.log('WebSocket open');//成功连接上Websocket
             //socket.send($('#message').val());//发送数据到服务端
         };
+        socket.onerror = function (){
+            alert('连接服务器失败，请重试！');
+            return false;
+        };
         socket.onmessage = function (e) {
             data = eval('('+ e.data +')')
-            console.log('message: ' + data.message);//打印服务端返回的数据
+            //console.log('message: ' + data.message);//打印服务端返回的数据
             $('#OperateUpgraderesults').append('<p>' + data.message + '</p>');
             var a = document.getElementById("progress_head");
             a.innerHTML = "操作进行中，请勿刷新页面......";
@@ -461,8 +465,6 @@ var operate = {
 
         //插入结果
         upgrade_progress_head.innerHTML="总共：<strong>"+postData.ip_addr.length+"</strong>台    "+"成功：<strong>"+postData.step+"</strong>台";
-        $('#upgrade_results').append('<p>执行动作:&thinsp;<strong>'+ postData.act +'</strong></p>');
-        $('#upgrade_results').append('<p>返回结果:</p>');
         
         if (postData.step == postData.ip_addr.length - 1){
             operate.disableButtons(['upgrade_interrupt'], true);
@@ -473,7 +475,16 @@ var operate = {
         var socket = new WebSocket("ws://" + window.location.host + "/upgrade/op_upgrade/deploy");
         socket.onopen = function () {
             //第一次发送数据
-            socket.send(JSON.stringify(postData))
+            socket.send(JSON.stringify(postData));
+            $('#upgrade_results').append('<p>执行动作:&thinsp;<strong>'+ postData.act +'</strong></p>');
+            $('#upgrade_results').append('<p>返回结果:</p>');
+        };
+        socket.onerror = function (){
+            modal_head_content.innerHTML = '与服务器连接失败...';
+            upgrade_progress_head.innerHTML = '与服务器连接失败...';
+            modal_head_close.innerHTML = "&times;";
+            operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
+            operate.disableButtons(['upgrade_interrupt'], true);
         };
         socket.onmessage = function (e) {
             //return false;

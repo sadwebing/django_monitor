@@ -172,8 +172,13 @@ window.operateStatusEvents = {
                 //tableInit.myViewModel.refresh();
             },
             error: function(msg){
+                if (postData.status == 'active'){
+                    document.getElementById(row.id).checked = false;
+                }else {
+                    document.getElementById(row.id).checked = true;
+                }
                 alert("失败，请检查日志！");
-                tableInit.myViewModel.refresh();
+                //tableInit.myViewModel.refresh();
             }
         });
         return false;
@@ -190,6 +195,7 @@ window.operateEvents = {
         };
         modal_results.innerHTML = "";
         modal_footer.innerHTML = "";
+        document.getElementById('progress_bar_div').hidden = false;
         $("#progress_bar").css("width", "30%");
         modal_head.style.color = 'blue';
         modal_head.innerHTML = "操作进行中，请勿刷新页面......";
@@ -199,6 +205,11 @@ window.operateEvents = {
             socket.send(JSON.stringify(postData));
         };
         $('#runprogress').modal('show');
+        socket.onerror = function (){
+            modal_head.innerHTML = "与服务器连接失败...";
+            $('#Checkresults').append('<p>连接失败......</p>' );
+            setTimeout(function(){$('#runprogress').modal('hide');}, 1000);
+        };
         socket.onmessage = function (e) {
             data = eval('('+ e.data +')')
             //console.log('message: ' + data);//打印服务端返回的数据
@@ -217,6 +228,7 @@ window.operateEvents = {
                 $('#Checkresults').append('<p> 检测时间:&thinsp;<strong>' + data.access_time + '</strong></p>' );
                 $('#Checkresults').append('<p> 检测状态:&thinsp;<strong>' + data.code + '</strong></p>' );
                 $('#Checkresults').append('<p> 备注:&thinsp;<strong>' + data.info + '</strong></p>' );
+                setTimeout("document.getElementById('progress_bar_div').hidden = true;", 1000)
                 //console.log('websocket已关闭');
                 modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
             }
@@ -227,7 +239,8 @@ window.operateEvents = {
 
 window.operateMailEvents = {
     'click .update_mail_status': function (e, value, row, index) {
-        var program = event.target.id.replace(/[0-9]+_/g, "");
+        var check_id = event.target.id
+        var program = check_id.replace(/[0-9]+_/g, "");
         var postData = {
             id:row.id,
             program:program,
@@ -256,6 +269,11 @@ window.operateMailEvents = {
                 row[program] = postData[program];
             },
             error: function(msg){
+                if (postData[program] == 1){
+                    document.getElementById(check_id).checked = false;
+                }else {
+                    document.getElementById(check_id).checked = true;
+                }
                 alert("失败，请检查日志！");
                 //tableInit.myViewModel.refresh();
             }
@@ -415,6 +433,11 @@ var operate = {
                     }
                 },
                 error: function(msg){
+                    if (apostData['status'] == 1){
+                        document.getElementById(apostData['program']).checked = false;
+                    }else {
+                        document.getElementById(apostData['program']).checked = true;
+                    }
                     alert("失败，请检查日志！");
                     //tableInit.myViewModel.refresh();
                 }

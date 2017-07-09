@@ -140,8 +140,13 @@ window.operateEvents = {
                 //tableInit.myViewModel.refresh();
             },
             error: function(msg){
+                if (postData.status == 'active'){
+                    document.getElementById(row.id).checked = false;
+                }else {
+                    document.getElementById(row.id).checked = true;
+                }
                 alert("失败，请检查日志！");
-                tableInit.myViewModel.refresh();
+                //tableInit.myViewModel.refresh();
             }
         });
         return false;

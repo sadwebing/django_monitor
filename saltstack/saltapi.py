@@ -27,17 +27,23 @@ class SaltAPI(object):
         ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False)
         return ret.json()['return']
 
-    def ClientLocal(self, tgt, fun, arg, expr_form='list'):
+    def ClientLocal(self, tgt, fun, arg, expr_form='list', timeout=300):
         if tgt == '*':
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg}
         else:
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
-        ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False, timeout=1800)
-        #logger.info("%s: %s, %s" %(ret.status_code, ret.text, dir(ret)))
-        if ret.status_code == 200:
-            return ret.json()
+        try:
+            ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False, timeout=timeout)
+        except requests.exceptions.ReadTimeout:
+            logger.info("saltapi:ClientLocal, ReadTimeout! timeout: %s s" %timeout)
+            return {u'return': [{}], u'status_code': 504}
         else:
-            return False
+            if ret.status_code == 200:
+                results = ret.json()
+                results['status_code'] = ret.status_code
+                return results
+            else:
+                return {u'return': [{}], u'status_code': ret.status_code}
 
     def MinionStatus(self):
         params = {"client":"runner","fun":"manage.status"}

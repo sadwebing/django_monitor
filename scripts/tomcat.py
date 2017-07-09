@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 #-_- coding:utf-8 -_-
+#author: Arno
+#update: 2017/07/07 add multiprocessing pool
 import re,os,sys,smtplib,requests,datetime,logging,multiprocessing
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 from time import sleep
@@ -130,7 +132,6 @@ def check_tomcat():
     pool = multiprocessing.Pool(processes=25)
     url_all = tomcat_url.objects.filter(status='active').all()
     code_list = ['200', '302', '303', '405']
-    start_time = time()
     for tomcat_info in url_all:
         global result
         result = {}
@@ -146,8 +147,6 @@ def check_tomcat():
             content = content_head + content_body + "</table></body></html>"
     pool.close()
     pool.join()
-    print "start at: " + start_time
-    print "end   at: " + time()
     return content
 
 def time():
