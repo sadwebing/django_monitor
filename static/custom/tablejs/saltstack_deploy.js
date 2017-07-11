@@ -171,7 +171,7 @@ var operate = {
                     if (data.result == ""){
                         $('#OperateDeployresults').append('<p>Minion ID: '+ data.minion_id +'</p>');
                         $('#OperateDeployresults').append('<p>模块: '+ data.module +'</p>');
-                        if (! data.project == ""){
+                        if (! data.project == "" && data.module == 'tomcat'){
                             $('#OperateDeployresults').append('<p>项目: '+ data.project +'</p>');
                         }
                         $('#OperateDeployresults').append('<p>部署中......</p>');

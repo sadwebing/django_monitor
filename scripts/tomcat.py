@@ -2,6 +2,8 @@
 #-_- coding:utf-8 -_-
 #author: Arno
 #update: 2017/07/07 add multiprocessing pool
+#        2017/07/11 optimize send_mail
+
 import re,os,sys,smtplib,requests,datetime,logging,multiprocessing
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 from time import sleep
@@ -31,11 +33,11 @@ def send_mail(to_list,sub,content,format=''):
         smtp = smtplib.SMTP()
         smtp.connect('localhost')
         smtp.sendmail(sender, to_list, msg.as_string())
-        logger.info('[success]mail from %s, mail to %s, %s' %(sender, to_list, content))
+        logger.info('[success]mail from %s, mail to %s \n%s' %(sender, to_list, content))
         smtp.quit()
         return True
     except Exception, e:
-        logger.error('[failed]mail from %s, mail to %s, %s' %(sender, to_list, content))
+        logger.error('[failed]mail from %s, mail to %s \n%s' %(sender, to_list, content))
         return False
 
 def get_mail_list(program):

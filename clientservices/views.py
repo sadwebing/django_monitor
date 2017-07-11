@@ -90,7 +90,7 @@ def OpHistory(request):
         role = request.user.userprofile.role
     except:
         role = 'none'
-    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+    logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
         'malfunction/op_history.html',

@@ -25,7 +25,7 @@ def GetProjectActive(request):
             tmpdict['product'] = data.product
             tmpdict['project'] = data.project
             projectlist.append(tmpdict)
-        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), projectlist))
+        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
         return HttpResponse(json.dumps(projectlist))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
@@ -53,7 +53,7 @@ def GetProjectServers(request):
                 tmpdict['envir'] = data.envir
                 serverlist.append(tmpdict)
             server_dict[project] = serverlist
-        logger.info('%s is requesting. %s: %s' %(clientip, request.get_full_path(), server_dict))
+        logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
         return HttpResponse(json.dumps(server_dict))
     elif request.method == 'GET':
         return HttpResponse('You get nothing!')
