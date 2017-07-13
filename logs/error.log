@@ -50761,3 +50761,52 @@ Traceback (most recent call last):
   File "D:\django\monitor\monitor\upgrade\upgrade.py", line 59, in Excute
     ip_addr    = self.__data['ip_addr'][data['step']-1],
 NameError: global name 'data' is not defined
+2017-07-13 18:14:38,112 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 8, in <module>
+    from upgrade import Upgrade
+  File "D:\django\monitor\monitor\upgrade\upgrade.py", line 70
+    except:
+         ^
+IndentationError: expected an indented block
+2017-07-13 18:52:26,921 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError! timeout: 1200 s
+2017-07-13 18:53:00,835 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError! timeout: 1200 s
+2017-07-13 20:21:34,283 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:30:07,459 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:38:10,664 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:38:11,671 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, ConnectionError!
+2017-07-13 20:38:12,700 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, ConnectionError!
+2017-07-13 20:38:27,941 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:39:00,282 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:47:11,979 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:47:11,980 upgrade.py [django:73] [ERROR]- insert into upgrade_op_history failed: {'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'op_status': 0, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': 'getfile', 'clientip': '127.0.0.1', u'restart': u'true', 'result': 'InsertRecordError'}
+2017-07-13 20:47:33,466 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:57:19,463 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 21:11:12,036 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 21:12:33,006 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 21:12:33,006 upgrade.py [django:70] [ERROR]- insert into upgrade_op_history failed: {'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'op_status': 0, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': 'getfile', 'clientip': '127.0.0.1', u'restart': u'true', 'result': 'InsertRecordError'}
+2017-07-13 21:12:42,040 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!

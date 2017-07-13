@@ -38,7 +38,7 @@ class SaltAPI(object):
             logger.info("saltapi:ClientLocal, ReadTimeout! timeout: %s s" %timeout)
             return {u'return': [{}], u'status_code': 504}
         else:
-            logger.info('%s %s: %s'%(tgt, arg, ret.status_code))
+            logger.info('%s "%s": %s'%(tgt, arg, ret.status_code))
             if ret.status_code == 200:
                 results = ret.json()
                 results['status_code'] = ret.status_code

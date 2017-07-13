@@ -8510,3 +8510,140 @@ NameError: global name 'data' is not defined
 2017-07-13 16:57:18,335 upgrade.py [django:52] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, deploy success!
 2017-07-13 16:58:20,394 views.py [django:93] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/op_history/Query
 2017-07-13 16:58:20,395 views.py [django:105] [INFO]- 查询参数：query_all
+2017-07-13 17:06:15,776 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 17:06:18,709 upgrade.py [django:49] [INFO]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, getfile success!
+2017-07-13 17:06:18,710 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 17:06:21,460 upgrade.py [django:49] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, deploy success!
+2017-07-13 17:06:28,224 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'rollback', u'restart': u'true'}
+2017-07-13 17:06:29,515 upgrade.py [django:49] [INFO]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, getfile success!
+2017-07-13 17:06:29,517 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'rollback', u'restart': u'true'}
+2017-07-13 17:06:32,352 upgrade.py [django:49] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=rollback&restart=true, rollback success!
+2017-07-13 18:13:34,278 views.py [django:48] [INFO]- 127.0.0.1 is requesting /
+2017-07-13 18:13:37,035 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-07-13 18:13:37,234 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-13 18:13:37,236 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-07-13 18:13:37,923 views.py [django:174] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-13 18:13:37,943 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-13 18:13:39,269 views.py [django:40] [INFO]- {"project":["CONF-READER"]}
+2017-07-13 18:13:39,976 views.py [django:56] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-13 18:14:38,112 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 8, in <module>
+    from upgrade import Upgrade
+  File "D:\django\monitor\monitor\upgrade\upgrade.py", line 70
+    except:
+         ^
+IndentationError: expected an indented block
+2017-07-13 18:15:18,657 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-07-13 18:15:19,694 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-07-13 18:15:24,408 views.py [django:93] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/op_history/Query
+2017-07-13 18:15:24,410 views.py [django:105] [INFO]- 查询参数：query_all
+2017-07-13 18:22:56,532 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-07-13 18:22:57,530 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-07-13 18:46:36,951 views.py [django:48] [INFO]- 127.0.0.1 is requesting /
+2017-07-13 18:46:36,969 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=false', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'false'}
+2017-07-13 18:46:36,970 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=false', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'false'}
+2017-07-13 18:46:39,265 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-07-13 18:46:39,394 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-13 18:46:39,395 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-07-13 18:46:40,062 views.py [django:174] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-13 18:46:40,078 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-13 18:46:41,233 views.py [django:40] [INFO]- {"project":["CONF-READER"]}
+2017-07-13 18:46:41,882 views.py [django:56] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-13 18:46:45,407 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 18:46:46,418 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 18:48:30,789 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 18:48:31,799 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 18:49:04,540 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 18:52:25,911 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 18:52:26,921 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError! timeout: 1200 s
+2017-07-13 18:52:59,826 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 18:53:00,835 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError! timeout: 1200 s
+2017-07-13 20:21:33,278 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:21:34,283 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:30:06,451 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:30:07,459 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:31:35,095 views.py [django:93] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/op_history/Query
+2017-07-13 20:31:35,096 views.py [django:105] [INFO]- 查询参数：query_all
+2017-07-13 20:38:09,653 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:38:10,664 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:38:10,665 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:38:11,305 views.py [django:48] [INFO]- 127.0.0.1 is requesting /
+2017-07-13 20:38:11,671 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, ConnectionError!
+2017-07-13 20:38:11,677 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'op_status': 0, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'true', 'result': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true ConnectionError'}
+2017-07-13 20:38:12,700 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, ConnectionError!
+2017-07-13 20:38:13,456 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-07-13 20:38:14,578 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-13 20:38:14,578 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-07-13 20:38:15,226 views.py [django:174] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-13 20:38:15,240 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-13 20:38:18,302 views.py [django:93] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/op_history/Query
+2017-07-13 20:38:18,303 views.py [django:105] [INFO]- 查询参数：query_all
+2017-07-13 20:38:22,328 views.py [django:40] [INFO]- {"project":["CONF-READER"]}
+2017-07-13 20:38:22,983 views.py [django:56] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-13 20:38:26,920 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:38:27,941 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:38:59,273 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:39:00,282 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:47:10,970 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:47:11,979 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:47:11,980 upgrade.py [django:73] [ERROR]- insert into upgrade_op_history failed: {'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'op_status': 0, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': 'getfile', 'clientip': '127.0.0.1', u'restart': u'true', 'result': 'InsertRecordError'}
+2017-07-13 20:47:32,436 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:47:33,466 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 20:57:18,459 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 20:57:19,463 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 21:08:30,398 views.py [django:48] [INFO]- 127.0.0.1 is requesting /
+2017-07-13 21:08:32,631 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-07-13 21:08:32,747 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-13 21:08:32,750 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-07-13 21:08:33,459 views.py [django:174] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-13 21:08:33,502 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-13 21:10:00,726 views.py [django:48] [INFO]- 127.0.0.1 is requesting /
+2017-07-13 21:10:03,167 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-07-13 21:10:03,299 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-13 21:10:03,302 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-07-13 21:10:04,086 views.py [django:174] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-13 21:10:04,631 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-13 21:10:24,628 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-07-13 21:10:25,688 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1499951400829
+2017-07-13 21:10:38,713 views.py [django:93] [INFO]- 127.0.0.1 is requesting. /malfunction/op_history
+2017-07-13 21:10:39,542 views.py [django:224] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryOpHistory?limit=10&offset=0&_=1499951400830
+2017-07-13 21:10:59,174 views.py [django:243] [INFO]- 127.0.0.1 is requesting.
+2017-07-13 21:11:00,296 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-13 21:11:01,267 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-13 21:11:01,269 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-07-13 21:11:02,187 views.py [django:28] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-13 21:11:03,313 views.py [django:174] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-13 21:11:04,187 views.py [django:40] [INFO]- {"project":["CONF-READER"]}
+2017-07-13 21:11:04,937 views.py [django:56] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-13 21:11:11,005 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 21:11:12,036 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 21:12:31,990 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 21:12:33,006 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-13 21:12:33,006 upgrade.py [django:70] [ERROR]- insert into upgrade_op_history failed: {'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'op_status': 0, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': 'getfile', 'clientip': '127.0.0.1', u'restart': u'true', 'result': 'InsertRecordError'}
+2017-07-13 21:12:41,026 views.py [django:230] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-07-13 21:12:42,040 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!

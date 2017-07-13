@@ -216,12 +216,13 @@ var tableInit = {
         var status = row.cur_status;
         var content = "";
         if (status == 'undone'){
-            content = '<span style="background-color: grey">未升级</span>';
+            content = '<span style="background-color: #FF0000">未升级</span>';
             return content;
         }else if(status == 'done'){
-            return "已升级";
+            content = '<span style="background-color: #32CD32">已升级</span>';
+            return content;
         }else if(status == 'rollback'){
-            content = '<span style="background-color: #FF6347">已回退</span>';
+            content = '<span style="background-color: #FFD700">已回退</span>';
             return content;
         }else {
             return "未定义";
@@ -495,10 +496,15 @@ var operate = {
                 operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
                 $('#upgrade_results').append('<p>传入参数错误，请检查服务！</p>');
                 return false;
+            }else if (data.op_status == 0){
+                modal_head_close.innerHTML = "&times;"
+                operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
+                $('#upgrade_results').append('<p>错误：'+ data.result +'</p>');
+                return false;
             }
 
             if (data.act == 'getfile'){
-                if (data.result == 'ReadTimeout' || data.result == 'UnknownError'){
+                if (data.result == 'ReadTimeout' || data.result == 'UnknownError' || data.result == 'ConnectionError' || data.result == 'InsertRecordError'){
                     modal_head_close.innerHTML = "&times;"
                     $('#upgrade_results').append('<p>获取svn版本文件: '+ data.result +'</p>');
                     operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
