@@ -489,6 +489,28 @@ var operate = {
         socket.onmessage = function (e) {
             //return false;
             data = eval('('+ e.data +')')
+
+            if (data.op_status == -1){
+                modal_head_close.innerHTML = "&times;"
+                operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
+                $('#upgrade_results').append('<p>传入参数错误，请检查服务！</p>');
+                return false;
+            }
+
+            if (data.act == 'getfile'){
+                if (data.result == 'ReadTimeout' || data.result == 'UnknownError'){
+                    modal_head_close.innerHTML = "&times;"
+                    $('#upgrade_results').append('<p>获取svn版本文件: '+ data.result +'</p>');
+                    operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
+                    return false;
+                }else {
+                    $('#upgrade_results').append('<p>获取svn版本文件: 成功</p>');
+                    postData.step = postData.step + 1;
+                    socket.send(JSON.stringify(postData));
+                    return false;
+                }
+            }
+
             var button = ""
             var button_html = "";
             //console.log('ip_addr: ' + data.ip_addr);//打印服务端返回的数据
@@ -499,12 +521,12 @@ var operate = {
                 operate.disableButtons(['upgrade_interrupt'], true);
             }
             $("#upgrade_progress_bar").css("width", width);
-            $('#upgrade_results').append('<p><strong>'+data.ip_addr[data.step]+'</strong></p>');
+            $('#upgrade_results').append('<p><strong>'+data.ip_addr[data.step-1]+'</strong></p>');
             $('#upgrade_results').append('<pre class="pre-scrollable"><xmp>'+data.result+'</xmp></pre>',)
-            upgrade_progress_head.innerHTML="总共：<strong>"+postData.ip_addr.length+"</strong>台    "+"成功：<strong>"+(data.step+1)+"</strong>台";
+            upgrade_progress_head.innerHTML="总共：<strong>"+postData.ip_addr.length+"</strong>台    "+"成功：<strong>"+(data.step)+"</strong>台";
             //console.log(data.step+" : "+postData.ip_addr.length)
             if (run){
-                if (data.step < postData.ip_addr.length - 1){
+                if (data.step <= postData.ip_addr.length - 1){
                     //console.log(postData);
                     socket.send(JSON.stringify(postData));
                 }else {

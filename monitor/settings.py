@@ -38,6 +38,8 @@ ALLOWED_HOSTS = ['192.168.100.107', '43.241.204.107', '10.11.15.218', '192.168.1
 
 LOGIN_REDIRECT_URL = '/tomcat/index/'
 
+UPGRADE_API = 'http://10.252.252.98/api'
+
 #LOGIN_URL = '/admin/login/'
 LOGIN_URL = '/accounts/login'
 

@@ -3,6 +3,7 @@
 #author: Arno
 #update: 2017/07/08  add multiprocessing
 #        2017/07/11  add check_salt_intrm
+#        2017/07/12  optimize check_server_status
 
 import os,sys,datetime,logging,multiprocessing,requests
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -15,6 +16,7 @@ from monitor import settings
 from ctypes import c_char_p
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+admin_mail_addr = ['Arno@ag866.com']
 
 salt_intrm = 'http://172.20.0.61:8080'
 salt_intrm_id = 'EST_0_61'
@@ -54,15 +56,15 @@ def check_salt_intrm_false(salt_intrm_id, salt_intrm, status_code):
     else:
         logger.error('%s status is down.' %salt_intrm_id)
         salt_intrm_id_status = 'not return'
-    mail_content = '''\
--------------------------------------------------
-检测时间: %s
-检测服务: %s
-检测状态: %s
-%s: %s
--------------------------------------------------
-    ''' %(time(), salt_intrm, status_code, salt_intrm_id, salt_intrm_id_status)
-    send_mail(['Arno@ag866.com'], 'Attention: salt_intrm', mail_content)
+    mail_content = (
+        "-------------------------------------------------\n"
+        "检测时间: %s\n"
+        "检测服务: %s\n"
+        "检测状态: %s\n"
+        "%s: %s\n"
+        "-------------------------------------------------"
+        )%(time(), salt_intrm, status_code, salt_intrm_id, salt_intrm_id_status)
+    send_mail(admin_mail_addr, 'Attention: salt_intrm check failed!', mail_content)
 
 def check_salt_intrm():
     try:
@@ -86,13 +88,35 @@ if __name__ == '__main__':
     start_time = time()
     end_time = multiprocessing.Manager().dict()
     if not check_server_status():
+        mail_content = (
+            "-------------------------------------------------\n"
+            "检测时间: %s\n"
+            "检测服务: %s\n"
+            "检测状态: %s\n"
+            "-------------------------------------------------\n"
+            )%(time(), server, '失败')
         os.system('nohup python %s/manage.py runserver 0.0.0.0:5000 &' %basedir)
-        send_mail(['Arno@ag866.com'], '%s Server Down!' %server, "%s %s 不可用！" %(time(), server))
-        logger.error('%s 不可用！' %server)
-        sleep(3)
+        #send_mail(admin_mail_addr, 'Attention: django_server is down!', mail_content)
+        mail_content = mail_content + (
+                "尝试重启服务......\n"
+                "重启时间: %s\n"
+            )%time()
+        sleep(4)
         if not check_server_status():
-            send_mail(['Arno@ag866.com'], '%s Server is unable to start, pls check!' %server, "%s %s 服务起不来！" %(time(), server))
+            mail_content = mail_content + (
+                    "检测状态: 失败\n"
+                    "-------------------------------------------------"
+                )
+            send_mail(admin_mail_addr, 'Attention: django_server is down!', mail_content)
             logger.error('%s %s 服务起不来！' %(time(), server))
+        else:
+            mail_content = mail_content + (
+                    "检测状态: 成功\n"
+                    "-------------------------------------------------"
+                )
+            send_mail(admin_mail_addr, 'Attention: django_server restarted!', mail_content)
+            logger.error('%s %s 服务起不来！' %(time(), server))
+
     #multiprocessing two processes
     pw1 = multiprocessing.Process(target=check_services_fun, args=())
     pw2 = multiprocessing.Process(target=check_salt_minion_fun, args=())

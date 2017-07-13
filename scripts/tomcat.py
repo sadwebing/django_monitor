@@ -42,12 +42,7 @@ def send_mail(to_list,sub,content,format=''):
 
 def get_mail_list(program):
     mail_list = []
-    if program == 'check_services':
-        datas = mail.objects.filter(check_services=1).all()
-    elif program == 'check_salt_minion':
-        datas = mail.objects.filter(check_salt_minion=1).all()
-    else:
-        return mail_list
+    datas = mail.objects.raw('select * from check_tomcat_mail where %s=1;' %program)
     for data in datas:
         mail_list.append(data.mail_address)
     return mail_list
@@ -165,6 +160,7 @@ def check_server_status():
     except requests.exceptions.ConnectionError:
         record = server_status(access_time=time(), url=server, status=error_status, info='null')
         record.save()
+        logger.error('%s check failed.' %server)
         return False
 
 if __name__ == '__main__':

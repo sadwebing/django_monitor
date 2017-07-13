@@ -5,15 +5,19 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib.auth.decorators import login_required
 from django.views.generic import View
 from monitor import settings
+from upgrade import Upgrade
 #from check_tomcat.models import tomcat_project, tomcat_url
 from models import upgrade_op, upgrade_cur_svn, svn_id, op_history
 from check_tomcat.models import tomcat_project
 from saltstack.saltapi import SaltAPI
-import json, logging, numpy, datetime
+import json, logging, numpy, datetime, requests
 from time import sleep
 from dwebsocket import require_websocket, accept_websocket
+
 logger = logging.getLogger('django')
-       
+deploy_api = 'http://10.252.252.98/api'
+
+
 @csrf_exempt
 @require_websocket
 def OperateUpgrade(request):
@@ -116,7 +120,7 @@ def OpHistoryQuery(request):
             tmp_dict['info'] = info.info
 
             svn_list.append(tmp_dict)
-        logger.info(svn_list)
+        #logger.info(svn_list)
         return HttpResponse(json.dumps(svn_list))
         #return HttpResponse('You get nothing!')
     else:
@@ -226,13 +230,19 @@ def OpUpgradeDeploy(request):
             logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
             #request.websocket.send(json.dumps(data))
             
-            #logger.info(dir(request.websocket))
-            sleep(2)
-            data['result'] =data['project'] + ": " + data['act'] + ' success!'
+            exe = Upgrade(data, username, clientip)
+            if exe:
+                request.websocket.send(json.dumps(exe.Excute()))
+            else:
+                data['op_status'] = -1
+                data['result']    = 'none'
+                request.websocket.send(json.dumps(data))
+            continue
+
             op_record = op_history(
                 svn_id = data['svn_id'],
                 project = data['project'],
-                ip_addr = data['ip_addr'][data['step']],
+                ip_addr = data['ip_addr'][data['step']-1],
                 act = data['act'],
                 op_time = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'),
                 op_user = username,

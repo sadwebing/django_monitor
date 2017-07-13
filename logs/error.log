@@ -50517,3 +50517,247 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 366, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2017-07-13 12:56:41,480 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 251
+    continue
+SyntaxError: 'continue' not supported inside 'finally' clause
+2017-07-13 12:57:21,332 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 12, in <module>
+    import json, logging, numpy, datetime, request
+ImportError: No module named request
+2017-07-13 12:57:51,457 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 240, in OpUpgradeDeploy
+    logger.error("%s: %s, getfile ReadTimeout! timeout: %s s" %(deploy_api, api_params, timeout))
+NameError: global name 'timeout' is not defined
+2017-07-13 13:00:05,743 views.py [django:241] [ERROR]- http://10.252.252.98/api: {'project': u'B79_WEB_V3', 'svn_id': u'svn_10040', 'act': 'getfile'}, getfile ReadTimeout! timeout: 10 s
+2017-07-13 13:00:27,625 views.py [django:241] [ERROR]- http://10.252.252.98/api: {'project': u'B79_WEB_V3', 'svn_id': u'svn_10040', 'act': 'getfile'}, getfile ReadTimeout! timeout: 10 s
+2017-07-13 13:40:23,092 views.py [django:247] [ERROR]- http://10.252.252.98/api: {'project': u'B79_WEB_V3', 'svn_id': u'svn_10040', 'act': 'getfile'}, getfile success!
+2017-07-13 13:40:23,094 views.py [django:247] [ERROR]- http://10.252.252.98/api: {'project': u'B79_WEB_V3', 'svn_id': u'svn_10040', 'act': 'getfile'}, getfile success!
+2017-07-13 13:40:55,348 views.py [django:247] [ERROR]- http://10.252.252.98/api: {'project': u'CONF-READER', 'svn_id': u'608', 'act': 'getfile'}, getfile success!
+2017-07-13 13:40:55,351 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 258, in OpUpgradeDeploy
+    ip_addr = data['ip_addr'][data['step']],
+IndexError: list index out of range
+2017-07-13 13:41:48,536 views.py [django:247] [ERROR]- http://10.252.252.98/api: {'project': u'CONF-READER', 'svn_id': u'608', 'act': 'getfile'}, getfile success!
+2017-07-13 13:42:05,418 views.py [django:247] [ERROR]- http://10.252.252.98/api: {'project': u'CONF-READER', 'svn_id': u'608', 'act': 'getfile'}, getfile success!
+2017-07-13 13:58:02,882 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 235, in OpUpgradeDeploy
+    getfile_api = deploy_api + '?project=%s&act=%s&svn_id=%s' %(data['project'], data['act'], data['svn_id'])
+UnboundLocalError: local variable 'deploy_api' referenced before assignment
+2017-07-13 14:00:23,963 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 260, in OpUpgradeDeploy
+    logger.error("%s, UnknownError!" %(upgrade_api, api_params))
+NameError: global name 'api_params' is not defined
+2017-07-13 14:02:00,476 views.py [django:260] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, UnknownError!
+2017-07-13 14:04:40,105 views.py [django:260] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=true, UnknownError!
+2017-07-13 14:04:50,509 views.py [django:260] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=false, UnknownError!
+2017-07-13 14:05:09,914 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 255, in OpUpgradeDeploy
+    deploy_ret = requests.get(upgrade_api, timeout=timeout)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\adapters.py", line 473, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+2017-07-13 14:15:01,582 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 255, in OpUpgradeDeploy
+    deploy_ret = requests.get(upgrade_api, timeout=timeout)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\adapters.py", line 473, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+2017-07-13 14:18:30,453 views.py [django:239] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ReadTimeout! timeout: 120 s
+2017-07-13 14:20:48,766 views.py [django:239] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ReadTimeout! timeout: 120 s
+2017-07-13 15:52:24,894 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 282
+    op_status = data['op_status'] = 0,
+                                  ^
+SyntaxError: invalid syntax
+2017-07-13 15:52:43,617 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 34, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 282
+    op_status = data['op_status'] = 0,
+                                  ^
+SyntaxError: invalid syntax
+2017-07-13 16:41:03,286 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 233, in OpUpgradeDeploy
+    exe = Upgrade(data, username, clientip)
+TypeError: __init__() should return None, not 'bool'
+2017-07-13 16:44:10,381 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/op_upgrade/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 235, in OpUpgradeDeploy
+    request.websocket.send(json.dumps(exe.Excute()))
+  File "D:\django\monitor\monitor\upgrade\upgrade.py", line 59, in Excute
+    ip_addr    = self.__data['ip_addr'][data['step']-1],
+NameError: global name 'data' is not defined

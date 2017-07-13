@@ -35,6 +35,8 @@ var tableInit = {
             var content = '成功';
         }else if (row.op_status == 0){
             var content = '失败';
+        }else if (row.op_status == -1){
+            var content = '参数错误';
         }else {
             var content = '未知';
         }
