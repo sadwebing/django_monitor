@@ -50810,3 +50810,5 @@ IndentationError: expected an indented block
 2017-07-13 21:12:33,006 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
 2017-07-13 21:12:33,006 upgrade.py [django:70] [ERROR]- insert into upgrade_op_history failed: {'username': u'arno', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608', u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], 'op_status': 0, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': 'getfile', 'clientip': '127.0.0.1', u'restart': u'true', 'result': 'InsertRecordError'}
 2017-07-13 21:12:42,040 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-14 14:13:16,996 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-14 16:34:50,506 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!

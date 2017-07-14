@@ -63,11 +63,11 @@ class Upgrade(object):
                     info       = self.__data['result'],
                     op_time    = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'),
                     )
-                op_record.save()
+                #op_record.save()
             except:
                 self.__data['result'] = 'InsertRecordError'
                 self.__data['op_status'] = 0
                 logger.error('insert into upgrade_op_history failed: %s' %self.__data)
-                raise
+                logger.error()
             finally:
                 return self.__data

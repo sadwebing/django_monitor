@@ -175,10 +175,13 @@ def UrlCheckServer(request):
                     exe_result = commandexe.CmdRun()[datas['target']]
                     #logger.info("exe_result: %s" %exe_result)
                     if exe_result == '':
-                        info_final['code'] = 'null'
+                        result['code'] = error_status
+                    elif exe_result == 'not return':
+                        result['code'] = exe_result
+                        result['info'] = '请检查服务器是否存活'
                     else:
-                        info_final['code'] = '200'
-                        info_final['info'] = '正常'
+                        result['code'] = '200'
+                        result['info'] = '正常'
                     #logger.info(info_final)
                 else:
                     ret = requests.head(data['url'], headers={'Host': data['domain']}, timeout=10)

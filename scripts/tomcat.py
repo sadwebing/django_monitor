@@ -3,6 +3,7 @@
 #author: Arno
 #update: 2017/07/07 add multiprocessing pool
 #        2017/07/11 optimize send_mail
+#        2017/07/13 update check app server
 
 import re,os,sys,smtplib,requests,datetime,logging,multiprocessing
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -59,7 +60,10 @@ def get_result(result, tomcat_info, code_list, content_body):
             commandexe = Command(datas['target'], datas['function'], datas['arguments'], datas['expr_form'])
             exe_result = commandexe.CmdRun()[datas['target']]
             if exe_result == '':
-                result['code'] = 'null'
+                result['code'] = error_status
+            elif exe_result == 'not return':
+                result['code'] = exe_result
+                result['info'] = '请检查服务器是否存活'
             else:
                 result['code'] = '200'
                 result['info'] = '正常'
@@ -85,6 +89,7 @@ def get_result(result, tomcat_info, code_list, content_body):
         commandexe = Command(tomcat_info.minion_id, 'test.ping')
         test_result = commandexe.TestPing()[tomcat_info.minion_id]
         if test_result == 'not return':
+            result['code'] == test_result
             result['info'] = '请检查服务器是否存活'
     print result['code'] + "    " + result['project'] + ":  " +  result['url']
     #print "  %s" %result['code']

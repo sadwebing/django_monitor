@@ -35,7 +35,7 @@ class SaltAPI(object):
         try:
             ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False, timeout=timeout)
         except requests.exceptions.ReadTimeout:
-            logger.info("saltapi:ClientLocal, ReadTimeout! timeout: %s s" %timeout)
+            #logger.info("saltapi:ClientLocal, ReadTimeout! timeout: %s s" %timeout)
             return {u'return': [{}], u'status_code': 504}
         else:
             logger.info('%s "%s": %s'%(tgt, arg, ret.status_code))
