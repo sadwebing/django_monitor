@@ -9,6 +9,7 @@ from saltstack.saltapi import SaltAPI
 from dwebsocket import require_websocket, accept_websocket
 from command import Command
 import json, logging, time
+from accounts.limit import LimitAccess
 
 logger = logging.getLogger('django')
 
@@ -243,7 +244,7 @@ def command(request):
     logger.info('%s is requesting.' %clientip)
     return render(
         request,
-        'saltstack/saltstack_index.html',
+        LimitAccess(role, 'saltstack/saltstack_index.html'),
         {
             'clientip':clientip,
             'title': title,
@@ -267,7 +268,7 @@ def deploy(request):
     logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'saltstack/saltstack_deploy.html',
+        LimitAccess(role, 'saltstack/saltstack_deploy.html'),
         {
             'clientip':clientip,
             'title': title,
@@ -291,7 +292,7 @@ def Id(request):
     logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'saltstack/saltstack_id.html',
+        LimitAccess(role, 'saltstack/saltstack_id.html'),
         {
             'clientip':clientip,
             'title': title,

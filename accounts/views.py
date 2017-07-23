@@ -12,27 +12,20 @@ from django.contrib.auth import (
     REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
     logout as auth_logout, update_session_auth_hash,
 )
+import logging
+
+logger = logging.getLogger('django')
 
 # Create your views here.
 def logout(request):
-	title = u'登陆中心'
+	redirect_to = request.REQUEST.get('url', '/')
 	auth_logout(request)
-
-	return HttpResponseRedirect('/')
+	
+	return HttpResponseRedirect(redirect_to)
 
 @sensitive_post_parameters()
 @csrf_protect
 @never_cache
-def login(request, template_name='registration/login.html',
-			redirect_field_name=REDIRECT_FIELD_NAME,
-			authentication_form=AuthenticationForm,
-			current_app=None, extra_context=None):
-    """
-    Displays the login form and handles the login action.
-    """
-    redirect_to = request.POST.get(redirect_field_name,
-							request.GET.get(redirect_field_name, ''))
-
 def login(request, template_name='registration/login.html',
 				redirect_field_name=REDIRECT_FIELD_NAME,
 				authentication_form=AuthenticationForm,

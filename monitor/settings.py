@@ -28,13 +28,13 @@ AUTH_PROFILE_MODULE = 'djangoadmin.myadmin.UserProfile'
 SECRET_KEY = 'c1&+!cifrwrgekxid63l$&#!1#628!l5t59t6&gxass(!q+00j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 CSRF_COOKIE_SECURE = False
 
 ADMINS = [('Arno', 'Arno@ag866.com')]
 
-ALLOWED_HOSTS = ['192.168.100.107', '43.241.204.107', '10.11.15.218', '192.168.100.1']
+ALLOWED_HOSTS = ['192.168.100.107', '43.241.204.107', '10.11.15.0/24', '192.168.100.1', '127.0.0.1']
 
 LOGIN_REDIRECT_URL = '/tomcat/index/'
 
@@ -156,7 +156,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )

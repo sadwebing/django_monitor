@@ -4,6 +4,7 @@
 #update: 2017/07/08  add multiprocessing
 #        2017/07/11  add check_salt_intrm
 #        2017/07/12  optimize check_server_status
+#        2017/07/22  add color print
 
 import os,sys,datetime,logging,multiprocessing,requests
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -14,6 +15,7 @@ from time import sleep
 from saltstack.saltapi import SaltAPI
 from monitor import settings
 from ctypes import c_char_p
+from color_print import ColorP
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 admin_mail_addr = ['Arno@ag866.com']
@@ -98,21 +100,21 @@ if __name__ == '__main__':
         os.system('nohup python %s/manage.py runserver 0.0.0.0:5000 &' %basedir)
         #send_mail(admin_mail_addr, 'Attention: django_server is down!', mail_content)
         mail_content = mail_content + (
-                "尝试重启服务......\n"
-                "重启时间: %s\n"
+            "尝试重启服务......\n"
+            "重启时间: %s\n"
             )%time()
         sleep(4)
         if not check_server_status():
             mail_content = mail_content + (
-                    "检测状态: 失败\n"
-                    "-------------------------------------------------"
+                "检测状态: 失败\n"
+                "-------------------------------------------------"
                 )
             send_mail(admin_mail_addr, 'Attention: django_server is down!', mail_content)
             logger.error('%s %s 服务起不来！' %(time(), server))
         else:
             mail_content = mail_content + (
-                    "检测状态: 成功\n"
-                    "-------------------------------------------------"
+                "检测状态: 成功\n"
+                "-------------------------------------------------"
                 )
             send_mail(admin_mail_addr, 'Attention: django_server restarted!', mail_content)
             logger.error('%s %s 服务起不来！' %(time(), server))
@@ -127,8 +129,8 @@ if __name__ == '__main__':
     pw1.join()
     pw2.join()
     pw3.join()
-    print "start_time:                 %s" %start_time
-    print "check_services_end_time:    %s" %end_time['check_services']
-    print "check_salt_minion_end_time: %s" %end_time['check_salt_minion']
-    print "check_salt_intrm_time:      %s" %end_time['check_salt_intrm']
-    print "end_time:                   %s" %time()
+    print "start_time:                 " + ColorP("%s" %start_time,                    fore = 'green') 
+    print "check_services_end_time:    " + ColorP("%s" %end_time['check_services'],    fore = 'yellow')  
+    print "check_salt_minion_end_time: " + ColorP("%s" %end_time['check_salt_minion'], fore = 'yellow')  
+    print "check_salt_intrm_time:      " + ColorP("%s" %end_time['check_salt_intrm'],  fore = 'yellow')  
+    print "end_time:                   " + ColorP("%s" %time(),                        fore = 'green')

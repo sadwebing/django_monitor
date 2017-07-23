@@ -4,6 +4,7 @@
 #update: 2017/07/07 add multiprocessing pool
 #        2017/07/11 optimize send_mail
 #        2017/07/13 update check app server
+#        2017/07/22 add color print
 
 import re,os,sys,smtplib,requests,datetime,logging,multiprocessing
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -17,6 +18,7 @@ import django,json
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "monitor.settings")
 django.setup()
 from check_tomcat.models import tomcat_url, mail, tomcat_status, server_status, tomcat_project
+from color_print import ColorP
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 server = 'http://192.168.100.107:5000/monitor_server/check/'
@@ -69,7 +71,7 @@ def get_result(result, tomcat_info, code_list, content_body):
                 result['info'] = '正常'
             #logger.info(result)
         else:
-            ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=10)
+            ret = requests.head(result['url'], headers={'Host': result['domain']}, timeout=16)
             if tomcat_info.project =='ALL_TSD_WS' and ret.status_code == 500:
                 result['code'] = '200'
             else:
@@ -91,7 +93,6 @@ def get_result(result, tomcat_info, code_list, content_body):
         if test_result == 'not return':
             result['code'] == test_result
             result['info'] = '请检查服务器是否存活'
-    print result['code'] + "    " + result['project'] + ":  " +  result['url']
     #print "  %s" %result['code']
     try:
         ret = requests.post(server, data=json.dumps(result), timeout=3)
@@ -106,12 +107,16 @@ def get_result(result, tomcat_info, code_list, content_body):
         )
         insert.save()
     if result['code'] not in code_list:
+        print ColorP(result['code'], fore = 'red') + "    " + result['project'] + ":  " +  result['url']
         try:
             result['server_type'] = tomcat_project.objects.filter(project=result['project']).first().server_type
         except:
             send_mail(['Arno@ag866.com'],'tomcat报警','%s project doesn\'t exists' %result['project'])
             result['server_type'] = 'unknown'
         content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['server_type'], result['domain'], result['url'], result['code'], result['info'])
+    else:
+        print result['code'] + "    " + result['project'] + ":  " +  result['url']
+
     #logger.info(MIMEText(str(result), 'utf-8'))
     return content_body
 

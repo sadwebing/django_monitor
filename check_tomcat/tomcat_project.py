@@ -47,7 +47,7 @@ def ProjectQuery(request):
             tmp_dict['script'] = project.script
             tmp_dict['status_'] = project.status
             project_list.append(tmp_dict)
-        logger.info(project_list)
+        #logger.info(project_list)
         return HttpResponse(json.dumps(project_list))
         #return HttpResponse('You get nothing!')
     else:

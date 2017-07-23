@@ -50812,3 +50812,650 @@ IndentationError: expected an indented block
 2017-07-13 21:12:42,040 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
 2017-07-14 14:13:16,996 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
 2017-07-14 16:34:50,506 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-14 20:21:44,013 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-23 08:00:31,177 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-23 08:02:36,980 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-23 08:02:56,822 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:03:20,552 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:03:27,306 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:03:39,789 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:06:10,329 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:07:12,885 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:07:12,979 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:07:12,979 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:07:12,979 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-23 08:07:12,979 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:07:12,986 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=E04_WS&act=getfile&svn_id=svn_15020, ConnectionError!
+2017-07-23 08:07:21,540 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-23 08:07:33,980 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=B79_WEB_V3&act=getfile&svn_id=svn_10040, ConnectionError!
+2017-07-23 08:07:37,776 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=B79_WEB_V3&act=getfile&svn_id=svn_10040, ConnectionError!
+2017-07-23 08:07:42,298 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=B79_WEB_V3&act=getfile&svn_id=svn_10040, ConnectionError!
+2017-07-23 08:07:46,111 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=B79_WEB_V3&act=getfile&svn_id=svn_10040, ConnectionError!
+2017-07-23 08:08:15,875 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=B79_WEB_V3&act=getfile&svn_id=svn_10040, ConnectionError!
+2017-07-23 10:44:14,812 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-23 10:44:41,114 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-23 10:58:25,127 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 50, in index
+    limit.LimitAccess(role, clientip, username)
+  File "D:\django\monitor\monitor\accounts\limit.py", line 9, in LimitAccess
+    request,
+NameError: global name 'request' is not defined
+2017-07-23 11:12:17,540 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts import limit
+  File "D:\django\monitor\monitor\accounts\limit.py", line 8
+    if role == 'sa':
+                   ^
+IndentationError: unindent does not match any outer indentation level
+2017-07-23 11:15:05,625 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts import limit
+  File "D:\django\monitor\monitor\accounts\limit.py", line 23
+    break
+SyntaxError: 'break' outside loop
+2017-07-23 11:15:35,256 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view check_tomcat.views.tomcat_url didn't return an HttpResponse object. It returned None instead.
+2017-07-23 11:15:48,750 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view check_tomcat.views.tomcat_url didn't return an HttpResponse object. It returned None instead.
+2017-07-23 11:18:55,348 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view check_tomcat.views.tomcat_url didn't return an HttpResponse object. It returned None instead.
+2017-07-23 11:19:06,147 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 151, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view check_tomcat.views.tomcat_url didn't return an HttpResponse object. It returned None instead.
+2017-07-23 11:21:38,490 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 14
+    if role == 'sa':
+    ^
+IndentationError: unexpected indent
+2017-07-23 11:21:51,005 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 14
+    if role == 'sa':
+    ^
+IndentationError: unexpected indent
+2017-07-23 11:22:13,135 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 8, in LimitAccess
+    username = request.user.username
+AttributeError: 'function' object has no attribute 'user'
+2017-07-23 11:30:49,854 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess(request)
+NameError: name 'request' is not defined
+2017-07-23 11:31:13,306 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 8, in LimitAccess
+    username = request.user.username
+AttributeError: 'function' object has no attribute 'user'
+2017-07-23 11:43:13,407 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+TypeError: LimitAccess() takes no arguments (1 given)
+2017-07-23 11:44:06,128 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+TypeError: LimitAccess() takes no arguments (1 given)
+2017-07-23 11:44:08,586 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+TypeError: LimitAccess() takes no arguments (1 given)
+2017-07-23 11:44:26,302 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+TypeError: LimitAccess() takes no arguments (1 given)
+2017-07-23 11:46:35,697 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+TypeError: LimitAccess() takes no arguments (1 given)
+2017-07-23 11:47:37,345 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "D:\django\monitor\lib\site-packages\django\middleware\clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options', None) is not None:
+AttributeError: 'function' object has no attribute 'get'
+2017-07-23 11:48:09,540 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "D:\django\monitor\lib\site-packages\django\middleware\clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options', None) is not None:
+AttributeError: 'function' object has no attribute 'get'
+2017-07-23 11:52:19,210 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 9
+    title = u'TOMCAT-监控列表'
+    ^
+IndentationError: unexpected indent
+2017-07-23 11:52:33,114 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 9
+    title = u'TOMCAT-监控列表'
+    ^
+IndentationError: unexpected indent
+2017-07-23 11:52:37,233 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 9
+    title = u'TOMCAT-监控列表'
+    ^
+IndentationError: unexpected indent
+2017-07-23 11:52:47,658 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 9
+    title = u'TOMCAT-监控列表'
+        ^
+SyntaxError: invalid syntax
+2017-07-23 11:55:11,490 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "D:\django\monitor\lib\site-packages\django\middleware\clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options', None) is not None:
+AttributeError: 'function' object has no attribute 'get'
+2017-07-23 11:56:03,157 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "D:\django\monitor\lib\site-packages\django\middleware\clickjacking.py", line 31, in process_response
+    if response.get('X-Frame-Options', None) is not None:
+AttributeError: 'function' object has no attribute 'get'
+2017-07-23 11:57:43,377 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+TypeError: LimitAccess() takes no arguments (1 given)
+2017-07-23 11:58:40,058 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+TypeError: LimitAccess() takes no arguments (1 given)
+2017-07-23 11:58:46,917 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 63, in <module>
+    @LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 34, in LimitAccess
+    username = request.user.username
+AttributeError: 'function' object has no attribute 'user'
+2017-07-23 12:02:19,890 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 75
+    return render(
+         ^
+SyntaxError: invalid syntax
+2017-07-23 12:04:30,993 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 85, in tomcat_url
+    'username': username,
+  File "D:\django\monitor\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django\monitor\lib\site-packages\django\template\loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: limit
+2017-07-23 12:08:58,996 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 9
+    template = custom_template
+           ^
+IndentationError: expected an indented block
+2017-07-23 12:09:25,413 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 11, in <module>
+    from accounts.limit import LimitAccess
+  File "D:\django\monitor\monitor\accounts\limit.py", line 10
+    else:
+        ^
+IndentationError: unindent does not match any outer indentation level
+2017-07-23 12:18:05,556 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+2017-07-23 12:18:40,217 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+2017-07-23 12:18:42,816 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+2017-07-23 12:28:01,154 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
+2017-07-23 12:37:56,638 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!

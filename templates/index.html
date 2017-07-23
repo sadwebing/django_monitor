@@ -68,7 +68,7 @@
                     <a class="navbar-brand" href="/admin">{{ username }}</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right"> 
-                    <li><a href="/accounts/logout"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li> 
+                    <li><a href="#" id="logout" onclick="Logout(this)"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li> 
                 </ul> 
             </div>
         </nav>
@@ -80,4 +80,12 @@
     <script src="/static/angular/angular-ui-router.js"></script>
     <script src="/static/angular/angular-animate.js"></script>
     <script src="/static/angular/TcbsApp.js"></script>
+    <script type="text/javascript">
+        //console.log(document.location.hash)
+        function Logout(obj) {
+            var redirct_to = window.location.hash;
+            //console.log(redirct_to)
+            $('#logout').attr("href", "/accounts/logout?url=" + redirct_to);
+        }
+    </script>
 </html>

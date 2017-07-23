@@ -33,4 +33,5 @@ urlpatterns = [
     url(r'^malfunction/', include('clientservices.urls')),
     url(r'^upgrade/', include('upgrade.urls')),
     url(r'^favicon$', lambda x: HttpResponseRedirect(settings.STATIC_URL+'images/favicon.ico')),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}), 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

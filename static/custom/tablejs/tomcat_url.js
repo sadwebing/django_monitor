@@ -228,7 +228,7 @@ window.operateEvents = {
                 $('#Checkresults').append('<p> 检测时间:&thinsp;<strong>' + data.access_time + '</strong></p>' );
                 $('#Checkresults').append('<p> 检测状态:&thinsp;<strong>' + data.code + '</strong></p>' );
                 $('#Checkresults').append('<p> 备注:&thinsp;<strong>' + data.info + '</strong></p>' );
-                setTimeout("document.getElementById('progress_bar_div').hidden = true;", 1000)
+                //setTimeout("document.getElementById('progress_bar_div').hidden = true;", 1000)
                 //console.log('websocket已关闭');
                 modal_footer.innerHTML = '<button id="close_modal" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
             }

@@ -8,6 +8,7 @@ import json, logging
 from tomcat_project import *
 from tomcat_url import *
 from mail import *
+from accounts.limit import LimitAccess
 
 logger = logging.getLogger('django')
 
@@ -71,7 +72,7 @@ def tomcat_url(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'tomcat/tomcat_index.html',
+        LimitAccess(role, 'tomcat/tomcat_index.html'),
         {
             'title': title,
             'clientip':clientip,
@@ -94,7 +95,7 @@ def project(request):
     logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'tomcat/tomcat_project.html',
+        LimitAccess(role, 'tomcat/tomcat_project.html'),
         {
             'title': title,
             'clientip':clientip,

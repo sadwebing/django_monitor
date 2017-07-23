@@ -4,3 +4,7 @@
 20170713 upgrade v1 
 20170713 fix bugs in upgrade about ConnectionError
 20170714 update check app server and add refresh projects to saltstack_deploy
+20170722 new add color_print.py to scripts
+		 add redirect_url to logout
+		 add access limit to user
+		 set DEBUG = False in settings and add STATIC_ROOT

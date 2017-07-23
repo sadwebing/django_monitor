@@ -13,10 +13,9 @@ from saltstack.saltapi import SaltAPI
 import json, logging, numpy, datetime, requests
 from time import sleep
 from dwebsocket import require_websocket, accept_websocket
+from accounts.limit import LimitAccess
 
 logger = logging.getLogger('django')
-deploy_api = 'http://10.252.252.98/api'
-
 
 @csrf_exempt
 @require_websocket
@@ -51,7 +50,7 @@ def Operate(request):
     logger.info('%s is requesting.' %clientip)
     return render(
         request,
-        'upgrade/upgrade_operate.html',
+        LimitAccess(role, 'upgrade/upgrade_operate.html'),
         {
             'clientip':clientip,
             'title': title,
@@ -75,7 +74,7 @@ def OpHistory(request):
     logger.info('%s is requesting. %s' %(clientip, request.get_full_path()))
     return render(
         request,
-        'upgrade/op_history.html',
+        LimitAccess(role, 'upgrade/op_history.html'),
         {
             'clientip':clientip,
             'title': title,

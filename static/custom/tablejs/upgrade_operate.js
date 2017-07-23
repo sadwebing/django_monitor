@@ -494,11 +494,13 @@ var operate = {
             if (data.op_status == -1){
                 modal_head_close.innerHTML = "&times;"
                 operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
+                operate.disableButtons(['upgrade_interrupt'], true);
                 $('#upgrade_results').append('<p>传入参数错误，请检查服务！</p>');
                 return false;
             }else if (data.op_status == 0){
                 modal_head_close.innerHTML = "&times;"
                 operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
+                operate.disableButtons(['upgrade_interrupt'], true);
                 $('#upgrade_results').append('<p>错误：'+ data.result +'</p>');
                 return false;
             }
