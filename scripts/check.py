@@ -18,7 +18,7 @@ from ctypes import c_char_p
 from color_print import ColorP
 
 basedir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-admin_mail_addr = ['Arno@ag866.com']
+admin_mail_addr = settings.ADMINS[0][1]
 
 salt_intrm = 'http://172.20.0.61:8080'
 salt_intrm_id = 'EST_0_61'
@@ -119,16 +119,16 @@ if __name__ == '__main__':
             send_mail(admin_mail_addr, 'Attention: django_server restarted!', mail_content)
             logger.error('%s %s 服务起不来！' %(time(), server))
 
-    #multiprocessing two processes
+    #multiprocessing three processes
+    pw_list = []
     pw1 = multiprocessing.Process(target=check_services_fun, args=())
+    pw_list.append(pw1)
     pw2 = multiprocessing.Process(target=check_salt_minion_fun, args=())
+    pw_list.append(pw2)
     pw3 = multiprocessing.Process(target=check_salt_intrm, args=())
-    pw1.start()
-    pw2.start()
-    pw3.start()
-    pw1.join()
-    pw2.join()
-    pw3.join()
+    pw_list.append(pw3)
+    for pw in pw_list: pw.start()
+    for pw in pw_list: pw.join()
     print "start_time:                 " + ColorP("%s" %start_time,                    fore = 'green') 
     print "check_services_end_time:    " + ColorP("%s" %end_time['check_services'],    fore = 'yellow')  
     print "check_salt_minion_end_time: " + ColorP("%s" %end_time['check_salt_minion'], fore = 'yellow')  

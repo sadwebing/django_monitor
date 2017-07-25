@@ -51459,3 +51459,499 @@ IndentationError: unindent does not match any outer indentation level
 2017-07-23 12:18:42,816 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
 2017-07-23 12:28:01,154 base.py [django.security.DisallowedHost:204] [ERROR]- Invalid HTTP_HOST header: '127.0.0.1:5000'. You may need to add u'127.0.0.1' to ALLOWED_HOSTS.
 2017-07-23 12:37:56,638 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-07-24 13:14:04,957 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 159, in CommandRestart
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-24 13:14:05,013 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 154, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-24 13:14:05,015 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 154, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-24 16:04:23,641 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 13
+SyntaxError: Non-ASCII character '\xe6' in file D:\django\monitor\monitor\detect\views.py on line 13, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2017-07-24 16:05:10,835 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 6, in <module>
+    url('index$', views.index),
+AttributeError: 'module' object has no attribute 'index'
+2017-07-24 16:05:12,483 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 6, in <module>
+    url('index$', views.index),
+AttributeError: 'module' object has no attribute 'index'
+2017-07-25 14:54:12,381 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 34, in <module>
+    @accept_websocket
+NameError: name 'accept_websocket' is not defined
+2017-07-25 15:09:17,835 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:17:36,933 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 63
+    else:
+       ^
+SyntaxError: invalid syntax
+2017-07-25 15:17:48,349 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 63
+    else:
+       ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:13,540 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:23,469 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:23,903 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:24,078 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:19:29,780 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 58, in Execute
+    ret = requests.get(url, timeout=10)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\adapters.py", line 479, in send
+    raise ConnectTimeout(e, request=request)
+ConnectTimeout: HTTPConnectionPool(host='192.169.100.107', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x0486CA70>, 'Connection to 192.169.100.107 timed out. (connect timeout=10)'))
+2017-07-25 15:24:21,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 66, in Execute
+    title = re.search('<title>.*?</title>', ret.content)
+NameError: global name 're' is not defined
+2017-07-25 15:24:23,270 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 58, in Execute
+    ret = requests.get(url)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='192.169.100.107', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x046B0DF0>: Failed to establish a new connection: [Errno 10060] ',))
+2017-07-25 15:24:45,328 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 66, in Execute
+    title = re.search('<title>.*?</title>', ret.content)
+NameError: global name 're' is not defined
+2017-07-25 15:35:07,279 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,279 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:48,726 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 16:16:20,153 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer

@@ -501,6 +501,10 @@ var operate = {
             ]
         });
         ko.applyBindings(this.mailViewModel, document.getElementById("mail_table"));
+        //部分列进行隐藏
+        $('#mail_table').bootstrapTable('hideColumn', 'id');
+        $('#mail_table').bootstrapTable('hideColumn', 'name');
+        $('#mail_table').bootstrapTable('hideColumn', 'role');
         $('#edit_mail').on("click", function () {
             //console.log(this.mailViewModel)
             $("#modifyMail").modal('show');

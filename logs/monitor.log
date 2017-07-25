@@ -10026,3 +10026,1377 @@ IndentationError: unindent does not match any outer indentation level
 2017-07-23 12:39:46,313 views.py [django:74] [INFO]- 127.0.0.1 is requesting. /upgrade/op_history
 2017-07-23 12:39:46,387 views.py [django:92] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/op_history/Query
 2017-07-23 12:39:46,388 views.py [django:104] [INFO]- 查询参数：query_all
+2017-07-23 13:30:46,157 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-07-23 13:30:47,153 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1500784629481
+2017-07-23 13:30:49,466 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-23 13:30:49,539 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-23 13:30:49,539 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-23 13:30:49,542 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-23 13:30:49,551 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-23 13:30:49,551 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-23 13:31:07,861 mail.py [django:54] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 1, u'program': u'check_services', u'id': 6}
+2017-07-23 13:31:09,740 mail.py [django:54] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 0, u'program': u'check_services', u'id': 6}
+2017-07-23 13:31:16,167 tomcat_url.py [django:216] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-07-23 13:31:19,052 tomcat_url.py [django:216] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 1, u'program': u'check_salt_minion'}
+2017-07-23 13:41:59,533 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-23 13:41:59,538 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-23 13:42:00,694 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-23 13:42:01,420 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-23 13:42:01,426 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-23 13:42:02,211 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-23 13:42:02,331 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-23 13:42:02,332 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-23 13:42:02,335 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-23 13:42:02,342 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-23 13:42:02,342 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-23 13:44:16,259 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-07-23 13:44:16,368 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-23 13:44:16,369 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-23 13:44:16,369 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-23 13:46:40,318 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-23 13:46:40,914 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-23 13:46:40,948 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-23 13:46:41,736 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-07-23 13:46:41,828 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-23 13:46:41,828 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-23 13:46:41,828 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-23 13:46:45,480 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-23 13:46:45,611 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-23 13:46:45,611 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-23 13:46:45,618 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-23 13:46:45,624 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-23 13:46:45,625 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-23 13:46:51,838 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-23 13:46:52,951 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-23 13:47:05,374 views.py [django:41] [INFO]- {"project":["B79_FENGCAI"]}
+2017-07-23 13:47:05,999 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-23 13:47:08,443 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-23 13:47:08,444 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'B79_FENGCAI', u'minion_id': u'GLB_10_65'}
+2017-07-23 13:47:08,490 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_b79fengcai restart']
+2017-07-23 13:47:24,443 saltapi.py [django:41] [INFO]- GLB_10_65 "['runas=tomcat', u'tomcat7_b79fengcai restart']": 200
+2017-07-23 13:47:33,197 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-23 13:47:33,197 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-23 13:47:33,198 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-23 13:47:33,203 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-23 13:47:33,204 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-23 13:47:35,637 tomcat_url.py [django:159] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.169:6080', u'domain': u'www.ag8.com', u'server_type': u'tomcat', u'minion_id': u'WTT_100_169'}
+2017-07-23 13:47:45,414 tomcat_url.py [django:159] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/CheckServer 执行参数：{u'url': u'http://192.168.100.86:6030', u'domain': u'www.ag8vip.com', u'server_type': u'tomcat', u'minion_id': u'WTT_100_86'}
+2017-07-24 13:14:04,694 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 13:14:04,957 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/restart
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 159, in CommandRestart
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-24 13:14:05,013 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 154, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-24 13:14:05,015 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 154, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-24 13:14:08,319 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 13:14:08,417 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-24 13:14:08,562 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 13:14:08,753 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-24 13:14:08,755 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-24 13:14:08,757 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-24 13:14:08,765 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-24 13:14:08,766 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-24 15:48:55,428 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-24 15:48:58,971 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 16:04:23,641 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 13
+SyntaxError: Non-ASCII character '\xe6' in file D:\django\monitor\monitor\detect\views.py on line 13, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2017-07-24 16:05:10,835 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 6, in <module>
+    url('index$', views.index),
+AttributeError: 'module' object has no attribute 'index'
+2017-07-24 16:05:12,483 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 6, in <module>
+    url('index$', views.index),
+AttributeError: 'module' object has no attribute 'index'
+2017-07-24 16:05:32,684 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 16:05:38,108 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 16:05:38,122 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 16:05:39,036 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-24 16:05:39,903 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 16:06:11,160 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 16:06:11,805 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 16:06:11,805 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 16:06:12,582 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-24 16:06:13,339 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 16:06:27,726 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 16:06:28,229 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 16:06:28,361 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 16:06:29,197 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-24 16:06:29,970 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 16:06:31,157 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 16:06:31,296 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-24 16:06:31,296 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-24 16:06:31,299 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-24 16:06:31,308 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-24 16:06:31,309 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-24 16:09:23,056 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-07-24 16:09:23,318 views.py [django:134] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-24 16:09:23,322 views.py [django:150] [INFO]- 查询参数：query_not_deleted
+2017-07-24 16:09:23,957 views.py [django:173] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-24 16:09:23,986 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 16:09:29,078 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-24 16:09:29,924 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 16:23:04,279 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-24 16:23:04,279 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-24 16:23:04,282 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-24 16:23:04,292 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-24 16:23:04,292 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-24 16:23:07,540 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 16:23:07,940 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 16:23:08,000 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 16:23:08,851 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 16:23:09,621 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 16:23:18,851 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 16:23:19,651 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 16:23:19,694 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 16:23:20,499 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 16:23:21,282 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 17:25:40,753 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 17:25:41,220 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 17:25:41,365 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 17:25:42,378 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 17:25:43,463 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 19:32:17,497 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 19:32:18,667 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 19:32:18,668 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 19:32:19,217 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 19:32:20,046 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 19:33:26,378 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 19:33:27,562 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 19:33:27,618 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 19:33:28,132 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 19:33:28,976 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 19:57:39,928 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 19:57:40,736 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 19:57:40,890 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 19:57:42,016 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 19:57:43,013 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 19:59:35,026 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 19:59:35,683 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 19:59:35,776 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 19:59:36,548 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 19:59:37,367 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 19:59:55,062 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 19:59:55,713 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 19:59:55,713 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 19:59:56,519 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 19:59:57,280 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:00:14,920 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:00:15,460 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:00:15,630 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:00:16,440 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:00:17,200 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:00:45,671 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:00:46,444 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:00:46,640 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:00:48,096 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:00:49,178 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:01:25,920 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:01:26,563 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:01:26,701 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:01:27,500 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:01:28,259 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:01:55,398 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:01:56,065 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:01:56,167 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:01:56,980 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:01:57,776 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:02:03,983 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:02:04,690 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:02:04,691 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:02:05,443 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:02:06,207 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:04:05,732 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:04:06,621 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:04:06,680 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:04:07,522 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:04:08,283 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:04:27,316 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:04:27,887 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:04:27,924 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:04:28,769 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:04:29,523 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:04:48,960 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:04:49,592 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:04:49,657 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:04:52,150 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:04:53,112 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:52:47,062 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:52:48,355 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:52:48,407 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:52:49,512 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:52:50,644 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:56:27,042 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:56:27,459 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:56:27,526 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:56:28,335 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:56:29,098 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:57:52,792 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:57:53,269 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:57:53,272 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:57:54,201 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:57:54,946 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 20:58:28,509 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 20:58:29,117 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 20:58:29,203 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 20:58:30,042 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 20:58:30,845 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:16:54,453 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:16:54,967 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:16:55,069 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:16:55,905 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:16:56,655 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:22:27,322 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:22:27,763 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:22:27,766 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:22:28,611 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:22:29,417 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:22:41,953 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:22:42,467 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:22:42,487 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:22:43,382 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:22:44,165 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:25:22,457 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:25:23,134 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:25:23,226 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:25:24,039 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:25:24,816 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:25:26,463 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:25:27,165 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:25:27,209 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:25:28,023 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:25:28,796 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:25:56,878 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:25:57,464 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:25:57,513 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:25:58,322 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:25:59,065 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:26:42,984 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:26:43,438 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:26:43,494 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:26:44,374 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:26:45,184 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:27:35,377 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:27:35,875 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:27:35,944 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:27:36,799 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:27:41,398 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:27:50,829 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:27:51,497 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:27:51,499 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:27:53,885 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:27:54,697 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:28:02,125 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:28:02,602 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:28:02,667 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:28:03,492 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:28:04,233 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:28:26,256 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:28:26,737 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:28:26,746 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:28:27,645 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:28:28,414 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:30:42,953 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:30:43,460 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:30:43,496 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:30:44,411 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:30:45,220 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:31:02,525 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:31:03,085 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:31:03,147 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:31:03,964 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:31:04,743 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:33:09,275 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:33:10,023 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:33:10,025 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:33:10,836 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:33:11,615 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:35:54,398 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:35:54,786 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:35:54,897 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:35:55,676 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:35:56,559 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:40:54,709 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:40:55,150 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:40:55,151 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:40:56,006 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:40:56,790 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:44:52,176 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:44:52,729 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:44:52,733 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:44:53,696 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:44:54,548 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:46:31,250 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:46:31,694 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:46:31,799 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:46:32,818 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:46:33,676 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:56:54,773 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:56:55,986 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:56:56,595 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:56:56,598 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:56:57,528 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 21:57:36,602 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 21:57:37,042 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 21:57:37,164 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 21:57:37,990 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 21:57:38,747 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:00:24,398 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:00:24,786 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:00:24,878 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:00:25,694 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:00:26,443 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:02:17,653 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:02:18,081 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:02:18,151 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:02:18,982 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:02:19,799 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:02:54,165 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:02:54,839 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:02:54,931 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:02:55,756 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:02:56,507 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:03:34,273 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:03:34,750 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:03:34,815 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:03:35,766 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:03:36,648 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:04:33,094 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:04:33,719 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:04:33,782 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:04:34,709 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:04:35,535 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:04:56,288 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:04:56,785 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:04:56,786 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:04:57,713 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:04:58,484 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:05:40,312 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:05:40,792 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:05:40,795 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:05:41,767 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:05:42,563 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:15:47,631 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:15:48,095 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:15:48,167 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:15:50,293 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:15:51,388 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:18:54,109 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:18:54,618 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:18:54,671 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:18:55,549 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:18:56,322 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:20:25,857 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:20:26,487 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:20:26,496 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:20:27,332 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:20:28,168 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:21:34,569 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:21:35,061 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:21:35,157 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:21:36,023 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:21:36,798 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:23:44,709 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:23:45,289 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:23:45,299 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:23:46,138 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:23:46,934 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:26:04,022 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:26:04,592 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:26:04,594 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:26:05,395 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:26:06,180 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:29:12,596 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:29:13,073 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:29:13,081 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:29:13,885 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:29:14,642 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:29:23,595 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:29:24,118 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:29:24,246 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:29:25,118 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:29:25,901 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:33:14,306 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:33:14,721 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:33:14,779 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:33:15,625 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:33:16,404 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:33:39,477 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:33:40,312 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:33:40,312 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:33:41,713 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:33:43,506 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:36:59,681 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:37:00,161 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:37:00,252 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:37:01,084 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:37:01,848 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:37:26,726 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:37:27,148 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:37:27,204 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:37:28,039 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:37:28,806 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:38:23,430 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:38:23,887 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:38:23,888 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:38:24,717 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:38:25,457 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:39:16,551 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:39:17,255 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:39:17,260 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:39:18,046 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:39:18,775 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:39:27,565 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:39:28,319 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:39:28,361 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:39:29,240 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:39:30,124 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:39:46,349 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:39:46,813 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:39:46,910 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:39:48,000 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:39:49,573 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:40:50,529 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:40:50,971 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:40:51,076 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:40:52,338 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:40:53,471 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:41:11,671 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:41:12,747 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:41:12,749 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:41:13,546 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:41:14,321 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:41:20,431 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:41:21,210 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:41:21,246 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:41:22,276 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:41:23,020 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:42:09,454 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:42:09,911 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:42:09,921 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:42:10,723 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:42:11,490 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:45:31,296 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:45:32,091 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:45:32,111 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:45:32,967 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:45:33,716 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:46:05,302 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:46:05,782 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:46:05,789 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:46:06,737 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:46:07,473 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:46:59,203 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:46:59,700 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:46:59,700 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:47:00,490 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:47:01,361 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:47:24,828 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:47:25,447 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:47:25,506 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:47:26,474 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:47:27,201 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:47:53,578 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:47:54,005 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:47:54,046 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:47:54,894 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:47:55,651 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:48:03,845 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:48:04,700 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:48:04,723 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:48:05,546 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:48:06,260 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:48:14,003 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:48:14,447 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:48:14,464 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:48:15,273 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:48:16,000 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:50:21,095 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:50:22,167 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:50:23,025 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:50:45,911 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:50:46,934 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:50:48,075 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:51:22,776 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:51:23,766 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:51:24,474 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:51:34,951 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:51:36,003 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:51:36,704 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:52:04,630 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:52:05,605 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:52:06,295 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:52:12,207 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:52:13,089 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:52:13,813 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:52:29,157 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:52:30,187 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:52:30,892 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:52:48,555 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:52:48,556 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:53:20,158 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:53:20,703 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:53:20,773 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:53:21,657 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:53:22,430 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:54:03,119 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:54:03,480 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:54:03,568 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:54:04,388 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:54:05,111 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:54:31,114 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:54:32,032 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:54:32,140 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:54:33,137 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:55:35,658 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:55:36,273 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:55:36,282 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:55:37,134 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:56:27,760 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:56:28,232 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:56:28,316 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:56:29,141 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:56:36,355 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:56:37,153 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:56:37,249 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:56:38,098 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:56:54,811 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:56:55,509 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:56:55,530 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:56:56,351 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:57:02,615 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:57:03,369 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:57:03,431 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:57:04,319 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:57:15,040 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 22:57:15,697 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 22:57:15,829 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 22:57:16,703 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 22:59:06,408 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-07-24 22:59:06,755 views.py [django:134] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-24 22:59:06,757 views.py [django:150] [INFO]- 查询参数：query_not_deleted
+2017-07-24 22:59:07,569 views.py [django:173] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-24 22:59:07,592 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 22:59:12,076 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-24 22:59:12,931 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-24 23:00:24,387 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 23:00:25,463 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 23:06:06,759 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 23:06:07,793 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-24 23:06:07,882 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 23:06:07,914 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 23:06:13,150 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-24 23:06:13,660 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-24 23:06:13,664 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-24 23:06:14,519 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 12:07:53,378 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 12:07:53,380 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 12:19:44,124 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 12:19:44,612 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 12:19:44,680 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 12:19:45,490 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 12:31:44,589 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 12:31:44,959 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 12:31:45,017 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 12:31:45,842 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 12:32:17,328 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 12:32:17,855 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 12:32:17,930 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 12:32:18,743 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 12:32:35,404 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 12:32:36,095 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 12:32:36,096 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 12:32:37,240 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 12:37:57,704 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 12:37:58,134 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 12:37:58,196 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 12:37:58,994 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 12:38:18,088 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 12:38:18,503 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 12:38:18,559 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 12:38:19,374 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:33:21,670 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:33:22,075 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:33:22,161 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:33:22,969 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:33:26,743 base.py [django.request:170] [WARNING]- Not Found: /detect/execute
+2017-07-25 13:33:50,776 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:33:51,150 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:33:51,265 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:33:52,335 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:34:39,556 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:34:40,963 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:34:40,967 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:34:41,924 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:35:39,884 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:35:40,244 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:35:40,305 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:35:41,141 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:36:43,042 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:36:43,559 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:36:43,569 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:36:44,733 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:38:39,075 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:38:39,565 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:38:39,572 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:38:40,388 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:39:41,003 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:39:41,529 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:39:41,532 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:39:42,359 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:39:47,194 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:39:47,648 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:39:47,653 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:39:48,825 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:46:30,098 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:46:30,476 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:46:30,532 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:46:31,368 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:50:46,437 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:50:46,858 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:50:46,858 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:50:48,046 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:52:21,979 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:52:22,456 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:52:22,464 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:52:23,246 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 13:57:38,588 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 13:57:38,941 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 13:57:38,983 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 13:57:39,790 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:00:28,842 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:00:29,391 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:00:29,428 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:00:30,417 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:02:47,467 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:02:47,819 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:02:47,894 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:02:49,476 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:18:57,104 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-07-25 14:18:57,375 views.py [django:134] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-07-25 14:18:57,438 views.py [django:150] [INFO]- 查询参数：query_not_deleted
+2017-07-25 14:18:58,181 views.py [django:173] [INFO]- [{'info': u'test', 'cur_status': u'undone', 'svn_id': u'608', 'deleted': 0L, 'project': u'CONF-READER', 'id_time': u'2017/07/13 12:00', 'tag': u'608', 'id': 4L}, {'info': u'emergency three', 'cur_status': u'rollback', 'svn_id': u'svn_15020', 'deleted': 0L, 'project': u'E04_WS', 'id_time': u'2017/06/21 13:00', 'tag': u'15020', 'id': 3L}, {'info': u'emergency two', 'cur_status': u'done', 'svn_id': u'svn_11050', 'deleted': 0L, 'project': u'E03_WEB_PHP', 'id_time': u'2017/06/20 11:00', 'tag': u'11050', 'id': 2L}, {'info': u'emergency', 'cur_status': u'undone', 'svn_id': u'svn_10040', 'deleted': 0L, 'project': u'B79_WEB_V3', 'id_time': u'2017/06/19 10:00', 'tag': u'10040', 'id': 1L}]
+2017-07-25 14:18:58,210 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-25 14:18:58,467 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-25 14:18:59,382 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-25 14:18:59,631 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-25 14:19:00,414 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-25 14:19:01,605 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:19:02,046 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:19:02,048 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:19:02,858 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-25 14:19:03,582 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-25 14:22:14,529 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:22:21,306 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:22:21,684 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:22:21,796 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:22:23,197 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:22:34,782 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:22:35,223 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:22:35,226 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:22:36,990 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:23:03,424 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:23:03,776 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:23:03,890 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:23:05,157 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:24:42,016 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:24:42,434 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:24:42,440 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:24:43,332 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:27:04,926 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:27:05,348 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:27:05,428 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:27:06,380 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:28:19,732 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:28:20,183 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:28:20,191 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:28:21,220 views.py [django:22] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:54:12,381 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 34, in <module>
+    @accept_websocket
+NameError: name 'accept_websocket' is not defined
+2017-07-25 14:54:40,701 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 14:54:46,414 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 14:54:46,494 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 14:54:47,628 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 14:54:59,391 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 25, u'ip_host_start': 23, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 14:57:14,851 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:09:17,819 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 15:09:17,835 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:09:19,171 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 15:09:19,262 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 15:09:20,082 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 15:09:35,275 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:12:51,280 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:14:40,322 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:14:40,323 views.py [django:56] [INFO]- http://192.169.100.107:80/
+2017-07-25 15:16:28,016 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:16:28,017 views.py [django:56] [INFO]- http://192.169.100.107:80/
+2017-07-25 15:17:36,933 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 63
+    else:
+       ^
+SyntaxError: invalid syntax
+2017-07-25 15:17:48,349 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 63
+    else:
+       ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:13,540 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:23,469 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:23,903 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:18:24,078 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 35, in <module>
+    url(r'^detect/', include('detect.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\detect\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\detect\views.py", line 70
+    request.websocket.send(json.dumps(data))
+          ^
+SyntaxError: invalid syntax
+2017-07-25 15:19:10,157 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 15:19:11,536 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 15:19:11,611 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 15:19:12,427 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 15:19:19,775 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:19:19,776 views.py [django:56] [INFO]- http://192.169.100.107:80/
+2017-07-25 15:19:29,780 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 58, in Execute
+    ret = requests.get(url, timeout=10)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\adapters.py", line 479, in send
+    raise ConnectTimeout(e, request=request)
+ConnectTimeout: HTTPConnectionPool(host='192.169.100.107', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<requests.packages.urllib3.connection.HTTPConnection object at 0x0486CA70>, 'Connection to 192.169.100.107 timed out. (connect timeout=10)'))
+2017-07-25 15:24:02,259 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.169.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:24:02,259 views.py [django:56] [INFO]- http://192.169.100.107:80/
+2017-07-25 15:24:21,193 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:24:21,194 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:24:21,280 views.py [django:59] [INFO]- 200
+2017-07-25 15:24:21,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 66, in Execute
+    title = re.search('<title>.*?</title>', ret.content)
+NameError: global name 're' is not defined
+2017-07-25 15:24:23,270 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 58, in Execute
+    ret = requests.get(url)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 70, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 488, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\sessions.py", line 609, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\django\monitor\lib\site-packages\requests\adapters.py", line 487, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPConnectionPool(host='192.169.100.107', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x046B0DF0>: Failed to establish a new connection: [Errno 10060] ',))
+2017-07-25 15:24:45,237 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:24:45,239 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:24:45,326 views.py [django:59] [INFO]- 200
+2017-07-25 15:24:45,328 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 66, in Execute
+    title = re.search('<title>.*?</title>', ret.content)
+NameError: global name 're' is not defined
+2017-07-25 15:25:22,413 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:25:22,414 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:25:22,507 views.py [django:59] [INFO]- 200
+2017-07-25 15:26:26,125 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:26:26,127 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:26:32,473 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:26:32,473 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:26:32,565 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:26:32,565 views.py [django:56] [INFO]- http://192.168.100.108:80/
+2017-07-25 15:26:33,711 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:26:33,713 views.py [django:56] [INFO]- http://192.168.100.109:80/
+2017-07-25 15:26:33,766 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:26:33,766 views.py [django:56] [INFO]- http://192.168.100.110:80/
+2017-07-25 15:26:43,927 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:26:43,927 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:26:44,016 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:26:44,016 views.py [django:56] [INFO]- http://192.168.100.108:80/
+2017-07-25 15:26:45,142 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:26:45,142 views.py [django:56] [INFO]- http://192.168.100.109:80/
+2017-07-25 15:26:45,190 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:26:45,191 views.py [django:56] [INFO]- http://192.168.100.110:80/
+2017-07-25 15:27:55,628 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:27:55,628 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:27:55,730 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:27:55,730 views.py [django:56] [INFO]- http://192.168.100.108:80/
+2017-07-25 15:27:56,857 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:27:56,857 views.py [django:56] [INFO]- http://192.168.100.109:80/
+2017-07-25 15:27:56,905 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:27:56,905 views.py [django:56] [INFO]- http://192.168.100.110:80/
+2017-07-25 15:27:56,954 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 4, u'port': u'80'}
+2017-07-25 15:27:56,956 views.py [django:56] [INFO]- http://192.168.100.111:80/
+2017-07-25 15:27:57,000 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 5, u'port': u'80'}
+2017-07-25 15:27:57,002 views.py [django:56] [INFO]- http://192.168.100.112:80/
+2017-07-25 15:28:03,505 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:28:03,505 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:28:03,599 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:28:03,599 views.py [django:56] [INFO]- http://192.168.100.108:80/
+2017-07-25 15:28:04,730 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:28:04,732 views.py [django:56] [INFO]- http://192.168.100.109:80/
+2017-07-25 15:28:04,776 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:28:04,776 views.py [django:56] [INFO]- http://192.168.100.110:80/
+2017-07-25 15:28:04,825 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 4, u'port': u'80'}
+2017-07-25 15:28:04,825 views.py [django:56] [INFO]- http://192.168.100.111:80/
+2017-07-25 15:28:04,871 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 5, u'port': u'80'}
+2017-07-25 15:28:04,872 views.py [django:56] [INFO]- http://192.168.100.112:80/
+2017-07-25 15:28:11,186 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:28:11,187 views.py [django:56] [INFO]- http://192.168.100.107:80/
+2017-07-25 15:28:11,323 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:28:11,323 views.py [django:56] [INFO]- http://192.168.100.108:80/
+2017-07-25 15:28:12,496 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:28:12,496 views.py [django:56] [INFO]- http://192.168.100.109:80/
+2017-07-25 15:28:12,552 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:28:12,552 views.py [django:56] [INFO]- http://192.168.100.110:80/
+2017-07-25 15:28:12,611 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 4, u'port': u'80'}
+2017-07-25 15:28:12,612 views.py [django:56] [INFO]- http://192.168.100.111:80/
+2017-07-25 15:28:12,683 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 5, u'port': u'80'}
+2017-07-25 15:28:12,683 views.py [django:56] [INFO]- http://192.168.100.112:80/
+2017-07-25 15:28:18,005 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 6, u'port': u'80'}
+2017-07-25 15:28:18,005 views.py [django:56] [INFO]- http://192.168.100.113:80/
+2017-07-25 15:28:18,052 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 7, u'port': u'80'}
+2017-07-25 15:28:18,052 views.py [django:56] [INFO]- http://192.168.100.114:80/
+2017-07-25 15:28:18,098 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 8, u'port': u'80'}
+2017-07-25 15:28:18,098 views.py [django:56] [INFO]- http://192.168.100.115:80/
+2017-07-25 15:28:25,874 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 6, u'port': u'80'}
+2017-07-25 15:28:25,875 views.py [django:56] [INFO]- http://192.168.100.113:80/
+2017-07-25 15:28:25,924 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 7, u'port': u'80'}
+2017-07-25 15:28:25,924 views.py [django:56] [INFO]- http://192.168.100.114:80/
+2017-07-25 15:28:25,970 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 8, u'port': u'80'}
+2017-07-25 15:28:25,971 views.py [django:56] [INFO]- http://192.168.100.115:80/
+2017-07-25 15:28:33,694 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 6, u'port': u'80'}
+2017-07-25 15:28:33,694 views.py [django:56] [INFO]- http://192.168.100.113:80/
+2017-07-25 15:28:33,749 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 7, u'port': u'80'}
+2017-07-25 15:28:33,749 views.py [django:56] [INFO]- http://192.168.100.114:80/
+2017-07-25 15:28:33,799 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 8, u'port': u'80'}
+2017-07-25 15:28:33,801 views.py [django:56] [INFO]- http://192.168.100.115:80/
+2017-07-25 15:28:39,101 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 9, u'port': u'80'}
+2017-07-25 15:28:39,101 views.py [django:56] [INFO]- http://192.168.100.116:80/
+2017-07-25 15:28:46,970 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 9, u'port': u'80'}
+2017-07-25 15:28:46,970 views.py [django:56] [INFO]- http://192.168.100.116:80/
+2017-07-25 15:28:54,801 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 9, u'port': u'80'}
+2017-07-25 15:28:54,802 views.py [django:56] [INFO]- http://192.168.100.116:80/
+2017-07-25 15:29:00,105 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 10, u'port': u'80'}
+2017-07-25 15:29:00,105 views.py [django:56] [INFO]- http://192.168.100.117:80/
+2017-07-25 15:29:07,980 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 10, u'port': u'80'}
+2017-07-25 15:29:07,980 views.py [django:56] [INFO]- http://192.168.100.117:80/
+2017-07-25 15:29:15,809 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 10, u'port': u'80'}
+2017-07-25 15:29:15,811 views.py [django:56] [INFO]- http://192.168.100.117:80/
+2017-07-25 15:29:21,115 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 11, u'port': u'80'}
+2017-07-25 15:29:21,115 views.py [django:56] [INFO]- http://192.168.100.118:80/
+2017-07-25 15:29:28,983 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 11, u'port': u'80'}
+2017-07-25 15:29:28,983 views.py [django:56] [INFO]- http://192.168.100.118:80/
+2017-07-25 15:29:36,816 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 11, u'port': u'80'}
+2017-07-25 15:29:36,818 views.py [django:56] [INFO]- http://192.168.100.118:80/
+2017-07-25 15:29:42,121 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 12, u'port': u'80'}
+2017-07-25 15:29:42,121 views.py [django:56] [INFO]- http://192.168.100.119:80/
+2017-07-25 15:29:49,996 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 12, u'port': u'80'}
+2017-07-25 15:29:49,996 views.py [django:56] [INFO]- http://192.168.100.119:80/
+2017-07-25 15:29:57,815 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 12, u'port': u'80'}
+2017-07-25 15:29:57,815 views.py [django:56] [INFO]- http://192.168.100.119:80/
+2017-07-25 15:30:03,124 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 13, u'port': u'80'}
+2017-07-25 15:30:03,125 views.py [django:56] [INFO]- http://192.168.100.120:80/
+2017-07-25 15:30:10,997 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 13, u'port': u'80'}
+2017-07-25 15:30:10,999 views.py [django:56] [INFO]- http://192.168.100.120:80/
+2017-07-25 15:30:18,819 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 13, u'port': u'80'}
+2017-07-25 15:30:18,821 views.py [django:56] [INFO]- http://192.168.100.120:80/
+2017-07-25 15:33:20,891 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 15:33:21,918 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 15:33:21,918 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 15:33:22,142 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-07-25 15:33:24,135 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1500968000996
+2017-07-25 15:33:28,043 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 15:33:48,865 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:33:57,015 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:34:06,851 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'443'}
+2017-07-25 15:34:40,773 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:34:44,198 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:35:07,269 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 15:35:07,279 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,279 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:07,280 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:08,020 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 15:35:08,023 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 15:35:08,914 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 15:35:16,345 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:35:48,713 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 15:35:48,726 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 15:35:49,246 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 15:35:49,256 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 15:35:53,023 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 15:36:03,358 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 107, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:37:13,660 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 15:37:14,121 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 15:37:14,122 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 15:37:15,108 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 15:37:25,111 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:37:25,217 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:37:26,431 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:37:26,551 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:37:34,818 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:37:34,908 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:37:36,036 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:37:36,088 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 110, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:38:54,588 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 15:38:54,750 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 15:38:55,921 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 15:38:55,971 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 15:38:56,022 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 4, u'port': u'80'}
+2017-07-25 15:38:56,111 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 5, u'port': u'80'}
+2017-07-25 15:39:17,109 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 6, u'port': u'80'}
+2017-07-25 15:39:17,155 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 7, u'port': u'80'}
+2017-07-25 15:39:17,203 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 8, u'port': u'80'}
+2017-07-25 16:14:03,641 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 16:14:06,056 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 16:14:06,151 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 16:14:06,976 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 16:14:55,888 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 16:14:55,990 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 16:14:57,178 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 2, u'port': u'80'}
+2017-07-25 16:14:57,331 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 3, u'port': u'80'}
+2017-07-25 16:14:57,391 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 4, u'port': u'80'}
+2017-07-25 16:14:57,500 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 5, u'port': u'80'}
+2017-07-25 16:15:02,505 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 6, u'port': u'80'}
+2017-07-25 16:15:02,588 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 7, u'port': u'80'}
+2017-07-25 16:15:02,635 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 8, u'port': u'80'}
+2017-07-25 16:15:07,640 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 9, u'port': u'80'}
+2017-07-25 16:15:12,644 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 10, u'port': u'80'}
+2017-07-25 16:15:17,647 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 11, u'port': u'80'}
+2017-07-25 16:15:22,651 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 12, u'port': u'80'}
+2017-07-25 16:15:27,654 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 13, u'port': u'80'}
+2017-07-25 16:15:32,657 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 14, u'port': u'80'}
+2017-07-25 16:15:37,684 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 15, u'port': u'80'}
+2017-07-25 16:15:38,819 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 16, u'port': u'80'}
+2017-07-25 16:15:39,957 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 17, u'port': u'80'}
+2017-07-25 16:15:41,105 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 18, u'port': u'80'}
+2017-07-25 16:15:42,240 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 19, u'port': u'80'}
+2017-07-25 16:15:43,374 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 20, u'port': u'80'}
+2017-07-25 16:15:44,496 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 21, u'port': u'80'}
+2017-07-25 16:15:45,628 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 22, u'port': u'80'}
+2017-07-25 16:15:46,776 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 130, u'ip_host_start': 107, u'uri': u'', u'step': 23, u'port': u'80'}
+2017-07-25 16:16:20,147 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 16:16:20,153 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-25 16:16:20,575 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 16:16:20,578 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 16:16:21,410 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index

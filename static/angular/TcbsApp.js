@@ -45,4 +45,8 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
             url:"/upgrade_op_history",
             templateUrl: "/upgrade/op_history"
         })
+        .state("detect_index", {
+            url:"/detect_index",
+            templateUrl: "/detect/index"
+        })
 });

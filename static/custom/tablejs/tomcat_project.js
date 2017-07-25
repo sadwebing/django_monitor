@@ -78,6 +78,7 @@ var tableInit = {
                 },{
                     field: 'script',
                     title: '重启脚本',
+                    sortable: true,
                     //align: 'center',
                     width:'15%',
                     checkbox: false,

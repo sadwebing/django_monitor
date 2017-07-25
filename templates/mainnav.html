@@ -27,10 +27,16 @@
 						</ul>
 					</li>
 					<li id="upgrade">
-						<i class="glyphicon glyphicon-sort text-primary"> <span>升级</span></i>
+						<i class="glyphicon glyphicon-sort text-primary"> <span>升级中心</span></i>
 						<ul>  
 						    <li><a ui-sref="upgrade_operate"><i class="glyphicon glyphicon-align-right"></i>   基本操作</a></li>  
 						    <li><a ui-sref="upgrade_op_history"><i class="glyphicon glyphicon-check"></i> 操作记录</a></li>
+						</ul>
+					</li>
+					<li id="detect">
+						<i class="glyphicon glyphicon-bullhorn text-primary"> <span>检测中心</span></i>
+						<ul>  
+						    <li><a ui-sref="detect_index"><i class="glyphicon glyphicon-align-right"></i>   Ip检测</a></li>
 						</ul>
 					</li>
 					{% endif %}
@@ -55,4 +61,5 @@
     $('#tomcat').children('ul').slideDown();
     $('#saltstack').children('ul').slideDown();
     $('#upgrade').children('ul').slideDown();
+    $('#detect').children('ul').slideDown();
 </script>

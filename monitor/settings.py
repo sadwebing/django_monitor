@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'djcelery',
     'clientservices',
     'upgrade',
+    'detect',
     #'users',
 ]
 

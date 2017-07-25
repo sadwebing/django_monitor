@@ -8,3 +8,5 @@
 		 add redirect_url to logout
 		 add access limit to user
 		 set DEBUG = False in settings and add STATIC_ROOT
+20170725 add detect
+		 add iptables to saltstack_deploy and delete iptables from init

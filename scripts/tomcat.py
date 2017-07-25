@@ -31,7 +31,10 @@ def send_mail(to_list,sub,content,format=''):
     msg = MIMEText(str(content),format,'utf-8')#中文需参数‘utf-8’，单字节字符不需要  
     msg['Subject'] = Header(sub, 'utf-8')
     msg['From'] = sender
-    msg['To'] = ';'.join(to_list)
+    if isinstance(to_list, list):
+        msg['To'] = ';'.join(to_list)
+    else:
+        msg['To'] = to_list
     try:
         smtp = smtplib.SMTP()
         smtp.connect('localhost')
