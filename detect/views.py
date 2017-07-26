@@ -55,7 +55,7 @@ def Execute(request):
             	url = 'http://' + req_ip + ':' + data['port'] + '/' +data['uri']
             #logger.info(url)
             try:
-            	ret = requests.get(url, timeout=5)
+            	ret = requests.get(url, verify=False, timeout=5)
             	#logger.info(ret.status_code)
             except requests.exceptions.ConnectionError:
             	data['http_code'] = 'Null'

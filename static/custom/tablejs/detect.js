@@ -148,18 +148,6 @@ var operate = {
 
             document.getElementById('btn_clear').disabled = true;
             document.getElementById('btn_submit_detect').disabled = true;
-
-            //for (i=0;i<=postData.ip_host_end-postData.ip_host_start;i++){
-            //    var rowNums = detect_table.rows.length;
-            //    var newRow = detect_table.insertRow(rowNums);
-            //    var col = newRow.insertCell(0);
-            //    newRow.insertCell(0).innerHTML = postData.ip_network + '.' + (postData.ip_host_start+i);
-            //    newRow.insertCell(1).innerHTML = 200;
-            //    newRow.insertCell(2).innerHTML = 'title';
-            //    //detect_table.append(table_td);
-            //}
-
-            
             
             var socket = new WebSocket("ws://" + window.location.host + "/detect/execute");
             socket.onopen = function () {
@@ -168,6 +156,8 @@ var operate = {
             };
             socket.onerror = function (){
                 detect_results.append('与服务器连接失败...' );
+                document.getElementById('btn_clear').disabled = false;
+                document.getElementById('btn_submit_detect').disabled = false;
             };
             socket.onmessage = function (e) {
                 data = eval('('+ e.data +')')

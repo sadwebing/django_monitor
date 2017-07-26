@@ -10,3 +10,5 @@
 		 set DEBUG = False in settings and add STATIC_ROOT
 20170725 add detect
 		 add iptables to saltstack_deploy and delete iptables from init
+		 fix bugs in detect: add verfiy=False in requests.get
+20170726 dbclick to edit tomcat_url and tomcat_project

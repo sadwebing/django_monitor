@@ -11,6 +11,7 @@ window.modal_head = document.getElementById("progress_head");
 //初始化表格
 var tableInit = {
     Init: function () {
+        this.dbclick();
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
             url: '/tomcat/tomcat_url/Query',         //请求后台的URL（*）
@@ -109,6 +110,30 @@ var tableInit = {
 
         });
         ko.applyBindings(this.myViewModel, document.getElementById("tomcat_table"));
+    },
+
+    dbclick: function (){
+        $('#tomcat_table').on('all.bs.table', function (e, name, args) {
+            //console.log('Event:', name, ', data:', args);
+        }).on('dbl-click-cell.bs.table', function (e, field, value, row, $element) {
+            console.log(row)
+            //return false;
+            $("#myModal").modal().on("shown.bs.modal", function () {
+                //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
+                ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(row));
+                if (document.getElementById(operate.DepartmentModel.id()).checked){
+                    operate.DepartmentModel.status_ = 'active';
+                }else {
+                    operate.DepartmentModel.status_ = 'inactive';
+                }
+                ko.applyBindings(operate.DepartmentModel, document.getElementById("myModal"));
+                operate.operateSave('Update');
+            }).on('hidden.bs.modal', function () {
+                //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+                ko.cleanNode(document.getElementById("myModal"));
+            });
+
+        });
     },
 
     operateStatusFormatter: function (value,row,index){
@@ -586,8 +611,6 @@ var operate = {
             if (!operate.operateCheck(arrselectedData)) { return; }
             $("#myModal").modal().on("shown.bs.modal", function () {
                 //operate.selectpicker();
-                var arrselectedData = tableInit.myViewModel.getSelections();
-                if (!operate.operateCheck(arrselectedData)) { return; }
                 //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
                 ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(arrselectedData[0]));
                 if (document.getElementById(operate.DepartmentModel.id()).checked){

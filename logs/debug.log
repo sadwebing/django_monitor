@@ -9269,3 +9269,229 @@ TypeError: expected string or buffer
 2017-07-25 16:16:20,575 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
 2017-07-25 16:16:20,578 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
 2017-07-25 16:16:21,410 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 16:46:00,766 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 16:46:01,056 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 16:46:20,065 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 16:46:20,276 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 16:46:49,796 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 0, u'port': u'443'}
+2017-07-25 16:46:51,180 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 1, u'port': u'443'}
+2017-07-25 16:48:43,667 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-25 16:48:45,170 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-25 16:48:45,279 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-25 16:48:48,138 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-07-25 16:50:19,894 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 0, u'port': u'443'}
+2017-07-25 16:50:21,430 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 1, u'port': u'443'}
+2017-07-25 17:01:01,549 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 17:01:01,759 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 146, u'ip_host_start': 145, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 18:26:37,483 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 18:26:37,608 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 18:55:28,266 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 18:55:28,375 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'223.197.120', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 19:03:08,407 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 0, u'port': u'80'}
+2017-07-25 19:03:08,453 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 1, u'port': u'80'}
+2017-07-25 19:03:17,150 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 0, u'port': u'443'}
+2017-07-25 19:03:17,778 views.py [django:48] [INFO]- 127.0.0.1 is requesting. /detect/execute 执行参数：{u'ip_network': u'192.168.100', u'ip_host_end': 46, u'ip_host_start': 45, u'uri': u'', u'step': 1, u'port': u'443'}
+2017-07-26 21:26:10,039 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-26 21:26:18,292 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:26:18,473 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 21:26:18,578 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-26 21:26:20,055 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-26 21:26:20,055 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 21:33:56,655 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-26 21:33:56,887 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-26 21:33:56,971 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-26 21:33:56,971 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-26 21:33:56,993 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-26 21:33:57,072 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-26 21:33:57,079 base.py [django.request:256] [ERROR]- Internal Server Error: /detect/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\detect\views.py", line 47, in Execute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-26 21:34:03,505 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-26 21:34:03,519 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-26 21:34:08,842 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-26 21:34:09,214 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:34:09,214 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 21:34:09,219 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-26 21:34:09,269 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-26 21:34:09,269 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 21:36:05,881 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-26 21:36:06,565 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-26 21:36:06,911 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-26 21:36:07,638 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-26 21:36:07,749 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:36:07,749 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 21:36:07,773 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-26 21:36:07,775 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-26 21:36:07,775 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 21:36:23,377 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:36:23,414 tomcat_url.py [django:34] [INFO]- 查询参数：query_inactive
+2017-07-26 21:36:37,647 tomcat_url.py [django:81] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/Update data: <QueryDict: {u'domain': [u'www.ag138.com'], u'ip_addr': [u'192.168.100.194'], u'__ko_mapping__[mappedProperties][project]': [u'true'], u'status_': [u'inactive'], u'__ko_mapping__[include][]': [u'_destroy'], u'__ko_mapping__[mappedProperties][status_]': [u'true'], u'minion_id': [u'WTT_100_194'], u'__ko_mapping__[mappedProperties][envir]': [u'true'], u'__ko_mapping__[mappedProperties][url]': [u'true'], u'__ko_mapping__[mappedProperties][0]': [u'true'], u'id': [u'24'], u'__ko_mapping__[mappedProperties][info]': [u'true'], u'0': [u'false'], u'role': [u'backup'], u'__ko_mapping__[mappedProperties][minion_id]': [u'true'], u'__ko_mapping__[mappedProperties][domain]': [u'true'], u'__ko_mapping__[mappedProperties][id]': [u'true'], u'server_type': [u'tomcat'], u'__ko_mapping__[mappedProperties][role]': [u'true'], u'__ko_mapping__[mappedProperties][ip_addr]': [u'true'], u'envir': [u'ONLINE'], u'info': [u'\u4e3b\u7ad9'], u'url': [u'http://192.168.100.194:6020'], u'__ko_mapping__[mappedProperties][server_type]': [u'true'], u'project': [u'P02_NEW_WEB_V4']}>
+2017-07-26 21:36:51,572 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:36:51,573 tomcat_url.py [django:34] [INFO]- 查询参数：query_inactive
+2017-07-26 21:36:57,703 tomcat_url.py [django:81] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/Update data: <QueryDict: {u'domain': [u'www.ag138.com'], u'ip_addr': [u'192.168.100.194'], u'__ko_mapping__[mappedProperties][project]': [u'true'], u'status_': [u'inactive'], u'__ko_mapping__[include][]': [u'_destroy'], u'__ko_mapping__[mappedProperties][status_]': [u'true'], u'minion_id': [u'WTT_100_194'], u'__ko_mapping__[mappedProperties][envir]': [u'true'], u'__ko_mapping__[mappedProperties][url]': [u'true'], u'__ko_mapping__[mappedProperties][0]': [u'true'], u'id': [u'24'], u'__ko_mapping__[mappedProperties][info]': [u'true'], u'0': [u'false'], u'role': [u'main'], u'__ko_mapping__[mappedProperties][minion_id]': [u'true'], u'__ko_mapping__[mappedProperties][domain]': [u'true'], u'__ko_mapping__[mappedProperties][id]': [u'true'], u'server_type': [u'tomcat'], u'__ko_mapping__[mappedProperties][role]': [u'true'], u'__ko_mapping__[mappedProperties][ip_addr]': [u'true'], u'envir': [u'ONLINE'], u'info': [u'\u4e3b\u7ad9'], u'url': [u'http://192.168.100.194:6020'], u'__ko_mapping__[mappedProperties][server_type]': [u'true'], u'project': [u'P02_NEW_WEB_V4']}>
+2017-07-26 21:36:59,818 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:36:59,819 tomcat_url.py [django:34] [INFO]- 查询参数：query_inactive
+2017-07-26 21:39:13,476 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-26 21:39:14,107 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-26 21:39:14,112 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-26 21:39:14,802 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-26 21:39:14,905 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:39:14,907 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 21:39:14,911 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-26 21:39:14,917 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-26 21:39:14,917 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 21:44:28,259 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 21:44:28,260 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 22:35:19,016 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-07-26 22:35:19,217 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:35:19,230 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:35:19,230 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:37:08,437 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-26 22:37:09,305 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-26 22:37:09,305 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-26 22:37:10,181 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-07-26 22:37:10,280 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:37:10,282 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:37:10,282 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:37:47,296 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:37:47,296 tomcat_project.py [django:33] [INFO]- 查询参数：query_active
+2017-07-26 22:37:47,298 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:38:36,237 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-26 22:38:36,687 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-26 22:38:36,831 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-26 22:38:37,598 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-07-26 22:38:37,687 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:38:37,687 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:38:37,687 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:39:01,292 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:39:01,292 tomcat_project.py [django:33] [INFO]- 查询参数：query_active
+2017-07-26 22:39:01,292 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:39:43,982 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-26 22:39:44,088 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 22:39:44,088 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 22:39:44,091 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-26 22:39:44,095 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-26 22:39:44,096 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:39:49,293 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 22:39:49,295 tomcat_url.py [django:34] [INFO]- 查询参数：query_inactive
+2017-07-26 22:39:55,891 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:39:55,891 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:39:55,892 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:40:02,890 tomcat_project.py [django:85] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Update data: <QueryDict: {u'__ko_mapping__[mappedProperties][tomcat]': [u'true'], u'status_': [u'inactive'], u'tomcat_version': [u'8'], u'__ko_mapping__[include][]': [u'_destroy'], u'__ko_mapping__[mappedProperties][status_]': [u'true'], u'__ko_mapping__[mappedProperties][main_port]': [u'true'], u'__ko_mapping__[mappedProperties][0]': [u'true'], u'id': [u'1'], u'__ko_mapping__[mappedProperties][code_dir]': [u'true'], u'main_port': [u'5020'], u'__ko_mapping__[mappedProperties][tomcat_version]': [u'true'], u'script': [u'tomcat8_p02newwebv3'], u'__ko_mapping__[mappedProperties][project]': [u'true'], u'code_dir': [u'P02_NEW_WEB_V3'], u'0': [u'false'], u'product': [u'P02'], u'__ko_mapping__[mappedProperties][product]': [u'true'], u'__ko_mapping__[mappedProperties][id]': [u'true'], u'server_type': [u'tomcat'], u'__ko_mapping__[mappedProperties][script]': [u'true'], u'__ko_mapping__[mappedProperties][jdk]': [u'true'], u'tomcat': [u'tomcat-8.0_p02_new_web_v3_5020'], u'jdk': [u'jdk1.6'], u'__ko_mapping__[mappedProperties][server_type]': [u'true'], u'project': [u'P02_NEW_WEB_V3']}>
+2017-07-26 22:40:04,779 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:40:04,779 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:40:04,780 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:40:09,084 tomcat_project.py [django:85] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Update data: <QueryDict: {u'__ko_mapping__[mappedProperties][tomcat]': [u'true'], u'status_': [u'inactive'], u'tomcat_version': [u'8'], u'__ko_mapping__[include][]': [u'_destroy'], u'__ko_mapping__[mappedProperties][status_]': [u'true'], u'__ko_mapping__[mappedProperties][main_port]': [u'true'], u'__ko_mapping__[mappedProperties][0]': [u'true'], u'id': [u'1'], u'__ko_mapping__[mappedProperties][code_dir]': [u'true'], u'main_port': [u'5020'], u'__ko_mapping__[mappedProperties][tomcat_version]': [u'true'], u'script': [u'tomcat8_p02newwebv3'], u'__ko_mapping__[mappedProperties][project]': [u'true'], u'code_dir': [u'P02_NEW_WEB_V3'], u'0': [u'false'], u'product': [u'P02'], u'__ko_mapping__[mappedProperties][product]': [u'true'], u'__ko_mapping__[mappedProperties][id]': [u'true'], u'server_type': [u'tomcat'], u'__ko_mapping__[mappedProperties][script]': [u'true'], u'__ko_mapping__[mappedProperties][jdk]': [u'true'], u'tomcat': [u'tomcat-8.0_p02_new_web_v3_5020'], u'jdk': [u'jdk1.8'], u'__ko_mapping__[mappedProperties][server_type]': [u'true'], u'project': [u'P02_NEW_WEB_V3']}>
+2017-07-26 22:40:10,789 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:40:10,789 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:40:10,789 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-26 22:41:37,414 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 22:41:37,415 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 22:41:37,431 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-26 22:41:37,434 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:41:37,443 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-26 22:41:45,099 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-26 22:41:46,048 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-26 22:41:46,157 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-26 22:41:46,963 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-07-26 22:41:47,118 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 22:41:47,122 tomcat_url.py [django:34] [INFO]- 查询参数：query_all
+2017-07-26 22:41:47,125 tomcat_url.py [django:222] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-07-26 22:41:47,134 mail.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-07-26 22:41:47,134 mail.py [django:33] [INFO]- 查询参数：query_all
+2017-07-26 22:41:55,296 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-07-26 22:41:55,296 tomcat_url.py [django:34] [INFO]- 查询参数：query_inactive

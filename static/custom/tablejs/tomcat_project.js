@@ -5,6 +5,7 @@ $(function () {
 //初始化表格
 var tableInit = {
     Init: function () {
+        this.dbclick();
         //绑定table的viewmodel
         this.myViewModel = new ko.bootstrapTableViewModel({
             url: '/tomcat/tomcat_project/Query',         //请求后台的URL（*）
@@ -94,6 +95,25 @@ var tableInit = {
             ]
         });
         ko.applyBindings(this.myViewModel, document.getElementById("project_table"));
+    },
+
+    dbclick: function (){
+        $('#project_table').on('all.bs.table', function (e, name, args) {
+            //console.log('Event:', name, ', data:', args);
+        }).on('dbl-click-cell.bs.table', function (e, field, value, row, $element) {
+            //console.log(row)
+            //return false;
+            $("#mytomcatproductModal").modal().on("shown.bs.modal", function () {
+                //将选中该行数据有数据Model通过Mapping组件转换为viewmodel
+                ko.utils.extend(operate.DepartmentModel, ko.mapping.fromJS(row));
+                ko.applyBindings(operate.DepartmentModel, document.getElementById("mytomcatproductModal"));
+                operate.operateSave('Update');
+            }).on('hidden.bs.modal', function () {
+                //关闭弹出框的时候清除绑定(这个清空包括清空绑定和清空注册事件)
+                ko.cleanNode(document.getElementById("mytomcatproductModal"));
+            });
+
+        });
     },
 
     operateFormatter: function (value,row,index){
