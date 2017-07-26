@@ -28,17 +28,22 @@ class SaltAPI(object):
         return ret.json()['return']
 
     def ClientLocal(self, tgt, fun, arg, expr_form='list', timeout=300):
-        if tgt == '*':
-            params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg}
+        if isinstance(arg, list):
+            arg_list = arg
+            arg_list.append('env={"LC_ALL": ""}')
         else:
-            params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg, 'expr_form': expr_form}
+            arg_list = [arg, 'env={"LC_ALL": ""}']
+        if tgt == '*':
+            params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg_list}
+        else:
+            params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg_list, 'expr_form': expr_form}
         try:
             ret = requests.post(url=self.__url, data=params, headers={'X-Auth-Token': self.__token_id}, verify=False, timeout=timeout)
         except requests.exceptions.ReadTimeout:
             #logger.info("saltapi:ClientLocal, ReadTimeout! timeout: %s s" %timeout)
             return {u'return': [{}], u'status_code': 504}
         else:
-            logger.info('%s "%s": %s'%(tgt, arg, ret.status_code))
+            logger.info('%s "%s": %s'%(tgt, arg_list, ret.status_code))
             if ret.status_code == 200:
                 results = ret.json()
                 results['status_code'] = ret.status_code

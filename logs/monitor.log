@@ -11626,3 +11626,213 @@ TypeError: expected string or buffer
 2017-07-26 22:41:47,134 mail.py [django:33] [INFO]- 查询参数：query_all
 2017-07-26 22:41:55,296 tomcat_url.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
 2017-07-26 22:41:55,296 tomcat_url.py [django:34] [INFO]- 查询参数：query_inactive
+2017-07-26 23:42:28,030 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 8, in <module>
+    from saltstack.command import Command
+  File "D:\django\monitor\monitor\saltstack\command.py", line 6, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 31
+    if isinstance(arg, 'list')
+                             ^
+SyntaxError: invalid syntax
+2017-07-26 23:42:43,253 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 8, in <module>
+    from saltstack.command import Command
+  File "D:\django\monitor\monitor\saltstack\command.py", line 6, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 31
+    if isinstance(arg, 'list')
+                             ^
+SyntaxError: invalid syntax
+2017-07-26 23:42:45,140 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 8, in <module>
+    from saltstack.command import Command
+  File "D:\django\monitor\monitor\saltstack\command.py", line 6, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 31
+    if isinstance(arg, 'list')
+                             ^
+SyntaxError: invalid syntax
+2017-07-26 23:42:48,434 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 8, in <module>
+    from saltstack.command import Command
+  File "D:\django\monitor\monitor\saltstack\command.py", line 6, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 31
+    if isinstance(arg, 'list')
+                             ^
+SyntaxError: invalid syntax
+2017-07-26 23:42:48,579 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 26, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 8, in <module>
+    from saltstack.command import Command
+  File "D:\django\monitor\monitor\saltstack\command.py", line 6, in <module>
+    from saltstack.saltapi import SaltAPI
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 31
+    if isinstance(arg, 'list')
+                             ^
+SyntaxError: invalid syntax
+2017-07-26 23:43:11,420 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-26 23:43:16,674 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-26 23:43:40,240 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_103', u'exe_user': u'tomcat', u'arguments': u'tomcat7_e04ws restart'}
+2017-07-26 23:43:41,691 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 135, in CommandExecute
+    info_final['results'] = commandexe.CmdRun()
+  File "D:\django\monitor\monitor\saltstack\command.py", line 53, in CmdRun
+    timeout   = self.__timeout,
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 31, in ClientLocal
+    if isinstance(arg, 'list'):
+TypeError: isinstance() arg 2 must be a class, type, or tuple of classes and types
+2017-07-26 23:44:52,233 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-26 23:44:53,785 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-26 23:44:53,786 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-26 23:44:54,556 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-26 23:44:55,354 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-26 23:45:15,655 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_103', u'exe_user': u'tomcat', u'arguments': u'tomcat7_e04ws restart'}
+2017-07-26 23:45:27,357 saltapi.py [django:46] [INFO]- GLB_10_103 "[u'runas=tomcat', u'tomcat7_e04ws restart', 'env=\'{"LC_ALL": ""}\'']": 200
+2017-07-26 23:49:26,355 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_103', u'exe_user': u'tomcat', u'arguments': u'tomcat7_e04ws restart'}
+2017-07-26 23:49:27,648 saltapi.py [django:36] [INFO]- [u'runas=tomcat', u'tomcat7_e04ws restart', 'env={"LC_ALL": ""}']
+2017-07-26 23:49:38,154 saltapi.py [django:47] [INFO]- GLB_10_103 "[u'runas=tomcat', u'tomcat7_e04ws restart', 'env={"LC_ALL": ""}']": 200
