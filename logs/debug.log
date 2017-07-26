@@ -9705,3 +9705,87 @@ TypeError: isinstance() arg 2 must be a class, type, or tuple of classes and typ
 2017-07-26 23:49:26,355 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_103', u'exe_user': u'tomcat', u'arguments': u'tomcat7_e04ws restart'}
 2017-07-26 23:49:27,648 saltapi.py [django:36] [INFO]- [u'runas=tomcat', u'tomcat7_e04ws restart', 'env={"LC_ALL": ""}']
 2017-07-26 23:49:38,154 saltapi.py [django:47] [INFO]- GLB_10_103 "[u'runas=tomcat', u'tomcat7_e04ws restart', 'env={"LC_ALL": ""}']": 200
+2017-07-26 23:59:43,150 views.py [django:41] [INFO]- {"project":["E04_WS"]}
+2017-07-26 23:59:43,769 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-26 23:59:46,147 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-26 23:59:46,148 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E04_WS', u'minion_id': u'GLB_10_103'}
+2017-07-26 23:59:46,200 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e04ws restart']
+2017-07-26 23:59:57,974 saltapi.py [django:47] [INFO]- GLB_10_103 "['runas=tomcat', u'tomcat7_e04ws restart', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:01:06,920 views.py [django:41] [INFO]- {"project":["B79_OFFICE"]}
+2017-07-27 00:01:07,558 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:01:11,561 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:01:11,562 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'B79_OFFICE', u'minion_id': u'EST_0_95'}
+2017-07-27 00:01:11,608 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_b79office restart']
+2017-07-27 00:01:27,000 saltapi.py [django:47] [INFO]- EST_0_95 "['runas=tomcat', u'tomcat7_b79office restart', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:02:36,368 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:02:36,369 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'B79_OFFICE', u'minion_id': u'EST_0_95'}
+2017-07-27 00:02:36,417 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_b79office restart']
+2017-07-27 00:02:51,559 saltapi.py [django:47] [INFO]- EST_0_95 "['runas=tomcat', u'tomcat7_b79office restart', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:04:18,193 views.py [django:41] [INFO]- {"project":["E03_OFFICE"]}
+2017-07-27 00:04:18,832 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:07:36,374 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:07:36,375 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'EST_0_229'}
+2017-07-27 00:07:36,423 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-27 00:07:46,476 saltapi.py [django:47] [INFO]- EST_0_229 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:09:58,923 views.py [django:41] [INFO]- {"project":["E04_WS"]}
+2017-07-27 00:09:59,644 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:10:01,765 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:10:01,765 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E04_WS', u'minion_id': u'GLB_10_103'}
+2017-07-27 00:10:01,812 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e04ws restart']
+2017-07-27 00:10:13,605 saltapi.py [django:47] [INFO]- GLB_10_103 "['runas=tomcat', u'tomcat7_e04ws restart', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:10:44,493 views.py [django:41] [INFO]- {"project":["E03_OFFICE"]}
+2017-07-27 00:10:45,122 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:10:47,315 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:10:47,316 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'EST_0_229'}
+2017-07-27 00:10:47,364 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-27 00:10:57,411 saltapi.py [django:47] [INFO]- EST_0_229 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:13:12,822 views.py [django:41] [INFO]- {"project":["B79_OFFICE"]}
+2017-07-27 00:13:13,446 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:13:16,515 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_88', u'EST_0_95', u'GLB_10_124'], u'exe_user': u'tomcat', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:13:17,354 saltapi.py [django:47] [INFO]- [u'EST_0_88', u'EST_0_95', u'GLB_10_124'] "[u'runas=tomcat', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:14:00,391 views.py [django:41] [INFO]- {"project":["B79_OFFICE","E03_OFFICE"]}
+2017-07-27 00:14:01,101 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:14:02,555 views.py [django:41] [INFO]- {"project":[]}
+2017-07-27 00:14:02,555 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:14:03,342 views.py [django:41] [INFO]- {"project":["E03_OFFICE"]}
+2017-07-27 00:14:04,023 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:14:30,921 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'tomcat', u'arguments': u'sed -i \'/LANG/a LC_ALL="zh_US.UTF-8"\' /etc/sysconfig/i18n'}
+2017-07-27 00:14:31,657 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=tomcat', u'sed -i \'/LANG/a LC_ALL="zh_US.UTF-8"\' /etc/sysconfig/i18n', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:14:35,835 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'sed -i \'/LANG/a LC_ALL="zh_US.UTF-8"\' /etc/sysconfig/i18n'}
+2017-07-27 00:14:36,604 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'sed -i \'/LANG/a LC_ALL="zh_US.UTF-8"\' /etc/sysconfig/i18n', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:14:43,420 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:14:44,130 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": ""}']": 200
+2017-07-27 00:15:20,252 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:15:20,253 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'EST_0_229'}
+2017-07-27 00:15:20,301 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-27 00:15:31,507 saltapi.py [django:47] [INFO]- EST_0_229 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": "zh_US.UTF-8"}']": 200
+2017-07-27 00:17:48,028 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'sed -i \'/LC_ALL/a LC_ALL="zh_CN.utf8"\' /etc/sysconfig/i18n'}
+2017-07-27 00:17:48,750 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'sed -i \'/LC_ALL/a LC_ALL="zh_CN.utf8"\' /etc/sysconfig/i18n', 'env={"LC_ALL": "zh_US.UTF-8"}']": 200
+2017-07-27 00:17:59,039 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:17:59,835 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": "zh_US.UTF-8"}']": 200
+2017-07-27 00:18:29,015 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u"sed -i '/zh_US/d' /etc/sysconfig/i18n"}
+2017-07-27 00:18:29,727 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u"sed -i '/zh_US/d' /etc/sysconfig/i18n", 'env={"LC_ALL": "zh_US.UTF-8"}']": 200
+2017-07-27 00:18:35,345 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:18:36,084 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": "zh_US.UTF-8"}']": 200
+2017-07-27 00:20:52,493 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u"sed -i '/zh_CN/ s/zh_CN.utf8/zh_CN.UTF-8/' /etc/sysconfig/i18n"}
+2017-07-27 00:20:53,206 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u"sed -i '/zh_CN/ s/zh_CN.utf8/zh_CN.UTF-8/' /etc/sysconfig/i18n", 'env={"LC_ALL": "zh_US.UTF-8"}']": 200
+2017-07-27 00:21:03,694 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:21:04,414 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": "zh_US.UTF-8"}']": 200
+2017-07-27 00:21:35,322 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:21:37,142 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:21:41,335 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:21:41,335 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'EST_0_229'}
+2017-07-27 00:21:41,384 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-27 00:21:51,526 saltapi.py [django:47] [INFO]- EST_0_229 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:23:00,505 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:23:01,276 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:23:10,115 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:23:10,115 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'EST_0_229'}
+2017-07-27 00:23:10,163 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-27 00:23:20,229 saltapi.py [django:47] [INFO]- EST_0_229 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:25:04,628 views.py [django:41] [INFO]- {"project":["E04_OFFICE"]}
+2017-07-27 00:25:05,250 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 00:25:07,654 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-27 00:25:07,655 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E04_OFFICE', u'minion_id': u'EST_0_74'}
+2017-07-27 00:25:07,703 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e04office restart']
+2017-07-27 00:25:23,322 saltapi.py [django:47] [INFO]- EST_0_74 "['runas=tomcat', u'tomcat7_e04office restart', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200

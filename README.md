@@ -12,4 +12,4 @@
 		 add iptables to saltstack_deploy and delete iptables from init
 		 fix bugs in detect: add verfiy=False in requests.get
 20170726 dbclick to edit tomcat_url and tomcat_project
-		 add env={"LC_ALL": ""} to ClientLocal in saltapi to fix chinese character encoding
+		 add env={"LC_ALL": "zh_CN.UTF-8"} to ClientLocal in saltapi to fix chinese character encoding

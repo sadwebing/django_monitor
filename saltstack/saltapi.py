@@ -28,11 +28,12 @@ class SaltAPI(object):
         return ret.json()['return']
 
     def ClientLocal(self, tgt, fun, arg, expr_form='list', timeout=300):
+        #env={"LC_ALL": ""}添加这个参数，是为了解决字符编码的问题，saltstack cmd.run默认使用的是C，中文无法正常解码
         if isinstance(arg, list):
             arg_list = arg
-            arg_list.append('env={"LC_ALL": ""}')
+            arg_list.append('env={"LC_ALL": "zh_CN.UTF-8"}')
         else:
-            arg_list = [arg, 'env={"LC_ALL": ""}']
+            arg_list = [arg, 'env={"LC_ALL": "zh_CN.UTF-8"}']
         if tgt == '*':
             params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg_list}
         else:
