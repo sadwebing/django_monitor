@@ -15,3 +15,4 @@
 		 add env={"LC_ALL": "zh_CN.UTF-8"} to ClientLocal in saltapi to fix chinese character encoding
 20170728 add php to saltstack_deploy
 20170729 set timeout for specific module['tomcat':1200, 'init':600, php':1800]
+		 fix bug in saltstack.views add timeout=300 in if...else...

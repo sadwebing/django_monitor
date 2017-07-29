@@ -211,12 +211,14 @@ def DeployExe(request):
             info_final['minion_count'] = 0
 
             #set timeout for specific module
-            if data['module'] == 'tomcat':
-                timeout = 1200
-            elif data['module'] == 'init':
+            if data['module'] == 'init':
                 timeout = 600
+            elif data['module'] == 'tomcat':
+                timeout = 1200
             elif data['module'] == 'php':
                 timeout = 1800
+            else:
+                timeout = 300
 
             #execute deploy module
             for minion_id in data['minion_id']:
