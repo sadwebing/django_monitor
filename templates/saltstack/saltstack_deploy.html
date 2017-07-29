@@ -12,19 +12,6 @@
         padding-top: 1%;
     }
 
-    label.normal-label {
-        background-color: #eee;
-        border: 1px solid #ccc;
-        display: block;
-        padding: 6px;
-        font-weight: normal;
-        border-radius: 4px;
-        width: 75px;
-        font-size: 15px;
-        text-align: center;
-        font-family:Arial,Verdana,Sans-serif;
-    }
-
     p.p-result {
         background-color: #eee;
         border: 1px solid #ccc;
@@ -60,27 +47,30 @@
     <form class="form-group form-inline" role="form">
         <div class="input-group" style="width: 70%;">
             <label class="input-group-addon" style="width: 100px;">模块</label>
-            <span class="radio form-control">
-                <label>
+            <span class="radio form-control" style="height: 60px;">
+                <label style="width: 130px;">
                     <input type="radio" name="deploy_module" value="init" onclick="operate.DisplayProjectActive()" title="系统初始化" style="margin-left: 10px;"> 初始化
                 </label>
-                <label>
+                <label style="width: 130px;">
+                    <input type="radio" name="deploy_module" value="init.iptables" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> Iptables
+                </label>
+                <label style="width: 130px;">
                     <input type="radio" name="deploy_module" value="nginx" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> Nginx
                 </label>
-                <label>
+                <label style="width: 130px;">
                     <input type="radio" name="deploy_module" value="tomcat" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> Tomcat
-                </label>
-                <label>
+                </label><br>
+                <label style="width: 130px;">
                     <input type="radio" name="deploy_module" value="openvpn" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> Openvpn
                 </label>
-                <label>
+                <label style="width: 130px;">
                     <input type="radio" name="deploy_module" value="zabbix.zabbix-agent" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> Zabbix-agent
                 </label>
-                <label>
-                    <input type="radio" name="deploy_module" value="logstash" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> logstash
+                <label style="width: 130px;">
+                    <input type="radio" name="deploy_module" value="logstash" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> Logstash
                 </label>
-                <label>
-                    <input type="radio" name="deploy_module" value="init.iptables" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> iptables
+                <label style="width: 130px;">
+                    <input type="radio" name="deploy_module" value="php" onclick="operate.DisplayProjectActive()" style="margin-left: 10px;"> Php
                 </label>
             </span>
         </div>

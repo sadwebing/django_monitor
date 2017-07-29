@@ -11920,3 +11920,477 @@ TypeError: isinstance() arg 2 must be a class, type, or tuple of classes and typ
 2017-07-27 00:25:07,655 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E04_OFFICE', u'minion_id': u'EST_0_74'}
 2017-07-27 00:25:07,703 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e04office restart']
 2017-07-27 00:25:23,322 saltapi.py [django:47] [INFO]- EST_0_74 "['runas=tomcat', u'tomcat7_e04office restart', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:33:37,812 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /etc/sysconfig/i18n'}
+2017-07-27 00:33:39,608 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /etc/sysconfig/i18n', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:34:16,075 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /web/E04_WS/version.txt'}
+2017-07-27 00:34:16,786 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /web/E04_WS/version.txt', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:34:29,118 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /web/E04_OFFICE/version.txt'}
+2017-07-27 00:34:29,835 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /web/E04_OFFICE/version.txt', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 00:34:38,362 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_229'], u'exe_user': u'root', u'arguments': u'cat /web/E03_OFFICE/version.txt'}
+2017-07-27 00:34:39,115 saltapi.py [django:47] [INFO]- [u'EST_0_229'] "[u'runas=root', u'cat /web/E03_OFFICE/version.txt', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 01:26:08,253 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-27 01:26:08,378 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-27 01:26:08,377 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-27 01:26:08,378 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-27 01:26:08,378 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-27 01:26:17,157 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-27 01:26:17,181 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-27 01:26:18,490 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-27 01:26:19,384 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-27 01:28:32,049 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-27 01:28:33,118 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-27 01:28:33,210 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-27 01:28:33,650 views.py [django:244] [INFO]- 127.0.0.1 is requesting.
+2017-07-27 01:28:34,401 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-27 01:28:41,201 views.py [django:41] [INFO]- {"project":["E04_OFFICE"]}
+2017-07-27 01:28:41,717 views.py [django:41] [INFO]- {"project":["E04_OFFICE","E04_OFFICE_APP"]}
+2017-07-27 01:28:41,826 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 01:28:42,390 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-27 01:28:47,697 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_74', u'EST_0_98', u'GLB_10_125', u'EST_0_74', u'EST_0_98', u'GLB_10_125'], u'exe_user': u'tomcat', u'arguments': u'date'}
+2017-07-27 01:28:48,532 saltapi.py [django:47] [INFO]- [u'EST_0_74', u'EST_0_98', u'GLB_10_125', u'EST_0_74', u'EST_0_98', u'GLB_10_125'] "[u'runas=tomcat', u'date', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 01:30:07,923 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_74', u'EST_0_98', u'GLB_10_125', u'EST_0_74', u'EST_0_98', u'GLB_10_125'], u'exe_user': u'tomcat', u'arguments': u'echo hello >> /tmp/a.txt'}
+2017-07-27 01:30:08,815 saltapi.py [django:47] [INFO]- [u'EST_0_74', u'EST_0_98', u'GLB_10_125', u'EST_0_74', u'EST_0_98', u'GLB_10_125'] "[u'runas=tomcat', u'echo hello >> /tmp/a.txt', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 01:30:18,760 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'list', u'target': [u'EST_0_74', u'EST_0_98', u'GLB_10_125', u'EST_0_74', u'EST_0_98', u'GLB_10_125'], u'exe_user': u'tomcat', u'arguments': u'cat /tmp/a.txt'}
+2017-07-27 01:30:19,595 saltapi.py [django:47] [INFO]- [u'EST_0_74', u'EST_0_98', u'GLB_10_125', u'EST_0_74', u'EST_0_98', u'GLB_10_125'] "[u'runas=tomcat', u'cat /tmp/a.txt', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 01:32:05,755 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'EST_0_177', u'exe_user': u'tomcat', u'arguments': u'ps -ef |grep tomcat'}
+2017-07-27 01:32:06,555 saltapi.py [django:47] [INFO]- EST_0_177 "[u'runas=tomcat', u'ps -ef |grep tomcat', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-27 01:32:17,168 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'EST_0_178', u'exe_user': u'tomcat', u'arguments': u'ps -ef |grep tomcat'}
+2017-07-27 01:32:17,957 saltapi.py [django:47] [INFO]- EST_0_178 "[u'runas=tomcat', u'ps -ef |grep tomcat', 'env={"LC_ALL": "zh_CN.UTF-8"}']": 200
+2017-07-28 11:57:35,424 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-28 11:57:45,719 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-28 11:58:49,993 views.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/check_minion 执行参数：[u'GLB_10_125']
+2017-07-28 11:58:54,917 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_125"],"module":"zabbix.zabbix-agent","project":""}
+2017-07-28 11:58:55,917 views.py [django:219] [INFO]- 部署参数：{'minion_all': 1, 'module': u'zabbix.zabbix-agent', 'minion_id': u'GLB_10_125', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-28 11:58:56,124 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/deploy/deploy
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 227, in DeployExe
+    info_final['result'] = commandexe.StateSls()[minion_id]
+  File "D:\django\monitor\monitor\saltstack\command.py", line 78, in StateSls
+    expr_form = self.__expr_form
+  File "D:\django\monitor\monitor\saltstack\saltapi.py", line 41, in ClientLocal
+    params = {'client': 'local', 'tgt': tgt, 'fun': fun, 'arg': arg_list, 'expr_form': expr_form}
+UnboundLocalError: local variable 'arg_list' referenced before assignment
+2017-07-28 12:00:29,306 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-28 12:00:33,289 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-28 12:00:33,292 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-28 12:00:33,589 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-28 12:00:34,384 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-28 12:00:36,816 views.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/check_minion 执行参数：[u'GLB_10_125']
+2017-07-28 12:00:40,020 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_125"],"module":"zabbix.zabbix-agent","project":""}
+2017-07-28 12:00:41,022 views.py [django:219] [INFO]- 部署参数：{'minion_all': 1, 'module': u'zabbix.zabbix-agent', 'minion_id': u'GLB_10_125', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-28 12:00:45,253 saltapi.py [django:50] [INFO]- GLB_10_125 "zabbix.zabbix-agent": 200
+2017-07-28 12:00:45,263 views.py [django:228] [INFO]- zabbix.zabbix-agent 部署完成。
+2017-07-28 12:09:27,829 views.py [django:41] [INFO]- {"project":["E03_OFFICE"]}
+2017-07-28 12:09:28,460 views.py [django:57] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project_servers
+2017-07-28 12:09:30,696 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-28 12:09:30,697 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'GLB_10_123'}
+2017-07-28 12:09:30,743 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-28 12:09:42,581 saltapi.py [django:50] [INFO]- GLB_10_123 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": "zh_HK.UTF-8"}']": 200
+2017-07-28 12:10:39,960 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-28 12:10:39,960 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'GLB_10_123'}
+2017-07-28 12:10:40,012 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-28 12:10:51,967 saltapi.py [django:50] [INFO]- GLB_10_123 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": "zh_CN"}']": 200
+2017-07-28 12:11:23,891 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-28 12:11:23,891 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'GLB_10_123'}
+2017-07-28 12:11:23,938 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-28 12:11:35,805 saltapi.py [django:50] [INFO]- GLB_10_123 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": "zh_CN.GBK"}']": 200
+2017-07-28 12:13:42,756 views.py [django:155] [INFO]- ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_new_messages', '_message_queue', 'accept_connection', 'close', 'closed', 'count_messages', 'has_messages', 'protocol', 'read', 'send', 'wait']
+2017-07-28 12:13:42,756 views.py [django:166] [INFO]- 127.0.0.1 is requesting. /saltstack/command/restart 执行参数：{u'project': u'E03_OFFICE', u'minion_id': u'GLB_10_123'}
+2017-07-28 12:13:42,805 views.py [django:180] [INFO]- 重启参数：['runas=tomcat', u'tomcat7_e03office restart']
+2017-07-28 12:13:54,595 saltapi.py [django:50] [INFO]- GLB_10_123 "['runas=tomcat', u'tomcat7_e03office restart', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-28 14:34:19,022 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_128', u'exe_user': u'tomcat', u'arguments': u'tomcat8_b79ucenter restart'}
+2017-07-28 14:34:27,563 saltapi.py [django:50] [INFO]- GLB_10_128 "[u'runas=tomcat', u'tomcat8_b79ucenter restart', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-28 14:34:48,562 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_128', u'exe_user': u'tomcat', u'arguments': u'tomcat8_b79ucenter restart'}
+2017-07-28 14:34:55,170 saltapi.py [django:50] [INFO]- GLB_10_128 "[u'runas=tomcat', u'tomcat8_b79ucenter restart', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-28 17:11:23,414 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-28 17:11:31,273 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-28 17:11:31,434 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-28 17:11:41,030 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-28 17:11:41,030 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-28 17:11:42,088 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-28 17:11:44,483 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-28 17:16:15,802 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-28 17:16:16,970 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-28 17:16:17,934 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-28 17:16:19,038 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-28 17:16:19,039 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-28 17:16:22,220 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-28 17:16:23,219 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-28 17:16:23,223 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-28 17:16:24,153 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-28 17:16:25,007 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-28 17:22:43,752 views.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/check_minion 执行参数：[u'GLB_10_66']
+2017-07-28 17:22:46,428 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_66"],"module":"php","project":""}
+2017-07-28 17:22:47,430 views.py [django:219] [INFO]- 部署参数：{'minion_all': 1, 'module': u'php', 'minion_id': u'GLB_10_66', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-28 17:24:33,904 saltapi.py [django:50] [INFO]- GLB_10_66 "php": 200
+2017-07-28 17:24:33,973 views.py [django:228] [INFO]- php 部署完成。
+2017-07-28 17:33:15,434 views.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/check_minion 执行参数：[u'GLB_10_66']
+2017-07-28 17:33:17,796 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_66"],"module":"nginx","project":""}
+2017-07-28 17:33:18,796 views.py [django:219] [INFO]- 部署参数：{'minion_all': 1, 'module': u'nginx', 'minion_id': u'GLB_10_66', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-28 17:35:44,072 saltapi.py [django:50] [INFO]- GLB_10_66 "nginx": 200
+2017-07-28 17:35:44,526 views.py [django:228] [INFO]- nginx 部署完成。
+2017-07-29 10:31:01,084 views.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/check_minion 执行参数：[u'GLB_10_106']
+2017-07-29 10:31:06,424 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_106"],"module":"nginx","project":""}
+2017-07-29 10:31:07,424 views.py [django:219] [INFO]- 部署参数：{'minion_all': 1, 'module': u'nginx', 'minion_id': u'GLB_10_106', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-29 10:33:06,736 saltapi.py [django:50] [INFO]- GLB_10_106 "nginx": 200
+2017-07-29 10:33:06,897 views.py [django:228] [INFO]- nginx 部署完成。
+2017-07-29 10:49:08,861 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_106', u'exe_user': u'tomcat', u'arguments': u'cat /etc/redhat-release'}
+2017-07-29 10:49:09,657 saltapi.py [django:50] [INFO]- GLB_10_106 "[u'runas=tomcat', u'cat /etc/redhat-release', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-29 10:50:21,697 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_106"],"module":"nginx","project":""}
+2017-07-29 10:50:22,697 views.py [django:219] [INFO]- 部署参数：{'minion_all': 1, 'module': u'nginx', 'minion_id': u'GLB_10_106', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-29 10:50:48,744 saltapi.py [django:50] [INFO]- GLB_10_106 "nginx": 200
+2017-07-29 10:50:48,808 views.py [django:228] [INFO]- nginx 部署完成。
+2017-07-29 10:51:22,177 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_106"],"module":"php","project":""}
+2017-07-29 10:51:23,177 views.py [django:219] [INFO]- 部署参数：{'minion_all': 1, 'module': u'php', 'minion_id': u'GLB_10_106', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-29 10:51:40,437 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_106', u'exe_user': u'tomcat', u'arguments': u'date'}
+2017-07-29 10:51:41,244 saltapi.py [django:50] [INFO]- GLB_10_106 "[u'runas=tomcat', u'date', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-29 10:56:23,496 views.py [django:228] [INFO]- php 部署完成。
+2017-07-29 11:13:51,519 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_106', u'exe_user': u'tomcat', u'arguments': u'mkdir /web/ALL_WMS_WEB'}
+2017-07-29 11:13:52,311 saltapi.py [django:50] [INFO]- GLB_10_106 "[u'runas=tomcat', u'mkdir /web/ALL_WMS_WEB', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-29 11:45:20,736 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_121', u'exe_user': u'tomcat', u'arguments': u'ps -ef |grep tomcat'}
+2017-07-29 11:45:21,680 saltapi.py [django:50] [INFO]- GLB_10_121 "[u'runas=tomcat', u'ps -ef |grep tomcat', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-29 11:45:36,598 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-07-29 11:45:37,052 tomcat_project.py [django:18] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-29 11:45:37,052 tomcat_project.py [django:33] [INFO]- 查询参数：query_all
+2017-07-29 11:45:37,052 tomcat_project.py [django:35] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-07-29 11:46:44,207 tomcat_project.py [django:113] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/UpdateStatus data: {u'status': u'inactive', u'id': 40}
+2017-07-29 11:47:12,930 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_121', u'exe_user': u'tomcat', u'arguments': u'kill -9 29786'}
+2017-07-29 11:47:13,782 saltapi.py [django:50] [INFO]- GLB_10_121 "[u'runas=tomcat', u'kill -9 29786', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-29 11:47:19,085 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_121', u'exe_user': u'tomcat', u'arguments': u'rm -rf /opt/tomcat-7.0_b79_office_ws_7110/'}
+2017-07-29 11:47:21,963 saltapi.py [django:50] [INFO]- GLB_10_121 "[u'runas=tomcat', u'rm -rf /opt/tomcat-7.0_b79_office_ws_7110/', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-29 11:47:37,690 views.py [django:119] [INFO]- 127.0.0.1 is requesting. /saltstack/command/execute 执行参数：{u'function': u'cmd.run', u'expr_form': u'glob', u'target': u'GLB_10_121', u'exe_user': u'root', u'arguments': u'rm -rf /usr/bin/tomcat*'}
+2017-07-29 11:47:38,516 saltapi.py [django:50] [INFO]- GLB_10_121 "[u'runas=root', u'rm -rf /usr/bin/tomcat*', 'env={"LC_ALL": "en_US.UTF-8"}']": 200
+2017-07-29 13:56:36,230 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 13:56:40,839 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:15:38,618 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:15:38,926 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,072 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,072 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,072 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,072 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,072 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,210 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,210 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:39,227 base.py [django.request:256] [ERROR]- Internal Server Error: /saltstack/command/execute
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\saltstack\views.py", line 118, in CommandExecute
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-07-29 14:15:47,171 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:15:47,229 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:15:53,917 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:15:55,140 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:16:11,992 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:16:13,845 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:16:13,934 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:16:13,936 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:16:14,680 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:16:21,140 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:16:22,026 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:16:22,026 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:16:22,874 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:16:23,821 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:18:43,391 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:18:44,352 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:18:44,361 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:18:45,026 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:18:45,805 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:19:31,726 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:19:33,191 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:19:33,447 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:19:34,253 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:19:35,028 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:22:26,736 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:22:27,275 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:22:27,431 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:22:28,283 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:22:29,030 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:22:49,421 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:22:50,187 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:22:50,226 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:22:51,006 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:22:51,990 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:23:38,526 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:23:38,946 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:23:39,019 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:23:39,864 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:23:40,668 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:24:42,834 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:24:43,684 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:24:43,684 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:24:44,585 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:24:45,397 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:25:21,270 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:25:21,901 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:25:21,903 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:25:22,805 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:25:23,645 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:25:47,522 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:25:48,411 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:25:48,427 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:25:49,266 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:25:50,016 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:26:06,871 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:26:07,891 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:26:07,897 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:26:08,723 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:26:09,464 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:26:25,250 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:26:26,094 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:26:26,217 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:26:27,040 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:26:27,835 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:27:49,515 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:27:50,039 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:27:50,243 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:27:51,062 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:27:51,832 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:28:06,063 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:28:06,819 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:28:06,930 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:28:07,776 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:28:08,562 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:28:24,460 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:28:25,344 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:28:25,352 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:28:26,069 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:28:26,811 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:28:35,770 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:28:36,680 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:28:36,766 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:28:37,585 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:28:38,332 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:28:45,039 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:28:45,854 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:28:45,969 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:28:46,729 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:28:47,520 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:30:14,345 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-07-29 14:30:14,970 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:30:14,974 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:30:15,832 views.py [django:268] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-07-29 14:30:16,868 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-07-29 14:30:35,447 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-07-29 14:30:35,453 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-07-29 14:40:30,796 views.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/check_minion 执行参数：[u'GLB_10_152']
+2017-07-29 14:40:34,696 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_152"],"module":"php","project":""}
+2017-07-29 14:40:35,697 views.py [django:226] [INFO]- 部署参数：{'minion_all': 1, 'module': u'php', 'minion_id': u'GLB_10_152', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-29 14:40:39,466 saltapi.py [django:50] [INFO]- GLB_10_152 "php": 200
+2017-07-29 14:40:39,493 views.py [django:235] [INFO]- php 部署完成。
+2017-07-29 14:42:46,697 views.py [django:77] [INFO]- 127.0.0.1 is requesting. /saltstack/check_minion 执行参数：[u'GLB_10_152']
+2017-07-29 14:42:50,408 views.py [django:199] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy/deploy 执行参数：{"minion_id":["GLB_10_152"],"module":"init","project":""}
+2017-07-29 14:42:51,410 views.py [django:228] [INFO]- 部署参数：{'minion_all': 1, 'module': u'init', 'minion_id': u'GLB_10_152', 'project': u'', 'step': 'final', 'result': '', 'minion_count': 0}
+2017-07-29 14:43:23,312 saltapi.py [django:50] [INFO]- GLB_10_152 "init": 200
+2017-07-29 14:43:23,392 views.py [django:237] [INFO]- init 部署完成。

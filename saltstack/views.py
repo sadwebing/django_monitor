@@ -210,6 +210,15 @@ def DeployExe(request):
             info_final['minion_all'] = len(data['minion_id'])
             info_final['minion_count'] = 0
 
+            #set timeout for specific module
+            if data['module'] == 'tomcat':
+                timeout = 1200
+            elif data['module'] == 'init':
+                timeout = 600
+            elif data['module'] == 'php':
+                timeout = 1800
+
+            #execute deploy module
             for minion_id in data['minion_id']:
                 info_final['minion_id'] = minion_id
                 info_final['module'] = data['module']
@@ -219,11 +228,11 @@ def DeployExe(request):
                 logger.info('部署参数：%s' %info_final)
                 info_final['minion_count'] += 1
                 if data['module'] == 'tomcat':
-                    commandexe = Command('WTT_100_109', 'cmd.run', '/srv/shell/install_tomcat.sh %s %s' %(minion_id, data['project']), 'glob', timeout=1200)
+                    commandexe = Command('WTT_100_109', 'cmd.run', '/srv/shell/install_tomcat.sh %s %s' %(minion_id, data['project']), 'glob', timeout=timeout)
                     info_final['result'] = commandexe.CmdRun()['WTT_100_109']
                     logger.info("%s 部署完成。" %data['project'])
                 else:
-                    commandexe = Command(minion_id, 'state.sls', data['module'])
+                    commandexe = Command(minion_id, 'state.sls', data['module'], 'glob', timeout=timeout)
                     info_final['result'] = commandexe.StateSls()[minion_id]
                     logger.info("%s 部署完成。" %data['module'])
                 request.websocket.send(json.dumps(info_final))

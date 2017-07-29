@@ -75,7 +75,8 @@ class Command(object):
             tgt       = self.__tgt,
             fun       = self.__fun,
             arg       = self.__arg,
-            expr_form = self.__expr_form
+            expr_form = self.__expr_form,
+            timeout   = self.__timeout,
             )
         #logger.info(results)
         if self.__expr_form == 'glob':
