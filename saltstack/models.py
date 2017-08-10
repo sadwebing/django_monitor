@@ -10,7 +10,7 @@ class tomcat_project(models.Model):
     #op_minion_id = 
     op_jid = models.CharField(max_length=20)
 
-class salt_tomcat_history(models.Model):
+class tomcat_saltstack_history(models.Model):
 	op_time = models.CharField(max_length=128, blank=False)
 	op_user = models.CharField(max_length=20, blank=False)
 	op_ip_addr = models.GenericIPAddressField(blank=False)

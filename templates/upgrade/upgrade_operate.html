@@ -99,8 +99,11 @@
                                     </div>
                                 </form>
                                 <form class="form-group form-inline" role="form">
-                                    <div class="col-xs-12 col-sm-12 col-md-12">
-                                        状态：<span id="cur_status" data-bind="text:$data.cur_status" style="font-weight:bold;"></span>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        测试环境：<span id="envir_uat" data-bind="text:$data.envir_uat" style="font-weight:bold;"></span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        运营环境：<span id="envir_online" data-bind="text:$data.envir_online" style="font-weight:bold;"></span>
                                     </div>
                                 </form>
                             </div>
@@ -109,13 +112,13 @@
                                     <label class="input-group-addon">环境</label>
                                     <span class="radio form-control">
                                         <label>
-                                            <input type="radio" name="upgrade_envir" value="UAT" onclick="operate.setupIp(this)" style="margin-left: 10px;"> UAT
+                                            <input type="radio" name="upgrade_envir" id="upgrade_envir_uat" value="UAT" onclick="operate.setupIp(this)" style="margin-left: 10px;"> UAT
                                         </label>
                                         <label>
-                                            <input type="radio" name="upgrade_envir" value="ONLINE" onclick="operate.setupIp(this)" style="margin-left: 10px;"> ONLINE
+                                            <input type="radio" name="upgrade_envir" id="upgrade_envir_online" value="ONLINE" onclick="operate.setupIp(this)" style="margin-left: 10px;"> ONLINE
                                         </label>
                                     </span>
-                                </div>、
+                                </div>
                                 <div class="input-group" style="padding-top: 15px;">
                                     <label class="input-group-addon">重启</label>
                                     <span class="radio form-control">

@@ -160,13 +160,17 @@ window.operateEvents = {
                 //alert(data);
                 //tableInit.myViewModel.refresh();
             },
-            error: function(msg){
+            error: function(XMLHttpRequest, textStatus, errorThrown){
                 if (postData.status == 'active'){
                     document.getElementById(row.id).checked = false;
                 }else {
                     document.getElementById(row.id).checked = true;
                 }
-                alert("失败，请检查日志！");
+                if (XMLHttpRequest.status == 0){
+                    toastr.error('后端服务不响应', '错误')
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                }
                 //tableInit.myViewModel.refresh();
             }
         });
@@ -334,12 +338,16 @@ var operate = {
                 contentType: 'application/json',
                 data: JSON.stringify(arrselectedData),
                 success: function (data, status) {
-                    alert(data);
+                    toastr.success(data);
                     tableInit.myViewModel.refresh();
                 },
-                error:function(msg){
-                    alert("失败，请检查日志！");
-                    tableInit.myViewModel.refresh();
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误')
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
+                    //tableInit.myViewModel.refresh();
                 }
             });
         });
@@ -396,12 +404,16 @@ var operate = {
                 type: "post",
                 data: oDataModel,
                 success: function (data, status) {
-                    alert(data);
+                    toastr.success(data);
                     tableInit.myViewModel.refresh();
                 },
-                error:function(msg){
-                    alert("失败，请检查日志！");
-                    tableInit.myViewModel.refresh();
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误')
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
+                    //tableInit.myViewModel.refresh();
                 }
             });
         });

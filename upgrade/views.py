@@ -56,6 +56,7 @@ def Operate(request):
             'title': title,
             'role': role,
             'username': username,
+            'upgrade_api': settings.UPGRADE_API,
         }
     )
 
@@ -157,20 +158,20 @@ def QuerySvnId(request):
                 if postData['project'] == 'all' and postData['cur_status_sel'] == 'all':
                     tmp_dict = getsvn(info)
                 elif postData['project'] == 'all' and postData['cur_status_sel'] != 'all':
-                    if info.cur_status in postData['cur_status_sel']:
+                    if info.envir_online in postData['cur_status_sel']:
                         tmp_dict = getsvn(info)
                 elif postData['project'] != 'all' and postData['cur_status_sel'] == 'all':
                     if info.project in postData['project']:
                         tmp_dict = getsvn(info)
                 else:
-                    if info.project in postData['project'] and info.cur_status in postData['cur_status_sel']:
+                    if info.project in postData['project'] and info.envir_online in postData['cur_status_sel']:
                         tmp_dict = getsvn(info)
             except:
                 tmp_dict = getsvn(info)
             if tmp_dict != {}:
                 svn_list.append(tmp_dict)
 
-        logger.info(svn_list)
+        #logger.info(svn_list)
         return HttpResponse(json.dumps(svn_list))
         #return HttpResponse('You get nothing!')
     else:
@@ -184,7 +185,8 @@ def getsvn(info):
     tmp_dict['tag'] = info.tag
     tmp_dict['project'] = info.project
     tmp_dict['deleted'] = info.deleted
-    tmp_dict['cur_status'] = info.cur_status
+    tmp_dict['envir_uat'] = info.envir_uat
+    tmp_dict['envir_online'] = info.envir_online
     tmp_dict['info'] = info.info
     return tmp_dict
 
@@ -211,11 +213,29 @@ def UpdateSvnId(request):
     else:
         return HttpResponse('nothing!')
 
+@csrf_exempt
+def GetHosts(request):
+    if request.method == 'POST':
+        username = request.user.username
+        try:
+            role = request.user.userprofile.role
+        except:
+            role = 'none'
+        clientip = request.META['REMOTE_ADDR']
+        data = json.loads(request.body)
+        logger.info('[POST]%s is requesting. %s : project %s' %(clientip, request.get_full_path(), data['project'][0]))
+        exe = Upgrade(data, username, clientip)
+        if exe:
+            return HttpResponse(json.dumps(exe.getHosts()))
+        else:
+            return HttpResponseServerError('传入参数不是字典，请检查！')
+    else:
+        return HttpResponseForbidden('nothing!')
+
 @require_websocket
 @csrf_exempt
 def OpUpgradeDeploy(request):
     if request.is_websocket():
-        global username, role, clientip
         username = request.user.username
         try:
             role = request.user.userprofile.role
@@ -231,7 +251,7 @@ def OpUpgradeDeploy(request):
             
             exe = Upgrade(data, username, clientip)
             if exe:
-                request.websocket.send(json.dumps(exe.Excute()))
+                request.websocket.send(json.dumps(exe.Execute()))
             else:
                 data['op_status'] = -1
                 data['result']    = 'none'

@@ -16,3 +16,8 @@
 20170728 add php to saltstack_deploy
 20170729 set timeout for specific module['tomcat':1200, 'init':600, php':1800]
 		 fix bug in saltstack.views add timeout=300 in if...else...
+
+20170810 add salt_master_glb to check servers of shichang in check.py
+		 update admin static files
+		 add permission to user
+		 update upgrade with will

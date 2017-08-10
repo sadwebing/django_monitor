@@ -52492,3 +52492,481 @@ Traceback (most recent call last):
   File "C:\Python27\Lib\json\decoder.py", line 366, in decode
     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
 TypeError: expected string or buffer
+2017-07-29 15:37:52,026 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 22, in <module>
+    from accounts.views import home
+  File "D:\django\monitor\monitor\accounts\views.py", line 22, in <module>
+    @login_required
+NameError: name 'login_required' is not defined
+2017-07-29 15:38:38,621 base.py [django.request:256] [ERROR]- Internal Server Error: /home
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\django\monitor\monitor\accounts\views.py", line 36, in home
+    LimitAccess(role, 'home/home.html'),
+NameError: global name 'LimitAccess' is not defined
+2017-08-01 13:55:55,683 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/CheckServer
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\dwebsocket\decorators.py", line 16, in new_func
+    response = func(request, *args, **kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 154, in UrlCheckServer
+    data = json.loads(postdata)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+2017-08-09 15:56:46,842 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-08-09 15:57:26,956 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-08-09 15:57:30,701 upgrade.py [django:41] [ERROR]- http://10.252.252.98/api?project=CONF-READER&act=getfile&svn_id=608, ConnectionError!
+2017-08-09 16:58:59,140 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 22, in <module>
+    from accounts.views import home
+  File "D:\django\monitor\monitor\accounts\views.py", line 33
+    if request.user.get_group_permissions('add_tomcat_url')
+                                                          ^
+SyntaxError: invalid syntax
+2017-08-09 17:22:52,446 views.py [django:104] [ERROR]- sa don't have the permisson to check_tomcat table tomcat_url of change
+2017-08-09 17:24:09,346 views.py [django:104] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 17:26:17,315 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 110, in UrlUpdateStatus
+    HasPermission(request.user, 'change', 'tomcat_url', 'check_tomcat')
+  File "D:\django\monitor\monitor\accounts\views.py", line 106, in HasPermission
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'HttpResponseForbidden' is not defined
+2017-08-09 17:27:33,776 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 110, in UrlUpdateStatus
+    HasPermission(request.user, 'change', 'tomcat_url', 'check_tomcat')
+  File "D:\django\monitor\monitor\accounts\views.py", line 106, in HasPermission
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'HttpResponseForbidden' is not defined
+2017-08-09 17:35:57,631 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 17:36:06,864 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 17:37:06,595 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 17:37:21,815 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 17:38:53,111 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 17:38:53,112 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:19:42,371 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:19:42,371 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:22:55,911 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:22:55,913 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:23:23,361 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:23:23,361 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:23:57,576 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:23:57,576 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:26:08,023 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:26:08,025 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:26:23,608 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:26:23,608 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:26:57,542 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:26:57,542 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:27:24,023 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:27:24,025 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 111, in UrlUpdateStatus
+    return HttpResponseForbidden('You don\'t have the permisson to %s table %s of %s' %(act, table, app))
+NameError: global name 'act' is not defined
+2017-08-09 18:28:15,953 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:28:23,496 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:28:57,727 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:29:08,904 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:31:11,305 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:31:27,395 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:32:15,131 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:32:27,670 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:34:32,006 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:34:36,431 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:35:51,966 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:35:54,464 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:37:11,880 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:37:15,594 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:41:43,338 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-09 18:41:45,451 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:38:55,292 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:38:58,865 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:41:40,747 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 22, in <module>
+    from accounts.views import home
+  File "D:\django\monitor\monitor\accounts\views.py", line 108
+    else
+       ^
+SyntaxError: invalid syntax
+2017-08-10 13:41:52,918 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 22, in <module>
+    from accounts.views import home
+  File "D:\django\monitor\monitor\accounts\views.py", line 108
+    else
+       ^
+SyntaxError: invalid syntax
+2017-08-10 13:41:54,180 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 22, in <module>
+    from accounts.views import home
+  File "D:\django\monitor\monitor\accounts\views.py", line 108
+    else
+       ^
+SyntaxError: invalid syntax
+2017-08-10 13:42:14,688 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:42:18,612 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:42:23,977 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:43:05,923 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:48:31,576 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 28, in <module>
+    url(r'^', include('check_tomcat.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\check_tomcat\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\check_tomcat\views.py", line 9, in <module>
+    from tomcat_url import *
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 14
+    def checkPermission(HasPermission)
+                                     ^
+SyntaxError: invalid syntax
+2017-08-10 13:48:49,822 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_url/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_url.py", line 116, in UrlUpdateStatus
+    checkPermission(HasPermission())
+TypeError: HasPermission() takes exactly 4 arguments (0 given)
+2017-08-10 13:52:01,069 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:52:04,634 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:52:50,964 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:52:53,546 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:55:21,921 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:56:33,591 views.py [django:106] [ERROR]- sa don't have the permisson to add table tomcat_url of check_tomcat
+2017-08-10 13:56:46,716 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 13:59:56,927 views.py [django:106] [ERROR]- sa don't have the permisson to add table tomcat_url of check_tomcat
+2017-08-10 14:00:11,888 views.py [django:106] [ERROR]- sa don't have the permisson to add table tomcat_url of check_tomcat
+2017-08-10 14:05:41,661 views.py [django:106] [ERROR]- sa don't have the permisson to delete table tomcat_url of check_tomcat
+2017-08-10 14:06:29,790 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 14:06:34,634 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 14:09:56,648 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 14:10:01,691 views.py [django:106] [ERROR]- sa don't have the permisson to delete table tomcat_url of check_tomcat
+2017-08-10 14:10:53,098 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 14:10:59,960 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 14:11:24,207 views.py [django:106] [ERROR]- sa don't have the permisson to delete table tomcat_url of check_tomcat
+2017-08-10 14:15:02,752 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_url of check_tomcat
+2017-08-10 14:17:07,408 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-10 14:17:10,539 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-10 14:20:26,578 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/mail/UpdateMailStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\mail.py", line 55, in UpdateMailStatus
+    if not HasPermission(request.user, 'change', 'mail', 'check_tomcat'):
+NameError: global name 'HasPermission' is not defined
+2017-08-10 14:20:30,562 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/mail/UpdateMailStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\mail.py", line 55, in UpdateMailStatus
+    if not HasPermission(request.user, 'change', 'mail', 'check_tomcat'):
+NameError: global name 'HasPermission' is not defined
+2017-08-10 14:21:20,673 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-10 14:21:20,673 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/mail/UpdateMailStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\mail.py", line 57, in UpdateMailStatus
+    return HttpResponseForbidden('你没有修改的权限。')
+NameError: global name 'HttpResponseForbidden' is not defined
+2017-08-10 14:21:48,598 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-10 14:21:53,388 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-10 14:21:58,217 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-10 14:22:09,855 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-10 14:22:13,334 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-10 14:22:21,970 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-10 14:29:22,427 base.py [django.request:256] [ERROR]- Internal Server Error: /tomcat/tomcat_project/UpdateStatus
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\check_tomcat\tomcat_project.py", line 118, in ProjectUpdateStatus
+    if not HasPermission(request.user, 'change', 'tomcat_project', 'check_tomcat'):
+NameError: global name 'HasPermission' is not defined
+2017-08-10 14:29:58,903 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_project of check_tomcat
+2017-08-10 14:30:07,299 views.py [django:106] [ERROR]- sa don't have the permisson to add table tomcat_project of check_tomcat
+2017-08-10 14:30:18,082 views.py [django:106] [ERROR]- sa don't have the permisson to delete table tomcat_project of check_tomcat
+2017-08-10 14:30:54,099 views.py [django:106] [ERROR]- sa don't have the permisson to delete table tomcat_project of check_tomcat
+2017-08-10 14:31:00,997 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_project of check_tomcat
+2017-08-10 14:31:04,414 views.py [django:106] [ERROR]- sa don't have the permisson to change table tomcat_project of check_tomcat
+2017-08-10 14:44:29,092 upgrade.py [django:42] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&act=deploy&restart=false&svn_id=608, ConnectionError!
+2017-08-10 15:32:43,316 base.py [django.request:256] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 36, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 8, in <module>
+    from upgrade import Upgrade
+  File "D:\django\monitor\monitor\upgrade\upgrade.py", line 29
+    def getHosts(self)
+                     ^
+SyntaxError: invalid syntax
+2017-08-10 15:34:14,726 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/get_hosts
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 223, in GetHosts
+    return HttpResponse(json.dumps(exe.getHosts))
+  File "C:\Python27\Lib\json\__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python27\Lib\json\encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python27\Lib\json\encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python27\Lib\json\encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <bound method Upgrade.getHosts of <upgrade.upgrade.Upgrade object at 0x04620C50>> is not JSON serializable
+2017-08-10 15:35:18,368 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/get_hosts
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django\monitor\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\django\monitor\monitor\upgrade\views.py", line 221, in GetHosts
+    exe = Upgrade(data, username, clientip)
+NameError: global name 'username' is not defined
+2017-08-10 15:41:27,372 upgrade.py [django:35] [ERROR]- http://10.252.252.98/api?project=[u'CONF-READER']&action=gethost, ReadTimeout! timeout: 60 s
+2017-08-10 15:42:26,701 base.py [django.request:256] [ERROR]- Internal Server Error: /upgrade/get_hosts
+Traceback (most recent call last):
+  File "D:\django\monitor\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\django\monitor\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\django\monitor\lib\site-packages\django\core\urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\monitor\urls.py", line 36, in <module>
+    url(r'^upgrade/', include('upgrade.urls')),
+  File "D:\django\monitor\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\django\monitor\monitor\upgrade\urls.py", line 3, in <module>
+    from . import views
+  File "D:\django\monitor\monitor\upgrade\views.py", line 225
+    logger.info('[POST]%s is requesting. %s : project %s' %(clientip, request.get_full_path(), %data['project'][0]))
+                                                                                               ^
+SyntaxError: invalid syntax
+2017-08-10 16:19:05,532 upgrade.py [django:39] [ERROR]- http://10.252.252.98/api?project=CONF-READER&action=gethost, ConnectionError!
+2017-08-10 16:20:56,842 upgrade.py [django:39] [ERROR]- http://10.252.252.98/api?project=CONF-READER&action=gethost, ConnectionError!
+2017-08-10 16:21:30,984 upgrade.py [django:39] [ERROR]- http://10.252.252.98/api?project=CONF-READER&action=gethost, ConnectionError!
+2017-08-10 16:32:21,171 upgrade.py [django:39] [ERROR]- http://10.252.252.98/api?project=CONF-READER&action=gethost, ConnectionError!
+2017-08-10 17:09:38,065 upgrade.py [django:66] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=192.168.100.107&action=deploy&restart=true&svn_id=608&envir=ONLINE, ConnectionError!
+2017-08-10 18:52:04,565 upgrade.py [django:39] [ERROR]- http://10.252.252.98/api?project=E04_WS&action=gethost, ConnectionError!

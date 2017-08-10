@@ -50,7 +50,7 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="max-height: 50px;">
             <div class="container-fluid"> 
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">TCBS</a>
+                    <a class="navbar-brand">TCBS</a>
                 </div>
                 {% comment %}
                 <div>
@@ -70,6 +70,9 @@
                 </div>
                 <div>
                     <a class="navbar-brand" href="/admin">{{ username }}</a>
+                </div>
+                <div>
+                    <a class="navbar-brand" ui-sref="home" style="margin-left: 50px;">主页</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right"> 
                     <li><a href="#" id="logout" onclick="Logout(this)"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li> 

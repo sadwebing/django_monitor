@@ -196,13 +196,19 @@ window.operateStatusEvents = {
                 //alert(data);
                 //tableInit.myViewModel.refresh();
             },
-            error: function(msg){
+            error: function(XMLHttpRequest, textStatus, errorThrown){
                 if (postData.status == 'active'){
                     document.getElementById(row.id).checked = false;
                 }else {
                     document.getElementById(row.id).checked = true;
                 }
-                alert("失败，请检查日志！");
+                if (XMLHttpRequest.status == 0){
+                    toastr.error('后端服务不响应', '错误')
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                }
+                //console.info(XMLHttpRequest)
+                //alert(XMLHttpRequest.status+': '+XMLHttpRequest.responseText);
                 //tableInit.myViewModel.refresh();
             }
         });
@@ -293,13 +299,17 @@ window.operateMailEvents = {
                 
                 row[program] = postData[program];
             },
-            error: function(msg){
+            error: function(XMLHttpRequest, textStatus, errorThrown){
                 if (postData[program] == 1){
                     document.getElementById(check_id).checked = false;
                 }else {
                     document.getElementById(check_id).checked = true;
                 }
-                alert("失败，请检查日志！");
+                if (XMLHttpRequest.status == 0){
+                    toastr.error('后端服务不响应', '错误')
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                }
                 //tableInit.myViewModel.refresh();
             }
         });
@@ -457,13 +467,17 @@ var operate = {
                         toastr.warning(postData.program+": "+status, '状态已更新');
                     }
                 },
-                error: function(msg){
+                error: function(XMLHttpRequest, textStatus, errorThrown){
                     if (apostData['status'] == 1){
                         document.getElementById(apostData['program']).checked = false;
                     }else {
                         document.getElementById(apostData['program']).checked = true;
                     }
-                    alert("失败，请检查日志！");
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误')
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
                     //tableInit.myViewModel.refresh();
                 }
             });
@@ -678,12 +692,17 @@ var operate = {
                 contentType: 'application/json',
                 data: JSON.stringify(arrselectedData),
                 success: function (data, status) {
-                    alert(data);
+                    toastr.success(data);
                     tableInit.myViewModel.refresh();
                 },
-                error:function(msg){
-                    alert("失败，请检查日志！");
-                    tableInit.myViewModel.refresh();
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误')
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
+                    //alert("失败，请检查日志！");
+                    //tableInit.myViewModel.refresh();
                 }
             });
         });
@@ -723,12 +742,17 @@ var operate = {
                 type: "post",
                 data: oDataModel,
                 success: function (data, status) {
-                    alert(data);
+                    toastr.success(data);
                     tableInit.myViewModel.refresh();
                 },
-                error:function(msg){
-                    alert("失败，请检查日志！");
-                    tableInit.myViewModel.refresh();
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误')
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
+                    //alert("失败，请检查日志！");
+                    //tableInit.myViewModel.refresh();
                 }
             });
         });

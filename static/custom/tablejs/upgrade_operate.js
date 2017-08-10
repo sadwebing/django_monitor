@@ -75,8 +75,16 @@ var tableInit = {
                     width:'18%',
                     //align: 'center'
                 },{
-                    field: 'cur_status',
-                    title: '状态',
+                    field: 'envir_uat',
+                    title: '测试环境',
+                    sortable: true,
+                    width:'6%',
+                    //align: 'center',
+                    //events: this.cur_statusEvents,
+                    formatter: this.cur_statusFormatter
+                },{
+                    field: 'envir_online',
+                    title: '运营环境',
                     sortable: true,
                     width:'6%',
                     //align: 'center',
@@ -117,36 +125,28 @@ var tableInit = {
                 id_time:row.id_time,
                 svn_id:row.svn_id,
                 tag:row.tag,
-                cur_status,
+                envir_uat,
+                envir_online,
                 project:row.project,
             }
 
-            if (row.cur_status == 'done'){
-                upgrade_parms.cur_status = ko.observable('已升级');
-            }else if (row.cur_status == 'undone'){
-                upgrade_parms.cur_status = ko.observable('未升级');
-            }else if (row.cur_status == 'rollback'){
-                upgrade_parms.cur_status = ko.observable('已回退');
+            if (row.envir_online == 'done'){
+                upgrade_parms.envir_online = ko.observable('已升级');
+            }else if (row.envir_online == 'undone'){
+                upgrade_parms.envir_online = ko.observable('未升级');
+            }else if (row.envir_online == 'rollback'){
+                upgrade_parms.envir_online = ko.observable('已回退');
+            }
+            if (row.envir_uat == 'done'){
+                upgrade_parms.envir_uat = ko.observable('已升级');
+            }else if (row.envir_uat == 'undone'){
+                upgrade_parms.envir_uat = ko.observable('未升级');
+            }else if (row.envir_uat == 'rollback'){
+                upgrade_parms.envir_uat = ko.observable('已回退');
             }
 
             //初始化升级按钮
             operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip','upgrade_interrupt'], true);
-            //if (row.cur_status == 'done'){
-            //    document.getElementById('upgrade_deploy').disabled = false;
-            //    document.getElementById('upgrade_diff').disabled = false;
-            //    document.getElementById('upgrade_rollback').disabled = false;
-            //    document.getElementById('upgrade_interrupt').disabled = true;
-            //}else if (row.cur_status == 'undone'){
-            //    document.getElementById('upgrade_deploy').disabled = false;
-            //    document.getElementById('upgrade_diff').disabled = false;
-            //    document.getElementById('upgrade_rollback').disabled = false;
-            //    document.getElementById('upgrade_interrupt').disabled = true;
-            //}else if (row.cur_status == 'rollback'){
-            //    document.getElementById('upgrade_deploy').disabled = false;
-            //    document.getElementById('upgrade_diff').disabled = false;
-            //    document.getElementById('upgrade_rollback').disabled = true;
-            //    document.getElementById('upgrade_interrupt').disabled = true;
-            //}
 
             //初始化页面参数
             var obj_envir = document.getElementsByName('upgrade_envir');
@@ -164,11 +164,14 @@ var tableInit = {
             document.getElementById('upgrade_ip').innerHTML = "";
             $('.selectpicker').selectpicker('refresh');
             operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
+            operate.disableButtons(['upgrade_envir_uat', 'upgrade_envir_online'], true);
             upgrade_progress_body.hidden = true;
             upgrade_progress_head.innerHTML= "";
             modal_head_content.innerHTML = "请选择升级参数";
             modal_head_close.innerHTML = "&times;";
             modal_results.innerHTML = "";
+            $('#upgrade_results').append('<p>正在获取主机地址，请稍后...</p>');
+            //modal_results.append('<p>正在获取主机地址，请稍后...</p>');
             operate.DisSelectedIp();
             ko.cleanNode(document.getElementById("upgrade_modal_body"));
             ko.applyBindings(upgrade_parms, document.getElementById("upgrade_modal_body"));
@@ -192,28 +195,11 @@ var tableInit = {
         }else {
             content_n = "";
         }
-
-        var content = [
-            '<a class="upgrade text-info" href="javascript:void(0)" title="升级">',
-                '升级',
-            '</a>&ensp;',
-            '<a class="diff text-primary" href="javascript:void(0)" title="比对代码">',
-                '比对',
-            '</a>&ensp;',
-        ].join('');
-        if (row.cur_status == 'rollback' || row.cur_status == 'undone'){
-        }else {
-            content = content + [
-            '<a class="rollback text-muted" href="javascript:void(0)" title="回退">',
-                '回退',
-            '</a>'
-            ].join('');   
-        }
         return content_n;
     },
 
     cur_statusFormatter: function (value,row,index) {
-        var status = row.cur_status;
+        var status = value;
         var content = "";
         if (status == 'undone'){
             content = '<span style="background-color: #FF0000">未升级</span>';
@@ -263,14 +249,6 @@ window.operateEvents = {
                 tmpfooter.innerHTML = '<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>'
             }
         }; 
-        return false;
-    },
-    'click .diff': function (e, value, row, index) {
-        console.log('click diff. '+row.project+" "+row.cur_status)
-        return false;
-    },
-    'click .rollback': function (e, value, row, index) {
-        console.log('click rollback. '+row.project+" "+row.cur_status)
         return false;
     },
     'click .delete': function (e, value, row, index) {
@@ -419,7 +397,7 @@ var operate = {
 
         $('#upgrade_interrupt').on("click", function () {
             //alert('终止')
-            cur_status.innerHTML = '中断';
+            //cur_status.innerHTML = '中断';
             modal_head_content.innerHTML = "中断";
             run = false;
             operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
@@ -455,8 +433,8 @@ var operate = {
 
         //更改页面展示的状态
         modal_head_content.innerHTML = args.content1+"，请勿刷新页面......";
-        cur_status = document.getElementById('cur_status');
-        cur_status.innerHTML = args.content1;
+        //cur_status = document.getElementById('cur_status');
+        //cur_status.innerHTML = args.content1;
         modal_head_close.innerHTML = "";
         upgrade_progress_body.hidden = false;
         $("#upgrade_progress_bar").css("width", "0%");
@@ -529,16 +507,16 @@ var operate = {
                 operate.disableButtons(['upgrade_interrupt'], true);
             }
             $("#upgrade_progress_bar").css("width", width);
-            $('#upgrade_results').append('<p><strong>'+data.ip_addr[data.step-1]+'</strong></p>');
+            $('#upgrade_results').append('<p><strong>'+data.ip_addr[data.step]+'</strong></p>');
             $('#upgrade_results').append('<pre class="pre-scrollable"><xmp>'+data.result+'</xmp></pre>',)
-            upgrade_progress_head.innerHTML="总共：<strong>"+postData.ip_addr.length+"</strong>台    "+"成功：<strong>"+(data.step)+"</strong>台";
+            upgrade_progress_head.innerHTML="总共：<strong>"+postData.ip_addr.length+"</strong>台    "+"成功：<strong>"+(postData.step)+"</strong>台";
             //console.log(data.step+" : "+postData.ip_addr.length)
             if (run){
-                if (data.step <= postData.ip_addr.length - 1){
+                if (data.step < postData.ip_addr.length - 1){
                     //console.log(postData);
                     socket.send(JSON.stringify(postData));
                 }else {
-                    cur_status.innerHTML = args.content2;
+                    //cur_status.innerHTML = args.content2;
                     modal_head_close.innerHTML = "&times;"
                     modal_head_content.innerHTML = args.content2;
                     operate.disableButtons(['upgrade_deploy', 'upgrade_diff', 'upgrade_rollback', 'upgrade_ip'], false);
@@ -619,7 +597,7 @@ var operate = {
         var postData = {};
         postData['project'] = projectlist;
         $.ajax({
-            url: "/saltstack/restart/get_project_servers",
+            url: "/upgrade/get_hosts",
             type: "post",
             contentType: 'application/json',
             dataType: 'json',
@@ -628,36 +606,54 @@ var operate = {
                 //alert(datas);
                 var data = eval(datas);
                 //var html = "<option value=''></option>";
-                
-                for (var project in data){
+                if (data.op_status == 0){
+                    $('#upgrade_results').append('<p>接口返回：'+data.result+'</p>');
+                    $('#upgrade_results').append('获取主机地址失败...');
+                }else {
                     var html_uat_tmp = "";
                     var html_online_tmp = "";
-                    $.each(data[project], function (index, item) { 
+                    try {
+                        var ip_dict = eval('('+ data.result +')')
+                        var ip_online = eval('('+ ip_dict.ONLINE +')');
+                        var ip_uat = eval('('+ ip_dict.UAT +')');
+                    }catch (e){
+                        $('#upgrade_results').append('<p>接口返回：'+data.result+'</p>');
+                        $('#upgrade_results').append('获取主机地址失败...');
+                        return false;
+                    }
+                    $.each(ip_online, function (index, item) { 
                         //循环获取数据 
-                        var name = data[project][index];
-                        html_name = "<option value='"+name.ip_addr+"' data-subtext='"+name.info+" "+name.role+"'>"+name.ip_addr+"</option>";
-                        if (name.envir == 'UAT'){
-                            html_uat_tmp = html_uat_tmp + html_name;
-                            uat_ip_addr_list.push(name.ip_addr);
-                        }else if (name.envir == 'ONLINE'){
-                            html_online_tmp = html_online_tmp + html_name;
-                            online_ip_addr_list.push(name.ip_addr);
-                        }
+                        var ip = ip_online[index];
+                        html_name = "<option value='"+ip+"'>"+ip+"</option>";
+                        html_online_tmp = html_online_tmp + html_name;
+                        online_ip_addr_list.push(ip);
+                    });
+                    $.each(ip_uat, function (index, item) { 
+                        //循环获取数据 
+                        var ip = ip_uat[index];
+                        html_name = "<option value='"+ip+"'>"+ip+"</option>";
+                        html_uat_tmp = html_uat_tmp + html_name;
+                        uat_ip_addr_list.push(ip);
                     }); 
                     //html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
                     html_uat = html_uat + html_uat_tmp;
                     html_online = html_online + html_online_tmp;
+                    operate.disableButtons(['upgrade_envir_uat', 'upgrade_envir_online'], false)
+                    $('#upgrade_results').append('<p>获取主机地址成功...</p>');
                 }
-                //document.getElementById('upgrade_ip').innerHTML=html;
-                //$('.selectpicker').selectpicker({title:"请选择服务器地址"});
-                //$('.selectpicker').selectpicker('refresh');
                 return false;
             },
-            error:function(msg){
-                alert("获取项目服务器地址失败！");
-                return false;
-            }
+            error:function(XMLHttpRequest, textStatus, errorThrown){
+                if (XMLHttpRequest.status == 0){
+                    toastr.error('后端服务不响应，获取主机地址失败...', '错误');
+                    $('#upgrade_results').append('后端服务不响应，获取主机地址失败...');
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status);
+                    $('#upgrade_results').append('<p>'+XMLHttpRequest.responseText+'</p>');
+                }
+            },
         });
+        return false;
     },
 
     setupIp: function (obj){

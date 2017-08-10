@@ -19,10 +19,12 @@ from django.contrib import auth
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponseRedirect
+from accounts.views import home
 
 urlpatterns = [
     #url(r'^', include('clientservices.urls')),
     #url(r'^$', include('clientservices.urls')),
+    url(r'^home$', home),
     url(r'^', include('check_tomcat.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),

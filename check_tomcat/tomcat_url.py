@@ -1,11 +1,12 @@
 # coding: utf8
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from models import tomcat_status, tomcat_url, tomcat_project, check_status
 from saltstack.command import Command
+from accounts.views import HasPermission
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
 error_status = 'null'
@@ -58,6 +59,8 @@ def UrlAdd(request):
         clientip = request.META['REMOTE_ADDR']
         #data = json.loads(request.body)
         data = request.POST
+        if not HasPermission(request.user, 'add', 'tomcat_url', 'check_tomcat'):
+            return HttpResponseForbidden('你没有新增的权限。')
         try:
             info = tomcat_url.objects.get(project=data['project'], minion_id=data['minion_id'])
             logger.info('%s is requesting. %s url: %s  already exists!' %(clientip, request.get_full_path(), info.url))
@@ -79,6 +82,8 @@ def UrlUpdate(request):
         #data = json.loads(request.body)
         data = request.POST
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        if not HasPermission(request.user, 'change', 'tomcat_url', 'check_tomcat'):
+            return HttpResponseForbidden('你没有修改的权限。')
         info = tomcat_url.objects.get(id=data['id'])
         info.envir = data['envir']
         info.project = data['project']
@@ -103,6 +108,8 @@ def UrlUpdateStatus(request):
         clientip = request.META['REMOTE_ADDR']
         data = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        if not HasPermission(request.user, 'change', 'tomcat_url', 'check_tomcat'):
+            return HttpResponseForbidden('你没有修改的权限。')
         info = tomcat_url.objects.get(id=data['id'])
         info.status = data['status']
         info.save()
@@ -117,12 +124,9 @@ def UrlDelete(request):
     clientip = request.META['REMOTE_ADDR']
     logger.info('user: %s' %request.user.username)
     username = request.user.username
-    if username != u'arno':
+    if username != u'arno' and not HasPermission(request.user, 'delete', 'tomcat_url', 'check_tomcat'):
         logger.info('%s %s is requesting. %s' %(clientip, username, request.get_full_path()))
-        return HttpResponse('你没有删除的权限，请联系管理员。')
-    #data = json.loads(request.body)
-    #logger.info('%s' %data)
-    #return HttpResponse('success!')
+        return HttpResponseForbidden('你没有删除的权限，请联系管理员。')
     if request.method == 'POST':
         datas = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))
@@ -214,6 +218,8 @@ def UpdateCheckStatus(request):
         data = json.loads(request.body)
         #data = request.POST
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        if not HasPermission(request.user, 'change', 'check_status', 'check_tomcat'):
+            return HttpResponseForbidden('你没有修改的权限。')
         info = check_status.objects.filter(program=data['program']).first()
         info.status = data['status']
         info.save()

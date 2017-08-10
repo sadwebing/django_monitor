@@ -1,10 +1,11 @@
 # coding: utf8
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from dwebsocket import require_websocket
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from models import mail
+from accounts.views import HasPermission
 import json, logging, requests, re, datetime
 logger = logging.getLogger('django')
 error_status = 'null'
@@ -52,6 +53,8 @@ def UpdateMailStatus(request):
         clientip = request.META['REMOTE_ADDR']
         data = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        if not HasPermission(request.user, 'change', 'mail', 'check_tomcat'):
+            return HttpResponseForbidden('你没有修改的权限。')
         info = mail.objects.get(id=data['id'])
         if data['program'] == 'check_services':
             info.check_services = data[data['program']]

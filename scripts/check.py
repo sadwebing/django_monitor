@@ -5,6 +5,7 @@
 #        2017/07/11  add check_salt_intrm
 #        2017/07/12  optimize check_server_status
 #        2017/07/22  add color print
+#        2017/08/10  add salt_master_glb to check servers of shichang
 
 import os,sys,datetime,logging,multiprocessing,requests
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
@@ -29,6 +30,12 @@ sapi = SaltAPI(
     password = settings.SALT_API['password']
 )
 
+sapi_glb = SaltAPI(
+    url      = settings.SALT_API['url_glb'],
+    username = settings.SALT_API['user'],
+    password = settings.SALT_API['password']
+)
+
 def check_services_fun():
     check_services = check_status.objects.filter(program='check_services').first()
     if check_services.status == 1:
@@ -41,10 +48,15 @@ def check_salt_minion_fun():
     check_salt_minion = check_status.objects.filter(program='check_salt_minion').first()
     if check_salt_minion.status == 1:
         minionsup, minionsdown= sapi.MinionStatus()
+        minionsup_glb, minionsdown_glb= sapi_glb.MinionStatus()
+        minionsdown_glb = [id for id in minionsdown_glb if 'SC' in id]
     else:
         minionsdown = []
+        minionsdown_glb = []
     if len(minionsdown) != 0:
         send_mail(get_mail_list('check_salt_minion'),'Attention: salt_minion','Minion Down:'+ '\n\t' +'\n\t'.join(minionsdown))
+    if len(minionsdown_glb) != 0:
+        send_mail(admin_mail_addr,'Attention: 市场部服务器故障','Minion Down:'+ '\n\t' +'\n\t'.join(minionsdown_glb))
     end_time['check_salt_minion'] = time()
 
 def check_salt_intrm_false(salt_intrm_id, salt_intrm, status_code):

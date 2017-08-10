@@ -1,6 +1,7 @@
 # coding: utf-8
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, HttpResponseForbidden
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.debug import sensitive_post_parameters
 from django.views.decorators.csrf import csrf_protect
@@ -8,6 +9,7 @@ from django.views.decorators.cache import never_cache
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.response import TemplateResponse
 from django.utils.http import is_safe_url, urlsafe_base64_decode
+from accounts.limit import LimitAccess
 from django.contrib.auth import (
     REDIRECT_FIELD_NAME, get_user_model, login as auth_login,
     logout as auth_logout, update_session_auth_hash,
@@ -17,6 +19,37 @@ import logging
 logger = logging.getLogger('django')
 
 # Create your views here.
+
+@csrf_protect
+@login_required
+def home(request):
+    title = u'默认主页'
+    global username, role, clientip
+    username = request.user.username
+    try:
+        role = request.user.userprofile.role
+    except:
+        role = 'none'
+    group = request.user.get_group_permissions()
+    if request.user.has_perm('check_tomcat.add_tomcat_url'):
+    	auth = 'welcome!'
+    else:
+    	auth = 'back off!'
+    clientip = request.META['REMOTE_ADDR']
+    logger.info('%s is requesting %s' %(clientip, request.get_full_path()))
+    return render(
+        request,
+        LimitAccess(role, 'home/home.html'),
+        {
+            'title': title,
+            'clientip':clientip,
+            'role': role,
+            'username': username,
+            'auth': auth,
+            'group': group,
+        }
+    )
+
 def logout(request):
 	redirect_to = request.REQUEST.get('url', '/')
 	auth_logout(request)
@@ -66,3 +99,11 @@ def login(request, template_name='registration/login.html',
 		request.current_app = current_app
 
 	return TemplateResponse(request, template_name, context)
+
+def HasPermission(user, act, table, app):
+	#logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
+	if not user.has_perm(app+'.'+act+'_'+table):
+		logger.error('%s don\'t have the permisson to %s table %s of %s' %(user.username, act, table, app))
+		return False
+	else:
+		return True

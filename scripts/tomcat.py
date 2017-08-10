@@ -118,7 +118,7 @@ def get_result(result, tomcat_info, code_list, content_body):
             result['server_type'] = 'unknown'
         content_body = content_body + "<tr style=\"font-size:15px\"><td >%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" %(result['access_time'], result['project'], result['server_type'], result['domain'], result['url'], result['code'], result['info'])
     else:
-        print result['code'] + "    " + result['project'] + ":  " +  result['url']
+        print result['code'] + "\t" + result['project'] + ":  " +  result['url']
 
     #logger.info(MIMEText(str(result), 'utf-8'))
     return content_body
@@ -126,15 +126,31 @@ def get_result(result, tomcat_info, code_list, content_body):
 def check_tomcat():
     content_head = """\
     <html><head><title>HTML email</title></head><body>
-    <table  borderColor=red cellPadding=1 width=1000 border=1 cellspacing=\"1\" style=\"text-align:center;padding:1px\">
+    <style>
+        .table_css table {
+            text-align:center;
+            width:1500px;
+            border: solid #dddddd;
+            border-collapse:collapse;
+            border-radius: 4px;
+        }
+        .table_css table th {
+            border: 1px solid #dddddd;
+        }
+        .table_css table td {
+            border: 1px solid #dddddd;
+        }
+    </style>
+    <div class=\"table_css\">
+    <table>
     <tr style=\"font-size:14px\">
-    <th style="width:120px">时间</th> 
-    <th style="width:120px">工程</th> 
-    <th style="width:120px">服务类型</th> 
-    <th style="width:120px">域名</th> 
-    <th style="width:300px">路径</th> 
-    <th style="width:120px">状态</th> 
-    <th style="width:300px">备注</th>
+    <th style="width:120px;">时间</th> 
+    <th style="width:120px;">工程</th> 
+    <th style="width:120px;">服务类型</th> 
+    <th style="width:120px;">域名</th> 
+    <th style="width:300px;">路径</th> 
+    <th style="width:120px;">状态</th> 
+    <th style="width:300px;">备注</th>
     </tr>
     """
     content_body = ""
@@ -154,7 +170,7 @@ def check_tomcat():
         #result['code'], result['info'] = get_result(result, tomcat_info, code_list)
         
         if content_body != "":
-            content = content_head + content_body + "</table></body></html>"
+            content = content_head + content_body + "</table></div></body></html>"
     pool.close()
     pool.join()
     return content

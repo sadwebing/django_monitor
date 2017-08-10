@@ -4,9 +4,10 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from models import tomcat_status,tomcat_url, tomcat_project
+from accounts.views import HasPermission
 import json, logging
 logger = logging.getLogger('django')
 @csrf_exempt 
@@ -59,11 +60,13 @@ def ProjectAdd(request):
         clientip = request.META['REMOTE_ADDR']
         #data = json.loads(request.body)
         data = request.POST
+        logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        if not HasPermission(request.user, 'add', 'tomcat_project', 'check_tomcat'):
+            return HttpResponseForbidden('你没有新增的权限。')
         try:
             info = tomcat_project.objects.get(project=data['project'])
             return HttpResponse('PROJECT: %s  already exists!' %info.project)
         except:
-            logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
             if data['status_'] == '':
             	status_ = 'active'
             else:
@@ -83,6 +86,8 @@ def ProjectUpdate(request):
         #data = json.loads(request.body)
         data = request.POST
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        if not HasPermission(request.user, 'change', 'tomcat_project', 'check_tomcat'):
+            return HttpResponseForbidden('你没有修改的权限。')
         if data['status_'] == '':
         	status_ = 'inactive'
         else:
@@ -111,6 +116,8 @@ def ProjectUpdateStatus(request):
         clientip = request.META['REMOTE_ADDR']
         data = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), data))
+        if not HasPermission(request.user, 'change', 'tomcat_project', 'check_tomcat'):
+            return HttpResponseForbidden('你没有修改的权限。')
         info = tomcat_project.objects.get(id=data['id'])
         info.status = data['status']
         info.save()
@@ -127,8 +134,8 @@ def ProjectDelete(request):
     #logger.info('%s' %data)
     #return HttpResponse('success!')
     username = request.user.username
-    if username != u'arno':
-        return HttpResponse('你没有删除的权限，请联系管理员。')
+    if username != u'arno' and not HasPermission(request.user, 'delete', 'tomcat_project', 'check_tomcat'):
+        return HttpResponseForbidden('你没有删除的权限，请联系管理员。')
     if request.method == 'POST':
         datas = json.loads(request.body)
         logger.info('%s is requesting. %s data: %s' %(clientip, request.get_full_path(), datas))

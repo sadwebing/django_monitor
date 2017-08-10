@@ -3,8 +3,12 @@ TcbsApp.config(function ($stateProvider, $urlRouterProvider) {
 
     //$urlRouterProvider.when("", "mainnav");
 
-    $urlRouterProvider.otherwise("/malfunction_all");
+    $urlRouterProvider.otherwise("/home");
     $stateProvider
+        .state("home", {
+            url:"/home",
+            templateUrl: "/home"
+        })
         .state("malfunction_all", {
             url:"/malfunction_all",
             templateUrl: "/malfunction/all"
