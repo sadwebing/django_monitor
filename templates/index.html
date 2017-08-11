@@ -42,6 +42,10 @@
         <link href="/static/bootstrapValidator/bootstrapValidator.css" rel="stylesheet">
         <script src="/static/bootstrapValidator/bootstrapValidator.min.js"></script>
 
+        <link rel="stylesheet" type="text/css" href="/static/bootstrapNews/css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="/static/bootstrapNews/css/default.css">
+        <link href="/static/bootstrapNews/css/site.css" rel="stylesheet" type="text/css" />
+
         <script src="/static/custom/tablejs/kobootstraptable.js"></script> 
 
 
@@ -69,13 +73,13 @@
                     <p class="navbar-text"><span class="glyphicon glyphicon-user"></span></p>
                 </div>
                 <div>
-                    <a class="navbar-brand" href="/admin">{{ username }}</a>
+                    <a class="navbar-brand" href="/admin" title="点击进入后台">{{ username }}</a>
                 </div>
                 <div>
-                    <a class="navbar-brand" ui-sref="home" style="margin-left: 50px;">主页</a>
+                    <a class="navbar-brand font_ui" ui-sref="home" title="点击进入主页面" style="margin-left: 20px;">主页</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right"> 
-                    <li><a href="#" id="logout" onclick="Logout(this)"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li> 
+                    <li><a href="#" id="logout" onclick="Logout(this)" title="点击退出"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li> 
                 </ul> 
             </div>
         </nav>

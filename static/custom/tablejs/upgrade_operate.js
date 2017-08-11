@@ -252,10 +252,6 @@ window.operateEvents = {
         return false;
     },
     'click .delete': function (e, value, row, index) {
-        $('#upgrade_op_table').bootstrapTable('remove', {
-                field: 'id',
-                values: [row.id]
-        });
         var postData = {};
         postData['deleted'] = 1
         postData['id'] = row.id
@@ -266,14 +262,22 @@ window.operateEvents = {
             type: "post",
             data: JSON.stringify(postData),
             success: function (datas, status) {
+                $('#upgrade_op_table').bootstrapTable('remove', {
+                    field: 'id',
+                    values: [row.id]
+                });
                 if (datas == 'failure'){
                     alert("failure");
                 }else {
                     toastr.warning('删除成功！', row.project+": "+row.svn_id)
                 }
             },
-            error:function(msg){
-                alert("删除失败，请检查日志！");
+            error:function(XMLHttpRequest, textStatus, errorThrown){
+                if (XMLHttpRequest.status == 0){
+                    toastr.error('后端服务不响应', '错误')
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                }
             }
         });
         return false;
@@ -296,8 +300,12 @@ window.operateEvents = {
                     $('#upgrade_op_table').bootstrapTable('refresh');
                 }
             },
-            error:function(msg){
-                alert("恢复失败，请检查日志！");
+            error:function(XMLHttpRequest, textStatus, errorThrown){
+                if (XMLHttpRequest.status == 0){
+                    toastr.error('后端服务不响应', '错误')
+                }else {
+                    toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                }
             }
         });
         

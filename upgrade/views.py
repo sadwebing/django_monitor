@@ -1,6 +1,6 @@
 # coding: utf-8
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib.auth.decorators import login_required
 from django.views.generic import View
@@ -14,6 +14,7 @@ import json, logging, numpy, datetime, requests
 from time import sleep
 from dwebsocket import require_websocket, accept_websocket
 from accounts.limit import LimitAccess
+from accounts.views import HasPermission
 
 logger = logging.getLogger('django')
 
@@ -197,6 +198,8 @@ def UpdateSvnId(request):
     elif request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
+        if not HasPermission(request.user, 'change', 'svn_id', 'upgrade'):
+            return HttpResponseForbidden('你没有修改的权限。')
         try:
             data = json.loads(request.body)
             deleted = data['deleted']

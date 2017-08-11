@@ -21,3 +21,4 @@
 		 add permission to user
 		 update upgrade with will
 20170811 在升级的js文件中添加对获取的IP地址进行数据类型判断
+		 新增bootstrapNews，滚动列表

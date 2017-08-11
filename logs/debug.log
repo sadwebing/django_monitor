@@ -12188,3 +12188,990 @@ SyntaxError: invalid syntax
 2017-08-11 10:51:48,796 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
 2017-08-11 10:52:55,490 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
 2017-08-11 10:52:55,543 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 11:16:44,312 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 11:16:44,957 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 11:16:45,112 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 11:16:46,045 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:03:39,362 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:03:40,776 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:03:40,792 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:03:41,992 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:04:36,752 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:04:37,410 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:04:37,421 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:04:38,283 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:04:54,072 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:04:54,776 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:04:54,832 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:04:55,727 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:05:15,381 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:05:15,894 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:05:15,974 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:05:16,930 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:06:06,046 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:06:07,164 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:06:07,181 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:06:08,085 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:07:52,700 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:07:52,940 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:07:52,980 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:07:53,010 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:07:53,012 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:07:53,013 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:09:07,783 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:09:08,611 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:09:08,671 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:09:09,582 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:11:33,165 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:11:33,611 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:11:33,651 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:11:34,539 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:11:42,618 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:11:43,609 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:11:43,658 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:11:44,532 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:13:47,351 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:13:47,888 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:13:47,895 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:13:48,961 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:14:05,961 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:14:06,421 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:14:06,493 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:14:07,371 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:14:18,352 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:14:19,487 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:14:19,546 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:14:20,470 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:14:27,937 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:14:28,509 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:14:28,555 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:14:29,448 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:14:51,535 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:14:52,512 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:14:52,571 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:14:53,515 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:15:18,368 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:15:19,375 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:15:19,375 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:15:20,336 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:15:27,868 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:15:28,908 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:15:28,967 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:15:29,858 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:15:57,219 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:15:57,322 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:15:57,322 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:15:57,325 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:15:57,331 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:15:57,332 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:16:02,993 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 12:16:04,289 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502424928624
+2017-08-11 12:16:15,509 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:16:15,509 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:16:15,510 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:16:15,515 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:16:15,516 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:16:39,289 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:16:42,250 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:16:42,252 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:16:43,108 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:16:45,772 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 12:16:46,773 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502425001828
+2017-08-11 12:17:45,276 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:17:45,611 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:17:46,273 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:17:46,280 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:17:47,362 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:17:51,372 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:17:51,503 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:17:51,506 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:17:51,506 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:17:51,520 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:17:51,522 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:19:08,615 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:19:09,249 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:19:09,249 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:19:10,059 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:19:10,177 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:19:10,180 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:19:10,180 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:19:10,197 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:19:10,197 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:19:22,255 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:20:02,588 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:20:03,584 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:20:03,676 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:20:04,548 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:20:11,947 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:20:12,039 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:20:12,040 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:20:12,043 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:20:12,052 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:20:12,053 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:20:22,591 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:20:22,592 tomcat_url.py [django:35] [INFO]- 查询参数：query_active
+2017-08-11 12:20:25,256 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:20:25,256 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:20:29,437 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-08-11 12:20:29,545 tomcat_project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 12:20:29,546 tomcat_project.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:20:29,546 tomcat_project.py [django:36] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 12:22:09,328 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:22:09,905 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:22:09,907 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:22:10,773 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:22:17,776 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:22:17,875 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:22:17,875 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:22:17,881 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:22:17,890 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:22:17,890 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:22:42,229 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:22:43,058 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:22:43,068 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:22:43,960 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:22:51,910 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:22:52,015 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:22:52,016 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:22:52,019 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:22:52,026 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:22:52,026 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:23:05,345 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:23:05,345 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:23:05,349 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:23:05,355 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:23:05,355 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:23:43,052 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:23:43,798 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:23:43,819 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:23:44,611 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:23:44,704 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:23:44,704 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:23:44,711 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:23:44,717 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:23:44,717 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:23:57,707 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-08-11 12:23:57,802 tomcat_project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 12:23:57,802 tomcat_project.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:23:57,802 tomcat_project.py [django:36] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 12:24:00,839 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:24:10,117 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 12:24:11,023 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502425423189
+2017-08-11 12:24:17,976 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:24:17,983 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:24:17,987 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:24:17,990 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:24:17,990 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:25:15,581 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:25:15,581 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:25:15,591 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:25:15,591 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:25:15,601 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:27:05,680 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:27:06,540 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:27:06,543 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:27:07,319 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:27:07,418 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:27:07,418 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:27:07,424 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:27:07,437 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:27:07,437 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:27:21,289 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 12:27:22,286 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502425625846
+2017-08-11 12:27:32,470 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:27:32,612 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:27:32,615 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:27:33,269 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:27:44,992 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 12:27:45,071 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 12:28:00,095 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 12:28:03,766 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 12:28:03,769 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 12:28:08,105 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 12:28:57,121 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:28:57,227 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'sa', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=true&svn_id=608&envir=ONLINE', u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], 'op_status': 1, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'true', 'result': 'deploy : success'}
+2017-08-11 12:28:58,552 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:28:58,582 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:28:59,309 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:28:59,426 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:28:59,427 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:29:00,095 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:29:01,799 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 12:29:40,378 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:29:41,045 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:29:41,237 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:29:41,990 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:29:42,098 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:29:42,099 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:29:42,756 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:31:25,184 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:31:25,786 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:31:25,928 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:31:26,680 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:31:26,789 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:31:26,789 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:31:27,430 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:31:33,223 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 12:31:33,253 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 12:32:19,934 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:32:21,137 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:32:21,171 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:32:21,989 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:32:22,107 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:32:22,108 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:32:22,825 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:32:25,759 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 12:32:27,122 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 12:33:00,502 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:33:01,190 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:33:01,292 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:33:02,095 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:33:02,203 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:33:02,204 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:33:02,868 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:33:06,121 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 12:33:06,165 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 12:33:15,862 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:33:16,617 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:33:16,664 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:33:17,436 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:33:17,542 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:33:17,542 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:33:18,220 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:33:20,855 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 12:33:20,888 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 12:33:29,285 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:33:30,403 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:33:30,414 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:33:31,046 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 12:33:31,151 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 12:33:31,151 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 12:33:31,826 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 12:33:35,480 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 12:33:35,509 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 12:33:50,325 views.py [django:75] [INFO]- 127.0.0.1 is requesting. /upgrade/op_history
+2017-08-11 12:33:50,440 views.py [django:93] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/op_history/Query
+2017-08-11 12:33:50,441 views.py [django:105] [INFO]- 查询参数：query_all
+2017-08-11 12:33:52,759 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:33:52,839 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:33:52,841 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:33:52,845 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:33:52,851 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:33:52,851 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:33:58,630 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:34:13,223 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:34:13,224 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:34:13,234 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:34:13,240 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:34:13,240 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:35:08,404 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:35:09,042 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:35:09,096 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:35:09,982 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:35:59,729 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:36:00,415 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:36:00,470 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:36:01,286 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:36:10,345 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:36:10,437 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:36:10,438 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:36:10,441 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:36:10,453 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:36:10,453 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 12:36:29,186 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 12:36:30,111 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502426159877
+2017-08-11 12:37:27,678 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 12:37:28,849 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 12:37:28,982 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 12:37:29,815 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 12:37:38,683 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 12:37:39,644 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502426248431
+2017-08-11 12:37:44,569 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 12:37:44,664 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 12:37:44,667 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 12:37:44,670 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 12:37:44,670 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 12:37:44,674 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:15:33,953 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:15:34,726 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:15:34,861 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:15:35,668 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:18:05,476 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:18:06,490 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:18:06,526 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:18:07,325 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:18:37,151 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:18:37,778 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:18:37,878 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:18:38,737 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:22:49,058 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 13:22:49,168 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 13:22:49,170 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 13:22:49,177 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 13:22:49,194 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 13:22:49,194 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:22:52,101 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-08-11 13:22:52,207 tomcat_project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 13:22:52,209 tomcat_project.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:22:52,209 tomcat_project.py [django:36] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 13:23:12,062 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 13:23:12,063 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 13:23:12,078 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 13:23:12,099 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 13:23:12,099 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:23:14,822 views.py [django:255] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 13:23:15,678 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 13:23:19,842 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 13:23:19,842 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 13:23:19,846 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 13:23:19,849 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 13:23:19,851 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:23:26,405 tomcat_project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 13:23:26,405 tomcat_project.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:23:26,405 tomcat_project.py [django:36] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 13:23:50,196 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:23:50,798 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:23:50,914 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:23:51,706 views.py [django:95] [INFO]- 127.0.0.1 is requesting /tomcat/project/
+2017-08-11 13:23:51,796 tomcat_project.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 13:23:51,796 tomcat_project.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:23:51,796 tomcat_project.py [django:36] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_project/Query
+2017-08-11 13:23:53,543 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:23:59,654 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 13:23:59,726 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 13:23:59,726 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 13:23:59,743 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 13:23:59,743 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 13:23:59,744 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:24:03,493 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 13:24:03,493 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 13:24:03,497 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 13:24:03,509 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 13:24:03,510 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:24:30,891 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:24:31,585 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:24:31,644 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:24:32,463 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:24:36,398 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 13:24:37,359 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502429071055
+2017-08-11 13:24:41,253 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 13:24:41,322 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 13:24:41,322 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 13:24:41,342 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 13:24:41,345 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 13:24:41,345 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 13:28:30,163 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:28:30,993 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:28:31,009 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:28:31,832 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:28:37,681 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:28:38,315 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:28:38,378 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:28:39,260 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:31:13,966 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:31:14,638 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:31:14,703 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:31:15,555 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:33:00,875 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:33:01,558 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:33:01,759 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:33:02,569 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:33:20,119 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:33:20,812 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:33:20,944 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:33:21,789 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:35:59,392 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:36:00,099 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:36:00,167 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:36:01,028 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:36:25,690 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:36:26,927 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:36:27,079 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:36:27,877 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:37:04,098 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:37:05,243 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:37:05,262 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:37:06,132 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:38:13,073 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:38:13,803 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:38:13,838 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:38:14,680 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:39:32,667 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:39:33,250 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:39:33,398 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:39:34,266 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:42:19,140 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:42:19,782 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:42:19,864 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:42:20,766 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:44:51,927 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:44:52,538 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:44:52,730 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:44:53,584 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:45:21,894 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:45:23,140 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:45:23,148 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:45:23,999 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:45:38,917 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:45:40,252 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:45:40,276 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:45:41,224 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:46:40,755 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:46:42,158 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:46:42,326 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:46:43,132 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:46:56,861 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:46:57,957 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:46:57,994 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:46:58,842 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:47:05,938 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:47:06,697 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:47:06,721 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:47:07,634 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:48:08,382 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:48:09,145 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:48:09,299 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:48:10,111 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:50:56,303 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:50:57,519 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:50:57,575 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:50:58,437 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:51:11,733 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:51:12,812 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:51:12,901 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:51:13,713 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:51:37,161 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:51:38,486 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:51:38,686 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:51:39,502 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:52:06,038 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:52:07,377 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:52:07,391 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:52:08,240 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:52:43,161 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 13:52:43,161 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 13:52:59,845 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:53:01,298 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:53:54,566 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:53:55,608 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 13:54:43,568 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 13:54:44,625 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:23:03,799 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:23:03,834 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'sa', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE', u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], 'op_status': 1, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'false', 'result': 'deploy : success'}
+2017-08-11 14:23:04,415 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:23:04,421 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:23:05,200 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 14:23:05,312 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 14:23:05,323 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 14:23:05,983 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 14:23:12,262 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:23:15,007 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 14:24:50,177 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:24:50,684 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:24:50,786 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:24:51,736 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:25:08,717 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:25:09,220 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:25:09,311 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:25:10,200 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:26:57,891 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:26:58,538 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:26:58,704 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:26:59,611 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:28:43,641 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:28:44,585 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:28:44,812 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:28:45,661 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:31:01,266 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:31:01,937 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:31:02,073 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:31:02,986 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:32:02,746 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:32:04,048 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:32:04,158 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:32:05,059 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:32:14,612 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:32:15,756 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:32:15,808 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:32:16,711 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:32:43,736 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:32:45,164 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:32:45,178 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:32:46,030 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:34:01,263 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:34:02,163 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:34:02,232 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:34:03,000 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:38:34,859 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:38:35,694 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:38:35,819 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:38:36,694 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:38:56,946 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:38:58,061 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:38:58,186 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:38:59,082 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:42:16,122 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:42:16,842 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:42:17,012 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:42:17,854 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:43:06,829 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:43:07,996 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:43:10,112 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:43:10,121 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:43:13,278 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:43:14,309 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:43:14,338 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:43:15,223 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:43:31,473 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:43:32,351 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:43:32,490 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:43:33,405 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:44:07,184 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:44:08,187 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:44:08,345 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:44:09,206 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:45:50,411 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:45:51,493 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:45:51,611 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:45:52,588 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:47:17,839 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:47:19,289 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:47:19,293 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:47:20,186 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:47:43,819 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:47:45,003 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:47:45,023 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:47:45,953 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:49:18,516 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:49:19,596 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:49:19,642 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:49:20,549 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:50:29,013 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:50:30,322 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:50:30,346 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:50:31,329 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:52:52,217 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:52:52,976 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:52:53,085 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:52:53,973 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 14:55:20,334 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 14:55:21,194 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 14:55:21,275 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 14:55:22,161 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:00:09,717 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:00:10,572 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:00:10,730 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:00:11,584 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:00:22,260 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:00:22,263 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:00:49,351 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:00:50,431 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:00:50,552 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:00:51,744 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:01:17,056 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 15:01:17,181 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 15:01:17,183 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 15:01:17,187 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 15:01:17,213 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 15:01:17,213 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 15:01:21,201 views.py [django:255] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:01:22,115 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:01:28,812 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 15:01:29,795 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502434849734
+2017-08-11 15:01:32,997 views.py [django:279] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-08-11 15:01:33,815 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:01:35,976 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:01:37,861 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:01:37,950 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:01:37,951 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:01:38,618 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:01:41,312 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:01:41,365 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:01:50,344 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 15:01:56,651 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:01:56,654 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 15:02:02,280 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:02:41,068 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:02:41,078 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'sa', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE', u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], 'op_status': 1, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'false', 'result': 'deploy : success'}
+2017-08-11 15:02:41,901 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:02:41,951 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:02:42,755 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:02:42,892 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:02:42,894 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:02:43,565 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:02:44,352 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:02:45,469 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:02:47,224 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:06:19,398 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:06:20,142 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:06:20,236 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:06:21,101 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:06:21,247 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:06:21,253 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:06:21,959 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:06:27,798 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:06:28,440 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:06:31,283 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:06:31,947 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:06:32,045 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:06:32,844 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:06:32,954 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:06:32,954 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:06:33,628 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:06:35,874 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:06:35,894 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:09:25,700 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:09:26,404 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:09:26,519 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:09:27,267 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:09:27,391 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:09:27,394 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:09:28,065 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:09:30,252 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:09:31,461 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:10:08,681 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:10:09,548 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:10:09,584 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:10:10,417 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:10:10,533 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:10:10,535 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:10:11,223 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:10:13,211 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:10:13,246 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:10:36,394 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:10:37,088 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:10:37,122 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:10:38,000 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:10:38,253 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:10:38,253 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:10:39,042 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:10:41,283 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project E04_WS
+2017-08-11 15:10:41,609 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=E04_WS&action=gethost, request success!
+2017-08-11 15:10:47,108 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:10:47,151 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:10:51,540 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project B79_WEB_V3
+2017-08-11 15:10:51,568 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=B79_WEB_V3&action=gethost, request success!
+2017-08-11 15:11:22,234 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:11:23,069 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:11:26,038 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:11:26,072 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:11:52,595 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:11:58,539 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:11:59,174 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:11:59,289 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:12:00,164 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:12:04,221 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:12:05,283 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:12:25,792 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:12:27,239 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:12:27,240 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:12:28,154 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:12:43,595 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:12:44,857 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:12:44,872 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:12:45,772 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:12:55,671 views.py [django:279] [INFO]- 127.0.0.1 is requesting. /saltstack/deploy
+2017-08-11 15:12:56,477 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:12:58,533 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 15:12:58,641 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 15:12:58,641 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 15:12:58,644 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 15:12:58,651 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 15:12:58,651 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 15:13:03,743 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 15:13:04,686 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502435564238
+2017-08-11 15:13:36,006 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:13:37,368 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:13:37,523 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:13:38,355 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:15:09,549 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:15:10,338 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:15:10,542 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:15:11,378 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:15:53,483 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:15:54,815 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:15:54,927 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:15:55,680 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:16:07,447 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:16:07,453 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:17:13,717 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:17:14,696 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:17:14,822 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:17:15,730 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:18:13,253 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:18:14,858 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:18:15,023 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:18:15,895 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:21:15,174 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 15:21:15,269 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 15:21:15,269 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 15:21:15,289 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 15:21:15,302 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 15:21:15,305 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 15:23:35,477 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:23:36,654 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:23:42,236 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:23:42,239 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:23:45,051 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:23:45,914 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:23:45,917 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:23:48,757 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:24:04,558 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:24:05,667 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:24:05,779 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:24:06,645 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:24:31,306 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:24:32,869 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:24:32,971 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:24:33,874 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:24:43,878 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:24:45,161 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:24:45,183 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:24:46,132 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:24:58,219 views.py [django:70] [INFO]- 127.0.0.1 is requesting /malfunction/all
+2017-08-11 15:24:59,246 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502436284605
+2017-08-11 15:25:06,838 views.py [django:140] [INFO]- 127.0.0.1 is requesting. /malfunction/QueryAll?limit=10&offset=0&_=1502436284606
+2017-08-11 15:25:51,005 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:25:52,407 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:25:52,437 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:25:53,404 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:27:07,680 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:27:08,594 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:27:08,736 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:27:09,684 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:27:50,191 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:27:51,016 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:27:51,051 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:27:52,006 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:28:13,865 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:28:14,858 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:28:14,900 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:28:15,834 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:28:31,608 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:28:32,313 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:28:32,332 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:28:33,190 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:30:10,092 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:30:10,223 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:30:10,226 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:30:10,891 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:30:13,089 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:30:13,118 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:30:18,036 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 15:30:22,831 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:30:22,834 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 15:30:26,928 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:30:35,493 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 15:30:37,769 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:30:37,772 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 15:30:41,142 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:31:11,943 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 15:31:12,042 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 15:31:12,042 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 15:31:12,046 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 15:31:12,052 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 15:31:12,052 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 15:32:29,476 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_services'}
+2017-08-11 15:32:30,290 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 15:32:36,561 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-08-11 15:32:37,357 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 15:32:39,703 mail.py [django:55] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 0, u'program': u'check_services', u'id': 2}
+2017-08-11 15:32:40,483 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-11 15:36:14,267 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-08-11 15:36:15,049 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 15:36:19,007 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-08-11 15:36:19,845 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 15:36:49,016 mail.py [django:55] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 0, u'program': u'check_services', u'id': 2}
+2017-08-11 15:36:53,713 mail.py [django:55] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 1, u'program': u'check_services', u'id': 2}
+2017-08-11 15:37:10,713 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-08-11 15:37:12,838 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 1, u'program': u'check_salt_minion'}
+2017-08-11 15:40:43,051 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 15:40:43,056 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 15:40:43,062 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 15:40:43,063 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 15:40:43,066 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 15:40:54,596 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 15:40:54,598 tomcat_url.py [django:35] [INFO]- 查询参数：query_inactive
+2017-08-11 15:40:57,096 tomcat_url.py [django:110] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/UpdateStatus data: {u'status': u'active', u'id': 17}
+2017-08-11 15:40:58,855 tomcat_url.py [django:110] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/UpdateStatus data: {u'status': u'inactive', u'id': 17}
+2017-08-11 15:41:01,556 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_services'}
+2017-08-11 15:41:02,336 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 15:41:04,783 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-08-11 15:41:05,572 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 15:41:08,426 mail.py [django:55] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 0, u'program': u'check_services', u'id': 2}
+2017-08-11 15:41:09,204 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-11 15:41:12,095 mail.py [django:55] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_salt_minion': 1, u'program': u'check_salt_minion', u'id': 7}
+2017-08-11 15:41:12,867 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-11 15:45:04,704 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:45:04,704 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:45:05,417 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:46:24,831 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:46:26,170 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:46:26,289 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:46:27,055 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:46:27,167 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:46:27,170 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:46:27,842 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:46:35,288 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:46:36,108 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:46:55,619 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:46:55,619 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:46:58,191 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:46:58,963 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:47:03,259 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:47:03,259 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:47:45,898 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:47:46,828 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:47:49,298 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:47:50,043 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:47:50,046 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:47:51,411 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:47:51,529 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:47:51,530 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:47:52,200 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:47:56,128 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:47:56,908 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:48:00,801 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:48:01,578 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:48:15,974 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:48:15,974 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:48:19,221 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:48:19,221 views.py [django:152] [INFO]- 查询参数：query_all
+2017-08-11 15:48:20,910 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:48:21,750 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:49:50,634 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:49:51,586 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:49:51,602 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:49:52,385 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:49:52,528 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:49:52,528 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:49:53,226 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:49:55,976 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:49:55,977 views.py [django:152] [INFO]- 查询参数：query_all
+2017-08-11 15:49:57,446 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:49:58,226 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:50:01,302 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:50:02,094 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:50:03,512 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:50:04,292 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:50:38,197 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:50:38,979 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:50:42,911 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:50:43,694 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:51:43,278 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:51:44,278 views.py [django:213] [INFO]- 608 deleted 0 success!
+2017-08-11 15:51:44,296 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:51:44,296 views.py [django:152] [INFO]- 查询参数：query_all
+2017-08-11 15:51:46,950 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:51:48,520 views.py [django:213] [INFO]- 608 deleted 1 success!
+2017-08-11 15:51:51,482 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:51:52,486 views.py [django:213] [INFO]- svn_15020 deleted 1 success!
+2017-08-11 15:51:55,990 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:51:55,992 views.py [django:152] [INFO]- 查询参数：query_all
+2017-08-11 15:51:57,589 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:51:58,611 views.py [django:213] [INFO]- svn_15020 deleted 0 success!
+2017-08-11 15:51:58,625 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:51:58,625 views.py [django:152] [INFO]- 查询参数：query_all
+2017-08-11 15:53:52,734 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:55:35,055 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 15:55:36,549 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 15:55:36,569 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 15:55:37,515 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 15:57:53,776 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 15:57:53,897 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:57:53,898 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 15:57:54,565 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 15:57:57,115 views.py [django:229] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project E04_WS
+2017-08-11 15:57:57,187 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=E04_WS&action=gethost, request success!
+2017-08-11 15:58:06,625 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:58:06,627 views.py [django:152] [INFO]- 查询参数：query_all
+2017-08-11 15:58:08,688 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 15:58:09,467 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 15:58:25,430 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 15:58:25,430 views.py [django:152] [INFO]- 查询参数：query_all
+2017-08-11 15:58:27,831 views.py [django:229] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 15:58:27,983 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 15:58:35,200 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 15:58:41,822 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 15:58:41,825 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 15:58:46,880 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 16:04:42,046 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 16:04:43,226 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 16:04:45,375 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 16:04:45,467 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 16:04:45,469 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 16:04:46,154 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 16:04:48,871 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 16:04:48,950 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 16:04:48,951 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 16:04:48,956 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 16:04:48,963 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 16:04:48,963 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 16:04:51,770 mail.py [django:55] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 0, u'program': u'check_services', u'id': 1}
+2017-08-11 16:04:52,572 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-11 16:04:55,095 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-08-11 16:04:55,885 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 16:19:50,867 views.py [django:23] [INFO]- 127.0.0.1 is requesting /detect/index
+2017-08-11 16:20:05,543 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 16:20:05,546 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 16:20:06,289 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 16:44:38,655 views.py [django:72] [INFO]- 127.0.0.1 is requesting /tomcat/tomcat_url
+2017-08-11 16:44:38,773 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 16:44:38,773 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 16:44:38,780 tomcat_url.py [django:228] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus  query check_status
+2017-08-11 16:44:38,788 mail.py [django:19] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/mail/Query
+2017-08-11 16:44:38,788 mail.py [django:34] [INFO]- 查询参数：query_all
+2017-08-11 16:44:46,963 mail.py [django:55] [INFO]- 127.0.0.1 is requesting. /tomcat/mail/UpdateMailStatus data: {u'check_services': 0, u'program': u'check_services', u'id': 1}
+2017-08-11 16:44:47,973 views.py [django:106] [ERROR]- sa don't have the permisson to change table mail of check_tomcat
+2017-08-11 16:44:52,336 tomcat_url.py [django:220] [INFO]- 127.0.0.1 is requesting. /tomcat/UpdateCheckStatus data: {u'status': 0, u'program': u'check_salt_minion'}
+2017-08-11 16:44:53,128 views.py [django:106] [ERROR]- sa don't have the permisson to change table check_status of check_tomcat
+2017-08-11 16:44:55,105 tomcat_url.py [django:110] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/UpdateStatus data: {u'status': u'inactive', u'id': 1}
+2017-08-11 16:44:57,102 tomcat_url.py [django:110] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/UpdateStatus data: {u'status': u'active', u'id': 1}
+2017-08-11 16:45:01,427 tomcat_url.py [django:84] [INFO]- 127.0.0.1 is requesting. /tomcat/tomcat_url/Update data: <QueryDict: {u'domain': [u'www.ag8.com'], u'ip_addr': [u'192.168.100.169'], u'__ko_mapping__[mappedProperties][project]': [u'true'], u'status_': [u'active'], u'__ko_mapping__[include][]': [u'_destroy'], u'__ko_mapping__[mappedProperties][status_]': [u'true'], u'minion_id': [u'WTT_100_169'], u'__ko_mapping__[mappedProperties][envir]': [u'true'], u'__ko_mapping__[mappedProperties][url]': [u'true'], u'__ko_mapping__[mappedProperties][0]': [u'true'], u'id': [u'1'], u'__ko_mapping__[mappedProperties][info]': [u'true'], u'0': [u'false'], u'role': [u'main'], u'__ko_mapping__[mappedProperties][minion_id]': [u'true'], u'__ko_mapping__[mappedProperties][domain]': [u'true'], u'__ko_mapping__[mappedProperties][id]': [u'true'], u'server_type': [u'tomcat'], u'__ko_mapping__[mappedProperties][role]': [u'true'], u'__ko_mapping__[mappedProperties][ip_addr]': [u'true'], u'envir': [u'ONLINE'], u'info': [u'\u4e3b\u7ad9'], u'url': [u'http://192.168.100.169:6080'], u'__ko_mapping__[mappedProperties][server_type]': [u'true'], u'project': [u'B79_WEB_V3']}>
+2017-08-11 16:45:02,438 tomcat_url.py [django:20] [INFO]- [POST]127.0.0.1 is requesting. /tomcat/tomcat_url/Query
+2017-08-11 16:45:02,438 tomcat_url.py [django:35] [INFO]- 查询参数：query_all
+2017-08-11 17:16:58,835 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 17:16:58,851 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'sa', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE', u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], 'op_status': 1, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'false', 'result': 'deploy : success'}
+2017-08-11 17:16:59,660 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 17:16:59,720 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 17:17:00,631 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 17:17:02,572 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 17:17:07,509 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 17:17:08,967 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 17:17:09,033 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 17:17:09,990 views.py [django:39] [INFO]- 127.0.0.1 is requesting /home
+2017-08-11 17:22:26,596 views.py [django:51] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 17:22:26,732 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 17:22:26,733 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 17:22:27,473 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 17:22:30,026 views.py [django:229] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 17:22:30,066 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 17:22:43,665 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 17:22:50,170 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 17:24:04,618 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'diff', u'restart': u'false'}
+2017-08-11 17:24:04,648 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=diff&restart=false&svn_id=608&envir=ONLINE, diff success!
+2017-08-11 17:24:09,780 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'rollback', u'restart': u'false'}
+2017-08-11 17:24:10,069 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=rollback&restart=false&svn_id=608&envir=ONLINE, rollback success!
+2017-08-11 17:24:15,513 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'rollback', u'restart': u'false'}
+2017-08-11 17:24:15,798 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=rollback&restart=false&svn_id=608&envir=ONLINE, rollback success!
+2017-08-11 17:24:19,325 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 17:24:24,000 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 18:05:52,513 views.py [django:136] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 18:05:52,513 views.py [django:152] [INFO]- 查询参数：query_not_deleted
+2017-08-11 18:05:53,200 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 18:05:54,328 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 18:05:55,086 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 18:05:57,757 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 18:05:58,523 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 18:06:01,220 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 18:06:01,977 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 18:06:04,509 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 18:06:05,276 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 18:06:18,898 views.py [django:200] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/update_svn
+2017-08-11 18:06:19,742 views.py [django:106] [ERROR]- sa don't have the permisson to change table svn_id of upgrade
+2017-08-11 18:06:27,676 views.py [django:229] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 18:06:27,841 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 18:06:35,305 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 18:06:38,841 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 18:06:38,844 views.py [django:252] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'true'}
+2017-08-11 18:06:41,698 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=true&svn_id=608&envir=ONLINE, deploy success!
