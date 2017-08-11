@@ -614,11 +614,44 @@ var operate = {
                     var html_online_tmp = "";
                     try {
                         var ip_dict = eval('('+ data.result +')')
-                        var ip_online = eval('('+ ip_dict.ONLINE +')');
-                        var ip_uat = eval('('+ ip_dict.UAT +')');
                     }catch (e){
                         $('#upgrade_results').append('<p>接口返回：'+data.result+'</p>');
                         $('#upgrade_results').append('获取主机地址失败...');
+                        return false;
+                    }
+                    //console.log(ip_dict)
+                    try {
+                        if (typeof(ip_dict.ONLINE) == 'object'){
+                            var ip_online = ip_dict.ONLINE;
+                        }else {
+                            var ip_online = eval('('+ ip_dict.ONLINE +')');
+                        }
+                        if (ip_online.length == 1 && ip_online[0] == ""){
+                            $('#upgrade_results').append('获取运营环境主机地址为空...');
+                        }else {
+                            $('#upgrade_results').append('<p>获取运营环境主机地址成功...</p>');
+                            operate.disableButtons(['upgrade_envir_online'], false)
+                        }
+                    }catch (e){
+                        $('#upgrade_results').append('<p>接口返回：'+ip_dict.ONLINE+'</p>');
+                        $('#upgrade_results').append('获取运营环境主机地址失败...');
+                        return false;
+                    }
+                    try {
+                        if (typeof(ip_dict.UAT) == 'object'){
+                            var ip_uat = ip_dict.UAT;
+                        }else {
+                            var ip_uat = eval('('+ ip_dict.UAT +')');
+                        }
+                        if (ip_uat.length == 1 && ip_uat[0] == ""){
+                            $('#upgrade_results').append('获取测试环境主机地址为空...');
+                        }else {
+                            $('#upgrade_results').append('<p>获取测试环境主机地址成功...</p>');
+                            operate.disableButtons(['upgrade_envir_uat'], false)
+                        }
+                    }catch (e){
+                        $('#upgrade_results').append('<p>接口返回：'+ip_dict.UAT+'</p>');
+                        $('#upgrade_results').append('获取测试环境主机地址失败...');
                         return false;
                     }
                     $.each(ip_online, function (index, item) { 
@@ -638,8 +671,8 @@ var operate = {
                     //html_tmp = "<optgroup label='"+ project +"'>" + html_tmp + "</optgroup>";
                     html_uat = html_uat + html_uat_tmp;
                     html_online = html_online + html_online_tmp;
-                    operate.disableButtons(['upgrade_envir_uat', 'upgrade_envir_online'], false)
-                    $('#upgrade_results').append('<p>获取主机地址成功...</p>');
+                    //operate.disableButtons(['upgrade_envir_uat', 'upgrade_envir_online'], false)
+                    
                 }
                 return false;
             },

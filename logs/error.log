@@ -52970,3 +52970,4 @@ SyntaxError: invalid syntax
 2017-08-10 16:32:21,171 upgrade.py [django:39] [ERROR]- http://10.252.252.98/api?project=CONF-READER&action=gethost, ConnectionError!
 2017-08-10 17:09:38,065 upgrade.py [django:66] [ERROR]- http://10.252.252.98/api?project=CONF-READER&ip_addr=192.168.100.107&action=deploy&restart=true&svn_id=608&envir=ONLINE, ConnectionError!
 2017-08-10 18:52:04,565 upgrade.py [django:39] [ERROR]- http://10.252.252.98/api?project=E04_WS&action=gethost, ConnectionError!
+2017-08-11 10:18:19,905 upgrade.py [django:35] [ERROR]- http://10.252.252.98/api?project=CONF-READER&action=gethost, ReadTimeout! timeout: 60 s

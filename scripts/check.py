@@ -24,18 +24,6 @@ admin_mail_addr = settings.ADMINS[0][1]
 salt_intrm = 'http://172.20.0.61:8080'
 salt_intrm_id = 'EST_0_61'
 
-sapi = SaltAPI(
-    url      = settings.SALT_API['url'],
-    username = settings.SALT_API['user'],
-    password = settings.SALT_API['password']
-)
-
-sapi_glb = SaltAPI(
-    url      = settings.SALT_API['url_glb'],
-    username = settings.SALT_API['user'],
-    password = settings.SALT_API['password']
-)
-
 def check_services_fun():
     check_services = check_status.objects.filter(program='check_services').first()
     if check_services.status == 1:
@@ -47,6 +35,17 @@ def check_services_fun():
 def check_salt_minion_fun():
     check_salt_minion = check_status.objects.filter(program='check_salt_minion').first()
     if check_salt_minion.status == 1:
+        sapi = SaltAPI(
+            url      = settings.SALT_API['url'],
+            username = settings.SALT_API['user'],
+            password = settings.SALT_API['password']
+        )
+        
+        sapi_glb = SaltAPI(
+            url      = settings.SALT_API['url_glb'],
+            username = settings.SALT_API['user'],
+            password = settings.SALT_API['password']
+        )
         minionsup, minionsdown= sapi.MinionStatus()
         minionsup_glb, minionsdown_glb= sapi_glb.MinionStatus()
         minionsdown_glb = [id for id in minionsdown_glb if 'SC' in id]

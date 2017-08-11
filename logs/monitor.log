@@ -14224,3 +14224,94 @@ SyntaxError: invalid syntax
 2017-08-10 19:20:26,078 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
 2017-08-10 19:20:28,088 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
 2017-08-10 19:20:29,644 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:01:15,697 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:01:16,571 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:01:51,934 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:01:51,967 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:05:14,368 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 10:05:14,842 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 10:05:14,907 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 10:05:15,776 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 10:05:15,878 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 10:05:15,878 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 10:05:16,526 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 10:05:18,578 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:05:19,832 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:08:34,046 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 10:08:34,507 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 10:08:34,571 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 10:08:35,448 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 10:08:35,559 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 10:08:35,561 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 10:08:36,240 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 10:08:38,177 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:08:38,203 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:09:57,321 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 10:09:57,823 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 10:09:57,854 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 10:09:58,654 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 10:09:58,765 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 10:09:58,766 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 10:09:59,436 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 10:10:01,371 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:10:01,395 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:12:22,983 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 10:12:23,467 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 10:12:23,553 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 10:12:24,368 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 10:12:24,467 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 10:12:24,469 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 10:12:25,121 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 10:12:28,344 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:12:29,563 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:13:04,232 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 10:13:04,838 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 10:13:04,924 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 10:13:05,723 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 10:13:05,822 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 10:13:05,822 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 10:13:06,471 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 10:13:08,986 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:13:10,598 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:17:19,905 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:18:19,905 upgrade.py [django:35] [ERROR]- http://10.252.252.98/api?project=CONF-READER&action=gethost, ReadTimeout! timeout: 60 s
+2017-08-11 10:18:44,767 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:19:42,023 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:34:55,091 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:34:55,131 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:35:07,457 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 10:35:12,181 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 10:35:12,184 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 10:35:15,825 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 10:39:55,782 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:39:55,811 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:44:17,127 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 10:44:17,134 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{'username': u'sa', 'exe_api': u'http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE', u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], 'op_status': 1, 'api': 'http://10.252.252.98/api', u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', 'timeout': 1200, u'act': u'deploy', 'clientip': '127.0.0.1', u'restart': u'false', 'result': 'deploy : success'}
+2017-08-11 10:44:17,595 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 10:44:17,648 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 10:44:18,479 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 10:44:18,592 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 10:44:18,592 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 10:44:19,312 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 10:44:21,114 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 10:44:21,463 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:44:21,486 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:45:27,058 views.py [django:49] [INFO]- 127.0.0.1 is requesting /
+2017-08-11 10:45:27,631 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular.min.js.map
+2017-08-11 10:45:27,707 base.py [django.request:170] [WARNING]- Not Found: /static/angular/angular-ui-router.js.map
+2017-08-11 10:45:28,526 views.py [django:50] [INFO]- 127.0.0.1 is requesting.
+2017-08-11 10:45:28,630 views.py [django:135] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-11 10:45:28,632 views.py [django:151] [INFO]- 查询参数：query_not_deleted
+2017-08-11 10:45:29,296 views.py [django:29] [INFO]- 127.0.0.1 is requesting. /saltstack/restart/get_project
+2017-08-11 10:45:31,184 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:45:31,214 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:47:37,700 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 0, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 10:47:41,263 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.116&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 10:47:41,266 views.py [django:249] [INFO]- 127.0.0.1 is requesting. /upgrade/op_upgrade/deploy 执行参数：{u'svn_id': u'608', u'ip_addr': [u'172.20.0.118', u'172.20.0.116'], u'project': u'CONF-READER', u'step': 1, u'tag': u'608', u'envir': u'ONLINE', u'act': u'deploy', u'restart': u'false'}
+2017-08-11 10:47:44,207 upgrade.py [django:74] [INFO]- http://10.252.252.98/api?project=CONF-READER&ip_addr=172.20.0.118&action=deploy&restart=false&svn_id=608&envir=ONLINE, deploy success!
+2017-08-11 10:48:52,552 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:48:52,578 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:51:47,723 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:51:48,796 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-11 10:52:55,490 views.py [django:226] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
+2017-08-11 10:52:55,543 upgrade.py [django:47] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
