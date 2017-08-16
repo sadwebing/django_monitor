@@ -89,6 +89,20 @@ xmp {
     overflow-x:hidden;
 }
 
+.textarea_e {
+    height:300px;
+    width: 570px;
+    max-height: 500px;
+    max-width: 570px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.label_e {
+    width: auto;
+}
+
 .demo_line{
     letter-spacing: -1px;
     color: #ddd;

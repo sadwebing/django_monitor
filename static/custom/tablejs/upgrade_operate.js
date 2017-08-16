@@ -5,7 +5,8 @@ $(function () {
 
 //全局变量
 window.run = true;
-window.postUpgradeDate = {
+window.myViewModel = {}
+window.postUpgradeData = {
         svn_id:'',
         tag:'',
         project:'',
@@ -14,7 +15,9 @@ window.postUpgradeDate = {
         step:0,
         envir:'',
         restart:'',
-},
+};
+
+window.postEditConfig = {}
 window.uat_ip_addr_list = new Array();
 window.online_ip_addr_list = new Array();
 window.html_uat = "";
@@ -24,6 +27,12 @@ window.modal_head_content = document.getElementById("upgrade_modal_head_content"
 window.modal_head_close = document.getElementById("upgrade_modal_head_close");
 window.upgrade_progress_head = document.getElementById("upgrade_progress_head");
 window.upgrade_progress_body = document.getElementById("upgrade_progress_body");
+window.Displayadd = document.getElementById('btn_save_new_config');
+window.Displaydelete = document.getElementById('btn_confirm_delete_config');
+window.config_name = document.getElementById('config_name')
+window.config_content = document.getElementById('config_content')
+window.radio_config_list = document.getElementById('radio_config_list')
+window.edit_config_head = document.getElementById("edit_config_head")
 
 var tableInit = {
     Init: function () {
@@ -180,6 +189,18 @@ var tableInit = {
     },
 
     operateFormatter: function (value,row,index){
+        content_m = [
+            '<a class="edit_config_choose_envir text-info" href="javascript:void(0)" title="编辑配置文件" style="margin-right: 10px;">',
+                '编辑配置',
+            '</a>',
+        ].join('');
+
+        content_m = content_m + [
+            '<a class="modify_upgrade_status text-info" href="javascript:void(0)" title="修改升级状态" style="margin-right: 10px;">',
+                '修改状态',
+            '</a>',
+        ].join('');
+
         if (row.deleted == 0){
             content_n = [
                 '<a class="delete text-info" href="javascript:void(0)" title="删除">',
@@ -192,10 +213,11 @@ var tableInit = {
                     '恢复',
                 '</a>',
             ].join('');
+            return content_n;
         }else {
             content_n = "";
         }
-        return content_n;
+        return content_m+content_n;
     },
 
     cur_statusFormatter: function (value,row,index) {
@@ -251,11 +273,61 @@ window.operateEvents = {
         }; 
         return false;
     },
+
+    'click .edit_config_choose_envir': function (e, value, row, index) {
+        content = [
+            '<form id="envir_form" class="form-inline" role="form" style="text-align: center; margin-bottom: 50px;">',
+                '<div class="col-xs-12 col-sm-12 col-md-12">',
+                    '项目：<span id="choose_envir_project" value='+row.project+' style="font-weight:bold;">'+row.project+'</span>',
+                '</div>',
+                '<div class="col-xs-12 col-sm-12 col-md-12">',
+                    'svn_id：<span id="choose_envir_svn_id" value='+row.svn_id+' style="font-weight:bold;">'+row.svn_id+'</span>',
+                '</div>',
+            '</form>',
+            '<form id="envir_form" class="form-inline" role="form" style="text-align: center;">',
+                '<button name="edit_config" id="edit_config_uat" onclick="operate.editConfig(this)" type="button" class="btn btn-default" style="margin-right: 50px;" value="UAT">测试环境</button>',
+                '<button name="edit_config" id="edit_config_online" onclick="operate.editConfig(this)" type="button" class="btn btn-default" value="ONLINE">运营环境</button>',
+            '</form>',
+        ].join('')
+
+        document.getElementById("choose_envir_body").innerHTML = content;
+
+        $('#choose_envir_modal').modal('show');
+        return false;
+    },
+
+    'click .modify_upgrade_status': function (e, value, row, index) {
+        operate.disableButtons(['btn_close_update_upgrade_status_modal', 'btn_update_upgrade_status_submit'], false);
+
+        document.getElementById('uat_upgrade_done').checked = false;
+        document.getElementById('uat_upgrade_rollback').checked = false;
+        document.getElementById('online_upgrade_done').checked = false;
+        document.getElementById('online_upgrade_rollback').checked = false;
+        document.getElementById('upgrade_status_id').value = row.id;
+
+        if (row.envir_uat == 'done'){
+            document.getElementById('uat_upgrade_done').checked = true;
+        }else if (row.envir_uat == 'rollback'){
+            document.getElementById('uat_upgrade_rollback').checked = true;
+        }
+
+        if (row.envir_online == 'done'){
+            document.getElementById('online_upgrade_done').checked = true;
+        }else if (row.envir_online == 'rollback'){
+            document.getElementById('online_upgrade_rollback').checked = true;
+        }
+
+        $('#update_upgrade_status_modal').modal('show');
+
+        return false;
+    },
+
     'click .delete': function (e, value, row, index) {
         var postData = {};
         postData['deleted'] = 1
         postData['id'] = row.id
         postData['svn_id'] = row.svn_id
+        postData['act'] = 'update_deleted'
 
         $.ajax({
             url: "/upgrade/update_svn",
@@ -287,6 +359,7 @@ window.operateEvents = {
         postData['deleted'] = 0
         postData['id'] = row.id
         postData['svn_id'] = row.svn_id
+        postData['act'] = 'update_deleted'
 
         $.ajax({
             url: "/upgrade/update_svn",
@@ -319,6 +392,9 @@ var operate = {
     operateInit: function () {
         this.operateUpgradeSelect();
         this.upgradeButtons();
+        this.Buttons();
+        //this.updateConfig();
+        //this.editConfig();
         //this.setHandleUser();
         //this.selectpicker();
     },
@@ -328,33 +404,33 @@ var operate = {
         var obj_restart = document.getElementsByName('upgrade_restart');
         for(i=0;i<obj_envir.length;i++) { 
             if(obj_envir[i].checked) { 
-                postUpgradeDate.envir = obj_envir[i].value; 
+                postUpgradeData.envir = obj_envir[i].value; 
             } 
         }
-        postUpgradeDate.restart = '';
+        postUpgradeData.restart = '';
         for(i=0;i<obj_restart.length;i++) { 
             if(obj_restart[i].checked) { 
-                postUpgradeDate.restart = obj_restart[i].value; 
+                postUpgradeData.restart = obj_restart[i].value; 
             } 
         }
-        postUpgradeDate.svn_id = upgrade_parms.svn_id;
-        postUpgradeDate.tag = upgrade_parms.tag;
-        postUpgradeDate.project = upgrade_parms.project;
-        postUpgradeDate.act = act;
+        postUpgradeData.svn_id = upgrade_parms.svn_id;
+        postUpgradeData.tag = upgrade_parms.tag;
+        postUpgradeData.project = upgrade_parms.project;
+        postUpgradeData.act = act;
         var selectedValue = []; 
         var objSelect = document.getElementById('upgrade_ip');
         for(var i = 0; i < objSelect.options.length; i++) { 
             if (objSelect.options[i].selected == true) 
             selectedValue.push(objSelect.options[i].value);
         }
-        if (selectedValue.length == 0 && postUpgradeDate.envir == 'UAT'){
-            postUpgradeDate.ip_addr = uat_ip_addr_list;
-        }else if (selectedValue.length == 0 && postUpgradeDate.envir == 'ONLINE') {
-            postUpgradeDate.ip_addr = online_ip_addr_list;
+        if (selectedValue.length == 0 && postUpgradeData.envir == 'UAT'){
+            postUpgradeData.ip_addr = uat_ip_addr_list;
+        }else if (selectedValue.length == 0 && postUpgradeData.envir == 'ONLINE') {
+            postUpgradeData.ip_addr = online_ip_addr_list;
         }else {
-            postUpgradeDate.ip_addr = selectedValue;
+            postUpgradeData.ip_addr = selectedValue;
         }
-        return postUpgradeDate;
+        return postUpgradeData;
     },
 
     disableButtons: function (buttonList, fun) {
@@ -515,8 +591,9 @@ var operate = {
                 operate.disableButtons(['upgrade_interrupt'], true);
             }
             $("#upgrade_progress_bar").css("width", width);
-            $('#upgrade_results').append('<p><strong>'+data.ip_addr[data.step]+'</strong></p>');
-            $('#upgrade_results').append('<pre class="pre-scrollable"><xmp>'+data.result+'</xmp></pre>',)
+            $('#upgrade_results').append('<p><strong>'+data.ip_addr+'</strong></p>');
+            //console.log(typeof(data.result))
+            $('#upgrade_results').append('<pre class="pre-scrollable"><xmp>'+data.info+'</xmp></pre>',)
             upgrade_progress_head.innerHTML="总共：<strong>"+postData.ip_addr.length+"</strong>台    "+"成功：<strong>"+(postData.step)+"</strong>台";
             //console.log(data.step+" : "+postData.ip_addr.length)
             if (run){
@@ -604,6 +681,7 @@ var operate = {
         //console.log(projectlist);
         var postData = {};
         postData['project'] = projectlist;
+        postData['act'] = 'gethosts';
         $.ajax({
             url: "/upgrade/get_hosts",
             type: "post",
@@ -780,6 +858,261 @@ var operate = {
             return false;
 
         });
+    },
+
+    editConfig: function (obj){
+            //var postData = {};
+            document.getElementById('edit_config_uat').disabled = true;
+            document.getElementById('edit_config_online').disabled = true;
+            postEditConfig['project'] = document.getElementById('choose_envir_project').innerText;
+            postEditConfig['svn_id'] = document.getElementById('choose_envir_svn_id').innerText;
+            postEditConfig['envir'] = obj.value;
+            postEditConfig['act'] = 'getfiles'
+            $.ajax({
+                url: "/upgrade/edit_config",
+                type: "post",
+                data: JSON.stringify(postEditConfig),
+                success: function (datas, status) {
+                    data = eval('('+datas+')');
+                    //toastr.success('操作成功！', data['response']);
+                    $('#choose_envir_modal').modal('hide');
+                    $('#edit_config_modal').modal('show');
+                    ko.cleanNode(document.getElementById('radio_config_list'));
+                    config_name.value = "";
+                    config_content.value = "";
+                    Displayadd.style.display = 'inline';
+                    myViewModel = {}
+                    if (data.files == {}){
+                        document.getElementById("edit_config_head").innerHTML = '请新增配置文件';
+                    }else {
+                        document.getElementById("radio_config_list").innerHTML = '';
+                        document.getElementById("edit_config_head").innerHTML = '请选择要编辑的文件';
+                        //console.log(data)
+                        for (var file in data.files){
+                            target = file.split('.')[0].replace(/-|_/g, '');
+                            //console.log(target)
+                            myViewModel[target] = ko.observable(file); 
+                            var content = data.files[file].join('');
+                            var html = [
+                                '<label class="label_e">',
+                                    '<input type="radio"  name="config_name" onclick="operate.DisplayFileContent(this)" style="margin-left: 10px;" id="radio_'+target+'" data-bind="text: '+target+'"> <span data-bind="text: '+target+'"></span>',
+                                '</label>',
+                                '<textarea id="textarea_'+target+'" style="display:none">'+content+'</textarea>',
+                            ].join('');
+                            $("#radio_config_list").append(html);
+                        }
+                    }
+                    ko.applyBindings(myViewModel, document.getElementById('radio_config_list'));
+
+                    //console.log(data.files);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误');
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
+                    document.getElementById('edit_config_uat').disabled = false;
+                    document.getElementById('edit_config_online').disabled = false;
+                }
+            });
+    },
+
+    DisplayFileContent: function (obj){
+        //console.log(content)
+        //获取到目标
+        target = obj.id.split("_")[1]
+        //隐藏新增
+        Displayadd.style.display = 'none';
+        Displaydelete.style.display = 'none';
+        //修改临时文本的name值
+        $("#config_content").attr("name", obj.value)
+        //填充数据框的值
+        config_name.value = myViewModel[target]();
+        //填充文本框的值
+        config_content.value = document.getElementById("textarea_"+target).value;
+    },
+
+    updateConfig: function (obj){
+        //判断是不是要新增文件
+        if (Displayadd.style.display == 'inline'){
+            return false;
+        }
+
+        //判断是否选中了文件
+        var file = $("input[name='config_name']:checked"); 
+        var item = file.val()
+        if (file.val() == undefined){
+            return false;
+        }
+        //获取到目标
+        target = file.attr("id").split("_")[1]
+
+        //判断是要更新文件名还是文件内容
+        if (obj.type == 'text'){
+            myViewModel[target](obj.value);
+        }else if(obj.type == 'textarea'){
+            document.getElementById("textarea_"+target).value = obj.value;
+        }
+
+    },
+
+    Buttons: function () {
+        $('#btn_add_config').on("click", function () {
+            Displayadd.style.display = 'inline';
+            Displaydelete.style.display = 'none';
+            var file = $("input[name='config_name']:checked"); 
+            if (file.val() == undefined){
+                return false;
+            }else {
+                config_name.value = "";
+                config_content.value = "";
+                $("input:radio").prop("checked",false);
+            }
+        });
+
+        $('#btn_delete_config').on("click", function () {
+            Displayadd.style.display = 'none';
+            Displaydelete.style.display = 'inline';
+        });
+
+        $('#btn_save_new_config').on("click", function () {
+            if (config_name.value == ""){
+                toastr.warning('请先输入文件名')
+                return false;
+            }
+            try {
+                if (/([a-z]+|[0-9]+)\.[a-z]+/.test(config_name.value)){
+                    target = config_name.value.split('.')[0];
+                }else {
+                    toastr.warning('请输入正确的文件名')
+                    return false;
+                }
+                for (var key in myViewModel){
+                    if (config_name.value == myViewModel[key]()){
+                        toastr.warning('文件名已存在')
+                        return false;
+                    }
+                    if (target == key){
+                        target = target+"A"
+                    }
+                }
+            }catch (e){
+                toastr.warning('请输入正确的文件名')
+                return false;
+            }
+            myViewModel[target] = ko.observable(config_name.value);
+            //console.log(myViewModel)
+            //重新绑定
+            ko.cleanNode(document.getElementById('radio_config_list'));
+            content = config_content.value;
+            var html = [
+                '<label class="label_e">',
+                    '<input type="radio"  name="config_name" onclick="operate.DisplayFileContent(this)" style="margin-left: 10px;" id="radio_'+target+'" data-bind="text: '+target+'"> <span data-bind="text: '+target+'"></span>',
+                '</label>',
+                '<textarea id="textarea_'+target+'" style="display:none">'+content+'</textarea>',
+            ].join('')
+            $("#radio_config_list").append(html);
+            ko.applyBindings(myViewModel, document.getElementById('radio_config_list'));
+            Displayadd.style.display = 'none';
+            document.getElementById("radio_"+target).checked = true;
+            toastr.success('文件新建成功！', config_name.value);
+        });
+
+        $('#btn_confirm_delete_config').on("click", function () {
+            var file = $("input[name='config_name']:checked"); 
+            if (file.val() == undefined){
+                toastr.warning('没有删除任何文件')
+                return false;
+            }
+
+            //获取到目标
+            target = file.attr("id").split("_")[1];
+            delete myViewModel[target];
+            inputh = document.getElementById("radio_"+target);
+            texth = document.getElementById("textarea_"+target);
+            texth.parentNode.removeChild(texth);
+            inputh.parentNode.parentNode.removeChild(inputh.parentNode);
+
+            toastr.success('文件删除成功！', config_name.value);
+            config_name.value = "";
+            config_content.value = "";
+
+            Displaydelete.style.display = 'none';
+            
+        });
+
+        $('#btn_submit').on("click", function () {
+            postEditConfig['act'] = 'commitfiles';
+            postEditConfig['files'] = {};
+            for (var key in myViewModel){
+                file = myViewModel[key]();
+                postEditConfig['files'][file] = document.getElementById("textarea_"+key).value;
+            }
+            //console.log(postEditConfig);
+            edit_config_head.innerHTML = '正在保存配置文件，请稍后...'
+            $.ajax({
+                url: "/upgrade/edit_config",
+                type: "post",
+                data: JSON.stringify(postEditConfig),
+                success: function (datas, status) {
+                    edit_config_head.innerHTML = '保存配置文件成功...'
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误')
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
+                    edit_config_head.innerHTML = '保存配置文件失败，请重试...'
+                }
+            });
+        });
+
+        $('#btn_update_upgrade_status_submit').on("click", function () {
+            operate.disableButtons(['btn_close_update_upgrade_status_modal', 'btn_update_upgrade_status_submit'], true);
+
+            var postData = {
+                id: document.getElementById('upgrade_status_id').value,
+            }
+            if (document.getElementById('uat_upgrade_done').checked == true){
+                postData['envir_uat'] = 'done';
+            }else if (document.getElementById('uat_upgrade_rollback').checked == true){
+                postData['envir_uat'] = 'rollback';
+            }else {
+                postData['envir_uat'] = 'undone';
+            }
+
+            if (document.getElementById('online_upgrade_done').checked == true){
+                postData['envir_online'] = 'done';
+            }else if (document.getElementById('online_upgrade_rollback').checked == true){
+                postData['envir_online'] = 'rollback';
+            }else {
+                postData['envir_online'] = 'undone';
+            }
+
+            postData['act'] = 'update_upgrade_status';
+
+            $.ajax({
+                url: "/upgrade/update_svn",
+                type: "post",
+                data: JSON.stringify(postData),
+                success: function (datas, status) {
+                    toastr.success('修改成功');
+                    $('#upgrade_op_table').bootstrapTable('refresh');
+                    $('#update_upgrade_status_modal').modal('hide');
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown){
+                    operate.disableButtons(['btn_close_update_upgrade_status_modal', 'btn_update_upgrade_status_submit'], false);
+                    if (XMLHttpRequest.status == 0){
+                        toastr.error('后端服务不响应', '错误');
+                    }else {
+                        toastr.error(XMLHttpRequest.responseText, XMLHttpRequest.status)
+                    }
+                }
+            });
+        });
+
     },
 
     setHandleUser: function(){

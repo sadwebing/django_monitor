@@ -6,6 +6,7 @@ urlpatterns = [
     url('^operate$', views.Operate),
     url('^query_svn$', views.QuerySvnId),
     url('^update_svn$', views.UpdateSvnId),
+    url('^edit_config$', views.EditConfig),
     url('^get_hosts$', views.GetHosts),
     url('^operate_upgrade$', views.OperateUpgrade),
     url('^op_upgrade/deploy$', views.OpUpgradeDeploy),

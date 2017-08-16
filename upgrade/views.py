@@ -1,6 +1,6 @@
 # coding: utf-8
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseForbidden
+from django.http import HttpResponse, HttpResponseForbidden, HttpResponseServerError
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.contrib.auth.decorators import login_required
 from django.views.generic import View
@@ -15,6 +15,7 @@ from time import sleep
 from dwebsocket import require_websocket, accept_websocket
 from accounts.limit import LimitAccess
 from accounts.views import HasPermission
+from edit_config import EditConfig
 
 logger = logging.getLogger('django')
 
@@ -114,9 +115,11 @@ def OpHistoryQuery(request):
             tmp_dict['ip_addr'] = info.ip_addr
             tmp_dict['act'] = info.act
             tmp_dict['op_time'] = info.op_time
+            tmp_dict['com_time'] = info.com_time
             tmp_dict['op_user'] = info.op_user
             tmp_dict['op_ip_addr'] = info.op_ip_addr
             tmp_dict['op_status'] = info.op_status
+            tmp_dict['backup_file'] = info.backup_file
             tmp_dict['envir'] = info.envir
             tmp_dict['info'] = info.info
 
@@ -198,21 +201,27 @@ def UpdateSvnId(request):
     elif request.method == 'POST':
         clientip = request.META['REMOTE_ADDR']
         logger.info('[POST]%s is requesting. %s' %(clientip, request.get_full_path()))
-        if not HasPermission(request.user, 'change', 'svn_id', 'upgrade'):
-            return HttpResponseForbidden('你没有修改的权限。')
         try:
             data = json.loads(request.body)
-            deleted = data['deleted']
-            #logger.info(data)
         except:
             return HttpResponse('failure')
-        
-        delete = svn_id.objects.get(id=data['id'])
-        delete.deleted = deleted
-        delete.save()
-        logger.info('%s deleted %s success!' %(data['svn_id'], deleted))
+        if data['act'] == 'update_deleted':
+            if not HasPermission(request.user, 'change', 'svn_id', 'upgrade'):
+                return HttpResponseForbidden('你没有修改的权限。')
+            deleted = data['deleted']
+            delete = svn_id.objects.get(id=data['id'])
+            delete.deleted = deleted
+            delete.save()
+            logger.info('%s deleted %s success!' %(data['svn_id'], deleted))
+        elif data['act'] == 'update_upgrade_status':
+            update = svn_id.objects.get(id=data['id'])
+            update.envir_uat = data['envir_uat']
+            update.envir_online = data['envir_online']
+            update.save()
+            logger.info('update success: %s' %data)
+        else:
+            return HttpResponseServerError('执行动作错误，请检查！')
         return HttpResponse('success')
-
     else:
         return HttpResponse('nothing!')
 
@@ -251,7 +260,7 @@ def OpUpgradeDeploy(request):
 
             logger.info('%s is requesting. %s 执行参数：%s' %(clientip, request.get_full_path(), data))
             #request.websocket.send(json.dumps(data))
-            
+
             exe = Upgrade(data, username, clientip)
             if exe:
                 request.websocket.send(json.dumps(exe.Execute()))
@@ -260,25 +269,3 @@ def OpUpgradeDeploy(request):
                 data['result']    = 'none'
                 request.websocket.send(json.dumps(data))
             continue
-
-            op_record = op_history(
-                svn_id = data['svn_id'],
-                project = data['project'],
-                ip_addr = data['ip_addr'][data['step']-1],
-                act = data['act'],
-                op_time = datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'),
-                op_user = username,
-                op_ip_addr = clientip,
-                op_status = 1,
-                envir = data['envir'],
-                info = data['result'],
-                )
-            #op_record.save()
-            request.websocket.send(json.dumps(data))
-            #if data['step'] == (len(data['ip_addr']) - 1):
-            #    ### close websocket ###
-            #    request.websocket.close()
-            #    logger.info('socket closed.')
-
-            
-        

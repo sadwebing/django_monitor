@@ -40,6 +40,12 @@ LOGIN_REDIRECT_URL = '/tomcat/index/'
 
 UPGRADE_API = 'http://10.252.252.98/api'
 UPGRADE_API_GET_HOSTS = 'http://10.252.252.98/api'
+
+#svn配置
+SVN_URL = 'svn://10.252.252.98/'
+SVN_USERNAME = 'sa'
+SVN_PASSWORD = 'ag988.net'
+
 #LOGIN_URL = '/admin/login/'
 LOGIN_URL = '/accounts/login'
 

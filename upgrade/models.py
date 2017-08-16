@@ -32,13 +32,15 @@ class svn_id(models.Model):
         unique_together = ('svn_id', 'project')
 
 class op_history(models.Model):
+    envir = models.CharField(max_length=10)
     svn_id = models.CharField(max_length=20, blank=False)
     project = models.CharField(max_length=128)
     ip_addr = models.GenericIPAddressField(blank=False)
     act = models.CharField(max_length=20, blank=False)
     op_time = models.CharField(max_length=64, blank=False)
+    com_time = models.CharField(max_length=64, blank=False)
     op_user = models.CharField(max_length=64, blank=False)
     op_ip_addr = models.GenericIPAddressField(blank=False)
     op_status = models.IntegerField(default=0)
-    envir = models.CharField(max_length=10)
+    backup_file = models.CharField(max_length=128, blank=False)
     info = models.TextField(max_length=51200, blank=True)

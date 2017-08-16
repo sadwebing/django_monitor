@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--以下所有pattern中输出的内容只包含了基本的信息，请根据需要进行扩展-->
+<included>
+	<property name="project.name" value="p01-portal" />
+	<property name="log.base" value="../logs/p01-portal" />
+	<property name="max.size" value="100MB" />
+	<jmxConfigurator />
+
+
+	<appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.base}/p01-portal.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}/p01-portal_%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date [%thread] [%X{finger}-%X{uid}-%X{toUrl}-%X{uip}] %-5level %logger{80} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="PAGE-DIGEST-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.base}/page-digest.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}/page-digest_%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date [%thread] [%X{finger}-%X{uid}-%X{fromUrl}-%X{toUrl}-%X{uip}] %-5level %logger{80} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="VISITOR-DIGEST-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.base}/visitor-digest.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}/visitor-digest_%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date [%thread] [%X{finger}-%X{uid}-%X{os}-%X{browser}-%X{uip}] %-5level %logger{80} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!--页面日志异步输出-->
+	<appender name ="ASYNC-PAGE-DIGEST-APPENDER" class= "ch.qos.logback.classic.AsyncAppender">
+		<discardingThreshold>0</discardingThreshold>
+		<queueSize>1024</queueSize>
+		<appender-ref ref ="PAGE-DIGEST-APPENDER" />
+	</appender>
+
+	<appender name ="ASYNC-VISITOR-DIGEST-APPENDER" class= "ch.qos.logback.classic.AsyncAppender">
+		<discardingThreshold>0</discardingThreshold>
+		<queueSize>1024</queueSize>
+		<appender-ref ref ="VISITOR-DIGEST-APPENDER" />
+	</appender>
+
+	<logger name="PAGE-DIGEST" level="INFO" additivity="false">
+		<appender-ref ref="ASYNC-PAGE-DIGEST-APPENDER" />
+	</logger>
+
+	<logger name="VISITOR-DIGEST" level="INFO" additivity="false">
+		<appender-ref ref="ASYNC-VISITOR-DIGEST-APPENDER" />
+	</logger>
+
+	<logger name="org.hibernate" level="INFO"/>
+	<logger name="org.springframework" level="DEBUG"/>
+	<logger name="org.apache.commons.beanutils" level="WARN"/>
+	<logger name="org.apache.zookeeper" level="WARN"/>
+	<logger name="org.mybatis.spring" level="INFO"/>
+	<logger name="com.alibaba.dubbo" level="WARN"/> 
+
+	<!--控制台日志，生产环境务必屏蔽-->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{100} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	<root level="debug">
+		<appender-ref ref="STDOUT" /><!--控制台日志，生产环境务必屏蔽 -->
+		<appender-ref ref="fileAppender" />
+	</root>
+</included>
