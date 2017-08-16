@@ -17767,3 +17767,17 @@ KeyError: 'svn_id'
 2017-08-16 16:50:23,401 upgrade.py [django:52] [INFO]- http://10.252.252.98/api?project=B79_WEB_V3&action=gethost, request success!
 2017-08-16 16:50:29,323 views.py [django:238] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/get_hosts : project CONF-READER
 2017-08-16 16:50:29,505 upgrade.py [django:52] [INFO]- http://10.252.252.98/api?project=CONF-READER&action=gethost, request success!
+2017-08-16 17:07:05,714 views.py [django:139] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-16 17:07:05,714 views.py [django:155] [INFO]- 查询参数：query_not_deleted
+2017-08-16 17:07:12,569 views.py [django:139] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-16 17:07:12,569 views.py [django:155] [INFO]- 查询参数：query_not_deleted
+2017-08-16 17:07:16,545 views.py [django:139] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-16 17:07:16,545 views.py [django:155] [INFO]- 查询参数：query_not_deleted
+2017-08-16 17:07:23,408 views.py [django:139] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-16 17:07:23,408 views.py [django:155] [INFO]- 查询参数：query_not_deleted
+2017-08-16 17:07:29,967 views.py [django:139] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-16 17:07:29,967 views.py [django:155] [INFO]- 查询参数：query_not_deleted
+2017-08-16 17:07:33,282 views.py [django:139] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-16 17:07:33,282 views.py [django:155] [INFO]- 查询参数：query_all
+2017-08-16 17:07:39,335 views.py [django:139] [INFO]- [POST]127.0.0.1 is requesting. /upgrade/query_svn
+2017-08-16 17:07:39,335 views.py [django:155] [INFO]- 查询参数：query_not_deleted

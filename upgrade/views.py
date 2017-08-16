@@ -162,13 +162,13 @@ def QuerySvnId(request):
                 if postData['project'] == 'all' and postData['cur_status_sel'] == 'all':
                     tmp_dict = getsvn(info)
                 elif postData['project'] == 'all' and postData['cur_status_sel'] != 'all':
-                    if info.envir_online in postData['cur_status_sel']:
+                    if info.envir_online in postData['cur_status_sel'] or info.envir_uat in postData['cur_status_sel']:
                         tmp_dict = getsvn(info)
                 elif postData['project'] != 'all' and postData['cur_status_sel'] == 'all':
                     if info.project in postData['project']:
                         tmp_dict = getsvn(info)
                 else:
-                    if info.project in postData['project'] and info.envir_online in postData['cur_status_sel']:
+                    if info.project in postData['project'] and (info.envir_online in postData['cur_status_sel'] or info.envir_uat in postData['cur_status_sel']):
                         tmp_dict = getsvn(info)
             except:
                 tmp_dict = getsvn(info)
